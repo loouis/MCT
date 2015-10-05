@@ -1,0 +1,126 @@
+.header-main{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	background:white;
+	background:rgba(255,255,255,1);
+    height: $base*10;
+    z-index:100;
+    border-bottom:1px solid darken($lightestGrey, 10%);
+
+
+	@include breakpoint(500px){
+		width:65px;
+		height:100vh;
+		background:none;
+		border-bottom:none;
+		border-right:1px solid darken($lightestGrey, 10%);
+		// padding:$base*6;
+	}
+
+	&__nav{
+		height: 100%;
+	    padding:10px 15px;
+	    position: relative;
+	    z-index:10;
+	    transition: background .3s ease-in-out;
+
+	    &__hamburger-menu{
+	    	position:relative;
+	    	float:right;
+	    	width:40px;
+	    	height:40px;
+
+			&:after, &:before{
+				content:"";
+				position:absolute;
+				width:26px;
+				height:4px;
+				right:0;
+				background:$brandColor;
+			}
+
+			&:before{
+				top:13px;
+			}
+
+			&:after{
+				bottom:13px;
+			}
+	    }
+
+	    @include breakpoint($m){
+			width: 65px;
+			padding:10px;
+
+			&__hamburger-menu{
+				display:none;
+			}
+	    }
+
+	    &--active{
+	    	background:rgba(255,255,255,0);
+	    }
+	}
+
+	& .has-solid-background{
+		background:white;
+	}
+
+	.logo{
+		width:110px;
+		@include clearfix;
+
+		@include breakpoint($m){
+			position:absolute;
+			width:45px;
+			height:180px;
+			top:45%;
+			bottom:50%;
+			margin-top:-90px;
+
+			&:after{
+				content:attr(data-explore);
+				position:absolute;
+				transform:rotate(-90deg);
+				bottom: -24px;
+				left: -17px;
+				text-transform:uppercase;
+				font-family:$brandFont;
+				color:white;
+				letter-spacing: 1px;
+			}
+	    }
+
+		&__letter{
+			float:left;
+
+			&:nth-child(1){
+				width: 33%;
+			}
+			&:nth-child(2){
+				width: 27%;
+			}
+			&:nth-child(3){
+				width: 26.1%;
+			}
+
+			@include breakpoint($m){
+				display:block;
+
+				&:nth-child(1){
+					width: 100%;
+				}
+				&:nth-child(2), &:nth-child(3){
+					width: 86%;
+					padding-left:2px;
+				}
+			}
+		}
+	}
+
+	.has-solid-background .logo:after{
+		color:darken($lightestGrey, 20%);
+	}
+}

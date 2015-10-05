@@ -1,0 +1,13 @@
+.news-single-post{
+	position:relative;
+	@include clearfix;
+
+	.main-wrapper{
+		max-width:1040px;
+	}
+
+	&__content{
+		max-width:90%;
+		float:right;
+	}
+}

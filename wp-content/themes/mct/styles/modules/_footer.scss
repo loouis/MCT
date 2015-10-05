@@ -1,0 +1,113 @@
+$footer-m: 800px;
+
+.footer{
+	position:relative;
+	@extend %text-white;
+	text-align:center;
+	background-image: radial-gradient(10% -1%, #FF9317 85%, #DF38AA 100%);
+
+	.main-wrapper{
+		padding-bottom: $base*3;
+	}
+
+	&__join-the-community{
+		padding-bottom: $base*3;
+		border-bottom:1px solid #574140;
+
+		&__title{
+
+		}
+
+		@include breakpoint($footer-m){
+			text-align:left;
+			border-bottom:none;
+			max-width:300px;
+		}
+	}
+
+	&__list-your-company{
+		padding-top: $base*3;
+		border-top:1px solid #574140;
+
+		&__text{
+
+			&__title{
+				@extend %text-white;
+			}
+
+			&__button{
+				@extend %button-border;
+			}
+
+			@include breakpoint($footer-m){
+				max-width:300px;
+				text-align: left;
+				float:left;
+			}
+
+		}
+
+		@include breakpoint($footer-m){
+			margin-top:$base*8;
+			padding-top:$base*8;
+		}
+
+	}
+
+	&__partnership{
+		text-align:left;
+
+		&__title{
+			@extend %font-weight-bold;
+			@extend %text-white;
+		}
+
+		&__logos{
+			margin: $base*3 0;
+			@include clearfix;
+
+			&__logo{
+				position:relative;
+				float:left;
+				max-width:90px;
+				margin-right:40px;
+
+				&:nth-child(1){
+					&:after{
+						content:"+";
+						position:absolute;
+						@extend %text-white;
+						top: 4px;
+						right: -25px;
+						font-size: 21px;
+					}
+				}
+
+				&:nth-child(2){
+					padding-top:9px;
+				}
+
+				@include breakpoint($footer-m){
+					margin-right:initial;
+					margin-left:40px;
+				}
+			}
+		}
+
+		@include breakpoint($footer-m){
+			float:right;
+			text-align:right;
+		}
+	}
+
+	&__copyright{
+		@extend %font-weight-bold;
+		text-align:left;
+		clear:both;
+		color:$secFontColor;
+	}
+
+	.social-icons{
+		margin: $base*2 0;
+	}
+}

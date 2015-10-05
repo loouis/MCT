@@ -1,0 +1,52 @@
+.hjb{
+
+	&__jobs{
+		@include clearfix;
+
+		&__cell{
+			width:100%;
+			padding:$base*8 $base*5;
+			text-align:center;
+			background:white;
+			border-bottom:3px solid #FBFBFB;
+
+									
+			@include breakpoint(700px){
+				@include layout($no-gutters);
+				@include gallery(6 of 12);
+				border-left:3px solid #FBFBFB;
+
+				&:nth-child(1), &:nth-child(4){
+					border-left:0;
+				}
+				&:nth-child(4), &:nth-child(5), &:nth-child(6){
+					border-bottom:0;
+				}
+			}
+
+			@include breakpoint($l){
+				@include layout($no-gutters);
+				@include gallery(4 of 12);
+				padding:$base*14 $base*8;
+			}
+
+			&__money{
+				font-size: $base*2;
+			}
+			&__job-role{
+				margin-bottom:$base*2;
+			}
+			&__desc{
+
+			}
+
+			&:hover{
+				background: $brandColor;
+
+				.p-small-title-highlight, p, .hjb__jobs__cell__job-role{
+					color:white;
+				}
+			}
+		}
+	}
+}

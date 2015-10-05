@@ -13,14 +13,50 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mct' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mct' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mct' ), 'mct', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="footer">
+	<div class="main-wrapper">
+		<div class="footer__join-the-community">
+			<h3 class="footer__join-the-community__title">Join the community and get the lastest to your inbox</h3>
+		</div>
+
+		<ul class="social-icons">
+
+			<a href="http://" target="_blank" class="social-icons__icon">
+				<img src="<?php echo get_template_directory_uri();?>/images/social-icons--twitter.png" alt=""/>
+			</a>
+
+			<a href="http://" target="_blank" class="social-icons__icon">
+				<img src="<?php echo get_template_directory_uri();?>/images/social-icons--facebook.png" alt=""/>
+			</a>
+
+			<a href="http://" target="_blank" class="social-icons__icon">
+				<img src="<?php echo get_template_directory_uri();?>/images/social-icons--instagram.png" alt=""/>
+			</a>
+		</ul>
+
+
+		<div class="footer__list-your-company">
+			<article class="footer__list-your-company__text">
+				<h5 class="footer__list-your-company__text__title">Want to list your company and  reach over 2,000 creative active users?</h5>
+				<div class="footer__list-your-company__text__button">Contact</div>
+			</article>
+		</div>
+
+		<div class="footer__partnership">
+			<p class="footer__partnership__title">In partnership</p>
+			<div class="footer__partnership__logos">
+				<div class="footer__partnership__logos__logo footer__partnership__logos__logo--mct">
+					<img src="<?php echo get_template_directory_uri();?>/images/mct-logo--color.png" alt=""/>
+				</div>
+				<div class="footer__partnership__logos__logo footer__partnership__logos__logo--purple">
+					<img src="<?php echo get_template_directory_uri();?>/images/purple-logo--white.png" alt=""/>
+				</div>
+			</div>
+		</div>
+
+		<p class="footer__copyright">© My creative town - 2015</p>
+	</div>
+</footer>
 
 <?php wp_footer(); ?>
 

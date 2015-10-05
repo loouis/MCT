@@ -1,0 +1,155 @@
+.site-nav{
+	position:fixed;
+	opacity:0;
+	visibility:hidden;
+	@include clearfix;
+	height:100vh;
+	width:100%;
+	z-index:30;
+	top:0;
+	left:0;
+	background:$offBlack;
+	padding:0 15px;
+	@extend %text-white;
+	
+	transition:visibility .3s ease-in-out, opacity .3s ease-in-out;
+	overflow: scroll;
+
+	@include breakpoint($m){
+		width:100%;
+		padding:$base*5 $base*10;
+	}
+	
+
+	// Menu slide out active class
+	&--active{
+		opacity:1;
+		visibility: visible;
+	}
+
+	// &__website-name{
+	// 	font-family: $brandFont;
+	// 	font-size:1.2em;
+	// 	@extend %uppercase;
+	// 	@extend %font-weight-black;
+	// 	float:left;
+
+	// 	@include breakpoint($m){
+	// 		font-size:2em;
+	// 	}
+	// }
+
+	&__all-site-links{
+		// overflow: hidden;
+		width: 100%;
+		margin-bottom:$base*4;
+		@include clearfix;
+	}
+
+	&__cat{
+		margin-top:$base*12;
+		clear:both;
+
+		&__title{
+			padding-top:3px;
+			padding-bottom: 0px;
+			margin-bottom: 11px;
+			@extend %text-white;
+		}
+		&__nav{
+			@include span ( 7 of 12);
+
+			&__links{
+				width:100%;
+
+				&__link{
+					@extend %text-white;
+					font-family: $brandFont;
+					display:block;
+					padding: $base*2 0;
+					font-size:1.35em;
+				}
+			}
+			@include breakpoint($m){
+				@include span ( 9 of 12);
+				
+				&__link{
+					@include span ( 6 of 12);
+				}
+			}
+		}
+	}
+
+	&__main-site-links{
+		@include span (last 5);
+
+		&__link{
+			@extend %uppercase;
+			@extend %text-white;
+			font-family: $brandFont;
+			display:block;
+			padding: $base*2.46 0;
+			text-align:right;
+			@extend %font-weight-black;
+			font-size:1.2em;
+
+			
+		}
+		@include breakpoint($m){
+			@include span (last 3);
+			&__link{
+				font-size:1.35em;
+				padding: $base*2 0;
+			}
+		}
+	}
+
+
+	&__join-the-community{
+		border-top:1px solid white;
+		margin-top:$base*3;
+		padding-top:$base*3;
+		clear:both;
+	
+		&__form{
+			// @include span(8 of 12);
+		}
+	}
+
+	.social-icons{
+		width:100%;
+		clear:both;
+		text-align: center;
+	}
+}
+
+
+input{
+	width:100%;
+	background-color:rgba(0,0,0,0);
+	background-image:url(/assets/images/transparent.png);
+	outline: none;
+	border: none;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+	font-family:$brandFont;
+	@extend %font-weight-bold;
+	font-size:1.2em;
+	margin: $base*2 0;
+	@extend %text-white;
+}
+
+
+input[type="submit"]{
+	width:100%;
+	background-color:rgba(0,0,0,0);
+	background-image:url(/assets/images/transparent.png);
+	outline: none;
+	border: none;
+	padding-bottom: 10px;
+	font-family:$brandFont;
+	@extend %font-weight-bold;
+	font-size:1.2em;
+	margin: $base*2 0;
+	@extend %text-white;
+}

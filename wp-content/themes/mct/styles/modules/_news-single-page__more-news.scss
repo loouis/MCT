@@ -1,0 +1,15 @@
+.news-single__more-news{
+
+
+	.main-wrapper{
+		border-top:1px solid darken($lightestGrey, 10%);
+	}
+
+	&__title{
+		margin-bottom: $base*4;
+	}
+
+	&__items{
+		@extend .latest-news;
+	}
+}

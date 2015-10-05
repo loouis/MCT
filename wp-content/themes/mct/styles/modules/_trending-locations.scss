@@ -1,0 +1,49 @@
+.trending-locations{
+	// background:$lightestGrey;
+	overflow:hidden;
+	display:none;
+
+	@include breakpoint(700px){
+		display:block;
+	}
+
+
+	&__title{
+		// @extend %center-text;
+		@extend %uppercase;
+		@extend %text-white;
+	}
+
+	&__slider-container{
+			
+		@include breakpoint($m){
+			padding: 0 14%;
+		}
+
+	}
+
+	.bx-controls-direction{
+
+		.bx-prev,.bx-next{
+			height: 100%;
+			top: 0;
+			margin-top: 0;
+			width: 100%;
+			z-index:10;
+			background: rgba(0, 0, 0, 0);
+			transition: background .3s ease-in-out;
+
+			&:hover{
+				background: rgba(0, 0, 0, 0.6);
+			}
+		}
+		.bx-prev{
+			left: -100%;
+			margin-left: -1.1em;
+		}
+		.bx-next{
+			right: -100%;
+			margin-right: -1.1em;
+		}
+	}
+}

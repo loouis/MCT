@@ -1,0 +1,92 @@
+%center-text{
+	text-align:center;
+}
+
+%center-block{
+	margin: 0 auto;
+}
+
+%uppercase{
+	text-transform:uppercase;
+}
+
+
+%text-white{
+	color:white;
+}
+
+// Small letter spacing
+%sm-letter-spacing{
+	letter-spacing:0.2em;
+}
+
+// Large letter spacing
+%l-letter-spacing{
+	letter-spacing:0.4em;
+}
+
+// font weight reg
+%font-weight-reg{
+	font-weight:400;
+}
+
+// font weight bold
+%font-weight-bold{
+	font-weight:700;
+}
+
+// font weight black
+%font-weight-black{
+	font-weight:900;
+}
+
+
+// font weight black
+%cover{
+	background-size: cover !important;
+}
+
+// Float left
+%left{
+	float:left;
+}
+
+
+
+
+
+// circle - border radius
+%circle{
+	border-radius:50%;
+}
+
+
+//------------------------------------------- Button styles
+
+// border-button
+%button-border{
+	padding:$base*2 $base*3;
+	margin: $base*5 0;
+	color:white;
+	border:2px solid white;
+	font-family:$brandFont;
+	text-transform:uppercase;
+	font-weight:700;
+	text-align:center !important;
+	float:left;
+}
+
+%button-solid{
+	padding:$base*2 $base*3;
+	margin: $base*5 0;
+	color:white;
+	background:$brandColor;
+	font-family:$brandFont;
+	text-transform:uppercase;
+	font-weight:700;
+	text-align:center !important;
+	float:left;
+}
+
+
+

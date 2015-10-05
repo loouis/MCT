@@ -1,0 +1,47 @@
+.trend-loc{
+	&__slider{
+		&__slide{
+			// position:relative;
+			opacity:0.5;
+			padding:0 1.1em;
+
+			&.active-slide{
+				opacity:1;
+			}
+
+			& > div{
+				position: relative;
+				// padding:30px;
+			}
+
+			&__text{
+				// max-width:560px;
+				position:absolute;
+				bottom:0;
+				left:0;
+				padding:$base*6 $base*6 $base*6 40px;
+				background:rgba(0,0,0,.5);
+				color:white;
+
+				&__location{
+					font-size:$base*2;
+					color:$brandColor;
+					@extend %uppercase;
+					@extend %font-weight-black;
+					@extend %l-letter-spacing;
+				}
+				&__title{
+					@extend %uppercase;
+					font-size:3.075em;
+					margin-bottom:0;
+				}
+				&__para{
+					color:white;
+				}
+				&__button{
+					@extend %button-solid;
+				}
+			}
+		}
+	}
+}
