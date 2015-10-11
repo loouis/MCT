@@ -210,7 +210,8 @@ get_header(); ?>
 									<p class="news-cell__text__news-type">Purple blog</p>
 									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
 								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p><img src="assets/images/blog-preview.png" alt=""/>
+								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
+								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
 							</div>
 						</a>
 
@@ -220,7 +221,8 @@ get_header(); ?>
 									<p class="news-cell__text__news-type">Purple blog</p>
 									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
 								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p><img src="assets/images/blog-preview.png" alt=""/>
+								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
+								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
 							</div>
 						</a>
 
@@ -230,7 +232,8 @@ get_header(); ?>
 									<p class="news-cell__text__news-type">Purple blog</p>
 									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
 								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p><img src="assets/images/blog-preview.png" alt=""/>
+								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
+								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
 							</div>
 						</a>
 
@@ -240,7 +243,8 @@ get_header(); ?>
 									<p class="news-cell__text__news-type">Purple blog</p>
 									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
 								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p><img src="assets/images/blog-preview.png" alt=""/>
+								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
+								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
 							</div>
 						</a>
 
@@ -250,7 +254,8 @@ get_header(); ?>
 									<p class="news-cell__text__news-type">Purple blog</p>
 									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
 								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p><img src="assets/images/blog-preview.png" alt=""/>
+								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
+								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
 							</div>
 						</a>
 
@@ -260,7 +265,8 @@ get_header(); ?>
 									<p class="news-cell__text__news-type">Purple blog</p>
 									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
 								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p><img src="assets/images/blog-preview.png" alt=""/>
+								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
+								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
 							</div>
 						</a>
 					</ul>

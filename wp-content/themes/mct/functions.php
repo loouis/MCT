@@ -7,6 +7,11 @@
  * @package mct
  */
 
+show_admin_bar(false);
+
+add_image_size( 'custom-size', 220, 220, array( 'left', 'top' ) ); // Hard crop left top
+
+
 if ( ! function_exists( 'mct_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -130,6 +135,8 @@ function mct_scripts() {
 
 	wp_enqueue_script( 'mct-bxslider', get_template_directory_uri() . '/js/libs/bxslider.js', array(), '05112015', true );
 
+	wp_enqueue_script( 'mct-classie', get_template_directory_uri() . '/js/libs/classie.js', array(), '11112015', true );
+
 	wp_enqueue_script( 'mct-global', get_template_directory_uri() . '/js/global.js', array(), '05112015', true );
 
 
@@ -155,6 +162,7 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+
 /**
  * Customizer additions.
  */
@@ -164,3 +172,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
