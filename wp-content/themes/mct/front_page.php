@@ -296,41 +296,17 @@ get_header(); ?>
 				<div class="main-wrapper">
 					<ul class="hjb__jobs">
 
-						<article class="hjb__jobs__cell">
-							<p class="hjb__jobs__cell__money p-small-title-highlight">&pound;25k</p>
-							<h5 class="hjb__jobs__cell__job-role">Creative Director</h5>
-							<p class="hjb__jobs__cell__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias facere sit optio reprehenderit repudiandae sint animi est, excepturi perferendis.</p>
-						</article>
+					<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job')); ?>
+						<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
 
 						<article class="hjb__jobs__cell">
-							<p class="hjb__jobs__cell__money p-small-title-highlight">&pound;25k</p>
-							<h5 class="hjb__jobs__cell__job-role">Creative Director</h5>
-							<p class="hjb__jobs__cell__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias facere sit optio reprehenderit repudiandae sint animi est, excepturi perferendis.</p>
+							<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
+							<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
+							<p class="hjb__jobs__cell__desc"><?php the_content();?></p>
 						</article>
 
-						<article class="hjb__jobs__cell">
-							<p class="hjb__jobs__cell__money p-small-title-highlight">&pound;25k</p>
-							<h5 class="hjb__jobs__cell__job-role">Creative Director</h5>
-							<p class="hjb__jobs__cell__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias facere sit optio reprehenderit repudiandae sint animi est, excepturi perferendis.</p>
-						</article>
+					<?php endwhile;?>
 
-						<article class="hjb__jobs__cell">
-							<p class="hjb__jobs__cell__money p-small-title-highlight">&pound;25k</p>
-							<h5 class="hjb__jobs__cell__job-role">Creative Director</h5>
-							<p class="hjb__jobs__cell__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias facere sit optio reprehenderit repudiandae sint animi est, excepturi perferendis.</p>
-						</article>
-
-						<article class="hjb__jobs__cell">
-							<p class="hjb__jobs__cell__money p-small-title-highlight">&pound;25k</p>
-							<h5 class="hjb__jobs__cell__job-role">Creative Director</h5>
-							<p class="hjb__jobs__cell__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias facere sit optio reprehenderit repudiandae sint animi est, excepturi perferendis.</p>
-						</article>
-
-						<article class="hjb__jobs__cell">
-							<p class="hjb__jobs__cell__money p-small-title-highlight">&pound;25k</p>
-							<h5 class="hjb__jobs__cell__job-role">Creative Director</h5>
-							<p class="hjb__jobs__cell__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias molestias facere sit optio reprehenderit repudiandae sint animi est, excepturi perferendis.</p>
-						</article>
 					</ul>
 				</div>
 			</section><!-- #Jobs board -->

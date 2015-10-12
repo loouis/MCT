@@ -120,6 +120,29 @@ function mct_widgets_init() {
 }
 add_action( 'widgets_init', 'mct_widgets_init' );
 
+
+
+
+
+
+
+
+
+
+/* Add Purple jobs to custom post type */
+function create_post_type() {
+  register_post_type( 'purple_job',
+    array(
+      'labels' => array(
+        'name' => __( 'Purple jobs' ),
+        'singular_name' => __( 'Job' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    ));
+}
+add_action( 'init', 'create_post_type' );
+
 /**
  * Enqueue scripts and styles.
  */

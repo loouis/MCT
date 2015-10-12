@@ -54,7 +54,35 @@ get_header(); ?>
 				<!-- The content -->
 				<article class="news-single-post__content">
 					<div class="main-wrapper">
-						<?php the_content();?>
+						<?php
+							$content = apply_filters('the_content', get_the_content());
+
+							$paragraphAfter = 2; //Enter number of paragraphs to display ad after.
+    						$content = explode("</p>", $content);
+
+    						for ($i = 0; $i < count($content); $i++) {
+						        if ($i == $paragraphAfter) {?>
+
+						        <?php wp_reset_postdata();?>
+
+						            <?php $purple_jobs = new WP_Query(array( 
+						            	'post_type' => 'purple_job', 
+						            	'posts_per_page' => 1,
+						            	'orderby' => 'rand')); ?>
+										<?php  while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+											<article class="hjb__jobs__cell">
+												<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
+												<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
+												<p class="hjb__jobs__cell__desc"><?php the_content();?></p>
+											</article>
+
+										<?php endwhile;?>
+										<?php wp_reset_postdata();?>
+
+						       <?php }
+
+						        echo $content[$i] . "</p>";
+						    }?>
 					</div>
 				</article>
 
