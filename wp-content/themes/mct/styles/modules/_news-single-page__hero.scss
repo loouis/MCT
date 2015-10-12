@@ -2,8 +2,7 @@
 	position:relative;
 	// height:100vh;
 	width:100%;
-	background:$brandColor url("../assets/images/trending-locations-slide-image.jpg");
-	overflow:hidden;
+	background-color:$lightestGrey;
 	@extend %cover;
 	
 	@include breakpoint($m){
@@ -18,10 +17,12 @@
 	&__slide{
 
 		&__text{
-
-			&__title{
 				position:absolute;
 				bottom:0;
+
+			&__title{
+				// position:absolute;
+				// bottom:0;
 				@extend %uppercase;
 				@extend %text-white;
 
@@ -33,3 +34,4 @@
 		}
 	}
 }
+

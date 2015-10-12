@@ -9,8 +9,8 @@
 
 show_admin_bar(false);
 
-add_image_size( 'custom-size', 220, 220, array( 'left', 'top' ) ); // Hard crop left top
 
+add_filter( 'jetpack_development_mode', '__return_true' );
 
 if ( ! function_exists( 'mct_setup' ) ) :
 /**
@@ -46,6 +46,11 @@ function mct_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+
+	add_image_size( 'custom-size', 220, 220, array( 'left', 'top' ) ); // Hard crop left top
+	add_image_size( 'retina-smallest', 640, 500, true ); // hard crop mode
+	add_image_size( 'desktop-largest', 1900, 1069 ); // soft proportional crop mode
+
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

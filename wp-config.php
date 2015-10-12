@@ -1,4 +1,6 @@
 <?php
+define( 'JETPACK_DEV_DEBUG', true);
+
 /**
  * The base configuration for WordPress
  *

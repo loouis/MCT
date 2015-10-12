@@ -3,19 +3,17 @@
 	top:-40px;
 
 	&__avatar{
+		width:90px;
+		height:90px;
+		float:left;
+		@extend %circle;
+		overflow:hidden;
+		margin-right:10px;
+		// border:4px solid white;
+	}
 
-		&__image{
-			width:80px;
-			height:80px;
-			float:left;
-			@extend %circle;
-			background:$brandColor;
-			border:4px solid white;
-		}
-
-		&__writers-name, &__date-posted{
-			float:left;
-			margin-top:30px;
-		}
+	&__writers-name, &__date-posted{
+		float:left;
+		margin-top:46px;
 	}
 }
