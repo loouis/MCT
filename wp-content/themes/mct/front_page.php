@@ -152,40 +152,35 @@ get_header(); ?>
 				</hgroup>
 
 				<div class="trending-locations__slider-container trend-loc">
+
+					<?php $featured_locations = new WP_Query(array( 
+						'post_type' => 'maplist',
+						
+						'map_location_categories' => 'featured',
+						// 'taxonomy=map_location_categories&tag_ID=3',
+					 	'posts_per_page' => 6)); ?>
+
+
+
 					<ul id="trend-loc" class="trend-loc__slider">
 
-						<li class="trend-loc__slider__slide">
-							<div>
-								<div class="trend-loc__slider__slide__text">
-									<p class="trend-loc__slider__slide__text__location">Covent garden</p>
-									<h3 class="trend-loc__slider__slide__text__title">Charlotte street hotel</h3>
-									<p class="trend-loc__slider__slide__text__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam.</p>
-								</div>
-								<img src="<?php echo get_template_directory_uri();?>/images/trending-locations-slide-image.jpg" alt=""/>
-							</div>
-						</li>
+						<?php while($featured_locations->have_posts() ) : $featured_locations->the_post();?>
 
 						<li class="trend-loc__slider__slide">
 							<div>
-								<div class="trend-loc__slider__slide__text">
-									<p class="trend-loc__slider__slide__text__location">Covent garden</p>
-									<h3 class="trend-loc__slider__slide__text__title">Purple</h3>
-									<p class="trend-loc__slider__slide__text__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam.</p>
-								</div>
-								<img src="<?php echo get_template_directory_uri();?>/images/trending-locations-slide-image.jpg" alt=""/>
-							</div>
+								<a href="<?php the_permalink();?>">
+									<div class="trend-loc__slider__slide__text">
+										<p class="trend-loc__slider__slide__text__location">Covent garden</p>
+										<h3 class="trend-loc__slider__slide__text__title"><?php the_title();?></h3>
+										<p class="trend-loc__slider__slide__text__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam.</p>
+									</div>
+								</a>
+								<?php the_post_thumbnail('desktop-largest');?>
 						</li>
 
-						<li class="trend-loc__slider__slide">
-							<div>
-								<div class="trend-loc__slider__slide__text">
-									<p class="trend-loc__slider__slide__text__location">Covent garden</p>
-									<h3 class="trend-loc__slider__slide__text__title">Charlotte street hotel</h3>
-									<p class="trend-loc__slider__slide__text__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam.</p>
-								</div>
-								<img src="<?php echo get_template_directory_uri();?>/images/trending-locations-slide-image.jpg" alt=""/>
-							</div>
-						</li>
+						<?php endwhile;?>
+						<?php wp_reset_postdata(); ?>
+
 					</ul>
 				</div>
 			</section><!-- #Trending locations -->
@@ -201,12 +196,12 @@ get_header(); ?>
 					<h3 class="latest-news__title">Latest news</h3>
 				</hgroup>
 
-				<?php $purple_jobs = new WP_Query(array( 'posts_per_page' => 3,)); ?>
+				<?php $latest_news = new WP_Query(array( 'posts_per_page' => 3,)); ?>
 
 				<div class="main-wrapper">
 					<ul class="latest-news__items">
 
-						<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+						<?php while($latest_news->have_posts() ) : $latest_news->the_post();?>
 
 						<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
 							<div class="news-cell__image">
@@ -250,7 +245,7 @@ get_header(); ?>
 				<div class="main-wrapper">
 					<ul class="hjb__jobs">
 
-					<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job')); ?>
+					<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 6, 'orderby' => 'rand')); ?>
 						<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
 
 						<article class="hjb__jobs__cell">
@@ -260,6 +255,7 @@ get_header(); ?>
 						</article>
 
 					<?php endwhile;?>
+					<?php wp_reset_postdata(); ?>
 
 					</ul>
 				</div>

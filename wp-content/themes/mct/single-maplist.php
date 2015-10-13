@@ -18,7 +18,7 @@ get_header(); ?>
 
 					<header class="header">
 						<div class="bg-img">
-							<img src="assets/images/trending-locations-slide-image.jpg" alt=""/>
+							<?php the_post_thumbnail('desktop-largest');?>
 						</div>
 					</header>
 

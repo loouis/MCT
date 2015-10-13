@@ -390,8 +390,8 @@ class MapListProKO {
     public static $imageHeight = 50;
 
     //The image on the location detail page
-    public static $featuredImageWidth = 100;
-    public static $featuredImageHeight = 100;
+    public static $featuredImageWidth = 640;
+    public static $featuredImageHeight = 500;
 
     //The icon on the list items
     public static $iconImageWidth = 25;
@@ -1697,8 +1697,8 @@ class MapListProKO {
                 "initiallyselectedcategories" => '',//An array of categories that start as selected
                 "infowidth" => 70,//%
                 "infoheight" => 50,//%
-                "imageheight" => "100",
-                "imagewidth" => "100",
+                "imageheight" => "500",
+                "imagewidth" => "640",
                 "keepzoomlevel" => false,
                 "locationsperpage" => "3",
                 "locationstoshow" => "",
