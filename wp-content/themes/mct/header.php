@@ -39,14 +39,36 @@
 		<nav class="site-nav__all-site-links">
 			<div class="site-nav__cat">
 				<div class="site-nav__cat__nav">
-					<div class="site-nav__cat__nav__links site-nav__cat__nav__links--left"><a href="http://" class="site-nav__cat__nav__links__link">Restaurants</a><a href="http://" class="site-nav__cat__nav__links__link">Bars</a><a href="http://" class="site-nav__cat__nav__links__link">Night clubs</a></div>
-					<div class="site-nav__cat__nav__links site-nav__cat__nav__links--right"><a href="http://" class="site-nav__cat__nav__links__link">Cafes</a><a href="http://" class="site-nav__cat__nav__links__link">Entertainment</a><a href="http://" class="site-nav__cat__nav__links__link">Hotels</a></div>
+					<?php wp_nav_menu( 
+						array( 
+							'theme_location' => 'locations', 
+							'menu_class' => 'site-nav__cat__nav__links__link' ) 
+						); 
+					?>	
 				</div>
 			</div>
-			<div class="site-nav__main-site-links"><a href="./" class="site-nav__main-site-links__link">Home</a><a href="http://www.purple-consultancy.com/jobs/" class="site-nav__main-site-links__link">Jobs</a><a href="./news-all.html" class="site-nav__main-site-links__link">Blog</a><a href="./about-us.html" class="site-nav__main-site-links__link">About us</a><a href="http://" class="site-nav__main-site-links__link">Contact</a></div>
+			<div class="site-nav__main-site-links">
+				<?php wp_nav_menu( 
+					array( 
+						'theme_location' => 'primary', 
+						'menu_id' => 'primary-menu',
+						'menu_class' => 'site-nav__main-site-links__link' ) 
+					); 
+				?>
+			</div>
 		</nav>
 
-		<ul class="social-icons"><a href="http://" target="_blank" class="social-icons__icon"><img src="assets/images/social-icons--twitter.png" alt=""/></a><a href="http://" target="_blank" class="social-icons__icon"><img src="assets/images/social-icons--facebook.png" alt=""/></a><a href="http://" target="_blank" class="social-icons__icon"><img src="assets/images/social-icons--instagram.png" alt=""/></a></ul>
+		<ul class="social-icons">
+			<a href="http://" target="_blank" class="social-icons__icon">
+				<img src="assets/images/social-icons--twitter.png" alt=""/>
+			</a>
+			<a href="http://" target="_blank" class="social-icons__icon">
+				<img src="assets/images/social-icons--facebook.png" alt=""/>
+			</a>
+			<a href="http://" target="_blank" class="social-icons__icon">
+				<img src="assets/images/social-icons--instagram.png" alt=""/>
+			</a>
+		</ul>
 	</div>
 
 	<div id="content" class="site-content">

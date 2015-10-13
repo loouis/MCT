@@ -69,7 +69,8 @@ get_header(); ?>
 						            	'post_type' => 'purple_job', 
 						            	'posts_per_page' => 1,
 						            	'orderby' => 'rand')); ?>
-										<?php  while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+
+										<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
 											<article class="hjb__jobs__cell">
 												<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
 												<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
@@ -82,7 +83,7 @@ get_header(); ?>
 						       <?php }
 
 						        echo $content[$i] . "</p>";
-						    }?>
+						    } wp_reset_postdata();?>
 					</div>
 				</article>
 
