@@ -51,6 +51,7 @@ get_header(); ?>
 			    	<?php echo do_shortcode("[ssba]"); ?>
 			    </aside>
 
+				<?php echo do_shortcode("[wp-review]");?>
 				<!-- The content -->
 				<article class="news-single-post__content">
 					<div class="main-wrapper">

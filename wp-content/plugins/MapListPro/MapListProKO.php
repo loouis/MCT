@@ -572,8 +572,8 @@ class MapListProKO {
             'hierarchical' => false,
             'rewrite' => array('slug' =>  __('location','maplistpro')),
             'menu_icon' => MAP_LIST_KO_PLUGIN_URL . 'images/mappin.png',
-            'supports' => $boxesToShow //Boxes to show in the panel
-
+            'supports' => $boxesToShow, //Boxes to show in the panel
+            'taxonomies' => array('post_tag'),
         );
 
         register_post_type('maplist' , $args );
@@ -618,23 +618,23 @@ class MapListProKO {
         // Add this code to your functions.php file to add a new category attached to map locations
         // Then add usealltaxonomies="true" to your shortcode to make them display in the front end
 
-        // $categoryargsFood = array(
-        //     'labels' => array(
-        //         'label' => __( 'Food type' ),
-        //         'rewrite' => array( 'slug' => 'food' ),
-        //         'hierarchical' => true,
-        //         ),
-        //     'label' => "Food type",
-        //     'public' => true,
-        //     'show_in_nav_menus' => false,
-        //     'show_ui' => true,
-        //     'show_tagcloud' => false,
-        //     'hierarchical' => true,
-        //     'rewrite' => true,
-        //     'query_var' => true
-        // );
+        $categoryargsArea = array(
+            'labels' => array(
+                'label' => __( 'Location area' ),
+                'rewrite' => array( 'slug' => 'area' ),
+                'hierarchical' => true,
+                ),
+            'label' => "Location area",
+            'public' => true,
+            'show_in_nav_menus' => false,
+            'show_ui' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => true,
+            'rewrite' => true,
+            'query_var' => true
+        );
 
-        // register_taxonomy( 'map_location_categories_food', $this->postTypesToUse, $categoryargsFood );
+        register_taxonomy( 'map_location_categories_food', $this->postTypesToUse, $categoryargsArea );
 
         //See if we've flushed permalinks, if not flush them
         if(!get_option('maplist_permalinksflushed' . self::$version)){

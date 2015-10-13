@@ -26,6 +26,7 @@ get_header(); ?>
 					<p class="location-single__cat">Drinks / Food / Music</p>
 					<h1 class="location-single__location-name"><?php the_title(); ?></h1>
 					<h2 class="location-single__subhead-call-out"></h2>
+					<?php echo do_shortcode("[wp-review]");?>
 
 					<div data-info="SCROLL TO READ" class="trigger">
 						<img src="assets/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
@@ -40,6 +41,7 @@ get_header(); ?>
 							<div class="location-single-meta__address__title">location</div>
 							<address class="location-single-meta__address__address"></address><a href="tel:<?php the_field('location_single_telephone_number')?>" target="_blank" class="location-single-meta__address__telephone"><?php the_field('location_single_telephone_number')?></a>
 						</article>
+
 	              
 						<article class="location-single-meta__nearest-tube">
 							<div class="location-single-meta__nearest-tube__icon">

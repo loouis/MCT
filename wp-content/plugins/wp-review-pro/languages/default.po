@@ -1,0 +1,378 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Review Pro Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-07 14:52+0100\n"
+"PO-Revision-Date: 2015-10-07 14:52+0100\n"
+"Last-Translator: MyThemeShop <support-team@mythemeshop.com>\n"
+"Language-Team: MyThemeShop\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/metaboxes.php:30
+msgid "Review"
+msgstr ""
+
+#: ../admin/metaboxes.php:39
+msgid "Review Item"
+msgstr ""
+
+#: ../admin/metaboxes.php:48 ../admin/metaboxes.php:336
+msgid "Review Heading"
+msgstr ""
+
+#: ../admin/metaboxes.php:57
+msgid "Review Description"
+msgstr ""
+
+#: ../admin/metaboxes.php:66
+msgid "User Reviews"
+msgstr ""
+
+#: ../admin/metaboxes.php:90 ../admin/options.php:31
+#: ../includes/widget.php:77
+msgid "Star"
+msgstr ""
+
+#: ../admin/metaboxes.php:90 ../admin/options.php:31
+#: ../includes/widget.php:78
+msgid "Point"
+msgstr ""
+
+#: ../admin/metaboxes.php:90 ../admin/options.php:31
+#: ../includes/widget.php:79
+msgid "Percentage"
+msgstr ""
+
+#: ../admin/metaboxes.php:90 ../admin/options.php:31
+msgid "Circle"
+msgstr ""
+
+#: ../admin/metaboxes.php:94
+msgid "Review Type"
+msgstr ""
+
+#: ../admin/metaboxes.php:96
+msgid "No Review"
+msgstr ""
+
+#: ../admin/metaboxes.php:181
+msgid "Feature Name"
+msgstr ""
+
+#: ../admin/metaboxes.php:182
+msgid "Star (1-5)"
+msgstr ""
+
+#: ../admin/metaboxes.php:199 ../admin/metaboxes.php:209
+#: ../admin/metaboxes.php:218 ../admin/options.php:222
+#: ../admin/options.php:230
+msgid "Delete"
+msgstr ""
+
+#: ../admin/metaboxes.php:227
+msgid "Add another"
+msgstr ""
+
+#: ../admin/metaboxes.php:231
+msgid "Total"
+msgstr ""
+
+#: ../admin/metaboxes.php:236
+msgid "Custom Location"
+msgstr ""
+
+#: ../admin/metaboxes.php:242 ../admin/options.php:133
+msgid "Review Location"
+msgstr ""
+
+#: ../admin/metaboxes.php:244 ../admin/options.php:135
+msgid "After Content"
+msgstr ""
+
+#: ../admin/metaboxes.php:245 ../admin/options.php:136
+msgid "Before Content"
+msgstr ""
+
+#: ../admin/metaboxes.php:246 ../admin/options.php:137
+msgid "Custom (use shortcode)"
+msgstr ""
+
+#: ../admin/metaboxes.php:252
+msgid "Copy &amp; paste this shortcode in the content."
+msgstr ""
+
+#: ../admin/metaboxes.php:256
+msgid "Custom Colors"
+msgstr ""
+
+#: ../admin/metaboxes.php:263 ../admin/options.php:151
+msgid "Review Color"
+msgstr ""
+
+#: ../admin/metaboxes.php:268 ../admin/options.php:156
+msgid "Font Color"
+msgstr ""
+
+#: ../admin/metaboxes.php:273 ../admin/options.php:161
+msgid "Heading Background Color"
+msgstr ""
+
+#: ../admin/metaboxes.php:278 ../admin/options.php:166
+msgid "Background Color"
+msgstr ""
+
+#: ../admin/metaboxes.php:283 ../admin/options.php:171
+msgid "Border Color"
+msgstr ""
+
+#: ../admin/metaboxes.php:288
+msgid "Custom Width"
+msgstr ""
+
+#: ../admin/metaboxes.php:295 ../admin/options.php:178
+msgid "Review Box Width"
+msgstr ""
+
+#: ../admin/metaboxes.php:299 ../admin/options.php:182
+msgid "Align Left"
+msgstr ""
+
+#: ../admin/metaboxes.php:303 ../admin/options.php:186
+msgid "Align Right"
+msgstr ""
+
+#: ../admin/metaboxes.php:310
+msgid "Custom Author"
+msgstr ""
+
+#: ../admin/metaboxes.php:316
+msgid "Review Author"
+msgstr ""
+
+#: ../admin/metaboxes.php:351 ../includes/functions.php:61
+msgid "Summary"
+msgstr ""
+
+#: ../admin/metaboxes.php:374
+msgid "Hide Description &amp; Total Rating"
+msgstr ""
+
+#: ../admin/metaboxes.php:396
+msgid "Disabled"
+msgstr ""
+
+#: ../admin/metaboxes.php:400
+msgid "Enabled"
+msgstr ""
+
+#: ../admin/metaboxes.php:409
+msgid "Reviews Through Comments"
+msgstr ""
+
+#: ../admin/options.php:62
+msgid "WP Review Settings"
+msgstr ""
+
+#: ../admin/options.php:120
+msgid ""
+"There is a filter set for the review location that may modify the options "
+"below."
+msgstr ""
+
+#: ../admin/options.php:125
+msgid "The current theme provides default settings for the plugin."
+msgstr ""
+
+#: ../admin/options.php:127
+msgid "Set to theme defaults"
+msgstr ""
+
+#: ../admin/options.php:144
+msgid "Copy &amp; paste this shortcode in the post content."
+msgstr ""
+
+#: ../admin/options.php:147
+msgid ""
+"There is a filter set for the review colors that may modify the options "
+"below."
+msgstr ""
+
+#: ../admin/options.php:198
+msgid "Default features are set by a filter function. Remove it to change."
+msgstr ""
+
+#: ../admin/options.php:198
+msgid "Default features"
+msgstr ""
+
+#: ../admin/options.php:239
+msgid "Add default feature"
+msgstr ""
+
+#: ../admin/options.php:246
+msgid "Add total rating to thumbnails"
+msgstr ""
+
+#: ../admin/options.php:253
+msgid "Registered image sizes: "
+msgstr ""
+
+#: ../admin/options.php:262
+msgid "Save Changes"
+msgstr ""
+
+#: ../admin/options.php:273
+msgid "Settings"
+msgstr ""
+
+#: ../filter-list.php:34
+msgid "Enable Reviews"
+msgstr ""
+
+#: ../filter-list.php:41
+msgid "Audio"
+msgstr ""
+
+#: ../filter-list.php:41
+msgid "Visual"
+msgstr ""
+
+#: ../filter-list.php:41
+msgid "UX"
+msgstr ""
+
+#: ../filter-list.php:41
+msgid "Price"
+msgstr ""
+
+#: ../includes/comments.php:36 ../includes/comments.php:74
+msgid "Rating"
+msgstr ""
+
+#: ../includes/comments.php:65 ../includes/comments.php:187
+msgid "WP Review Rating"
+msgstr ""
+
+#: ../includes/functions.php:264
+msgid "Click on the stars to rate!"
+msgstr ""
+
+#: ../includes/functions.php:284
+msgid "User Rating"
+msgstr ""
+
+#: ../includes/functions.php:285
+msgid "votes"
+msgstr ""
+
+#: ../includes/functions.php:292
+msgid "Sending"
+msgstr ""
+
+#: ../includes/functions.php:412
+msgid "10"
+msgstr ""
+
+#: ../includes/widget.php:13
+msgid "Display Reviews in tabbed format."
+msgstr ""
+
+#: ../includes/widget.php:15
+msgid "WP Review Widget"
+msgstr ""
+
+#: ../includes/widget.php:36 ../includes/widget.php:54
+#: ../includes/widget.php:138 ../includes/widget.php:158
+msgid "Top Rated"
+msgstr ""
+
+#: ../includes/widget.php:36 ../includes/widget.php:58
+#: ../includes/widget.php:142 ../includes/widget.php:162
+msgid "Recent"
+msgstr ""
+
+#: ../includes/widget.php:36 ../includes/widget.php:62
+#: ../includes/widget.php:146 ../includes/widget.php:166
+msgid "Most Voted"
+msgstr ""
+
+#: ../includes/widget.php:36
+msgid "Editor's choice"
+msgstr ""
+
+#: ../includes/widget.php:49
+msgid "Select Tabs"
+msgstr ""
+
+#: ../includes/widget.php:66 ../includes/widget.php:150
+#: ../includes/widget.php:170
+msgid "Custom"
+msgstr ""
+
+#: ../includes/widget.php:74
+msgid "Review type:"
+msgstr ""
+
+#: ../includes/widget.php:76
+msgid "Any"
+msgstr ""
+
+#: ../includes/widget.php:86
+msgid "Allow pagination"
+msgstr ""
+
+#: ../includes/widget.php:91
+msgid "Number of reviews to show:"
+msgstr ""
+
+#: ../includes/widget.php:98
+msgid "Title length (words):"
+msgstr ""
+
+#: ../includes/widget.php:107
+msgid "Thumbnail size:"
+msgstr ""
+
+#: ../includes/widget.php:109
+msgid "Small"
+msgstr ""
+
+#: ../includes/widget.php:110
+msgid "Large"
+msgstr ""
+
+#: ../includes/widget.php:117
+msgid "Show date"
+msgstr ""
+
+#: ../includes/widget.php:122
+msgid "Reviews on Custom tab:"
+msgstr ""
+
+#: ../includes/widget.php:132
+msgid "Tab Titles"
+msgstr ""
+
+#: ../includes/widget.php:132
+msgid "Tab Order"
+msgstr ""
+
+#: ../includes/widget.php:469
+msgid "&laquo; Previous"
+msgstr ""
+
+#: ../includes/widget.php:472
+msgid "Next &raquo;"
+msgstr ""
+
+#: ../wp-review.php:39
+msgid "Please deactivate WP Review plugin first to use the Premium features!"
+msgstr ""
