@@ -201,75 +201,29 @@ get_header(); ?>
 					<h3 class="latest-news__title">Latest news</h3>
 				</hgroup>
 
+				<?php $purple_jobs = new WP_Query(array( 'posts_per_page' => 3,)); ?>
+
 				<div class="main-wrapper">
 					<ul class="latest-news__items">
 
-						<a href="" class="latest-news__items__item news-cell">
+						<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+
+						<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
 							<div class="news-cell__image">
 								<article class="news-cell__text">
-									<p class="news-cell__text__news-type">Purple blog</p>
-									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
+									<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
 								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
-								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
+								<span class="news-cell__text__excerpt"><?php the_excerpt(); ?></span>
+								<?php the_post_thumbnail('retina-smallest');?>
 							</div>
 						</a>
 
-						<a href="" class="latest-news__items__item news-cell">
-							<div class="news-cell__image">
-								<article class="news-cell__text">
-									<p class="news-cell__text__news-type">Purple blog</p>
-									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
-								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
-								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
-							</div>
-						</a>
+						<?php endwhile; ?>
 
-						<a href="" class="latest-news__items__item news-cell">
-							<div class="news-cell__image">
-								<article class="news-cell__text">
-									<p class="news-cell__text__news-type">Purple blog</p>
-									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
-								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
-								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
-							</div>
-						</a>
-
-						<a href="" class="latest-news__items__item news-cell">
-							<div class="news-cell__image">
-								<article class="news-cell__text">
-									<p class="news-cell__text__news-type">Purple blog</p>
-									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
-								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
-								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
-							</div>
-						</a>
-
-						<a href="" class="latest-news__items__item news-cell">
-							<div class="news-cell__image">
-								<article class="news-cell__text">
-									<p class="news-cell__text__news-type">Purple blog</p>
-									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
-								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
-								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
-							</div>
-						</a>
-
-						<a href="" class="latest-news__items__item news-cell">
-							<div class="news-cell__image">
-								<article class="news-cell__text">
-									<p class="news-cell__text__news-type">Purple blog</p>
-									<h4 class="news-cell__text__news-title">5 STRATEGIES TO IMPROVE YOUR PERSONAL …</h4>
-								</article>
-								<p class="news-cell__text__excerpt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod pariatur amet aliquam odio quos optio ipsam iusto numquam corporis?</p>
-								<img src="<?php echo get_template_directory_uri();?>/images/blog-preview.png" alt=""/>
-							</div>
-						</a>
 					</ul>
+
+				<?php wp_reset_postdata(); ?>
+
 				</div>
 			</section><!-- #Latest news -->
 
