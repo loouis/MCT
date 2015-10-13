@@ -4,18 +4,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .location-single{
 
 	&__cat{
@@ -36,6 +24,12 @@
 		font-weight:700;
 		line-height:1.5em;
 		margin-bottom:$base*4;
+	}
+	
+	// Latest news background color
+	&__latest-news{
+		position:relative;
+		background-color:#EEEEEE;
 	}
 }
 

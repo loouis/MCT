@@ -1,0 +1,21 @@
+.related-locations{
+	position:relative;
+	@include clearfix;
+	background:white;
+
+	&__items{
+		&__item{
+			@include span(4 of 12);
+		}
+	}
+}
+
+.related-locations-cell{
+	&__image{
+
+	}
+
+	&__news-title{
+
+	}
+}

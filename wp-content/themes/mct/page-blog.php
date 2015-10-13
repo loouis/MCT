@@ -70,8 +70,6 @@ get_header(); ?>
 
 				<?php endif; ?>
 
-
-
 				<?php wp_reset_postdata(); ?>
 
 			</article>
