@@ -61,7 +61,7 @@ get_header(); ?>
 						<?php
 							$content = apply_filters('the_content', get_the_content());
 
-							$paragraphAfter = 2; 
+							$paragraphAfter = 3; 
     						$content = explode("</p>", $content);
 
     						for ($i = 0; $i < count($content); $i++) {
@@ -75,11 +75,25 @@ get_header(); ?>
 						            	'orderby' => 'rand')); ?>
 
 										<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
-											<article class="hjb__jobs__cell">
-												<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
-												<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
-												<p class="hjb__jobs__cell__desc"><?php the_content();?></p>
-											</article>
+											<section class="inline-jobs">
+
+												<p class="inline-jobs__title">Latest Purple job</p>
+												<a href="http://www.purple-consultancy.com" target="_blank" class="inline-jobs__purple-view-all-jobs-link">
+													<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
+												</a>
+												
+												<a href="<?php the_field('purple_jobs_direct_link');?>">
+													<article class="inline-jobs__cell">
+														<p class="inline-jobs__cell__money"><?php the_field('purple_jobs_money')?></p>
+														<h5 class="inline-jobs__cell__job-role"><?php the_title();?></h5>
+														<div class="inline-jobs__cell__desc"><?php the_content();?></div>
+														<a href="<?php the_field('purple_jobs_direct_link');?>" target="_blank" class="inline-jobs__cell__direct-link">
+															Read more
+														</a>
+													</article>
+												</a>
+
+											</section>
 
 										<?php endwhile;?>
 										<?php wp_reset_postdata();?>
