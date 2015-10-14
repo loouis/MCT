@@ -55,3 +55,9 @@ body, html{
 	@include container;
 }
 
+.site-main{
+  @include clearfix;
+  padding:0 0 0 65px;
+  // @extend .main-wrapper;
+}
+

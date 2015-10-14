@@ -45,6 +45,8 @@
 		bottom:$base*1;
 		z-index:1;
 		z-index: 30;
+		width:100%;
+		text-align:center;
 	
 		&__news-type{
 			color:$brandColor;
@@ -61,19 +63,14 @@
 			font-weight:900;
 			@extend %text-white;
 		}
-
-		&__excerpt{
-			position:absolute;
-			color: $secFontColor;
-			visibility: hidden;
-			opacity:0;
-			bottom:0;
-			color:white;
-			z-index: 30;
-			font-weight:700;
-		}
 	}
-	
+		
+	&__excerpt p{
+		padding: 2em 3em;
+		text-align: center;
+		height:380px;
+	}
+
 	// news-cell
 	@include breakpoint($m){
 
