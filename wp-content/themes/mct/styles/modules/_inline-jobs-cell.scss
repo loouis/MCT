@@ -2,8 +2,21 @@
 
 .inline-jobs{
 
+	margin: $base*8 0;
+
+	& > div{
+		@include clearfix;
+    	margin-bottom: $base*2;
+	}
+
+	&__latest-job-title{
+		float:left;
+	}
+
 	&__purple-view-all-jobs-link{
 		@extend .hjb__powered-by;
+		height:auto;
+		width:140px;
 	}
 
 	&__cell{
@@ -11,6 +24,11 @@
 		width:100%;
 		background:$lightestGrey;
 		padding:$base*4;
+		margin-bottom: $base*3;
+
+		.p2{
+			margin:0;
+		}
 
 		&__money{
 			color: #FF02AF;
@@ -47,6 +65,7 @@
 	@include breakpoint(700px){
 
 		&__cell{
+
 
 			&__money{
 			    top: 18px;

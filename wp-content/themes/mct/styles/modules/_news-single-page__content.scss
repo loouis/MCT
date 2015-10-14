@@ -5,9 +5,17 @@
 	.main-wrapper{
 		max-width:1040px;
 	}
+	.wrapper{
+		padding-left:110px;
+	}
 
 	&__content{
 		max-width:90%;
-		float:right;
+		margin-top:$base*12;
+
+		.p2{
+			font-size:18px;
+			margin-bottom: $base*4;
+		}
 	}
 }

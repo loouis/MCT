@@ -76,20 +76,19 @@ get_header(); ?>
 
 										<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
 											<section class="inline-jobs">
-
-												<p class="inline-jobs__title">Latest Purple job</p>
-												<a href="http://www.purple-consultancy.com" target="_blank" class="inline-jobs__purple-view-all-jobs-link">
-													<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
-												</a>
+												<div>
+													<p class="inline-jobs__latest-job-title">Latest Purple job</p>
+													<a href="http://www.purple-consultancy.com" target="_blank" class="inline-jobs__purple-view-all-jobs-link">
+														<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
+													</a>
+												</div>
 												
 												<a href="<?php the_field('purple_jobs_direct_link');?>">
 													<article class="inline-jobs__cell">
 														<p class="inline-jobs__cell__money"><?php the_field('purple_jobs_money')?></p>
 														<h5 class="inline-jobs__cell__job-role"><?php the_title();?></h5>
 														<div class="inline-jobs__cell__desc"><?php the_content();?></div>
-														<a href="<?php the_field('purple_jobs_direct_link');?>" target="_blank" class="inline-jobs__cell__direct-link">
-															Read more
-														</a>
+														<div class="inline-jobs__cell__direct-link">Read more</div>
 													</article>
 												</a>
 
