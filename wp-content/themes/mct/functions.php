@@ -124,12 +124,6 @@ add_action( 'widgets_init', 'mct_widgets_init' );
 
 
 
-
-
-
-
-
-
 /* Add Purple jobs to custom post type */
 function create_post_type() {
   register_post_type( 'purple_job',
@@ -165,6 +159,8 @@ function mct_scripts() {
 	wp_enqueue_script( 'mct-bxslider', get_template_directory_uri() . '/js/libs/bxslider.js', array(), '05112015', true );
 
 	wp_enqueue_script( 'mct-classie', get_template_directory_uri() . '/js/libs/classie.js', array(), '11112015', true );
+
+	wp_enqueue_script( 'mct-sticky-kit', get_template_directory_uri() . '/js/libs/sticky-kit.min.js', array(), '14112015', true );
 
 	wp_enqueue_script( 'mct-global', get_template_directory_uri() . '/js/global.js', array(), '05112015', true );
 

@@ -46,19 +46,22 @@ get_header(); ?>
 			      <p class="meta__date-posted"><?php the_date(); ?></p>
 			    </div>
 
-			    <!-- Social links -->
-			    <aside class="share-social-links">
-			    	<?php echo do_shortcode("[ssba]"); ?>
-			    </aside>
 
-				<?php echo do_shortcode("[wp-review]");?>
 				<!-- The content -->
 				<article class="news-single-post__content">
-					<div class="main-wrapper">
+
+					<!-- Social share -->
+				    <aside class="share-social-links">
+				    	<?php echo do_shortcode("[ssba]"); ?>
+				    </aside><!-- // Social share -->
+					
+					<div class="wrapper">
+
+						<!-- Pull Purple advert at random and place after second paragraph -->
 						<?php
 							$content = apply_filters('the_content', get_the_content());
 
-							$paragraphAfter = 2; //Enter number of paragraphs to display ad after.
+							$paragraphAfter = 2; 
     						$content = explode("</p>", $content);
 
     						for ($i = 0; $i < count($content); $i++) {

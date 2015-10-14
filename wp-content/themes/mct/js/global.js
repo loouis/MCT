@@ -17,8 +17,11 @@ $(document).ready(function(){
 	        $('#trend-loc > li').eq(1).addClass('active-slide');
 	    },
 	});
-	
 
+	// Sticky social links in single blog posts
+	$(".share-social-links").stick_in_parent();
+
+	// Hamburger menu
 	var $hamburger = $(".header-main__nav__hamburger-menu"),
 		$logo = $(".logo"),
 		$openNav = $(".logo, .header-main__nav__hamburger-menu"),
@@ -30,9 +33,6 @@ $(document).ready(function(){
 		$("body").toggleClass("body--is-fixed");
 		$mainHeader.toggleClass("header-main__nav--active");
 	});
-
-
-
 
 
 	$(window).on('resize scroll', function(){
