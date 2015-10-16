@@ -671,7 +671,7 @@ jQuery(document).ready(function ($) {
                     content: "",
                     disableAutoPan: false,
                     closeBoxMargin: "10px 2px 2px 2px",
-                    closeBoxURL: "https://www.google.com/intl/en_us/mapfiles/close.gif",
+                    // closeBoxURL: "https://www.google.com/intl/en_us/mapfiles/close.gif",
                     enableEventPropagation: false,
                     infoBoxClearance: new google.maps.Size(40, 40),
                     isHidden: false,
@@ -1243,9 +1243,15 @@ jQuery(document).ready(function ($) {
                         return "<h3><a href='" + createLocationUrl(location) + "'>" + location.title + "</a></h3>";
                     }
                     break;
-                case "thumbnail":
-                    return location.imageUrl ? "<img src='" + location.imageUrl + "' class='locationImage'/>" : "";
-                    //  break;
+
+/****  
+
+REMOVED IMAGE FROM MAP POP UP
+
+ ****/
+                // case "thumbnail":
+                //     // return location.imageUrl ? "<img src='" + location.imageUrl + "' class='locationImage'/>" : "";
+                //      break;
                 case "description":
                     return location.description;
                     //  break;

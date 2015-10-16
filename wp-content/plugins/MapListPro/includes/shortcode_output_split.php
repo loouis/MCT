@@ -90,37 +90,42 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
 
                     //SEARCH
                     //===================================================
-                    if($hidesearch != 'true'){
 
-                        $mlpoutputhtml .= "<form id='Map-List-Search' data-bind='submit:mapSearchSubmit' class='prettyMapListSearch $simplesearch'>";
 
-                            if($simplesearch == 'true'){
-                                //TEXT SEARCH
-                                $mlpoutputhtml .= "<label>" . __('Search locations','maplistpro'). "</label>";
-                                $mlpoutputhtml .= "<input type='text' class='prettySearchValue' data-bind='value: query, valueUpdate:" . '"keyup"' . "' autocomplete='off' value='$this->searchTextDefault'>";
-                            }
-                            else{
-                                if($simplesearch == 'combo'){
-                                    //COMBO SEARCH
-                                    $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchTextDefault' value=''>";
-                                    $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
-                                    $mlpoutputhtml .= "<input type='text' class='prettySearchLocationValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
-                                    $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:comboSearch'>" . __('Go','maplistpro'). "</a>";
-                                }
-                                else{
-                                    //LOCATION SEARCH
-                                    //TODO:Add default value in
-                                    $mlpoutputhtml .= "<label class='hidden'>" . __('Find locations near','maplistpro'). "</label>";
-                                    $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
-                                    $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
-                                    $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:locationSearch'>" . __('Go','maplistpro'). "</a>";
-                                }
+/*****
+HIDE SEARCH
+*******/
+                    // if($hidesearch != 'true'){
 
-                            }
+                    //     $mlpoutputhtml .= "<form id='Map-List-Search' data-bind='submit:mapSearchSubmit' class='prettyMapListSearch $simplesearch'>";
 
-                            $mlpoutputhtml .= "<a class='clearSearch btn corePrettyStyle' data-bind='visible: anySearchTermsEntered, click: clearSearch'>" . __('Clear','maplistpro'). "</a>";
-                        $mlpoutputhtml .= "</form>";//EOF .prettyMapListSearch
-                    }
+                    //         if($simplesearch == 'true'){
+                    //             //TEXT SEARCH
+                    //             $mlpoutputhtml .= "<label>" . __('Search locations','maplistpro'). "</label>";
+                    //             $mlpoutputhtml .= "<input type='text' class='prettySearchValue' data-bind='value: query, valueUpdate:" . '"keyup"' . "' autocomplete='off' value='$this->searchTextDefault'>";
+                    //         }
+                    //         else{
+                    //             if($simplesearch == 'combo'){
+                    //                 //COMBO SEARCH
+                    //                 $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchTextDefault' value=''>";
+                    //                 $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
+                    //                 $mlpoutputhtml .= "<input type='text' class='prettySearchLocationValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
+                    //                 $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:comboSearch'>" . __('Go','maplistpro'). "</a>";
+                    //             }
+                    //             else{
+                    //                 //LOCATION SEARCH
+                    //                 //TODO:Add default value in
+                    //                 $mlpoutputhtml .= "<label class='hidden'>" . __('Find locations near','maplistpro'). "</label>";
+                    //                 $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
+                    //                 $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
+                    //                 $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:locationSearch'>" . __('Go','maplistpro'). "</a>";
+                    //             }
+
+                    //         }
+
+                    //         $mlpoutputhtml .= "<a class='clearSearch btn corePrettyStyle' data-bind='visible: anySearchTermsEntered, click: clearSearch'>" . __('Clear','maplistpro'). "</a>";
+                    //     $mlpoutputhtml .= "</form>";//EOF .prettyMapListSearch
+                    // }
 
                     //CATEGORIES
                     //===================================================
@@ -141,7 +146,7 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                         if($hidefilter != 'true'){
                             if($categoriesaslist == "false"){
                                 $mlpoutputhtml .= '<div class="customCategoryList">';
-                                    $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel. "</a>";
+                                    $mlpoutputhtml .= "<a class='showFilterBtn  corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel. "</a>";
 
                                     $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: mapCategories}'>";
                                         $mlpoutputhtml .= "<li data-bind='css:slug'>";
@@ -244,6 +249,7 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                                         $mlpoutputhtml .= "<!-- ko if: " . '$data.imageUrl' . " -->";
                                             // $mlpoutputhtml .= "<a href='#' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">";
                                                 $mlpoutputhtml .= "<div class='map-pro-thumbnail-image'>";
+                                                    $mlpoutputhtml .= "<a href='#' class='viewLocationPage btn corePrettyStyle' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">" . __('VIEW','maplistpro'). "</a>";
                                                     $mlpoutputhtml .= "<img src='#' data-bind='attr:{src: " . '$data.imageUrl' . "}' class='featuredImage float_left' />";
                                                 $mlpoutputhtml .= "</div>";
                                             // $mlpoutputhtml .= "</a>";
@@ -251,16 +257,17 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                                         $mlpoutputhtml .= "<div class='description float_left'>";
 
                                             // Moved title under photo
-                                            $mlpoutputhtml .= "<span data-bind='html:" . '$data.title' . "'></span>";
-
-                                            $mlpoutputhtml .= "<span data-bind='text:" . '$data.friendlyDistance' . "'></span>";
-                                            $mlpoutputhtml .= "<div data-bind='{html:" . '$data.description' . "}'></div>";
-                                        $mlpoutputhtml .= "</div>";
-                                    $mlpoutputhtml .= "</div>";
+                                            $mlpoutputhtml .= "<div class='description__title'>";
+                                                $mlpoutputhtml .= "<span data-bind='html:" . '$data.title' . "'></span>";
+                                            $mlpoutputhtml .= "</div>";
+                                            // $mlpoutputhtml .= "<span data-bind='text:" . '$data.friendlyDistance' . "'></span>";
+                                            // $mlpoutputhtml .= "<div data-bind='{html:" . '$data.description' . "}'></div>";
+                                        // $mlpoutputhtml .= "</div>";
+                                    // $mlpoutputhtml .= "</div>";
 
                                     if($hideviewdetailbuttons != "true"){
                                         $mlpoutputhtml .= "<!-- ko if: " . '$data.locationUrl' . "-->";
-                                            $mlpoutputhtml .= "<a href='#' class='viewLocationPage btn corePrettyStyle' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">" . __('VIEW','maplistpro'). "</a>";
+                                            // $mlpoutputhtml .= "<a href='#' class='viewLocationPage btn corePrettyStyle' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">" . __('VIEW','maplistpro'). "</a>";
                                         $mlpoutputhtml .= "<!-- /ko -->";
                                     }
 

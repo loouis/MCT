@@ -77,7 +77,8 @@
 /*Pop up windows*/
 .prettyMapList .mapHolder .infoWindow
 {
-    font-size:14px;
+    font-size:15px;
+    padding: 0 40px;
 }
 
 /*CUSTOM columns*/
@@ -94,6 +95,9 @@
     border-radius:5px;
     border:none;
     position:relative;
+}
+.infoWindowContainer > img{
+    display:none;
 }
 
 .infoWindowContainer.infobox{border:solid 1px #999;}
@@ -156,6 +160,14 @@ body .infoWindowContainer .infoWindow h3{
     line-height:1.2em;
     margin:0 !important;
     padding:7px;
+    padding-top:30px;
+    text-align:center;
+    width:100% !important;
+}
+
+.infowindowContent > p{
+    width:100%;
+    text-align:center;
 }
 
 .infoWindowContainer .locationImage{
@@ -180,9 +192,11 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 .prettyMapList .mapHolder img,
 #SingleMapLocation img{
     box-shadow: none;
-    width:20px;
+    /*width:20px;*/
     max-width:none !important;
 }
+
+
 
 .prettyMapList .mapLocationDetail{
     padding:10px 0;
@@ -401,7 +415,7 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 }
 .prettyMapList{
     background:#EFEFEF;
-    height:100vh;
+    /*height:100vh;*/
 }
 
 /*Set icons*/
@@ -802,14 +816,21 @@ body .prettyMapList .prettyFileBar .combo .prettySearchValue{width:100px;}
 }
 
 
-.prettyMapList .viewLocationPage{margin-top:10px;}
+.prettyMapList .viewLocationPage{
+    margin-top:10px;
+    width: 100% !important;
+    text-align: center;
+    margin: 0 !important;
+    padding: 20px 0;
+}
 
 
 .prettyMapList .corePrettyStyle a{
     position: absolute;
-    top: 32%;
+    top: 46%;
     left: 15%;
     width:auto !important;
+    z-index:20;
 
 }
 

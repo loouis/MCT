@@ -1008,11 +1008,11 @@ class MapListProKO {
                         'desc' => __('This should be in decimal format (e.g. -0.087720)','maplistpro'),
                         'id' => $prefix . 'longitude',
                         'type' => 'text'),
-                        // array(
-                        // 'name' => __('Short description','maplistpro'),
-                        // 'desc' => __('This appears on the expanded items in the list','maplistpro'),
-                        // 'id' => $prefix . 'description',
-                        // 'type' => 'wysiwyg'),
+                        array(
+                        'name' => __('Short description','maplistpro'),
+                        'desc' => __('This appears on the expanded items in the list','maplistpro'),
+                        'id' => $prefix . 'description',
+                        'type' => 'textarea_small'),
                         array(
                         'name' => __('Address','maplistpro'),
                         'desc' => __('Enter address','maplistpro'),
@@ -2257,7 +2257,7 @@ class MapListProKO {
             'noFilesFoundMessage' => __('No locations found.','maplistpro'),
             'noGeoSupported' => __('Geolocation is not supported by this browser.','maplistpro'),
             'printDirectionsMessage' => __('Print directions','maplistpro'),
-            'viewLocationDetail' => __('View location','maplistpro')
+            'viewLocationDetail' => __('VIEW','maplistpro')
         );
 
 

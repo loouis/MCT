@@ -157,7 +157,7 @@ jQuery(document).ready(function($){
               content: "",
               disableAutoPan: false,
               closeBoxMargin: "10px 2px 2px 2px",
-              closeBoxURL: "https://www.google.com/intl/en_us/mapfiles/close.gif",
+              // closeBoxURL: "https://www.google.com/intl/en_us/mapfiles/close.gif",
               enableEventPropagation: false,
               infoBoxClearance: new google.maps.Size(40, 40),
               isHidden: false,
@@ -193,9 +193,9 @@ jQuery(document).ready(function($){
         self.content = "<div class='infoWindow'>";
             self.content += "<h3>" + location.title + "</h3>";
             self.content += '<div class="infowindowContent">';
-                if(location.imageUrl){
-                    self.content += "<img src='" + location.imageUrl + "' class='locationImage'/>";
-                }
+                // if(location.imageUrl){
+                //     self.content += "<img src='" + location.imageUrl + "' class='locationImage'/>";
+                // }
                 self.content += "<p>" + location.description + "</p>";
             self.content += "</div>";
         self.content += "</div>";
