@@ -52,10 +52,14 @@
 }
 .description{
     text-align: center;
+    padding-bottom: 40px;
 }
 
 .description span{
     font-family:"brandon-grotesque",sans-serif;
+    font-size: 20px;
+    font-weight:900;
+    text-transform:uppercase;
 }
 
 /*MAIN*/
@@ -349,14 +353,13 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 
 .prettyMapList .prettylink:after
 {
-	content:"";
-	display:block;
-	height:20px;
-	left:10px;
-	margin-right:2px;
-	position:absolute;
-	top:11px;
-	width:20px;
+	content: "MAP";
+    display: block;
+    right: 15%;
+    position: absolute;
+    top: 34.5%;
+    z-index: 20;
+    border-radius: 50%;
 }
 
 .prettyMapList .prettylink:hover{}
@@ -379,7 +382,7 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 
 .prettyMapList .corePrettyStyle{
     background:red;
-    height:350px;
+    /*height:350px;*/
 }
 
 /*Address in list item*/
@@ -398,16 +401,33 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 }
 .prettyMapList{
     background:#EFEFEF;
+    height:100vh;
 }
 
 /*Set icons*/
-.prettyMapList .map:after{background:transparent url(../images/icons/silk_icons/map.png) no-repeat 0 0;}
+/*.prettyMapList .map:after{background:transparent url(../images/icons/silk_icons/map.png) no-repeat 0 0;}*/
 
 /*Use featured image*/
 .prettyMapList .featuredImage{
+    position:relative;
     display:block;
     float:left;
-    margin-right:10px;
+}
+
+.prettyMapList .map-pro-thumbnail-image:after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:1;
+    background:rgba(0,0,0,.4);
+}
+.map-pro-thumbnail-image{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 28px;
 }
 
 
@@ -783,6 +803,24 @@ body .prettyMapList .prettyFileBar .combo .prettySearchValue{width:100px;}
 
 
 .prettyMapList .viewLocationPage{margin-top:10px;}
+
+
+.prettyMapList .corePrettyStyle a{
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    width:auto !important;
+
+}
+
+.prettyMapList .corePrettyStyle a, .prettyMapList .prettylink:after{
+    font-family:"brandon-grotesque", sans-serif;
+    font-weight:900;
+    font-size:28px;
+    color:white;
+    background:none !important;
+
+}
 
 /*Fixes for common template issues
 Feel free to remove or tweak these if you run into issues

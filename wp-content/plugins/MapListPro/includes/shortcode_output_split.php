@@ -243,7 +243,9 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                                     $mlpoutputhtml .= "<div class='mapDescription clearfix'>";
                                         $mlpoutputhtml .= "<!-- ko if: " . '$data.imageUrl' . " -->";
                                             // $mlpoutputhtml .= "<a href='#' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">";
-                                                $mlpoutputhtml .= "<img src='#' data-bind='attr:{src: " . '$data.imageUrl' . "}' class='featuredImage float_left' />";
+                                                $mlpoutputhtml .= "<div class='map-pro-thumbnail-image'>";
+                                                    $mlpoutputhtml .= "<img src='#' data-bind='attr:{src: " . '$data.imageUrl' . "}' class='featuredImage float_left' />";
+                                                $mlpoutputhtml .= "</div>";
                                             // $mlpoutputhtml .= "</a>";
                                         $mlpoutputhtml .= "<!-- /ko -->";
                                         $mlpoutputhtml .= "<div class='description float_left'>";
@@ -258,7 +260,7 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
 
                                     if($hideviewdetailbuttons != "true"){
                                         $mlpoutputhtml .= "<!-- ko if: " . '$data.locationUrl' . "-->";
-                                            $mlpoutputhtml .= "<a href='#' class='viewLocationPage btn corePrettyStyle' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">" . __('View location detail','maplistpro'). "</a>";
+                                            $mlpoutputhtml .= "<a href='#' class='viewLocationPage btn corePrettyStyle' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">" . __('VIEW','maplistpro'). "</a>";
                                         $mlpoutputhtml .= "<!-- /ko -->";
                                     }
 
