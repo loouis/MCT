@@ -121,11 +121,108 @@ function mct_widgets_init() {
 }
 add_action( 'widgets_init', 'mct_widgets_init' );
 
-
+/* Excerpt update */
 function custom_excerpt_length( $length ) {
 return 5;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+/* WYSIWYG editor chages */
+
+/* Custom stylesheet */
+function my_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'my_theme_add_editor_styles' );
+
+
+/* Custom Text colours */
+function my_mce4_options($init) {
+  $default_colours = '"565656", "Dark title text",
+  					  "EFEFEF", "Light grey",
+                      "FF02AF", "Brand Colour"
+                      ';
+
+  // build colour grid default+custom colors
+  $init['textcolor_map'] = '['.$default_colours.','.$custom_colours.']';
+
+  // enable 6th row for custom colours in grid
+  $init['textcolor_rows'] = 6;
+
+  return $init;
+}
+add_filter('tiny_mce_before_init', 'my_mce4_options');
+
+/*
+ * Modify TinyMCE editor to remove H1.
+ */
+function tiny_mce_remove_unused_formats($init) {
+	// Add block format elements you want to show in dropdown
+	$init['block_formats'] = 'Paragraph=p;  Large opening text=h2; Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Address=address;Pre=pre';
+	return $init;
+}
+
+add_filter('tiny_mce_before_init', 'tiny_mce_remove_unused_formats' );
+
+
+
+function wpb_mce_buttons_2($buttons) {
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+/*
+* Callback function to filter the MCE settings
+*/
+
+function my_mce_before_init_insert_formats( $init_array ) {  
+
+// Define the style_formats array
+
+	$style_formats = array(  
+		// Each array child is a format with it's own settings
+		array(  
+			'title' => 'Content Block',  
+			'block' => 'span',  
+			'classes' => 'content-block',
+			'wrapper' => true,
+			
+		),  
+		array(  
+			'title' => 'Blue Button',  
+			'block' => 'span',  
+			'classes' => 'blue-button',
+			'wrapper' => true,
+		),
+		array(  
+			'title' => 'Red Button',  
+			'block' => 'span',  
+			'classes' => 'red-button',
+			'wrapper' => true,
+		),
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+
+
+
+/** set default settings of attachment media box */
+function attachment_default_settings() {
+  update_option('image_default_align', 'left' );
+  update_option('image_default_link_type', 'custom' );
+  update_option('image_default_size', 'large' );
+}
+add_action('after_setup_theme', 'attachment_default_settings');
+
+
 
 
 /* Add Purple jobs to custom post type */

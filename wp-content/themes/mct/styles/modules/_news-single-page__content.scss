@@ -11,7 +11,40 @@
 
 	&__content{
 		max-width:90%;
-		margin-top:$base*12;
+		margin-top:$base*8;
+
+		strong{
+			font-weight:700;
+			padding-bottom:$base*2;
+			display: block;
+			font-size:em(18px);
+		}
+
+		h2{
+			font-size: 1.8em;
+			line-height: 43px;
+			font-weight: 700;
+			margin-bottom: 50px;
+		}
+
+
+		img.alignright{
+			position:relative;
+		    margin: 30px 0;
+		    margin-right: -190px;
+		    margin-left: 40px;
+		    float: right;
+		    width: 430px;
+		    height: 320px;
+		}
+
+		img.alignnone, img.aligncenter{
+			width:140%;
+			margin:40px 0;
+			left:-20%;
+			position:relative;
+
+		}
 
 		.p2{
 			font-size:18px;

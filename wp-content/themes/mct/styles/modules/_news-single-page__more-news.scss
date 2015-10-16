@@ -1,15 +1,21 @@
-.news-single__more-news{
 
+.news-single{
 
-	.main-wrapper{
-		border-top:1px solid darken($lightestGrey, 10%);
-	}
+	&__more-news{
+		margin-top:$base*10;
+		background: #F4F4F4;
 
-	&__title{
-		margin-bottom: $base*4;
-	}
+		&__wrap{
+			padding: $base*10 0 0 0;
+		}
 
-	&__items{
-		@extend .latest-news;
+		&__title{
+			margin-bottom: $base*4;
+			text-align:center;
+		}
+
+		&__items{
+			@include clearfix;
+		}
 	}
 }
