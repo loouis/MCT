@@ -40,7 +40,7 @@
 
 
 // Latest news
-@import "modules/_latest-news__3cell";
+// @import "modules/_latest-news__3cell";
 
 	// News-cell atom
 	@import "modules/_news-cell";
@@ -71,6 +71,12 @@
 // News all - post results
 @import "modules/_news-all-page__results";
 
+// News all - inline Purple advert
+@import "modules/_all-blog-inline-purple-ad";
+
+// Latest news
+@import "modules/_latest-news__page";
+
 
 
 
@@ -90,6 +96,7 @@
 
 // News - inline jobs cell
 @import "modules/_inline-jobs-cell";
+
 
 
 

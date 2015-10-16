@@ -122,6 +122,10 @@ function mct_widgets_init() {
 add_action( 'widgets_init', 'mct_widgets_init' );
 
 
+function custom_excerpt_length( $length ) {
+return 5;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 /* Add Purple jobs to custom post type */

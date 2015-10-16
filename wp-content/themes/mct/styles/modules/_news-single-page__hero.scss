@@ -4,6 +4,7 @@
 	width:100%;
 	background-color:$lightestGrey;
 	@extend %cover;
+	overflow:hidden;
 	
 	@include breakpoint($m){
 		height:600px;

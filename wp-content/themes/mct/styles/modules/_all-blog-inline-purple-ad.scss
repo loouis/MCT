@@ -1,0 +1,48 @@
+.all-blog-inline-purple-ad{
+	position:relative;
+	float: left;
+	width:100%;
+	background:red;
+
+	&:after{
+		content:"";
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		height:100%;
+		width:100%;
+		background:rgba(0,0,0,.4);
+		z-index:2;
+	}
+
+	&__text{
+		@include vertical-align;
+		position:absolute;
+		padding:0 20px;
+		text-align: center;
+		color:white;
+		z-index: 3;
+
+		&__news-title, &__excerpt{
+			color:white;
+		}
+
+		&__news-title{
+			font-size:em(30px);
+			font-weight:900;
+		}
+		&__excerpt{
+
+		}
+	}
+
+	@include breakpoint(700px){
+		width:50%;
+		margin-bottom:5em;
+	}
+
+	@include breakpoint(1100px){
+		width:33.333%;
+	}
+}

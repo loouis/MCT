@@ -2,14 +2,6 @@
 	width: 100%;
 	float:left;
 
-	@include breakpoint(700px){
-		width:50%;
-	}
-
-	@include breakpoint(1100px){
-		width:33.333%;
-	}
-
 	&__image{
 		position:relative;
 		width:100%;
@@ -25,19 +17,6 @@
 			z-index:0;
 		}
 	}
-
-	// @include breakpoint($m){
-
-	// 	&__text{
-	// 		padding:0 $base*6;
-	// 		bottom:$base*3;
-	// 	}
-
-	// 	&:hover .news-cell__text__excerpt{
-	// 		visibility: visible;
-	// 		opacity:1;
-	// 	}
-	// }
 
 	&__text{
 		position:absolute;
@@ -68,27 +47,47 @@
 	&__excerpt p{
 		padding: 2em 3em;
 		text-align: center;
-		height:380px;
+		margin-bottom:2em;
 	}
 
 	// news-cell
-	@include breakpoint($m){
+	// @include breakpoint($m){
 
-		&:hover .news-cell__image:after{
-			background: rgba(0,0,0,0.7);
-		}
+	// 	&:hover .news-cell__image:after{
+	// 		background: rgba(0,0,0,0.7);
+	// 	}
 
 		
-		&:hover .news-cell__text__news-title, 
-		&:hover .news-cell__text__news-type{
-			opacity:0;
-		}
+	// 	&:hover .news-cell__text__news-title, 
+	// 	&:hover .news-cell__text__news-type{
+	// 		opacity:0;
+	// 	}
 
-		// Animate excerpt
-		&:hover .news-cell__text__excerpt{
-			visibility: visible;
-			opacity:1;
-			padding:$base*3;
+	// 	// Animate excerpt
+	// 	&:hover .news-cell__text__excerpt{
+	// 		visibility: visible;
+	// 		opacity:1;
+	// 		padding:$base*3;
+	// 	}
+	// }
+
+	@include breakpoint(700px){
+		width:50%;
+
+		&__excerpt p{
+			padding: 2em 3em;
+			text-align: center;
+			height:280px;
+			margin-bottom:0;
+		}
+	}
+
+	@include breakpoint(1100px){
+		width:33.333%;
+
+		&__excerpt p{
+			padding: 2em 3em;
+			text-align: center;
 		}
 	}
 

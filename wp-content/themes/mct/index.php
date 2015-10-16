@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package mct
+ * @package _s
  */
 
 get_header(); ?>
@@ -17,43 +17,74 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php if ( have_posts() ) : ?>
+			<?php $blog_hero = new WP_Query( array( 'posts_per_page' => 4) );?>
+			<?php if($blog_hero->have_posts() ) : $blog_hero->the_post(); ?>
 
-				<section class="latest-news latest-news--results">
-	  				<div class="main-wrapper">
+				<section id="news-all-hero-slider" class="news-single-hero section-hero">
 
-	  					<h3 class="latest-news__title">Latest news</h3>
+					<?php while($blog_hero->have_posts()) : $blog_hero->the_post();?>
 
-						<?php if ( is_home() && ! is_front_page() ) : ?>
-							<header>
-								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-							</header>
-						<?php endif; ?>
+						<div class="news-single-hero__slide" <?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
+				        	if ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'desktop-largest' ) )
+				            	printf( ' style="background-image: url(%s);"', $image_src[0] );     
+				    		}?>>
+							<div class="main-wrapper">
+								<div class="news-single-hero__slide__text">
+									<!-- Category-->
+									<p class="news-single-hero__slide__text__news-cat">
+										<?php $category = get_the_category(); $firstCategory = $category[0]->cat_name; echo $firstCategory;?>
+									</p>
+									<!-- Title -->
+									<h3 class="news-single-hero__slide__text__title"><?php the_title();?></h3>
+								</div>
+							</div>
+						</div>
 
-						<ul class="latest-news__items">
+					<?php endwhile;?>
+				</section>
+			<?php endif;?>
 
-							<?php while ( have_posts() ) : the_post(); ?>
+			<?php wp_reset_query();?>
 
-	  						<a href="<?php the_permalink();?>" class="latest-news__items__item news-cell">
+			<div class="latest-news">
+
+				<?php if ( have_posts() ) : ?>
+
+					<h1 class="latest-news__title">More news…</h1>
+
+					<ul class="latest-news__items">
+		
+						<?php while( have_posts() ) : the_post();?>
+
+							<?php if ($count == 1) : ?> 
+								<a href="" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad">
+									<article class="all-blog-inline-purple-ad__text">
+										<h4 class="all-blog-inline-purple-ad__text__news-title">SEEKING WORK  IN LONDON?</h4>
+										<p class="all-blog-inline-purple-ad__text__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+									</article>
+									<img src="<?php echo get_template_directory_uri();?>/images/all-blog-inline-purple-ad-image.jpg" alt="">
+								</a>
+							<?php endif; $count++; ?>
+
+							<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
 								<div class="news-cell__image">
 									<article class="news-cell__text">
-										<p class="news-cell__text__news-type">Purple blog</p>
-										<h4 class="news-cell__text__news-title"><?php the_title();?></h4>
+										<!-- <p class="news-cell__text__news-type">Purple blog</p> -->
+										<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
 									</article>
-									<p class="news-cell__text__excerpt"> <?php the_content();?></p>
-									<img src="assets/images/blog-preview.png" alt=""/>
+									
+									<?php the_post_thumbnail('retina-smallest');?>
+
 								</div>
+								<span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
 							</a>
 
-							<?php endwhile; ?>
-							
-						</ul>
-
-	  				</div>
-	  			<section>
-
-	  		<?php else : ?>
-			<?php endif; ?>
+						<?php endwhile; ?>
+						
+					</ul>
+						
+				<?php endif; ?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

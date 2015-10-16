@@ -18,6 +18,12 @@ $(document).ready(function(){
 	    },
 	});
 
+	$('#news-all-hero-slider').bxSlider({
+	    mode: 'horizontal',
+	    auto: true,
+  		autoControls: true
+	});
+
 	// Sticky social links in single blog posts
 	$(".share-social-links").stick_in_parent();
 
