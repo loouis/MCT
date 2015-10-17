@@ -678,7 +678,7 @@ class MapListProKO {
         // "custom" : Any custom fields you add via the detail hook
         // "address" : The location address field
         // "directions" : Directions - only shows if enabled in settings;
-        $detailParts = array("content","map","address","custom","directions");
+        $detailParts = array("map","address","custom","directions");
 
         return apply_filters( 'mlp_detail_page_parts', $detailParts);
     }

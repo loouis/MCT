@@ -57,7 +57,8 @@ body, html{
 
 .site-main{
   @include clearfix;
-  padding:0 0 0 65px;
+  padding:0 0 0 0px;
+  overflow:hidden;
   // @extend .main-wrapper;
 }
 

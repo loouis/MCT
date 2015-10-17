@@ -18,6 +18,10 @@ get_header(); ?>
 
 			<header class="header">
 				<div class="bg-img"><?php the_post_thumbnail('desktop-largest');?></div>
+
+                <div class="social-and-review-conatiner">
+                    <?php echo do_shortcode("[wp-review]");?>
+                </div>
 			</header>
 
 			<article class="content">
@@ -30,7 +34,6 @@ get_header(); ?>
                     </p>
 					<h1 class="location-single__location-name"><?php the_title(); ?></h1>
 					<h2 class="location-single__subhead-call-out"></h2>
-                    <?php echo do_shortcode("[wp-review]");?>
 
 					<div data-info="SCROLL TO READ" class="trigger">
 						<img src="assets/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
@@ -39,9 +42,44 @@ get_header(); ?>
 
                 
 
-				<div>
+				<div class="content-container">
+
+                    <?php the_field('locations__the_content');?>
+
+                    <?php wp_reset_postdata();?>
+
+                    <?php $purple_jobs = new WP_Query(array( 
+                        'post_type' => 'purple_job', 
+                        'posts_per_page' => 1,
+                        'orderby' => 'rand')); ?>
+
+                        <?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+                            <section class="inline-jobs">
+                                <div>
+                                    <p class="inline-jobs__latest-job-title">Latest Purple job</p>
+                                    <a href="http://www.purple-consultancy.com" target="_blank" class="inline-jobs__purple-view-all-jobs-link">
+                                        <img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
+                                    </a>
+                                </div>
+                                
+                                <a href="<?php the_field('purple_jobs_direct_link');?>">
+                                    <article class="inline-jobs__cell">
+                                        <p class="inline-jobs__cell__money"><?php the_field('purple_jobs_money')?></p>
+                                        <h5 class="inline-jobs__cell__job-role"><?php the_title();?></h5>
+                                        <div class="inline-jobs__cell__desc"><?php the_content();?></div>
+                                        <div class="inline-jobs__cell__direct-link">Read more</div>
+                                    </article>
+                                </a>
+
+                            </section>
+
+                        <?php endwhile;?>
+                    <?php wp_reset_postdata();?>
+
+
 
                     <?php the_content();?> 
+
 
 	              	<section class="location-single-meta">
 
@@ -103,18 +141,25 @@ get_header(); ?>
 	<!-- Related location in same category -->
 	<section class="location-single__related-locations related-locations">
 		<div class="main-wrapper">
+    
+			<?php 
+            $postID = get_the_ID();
+            $postCat = get_the_category_bytax($post->ID, 'taxo');
+            $catName = $postCat[0]->name;
+            echo $catName;
 
-			<?php $current_post_category = wp_get_post_categories($post->ID);
 			$related_locations = new WP_Query(
 				array(
                     'post_type' => 'maplist',
-					'map_location_categories' => $current_post_category,
+					'map_location_categories' => $catName,
 					'posts_per_page' => 6,
 					'orderby' => 'rand',
 					'post__not_in' => array( get_the_ID() ),
 				)
 			);
-            echo "$current_post_category";
+            // echo "$current_post_category";
+            
+            // echo "$getCatID[0]->cat_name;"
             ?>
 
 			<ul class="related-locations__items">
