@@ -23,17 +23,25 @@ get_header(); ?>
 			<article class="content">
 
 				<div class="title">
-					<p class="location-single__cat">Drinks / Food / Music</p>
+					<p class="location-single__cat">
+                        <?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );
+                            if( $posttags ) echo implode( ' / ' , $posttags );
+                        ?>
+                    </p>
 					<h1 class="location-single__location-name"><?php the_title(); ?></h1>
 					<h2 class="location-single__subhead-call-out"></h2>
-					<?php echo do_shortcode("[wp-review]");?>
+                    <?php echo do_shortcode("[wp-review]");?>
 
 					<div data-info="SCROLL TO READ" class="trigger">
 						<img src="assets/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
 					</div>
 				</div>
 
+                
+
 				<div>
+
+                    <?php the_content();?> 
 
 	              	<section class="location-single-meta">
 
@@ -44,9 +52,7 @@ get_header(); ?>
 
 	              
 						<article class="location-single-meta__nearest-tube">
-							<div class="location-single-meta__nearest-tube__icon">
-								<p><?php the_field('single_location_underground_line')?></p>
-							</div>
+							
 
 							<div class="location-single-meta__nearest-tube__name"><?php the_field('single_location_underground_station')?></div>
 						</article>
@@ -79,6 +85,7 @@ get_header(); ?>
 						</article>
 
 	                <div class="location-single-meta__map">
+                        
 	                  <a href="#" target="_blank">View map</a>
 	                </div>
 
@@ -100,14 +107,18 @@ get_header(); ?>
 			<?php $current_post_category = wp_get_post_categories($post->ID);
 			$related_locations = new WP_Query(
 				array(
-					'category__in' => $current_post_category,
-					'posts_per_page' => 3,
+                    'post_type' => 'maplist',
+					'map_location_categories' => $current_post_category,
+					'posts_per_page' => 6,
 					'orderby' => 'rand',
 					'post__not_in' => array( get_the_ID() ),
 				)
-			);?>
+			);
+            echo "$current_post_category";
+            ?>
 
 			<ul class="related-locations__items">
+
 
 				<?php while ($related_locations->have_posts() ) : $related_locations->the_post(); ?>
 
@@ -129,33 +140,39 @@ get_header(); ?>
 
   	<!-- Latest news -->
 	<section class="location-single__latest-news latest-news">
+        
+        <div class="news-single__more-news__wrap">
 
 		<h3 class="latest-news__title">Latest news</h3>
 
-		<?php $latest_news = new WP_Query(array( 'posts_per_page' => 3,)); ?>
+		<?php $latest_news = new WP_Query(array( 'posts_per_page' => 6,)); ?>
 
-		<div class="main-wrapper">
-			<ul class="latest-news__items">
+    		<div class="main-wrapper">
+    			<ul class="latest-news__items">
 
-				<?php while($latest_news->have_posts() ) : $latest_news->the_post();?>
+    				<?php while($latest_news->have_posts() ) : $latest_news->the_post();?>
 
-				<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
-					<div class="news-cell__image">
-						<article class="news-cell__text">
-							<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
-						</article>
-						<span class="news-cell__text__excerpt"><?php the_excerpt(); ?></span>
-						<?php the_post_thumbnail('retina-smallest');?>
-					</div>
-				</a>
+    				<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
+                        <div class="news-cell__image">
+                            <article class="news-cell__text">
+                                <!-- <p class="news-cell__text__news-type">Purple blog</p> -->
+                                <h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
+                            </article>
+                            
+                            <?php the_post_thumbnail('retina-smallest');?>
 
-				<?php endwhile; ?>
+                        </div>
+                        <span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
+                    </a>
 
-			</ul>
+    				<?php endwhile; ?>
 
-		<?php wp_reset_postdata(); ?>
+    			</ul>
 
-		</div>
+    		<?php wp_reset_postdata(); ?>
+
+    		</div>
+        </div>
 	</section><!-- #Latest news -->
 
 <script>

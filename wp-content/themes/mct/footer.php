@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-<footer class="footer">
+<!-- <footer class="footer">
 	<div class="main-wrapper">
 		<div class="footer__join-the-community">
 			<h3 class="footer__join-the-community__title">Join the community and get the lastest to your inbox</h3>
@@ -56,7 +56,7 @@
 
 		<p class="footer__copyright">© My creative town - 2015</p>
 	</div>
-</footer>
+</footer> -->
 
 <?php wp_footer(); ?>
 

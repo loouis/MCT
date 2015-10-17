@@ -177,6 +177,7 @@ html, body {
 
 /* Conent */
 .content {
+	position:relative;
 	margin: 0 auto;
 	padding: 0 0 3em;
 }
@@ -354,14 +355,15 @@ html, body {
 }
 
 .intro-effect-sidefixed .content {
-	width: 60%;
+	width: 58%;
 	margin-right: 40%;
-	padding: 0 7.5em;
+	padding: 0 3em;
+    margin-left: 0;
 }
 
 .intro-effect-sidefixed .content div {
 	position: relative;
-	margin: 70px 0;
+	padding-top: 30px;
 	color: #77726b;
 }
 
@@ -369,6 +371,10 @@ html, body {
 	opacity: 0;
 	-webkit-transform: translateY(200px);
 	transform: translateY(200px);
+}
+
+.intro-effect-sidefixed .content .prettyMapList{
+	background:none !important;
 }
 
 .intro-effect-sidefixed.modify .content div:nth-child(2) {

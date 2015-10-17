@@ -50,42 +50,45 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
 
                     //Don't put the category button here if using custom categories
                     if(!$usealltaxonomies == true){
-                        if($hidefilter != 'true'){
-                            if($categoriesaslist == "false"){
+                        
+                            
                                 $mlpoutputhtml .= "<!-- Category button -->";
                                 $mlpoutputhtml .= '<div class="customCategoryList">';
-                                    $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel . "</a>";
+                                    $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . $categorylabel . "</a>";
+                                    // $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel . "</a>";
 
-                                    $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: mapCategories}'>";
-                                        $mlpoutputhtml .= "<li data-bind='css:slug'>";
+                                    $mlpoutputhtml .= "<ul class='' data-bind='foreach: {data: mapCategories}'>";
+                                        $mlpoutputhtml .= "<li data-bind=''>";
                                             $mlpoutputhtml .= "<a data-bind='css: {" . 'showing' . ": selected}, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
+                                            // $mlpoutputhtml .= "<a data-bind='css: {" . 'showing' . ": selected}, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
+
                                         $mlpoutputhtml .= "</li>";
                                     $mlpoutputhtml .= "</ul>";
 
                                 $mlpoutputhtml .= "</div>";
-                            }
-                        }
+                         
+                       
                     }
 
                     //SORTING
                     //===================================================
-                    $mlpoutputhtml .= "<!-- Sorting button -->";
+                    // $mlpoutputhtml .= "<!-- Sorting button -->";
 
-                    if($hidesort != 'true' && $viewstyle != 'maponly'){
-                        if($geoenabled == 'true' || $simplesearch != 'true'){
-                            $mlpoutputhtml .= "<div class='customCategoryList sortList'>";
-                                $mlpoutputhtml .= "<a data-bind='click:showCategories' class='showSortingBtn float_right corePrettyStyle btn' href='#'>" . __('Sort','maplistpro'). "</a>";
+                    // if($hidesort != 'true' && $viewstyle != 'maponly'){
+                    //     if($geoenabled == 'true' || $simplesearch != 'true'){
+                    //         $mlpoutputhtml .= "<div class='customCategoryList sortList'>";
+                    //             $mlpoutputhtml .= "<a data-bind='click:showCategories' class='showSortingBtn float_right corePrettyStyle btn' href='#'>" . __('Sort','maplistpro'). "</a>";
 
-                                $mlpoutputhtml .= "<ul class='unstyled menuDropDown'>";
-                                    $mlpoutputhtml .= "<li><a href='#' data-sorttype='title' data-bind='" . 'click:$root.sortList' . "'>" . __('Title','maplistpro'). "</a></li>";
-                                    $mlpoutputhtml .= "<li><a href='#' data-sorttype='distance' data-bind='" . 'click:$root.sortList' . "'>" . __('Distance','maplistpro'). "</a></li>";
-                                $mlpoutputhtml .= "</ul>";
-                            $mlpoutputhtml .= "</div>";
-                        }
-                        else{
-                            $mlpoutputhtml .= "<a data-sorttype='title' class='showSortingBtn float_right corePrettyStyle sortAsc btn' href='#' data-bind='click:sortList'>" . __('Sort','maplistpro'). "</a>";
-                        }
-                    }
+                    //             $mlpoutputhtml .= "<ul class='unstyled menuDropDown'>";
+                    //                 $mlpoutputhtml .= "<li><a href='#' data-sorttype='title' data-bind='" . 'click:$root.sortList' . "'>" . __('Title','maplistpro'). "</a></li>";
+                    //                 $mlpoutputhtml .= "<li><a href='#' data-sorttype='distance' data-bind='" . 'click:$root.sortList' . "'>" . __('Distance','maplistpro'). "</a></li>";
+                    //             $mlpoutputhtml .= "</ul>";
+                    //         $mlpoutputhtml .= "</div>";
+                    //     }
+                    //     else{
+                    //         $mlpoutputhtml .= "<a data-sorttype='title' class='showSortingBtn float_right corePrettyStyle sortAsc btn' href='#' data-bind='click:sortList'>" . __('Sort','maplistpro'). "</a>";
+                    //     }
+                    // }
 
 
                     //SEARCH
@@ -129,34 +132,39 @@ HIDE SEARCH
 
                     //CATEGORIES
                     //===================================================
-                   if($categoriesaslist == "true" && $hidefilter != 'true'){
-                        $mlpoutputhtml .= "<div class='categoryList clearfix'>";
-                            $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: mapCategories}'>";
-                                $mlpoutputhtml .= "<li data-bind='css:slug'>";
-                                    $mlpoutputhtml .= "<a data-bind='css: cssClass, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
-                                $mlpoutputhtml .= "</li>";
-                            $mlpoutputhtml .= "</ul>";
-                        $mlpoutputhtml .= "</div>";
-                    }
+                   // if($categoriesaslist == "true" && $hidefilter != 'true'){
+                   //  // if($categoriesaslist == "true" && $hidefilter != 'false'){
+                   //      $mlpoutputhtml .= "<div class='categoryList clearfix'>";
+                   //          $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: mapCategories}'>";
+                   //              $mlpoutputhtml .= "<li data-bind='css:slug'>";
+                   //                  $mlpoutputhtml .= "<a data-bind='css: cssClass, html: " . '$data.title' . "' href='#'></a>";
+                   //                  // $mlpoutputhtml .= "<a data-bind='css: cssClass, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
+                   //              $mlpoutputhtml .= "</li>";
+                   //          $mlpoutputhtml .= "</ul>";
+                   //      $mlpoutputhtml .= "</div>";
+                   //  }
 
                     //All categories
                     if($usealltaxonomies == true && Count($allTaxObjects) > 0){
                         $mlpoutputhtml .= "<div class='multiCategoryFilter'>";
                         /*Core categories*/
-                        if($hidefilter != 'true'){
-                            if($categoriesaslist == "false"){
-                                $mlpoutputhtml .= '<div class="customCategoryList">';
-                                    $mlpoutputhtml .= "<a class='showFilterBtn  corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel. "</a>";
+                      
+                            // if($categoriesaslist == "false"){
+                            //     $mlpoutputhtml .= '<div class="customCategoryList">';
+                            //         $mlpoutputhtml .= "<a class='  corePrettyStyle btn' href='#'>" . $categorylabel. "</a>";
+                            //         // $mlpoutputhtml .= "<a class='showFilterBtn  corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel. "</a>";
 
-                                    $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: mapCategories}'>";
-                                        $mlpoutputhtml .= "<li data-bind='css:slug'>";
-                                            $mlpoutputhtml .= "<a data-bind='css: {" . '"showing"' . ": selected}, text: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
-                                        $mlpoutputhtml .= "</li>";
-                                    $mlpoutputhtml .= "</ul>";
+                            //         $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: mapCategories}'>";
+                            //             $mlpoutputhtml .= "<li data-bind='css:slug'>";
+                            //                 $mlpoutputhtml .= "<a data-bind='css: {" . '"showing"' . ": selected}, text: " . '$data.title' . "' href='#'></a>";
+                            //                 // $mlpoutputhtml .= "<a data-bind='css: {" . '"showing"' . ": selected}, text: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
 
-                                $mlpoutputhtml .= "</div>";
-                            }
-                        }
+                            //             $mlpoutputhtml .= "</li>";
+                            //         $mlpoutputhtml .= "</ul>";
+
+                            //     $mlpoutputhtml .= "</div>";
+                            // }
+                       
 
                         foreach($allTaxObjects as $key => $taxObject){
                             //Dont create a list for the lookup
@@ -169,17 +177,23 @@ HIDE SEARCH
                                 $mlpoutputhtml .= "<div class='categoryList clearfix'>";
                                     $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: customCategories." . $key ."}'>";
                                         $mlpoutputhtml .= "<li data-bind='css:slug'>";
-                                            $mlpoutputhtml .= "<a data-bind='css: cssClass, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
+                                            $mlpoutputhtml .= "<a data-bind='css: cssClass, html: " . '$data.title' . "' href='#'></a>";
+                                            // $mlpoutputhtml .= "<a data-bind='css: cssClass, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
+
                                         $mlpoutputhtml .= "</li>";
                                     $mlpoutputhtml .= "</ul>";
                                 $mlpoutputhtml .= "</div>";
                             }
                             else{
                                 $mlpoutputhtml .= "<div class='customCategoryList'>";
-                                    $mlpoutputhtml .= "<a class='customCatButton corePrettyStyle btn' href='' data-bind='click:showCustomCategoriesClick'>" . $fullTax->label . "</a>";
+                                    $mlpoutputhtml .= "<a class='customCatButton corePrettyStyle btn' href='' >" . $fullTax->label . "</a>";
+                                    // $mlpoutputhtml .= "<a class='customCatButton corePrettyStyle btn' href='' data-bind='click:showCustomCategoriesClick'>" . $fullTax->label . "</a>";
+
                                     $mlpoutputhtml .= "<ul class='unstyled menuDropDown' data-bind='foreach: {data: customCategories." . $key ."}'>";
                                         $mlpoutputhtml .= "<li data-bind='css:slug'>";
-                                            $mlpoutputhtml .= "<a data-taxonomyname='" . $key . "' data-bind='css: {" . '"showing"' . ": selected},text: " . '$data.title, click: $parent.selectCustomCategory' . "' href='#'></a>";
+                                            $mlpoutputhtml .= "<a data-taxonomyname='" . $key . "' data-bind='css: {" . '"showing"' . ": selected},text: " . '$data.title, ' . "' href='#'></a>";
+                                            // $mlpoutputhtml .= "<a data-taxonomyname='" . $key . "' data-bind='css: {" . '"showing"' . ": selected},text: " . '$data.title, click: $parent.selectCustomCategory' . "' href='#'></a>";
+
                                         $mlpoutputhtml .= "</li>";
                                     $mlpoutputhtml .= "</ul>";
                                 $mlpoutputhtml .= "</div>";
@@ -204,7 +218,7 @@ HIDE SEARCH
                         //Custom by category view
                         $mlpoutputhtml .= "<div class='location-accordion' data-bind='foreach: {data: mapCategories}'>";
                             $mlpoutputhtml .= "<h2 class='show-locations' data-bind='text:title, click: " . '$parent.selectCategory' . "'></h2>";
-                            $mlpoutputhtml .= "<ul class='location-list' data-bind='slideIn:selected,slideOut:selected,foreach: {data: " . '$root.getLocationsByCategory' . "(" . ' $data.slug' . ")}'>";
+                            $mlpoutputhtml .= "<ul class='location-list' data-bind='fadeIn:selected,fadeOut:selected,foreach: {data: " . '$root.getLocationsByCategory' . "(" . ' $data.slug' . ")}'>";
                                 $mlpoutputhtml .= "<li data-bind='css: {" . '"active"' . ": expanded},text:title,click: " . '$root.locationClick' . "'></li>";
                             $mlpoutputhtml .= "</ul>";
                         $mlpoutputhtml .= "</div>";
@@ -244,7 +258,7 @@ HIDE SEARCH
 
 
                                 $mlpoutputhtml .= "<!--Expanded item-->";
-                                $mlpoutputhtml .= "<div class='mapLocationDetail clearfix' style='display:none;' data-bind='slideIn: " . '$data.expanded' . ",slideOut: " . '$data.expanded' . "'>";
+                                $mlpoutputhtml .= "<div class='mapLocationDetail clearfix' style='display:none;' data-bind='fadeIn: " . '$data.expanded' . ",fadeOut: " . '$data.expanded' . "'>";
                                     $mlpoutputhtml .= "<div class='mapDescription clearfix'>";
                                         $mlpoutputhtml .= "<!-- ko if: " . '$data.imageUrl' . " -->";
                                             // $mlpoutputhtml .= "<a href='#' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">";

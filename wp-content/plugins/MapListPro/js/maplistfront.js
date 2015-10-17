@@ -231,25 +231,25 @@ jQuery(document).ready(function ($) {
          * CUSTOM BINDINGS
          ===============================================*/
 
-        /* Binding to make content appear with 'slideIn' effect */
-        ko.bindingHandlers['slideIn'] = {
-            'update': function (element, valueAccessor) {
-                var options = valueAccessor();
-                if (options() === true) {
-                    $(element).slideDown(300);
-                }
-            }
-        };
+        // /* Binding to make content appear with 'slideIn' effect */
+        // ko.bindingHandlers['slideIn'] = {
+        //     'update': function (element, valueAccessor) {
+        //         var options = valueAccessor();
+        //         if (options() === true) {
+        //             $(element).slideDown(300);
+        //         }
+        //     }
+        // };
 
-        /* Binding to make content disappear with 'slideOut' effect */
-        ko.bindingHandlers['slideOut'] = {
-            'update': function (element, valueAccessor) {
-                var options = valueAccessor();
-                if (options() === false) {
-                    $(element).slideUp(300);
-                }
-            }
-        };
+        // /* Binding to make content disappear with 'slideOut' effect */
+        // ko.bindingHandlers['slideOut'] = {
+        //     'update': function (element, valueAccessor) {
+        //         var options = valueAccessor();
+        //         if (options() === false) {
+        //             $(element).slideUp(300);
+        //         }
+        //     }
+        // };
 
         /*
          * EVENTS
@@ -978,7 +978,7 @@ jQuery(document).ready(function ($) {
             // Find out if this is an already showing item
             if (location.expanded() === false) {
 
-                closeAllLocations();
+                // closeAllLocations();
 
                 if (mapObject.options.viewstyle !== 'listonly') {
                     // Show the infowindow

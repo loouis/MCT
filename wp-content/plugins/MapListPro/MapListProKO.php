@@ -661,7 +661,7 @@ class MapListProKO {
         // "simpledescription" : The short description without the address
         // "categories" : Any categories specified for this item
         // "address" : The location address field
-        $infoboxParts = array("title","thumbnail","simpledescription","custom");
+        $infoboxParts = array("title","address","simpledescription","custom");
 
         return apply_filters( 'mlp_infobox_parts', $infoboxParts);
     }
@@ -678,7 +678,7 @@ class MapListProKO {
         // "custom" : Any custom fields you add via the detail hook
         // "address" : The location address field
         // "directions" : Directions - only shows if enabled in settings;
-        $detailParts = array("map","content","custom","address","directions");
+        $detailParts = array("content","map","address","custom","directions");
 
         return apply_filters( 'mlp_detail_page_parts', $detailParts);
     }
@@ -791,25 +791,41 @@ class MapListProKO {
                 foreach($displayParts as $part){
 
                     switch(strtolower($part)){
+                        case "address":
+                        //Show address if it is set
+  
+                        $pageContent .= '<div id="MapAddressContainer">';
+                            // $pageContent .= '<span id="MapAddressLabel">';
+                            //     $pageContent .= __('Address:','maplistpro');
+                            // $pageContent .= '</span>';
+
+                            $pageContent .= '<div id="MapAddress">';
+                                $pageContent .= $address;
+                            $pageContent .= '</div>';//#MapAddress
+                        $pageContent .= '</div>';//#MapAddressContainer
+              
+                        break;
+
                         case "map":
                             $pageContent .= '<div id="SingleMapLocation"></div>';
                             break;
                         case "title":
                             $pageContent .= "<h2 id='Maplocation-" . get_the_ID() . "'>" . get_the_title() . "</h2>";;
                             break;
+
                         case "content":
 
                             $pageContent .= '<div id="MapDescription" class="cf">';
 
                                 //Post featured image
-                                if(has_post_thumbnail($post->ID)){
+                                // if(has_post_thumbnail($post->ID)){
 
-                                    $imageUrlTemp = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID));
+                                //     $imageUrlTemp = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID));
 
-                                    $imageUrl = mlp_mr_image_resize($imageUrlTemp[0], self::$featuredImageWidth, self::$featuredImageHeight, true, 'tr', false);
+                                //     $imageUrl = mlp_mr_image_resize($imageUrlTemp[0], self::$featuredImageWidth, self::$featuredImageHeight, true, 'tr', false);
 
-                                    $pageContent .= "<img src='" . $imageUrl . "' class='float_left maplist_featuredimage'/>";
-                                }
+                                //     $pageContent .= "<img src='" . $imageUrl . "' class='float_left maplist_featuredimage'/>";
+                                // }
 
                                 //Get the main content, format it, and display it
                                 $content = $post->post_content;
@@ -830,34 +846,21 @@ class MapListProKO {
                             //GET CUSTOM FIELDS FROM FILTER
                             $pageContent = apply_filters( 'mlp_location_detail_description', $pageContent,$locationMetaFields,$kolocation);
                             break;
-                        case "address":
-                            //Show address if it is set
-                            if(isset($address)){
-                                $pageContent .= '<div id="MapAddressContainer">';
-                                    $pageContent .= '<span id="MapAddressLabel">';
-                                        $pageContent .= __('Address:','maplistpro');
-                                    $pageContent .= '</span>';
 
-                                    $pageContent .= '<div id="MapAddress">';
-                                        $pageContent .= $address;
-                                    $pageContent .= '</div>';//#MapAddress
-                                $pageContent .= '</div>';//#MapAddressContainer
-                            }
-                            break;
-                        case "directions":
-                            //Get directions
-                            $showdirections = get_option('maplist_detailpagedirections');
+                        // case "directions":
+                        //     //Get directions
+                        //     $showdirections = get_option('maplist_detailpagedirections');
 
-                            if($showdirections == 'true'){
-                                $pageContent .= "<!-- Directions -->";
-                                $pageContent .= "<div class='getDirections'>" . __('Get directions from','maplistpro'). " <input class='directionsPostcode' type='text' value='' size='10'/>";
-                                    $pageContent .= "<a href='#' class='getdirections btn corePrettyStyle'>" . __('Go','maplistpro'). "</a>";
-                                    // $pageContent .= "<a href='#' class='getdirectionsgeo btn corePrettyStyle'>" . __('Geo locate me','maplistpro'). "</a>";
-                                    $pageContent .= "<div class='mapLocationDirectionsHolder'></div>";
-                                    $pageContent .= "<div class='mapLocationDirectionsError' style='display:none'><p class='prettyMessage'>" . __('Unable to find any directions.','maplistpro') . "</p></div>";
-                                $pageContent .= "</div>";
-                            }
-                            break;
+                        //     if($showdirections == 'true'){
+                        //         $pageContent .= "<!-- Directions -->";
+                        //         $pageContent .= "<div class='getDirections'>" . __('Get directions from','maplistpro'). " <input class='directionsPostcode' type='text' value='' size='10'/>";
+                        //             $pageContent .= "<a href='#' class='getdirections btn corePrettyStyle'>" . __('Go','maplistpro'). "</a>";
+                        //             // $pageContent .= "<a href='#' class='getdirectionsgeo btn corePrettyStyle'>" . __('Geo locate me','maplistpro'). "</a>";
+                        //             $pageContent .= "<div class='mapLocationDirectionsHolder'></div>";
+                        //             $pageContent .= "<div class='mapLocationDirectionsError' style='display:none'><p class='prettyMessage'>" . __('Unable to find any directions.','maplistpro') . "</p></div>";
+                        //         $pageContent .= "</div>";
+                        //     }
+                        //     break;
                     }
 
                 }

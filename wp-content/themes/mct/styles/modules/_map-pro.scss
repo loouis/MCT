@@ -14,3 +14,23 @@
 .prettyMapList .corePrettyStyle{
 	height:auto;
 }
+
+#map-canvas0{
+	display:none;
+
+	@include breakpoint(820px){
+		display:block;
+	}
+}
+
+.customCategoryList ul li a:not(.showing) {
+    opacity:0.3;
+}
+
+.customCategoryList ul li a.showing{
+	color:$brandColor !important;
+}
+
+.customCategoryList ul li a:hover{
+	opacity:1 !important;
+}
