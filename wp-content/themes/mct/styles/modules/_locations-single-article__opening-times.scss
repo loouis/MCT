@@ -1,0 +1,39 @@
+.opening-times{
+	
+	&__title{
+
+	}
+
+	&__cells{
+		font-family: $brandFont;
+
+		&__cell{
+			width:100%;
+			@include clearfix;
+			display:block;
+			clear: both;
+			margin-bottom:$base*2;
+
+			&__date, &__time{
+				float:left;
+				
+				p{
+					font-size:1em !important;
+					margin-bottom: 0 !important;
+					line-height: 1.2em;
+				}
+			}
+
+			&__date{
+			    width: 62px;
+				font-weight: 900;
+				text-transform: uppercase;
+				padding-top:2px;
+			}
+
+			&__time{
+
+			}
+		}
+	}
+}
