@@ -28,6 +28,7 @@
 				@include layout($no-gutters);
 				@include gallery(4 of 12);
 				padding:$base*14 $base*8;
+				height:500px;
 			}
 
 			&__money{

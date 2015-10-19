@@ -15,7 +15,7 @@ get_header(); ?>
 			<!-- Video hero -->
 			<section class="home-hero">
 				<div class="home-hero__grad-overlay"></div>
-				<div class="main-wrapper">
+				<div class="outter-wrapper">
 					<div class="home-hero__text">
 						<h1 class="home-hero__text__title">My<br/>Creative<br/> Town</h1>
 					</div>
@@ -160,8 +160,6 @@ get_header(); ?>
 						// 'taxonomy=map_location_categories&tag_ID=3',
 					 	'posts_per_page' => 6)); ?>
 
-
-
 					<ul id="trend-loc" class="trend-loc__slider">
 
 						<?php while($featured_locations->have_posts() ) : $featured_locations->the_post();?>
@@ -189,13 +187,6 @@ get_header(); ?>
 			<!-- Latest news -->
 			<section class="latest-news">
 
-				<hgroup class="off-center-title">
-					<svg class="off-center-title__icon">
-						<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-latest-news" />
-					</svg>
-					<h3 class="latest-news__title">Latest news</h3>
-				</hgroup>
-
 				<?php $latest_news = new WP_Query(array( 'posts_per_page' => 3,)); ?>
 
 				<div class="main-wrapper">
@@ -206,11 +197,14 @@ get_header(); ?>
 						<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
 							<div class="news-cell__image">
 								<article class="news-cell__text">
+									<!-- <p class="news-cell__text__news-type">Purple blog</p> -->
 									<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
 								</article>
-								<span class="news-cell__text__excerpt"><?php the_excerpt(); ?></span>
+								
 								<?php the_post_thumbnail('retina-smallest');?>
+
 							</div>
+							<span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
 						</a>
 
 						<?php endwhile; ?>
@@ -219,45 +213,52 @@ get_header(); ?>
 
 				<?php wp_reset_postdata(); ?>
 
+				<a href="/blog" class="button">
+					see all news
+				</a>
+
 				</div>
 			</section><!-- #Latest news -->
 
 			<!-- Jobs board -->
 			<section class="home-jobs-board hjb">
-				<hgroup class="off-center-title">
-					<h4 class="hjb__title">Jobs Board</h4>
-					<a href="http://www.purple-consultancy.com" target="_blank" class="hjb__powered-by">
-						<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
-					</a>
-					<nav class="hjb__purple-links">
-						<ul>
-							<a href=""><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>
-							<a href=""><li class="hjb__purple-links__link">Studio</li></a>
-							<a href=""><li class="hjb__purple-links__link">Planning & Strategy</li></a>
-							<a href=""><li class="hjb__purple-links__link">Tech & dev</li></a>
-							<a href=""><li class="hjb__purple-links__link">Client services</li></a>
-							<a href=""><li class="hjb__purple-links__link">Creative services</li></a>
-							<a href=""><li class="hjb__purple-links__link">Production</li></a>
-							<a href=""><li class="hjb__purple-links__link">Creative & Design</li></a>
+				<div class="outter-wrapper">
+
+					<div class="main-wrapper">
+						<hgroup class="off-center-title">
+							<h4 class="hjb__title">Jobs Board</h4>
+							<a href="http://www.purple-consultancy.com" target="_blank" class="hjb__powered-by">
+								<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
+							</a>
+							<nav class="hjb__purple-links">
+								<ul>
+									<a href=""><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>
+									<a href=""><li class="hjb__purple-links__link">Studio</li></a>
+									<a href=""><li class="hjb__purple-links__link">Planning & Strategy</li></a>
+									<a href=""><li class="hjb__purple-links__link">Tech & dev</li></a>
+									<a href=""><li class="hjb__purple-links__link">Client services</li></a>
+									<a href=""><li class="hjb__purple-links__link">Creative services</li></a>
+									<a href=""><li class="hjb__purple-links__link">Production</li></a>
+									<a href=""><li class="hjb__purple-links__link">Creative & Design</li></a>
+								</ul>
+							</nav>
+						</hgroup>
+						<ul class="hjb__jobs">
+
+						<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 6, 'orderby' => 'rand')); ?>
+							<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+
+							<article class="hjb__jobs__cell">
+								<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
+								<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
+								<p class="hjb__jobs__cell__desc"><?php the_content();?></p>
+							</article>
+
+						<?php endwhile;?>
+						<?php wp_reset_postdata(); ?>
+
 						</ul>
-					</nav>
-				</hgroup>
-				<div class="main-wrapper">
-					<ul class="hjb__jobs">
-
-					<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 6, 'orderby' => 'rand')); ?>
-						<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
-
-						<article class="hjb__jobs__cell">
-							<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
-							<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
-							<p class="hjb__jobs__cell__desc"><?php the_content();?></p>
-						</article>
-
-					<?php endwhile;?>
-					<?php wp_reset_postdata(); ?>
-
-					</ul>
+					</div>
 				</div>
 			</section><!-- #Jobs board -->
 

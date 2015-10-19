@@ -34,6 +34,16 @@ body, html{
 	background: url("../../assets/images/baseline.png") repeat;
 }
 
+.outter-wrapper{
+  height:100%;
+  @include clearfix;
+
+  @include breakpoint(500px){
+    padding-left:65px;
+    padding-right:0;
+  }
+}
+
 .main-wrapper{
   padding:40px 30px 60px 30px;
   @extend %center-block;

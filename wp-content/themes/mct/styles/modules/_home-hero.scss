@@ -12,10 +12,6 @@
 	@include breakpoint($m){
 		background:none;
 
-		.main-wrapper{
-			margin-left:100px;
-			max-width:inital;
-		}
 	}
 
 	@include breakpoint(1000px){
@@ -34,7 +30,7 @@
 			@include breakpoint(800px){
 				font-size: 8.25em;
     			line-height: 0.9em;
-    			text-align:left;
+    			text-align:center;
 			}
 		}
 		&__tagline{
