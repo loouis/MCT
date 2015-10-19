@@ -41,18 +41,18 @@ $(document).ready(function(){
 	});
 
 
-	$(window).on('resize scroll', function(){
-		 var scroll = $(window).scrollTop(),
-		 	winHeight = $(window).height(),
-		 	mainHeader = $(".header-main__nav");
+	// $(window).on('resize scroll', function(){
+	// 	 var scroll = $(window).scrollTop(),
+	// 	 	winHeight = $(window).height(),
+	// 	 	mainHeader = $(".header-main__nav");
 
 
-		 if (scroll >= winHeight - 140){
-		 	mainHeader.addClass("has-solid-background");
-		 }else{
-			mainHeader.removeClass("has-solid-background");
-		 }
-	});
+	// 	 if (scroll >= winHeight - 140){
+	// 	 	mainHeader.addClass("has-solid-background");
+	// 	 }else{
+	// 		mainHeader.removeClass("has-solid-background");
+	// 	 }
+	// });
 
 
 

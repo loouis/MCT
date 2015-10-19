@@ -12,7 +12,11 @@
 		svg{
 			width: 55px;
     		height: 55px;
-    		fill:$brandColor;
+    		// fill:$brandColor;
+
+    		.bird{
+    			fill:red;
+    		}
 		}
 	}
 
@@ -35,3 +39,10 @@
 		float:none;
 	}
 }
+
+svg.circle{
+	fill:white
+}
+.bird{
+			fill:white;
+		}

@@ -85,7 +85,7 @@
 /**
  * Animation
  */
-.review-wrapper .review-result { transition: width 2s ease }
+/*.review-wrapper .review-result { transition: width 2s ease }*/
 .review-wrapper.delay-animation .review-result { width: 0% !important }
 /**
  * Font icon

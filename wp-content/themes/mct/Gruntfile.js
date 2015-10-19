@@ -99,7 +99,7 @@ module.exports = function(grunt) {
     svgstore: {
       options: {
         prefix: "",
-        cleanup: ['fill', 'style'],
+        // cleanup: ['fill', 'style'],
         svg:{
           xmlns: 'http://www.w3.org/2000/svg'
           // style: "display:none;"
