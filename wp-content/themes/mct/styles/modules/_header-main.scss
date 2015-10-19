@@ -24,7 +24,8 @@
 	    padding:10px 15px;
 	    position: relative;
 	    z-index:10;
-	    transition: background .3s ease-in-out;
+	    background:white;
+	    // transition: background .3s ease-in-out;
 
 	    &__hamburger-menu{
 	    	position:relative;
@@ -64,9 +65,9 @@
 	    }
 	}
 
-	& .has-solid-background{
-		background:white;
-	}
+	// & .has-solid-background{
+	// 	background:white;
+	// }
 
 	.logo{
 		width:110px;
@@ -88,7 +89,8 @@
 				left: -17px;
 				text-transform:uppercase;
 				font-family:$brandFont;
-				color:white;
+				// color:white;
+				color:darken($lightestGrey, 20%);
 				letter-spacing: 1px;
 			}
 	    }
