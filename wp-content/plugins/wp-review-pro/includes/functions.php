@@ -282,7 +282,7 @@ function wp_review_get_data( $post_id = null ) {
 					
 					if( $userTotal == '' ) $userTotal = '0.0';
 					$review .= '<div class="user-total-wrapper"><span class="user-review-title">'.__('User Rating','wp-review').': </span><span class="review-total-box"><span id="mts-user-reviews-total">' . $userTotal . '</span> ';
-					$review.= '<small>(<span id="mts-user-reviews-counter" >'.$usersReviewsCount.'</span> '.__('votes', 'wp-review').')</small></span></div>';
+					$review.= '<small><span id="mts-user-reviews-counter" >'.$usersReviewsCount.'</span> '.__('votes', 'wp-review').'</small></span></div>';
 					
 					if( hasPreviousReview( $post_id, $user_id, $ip )) {
 						$hasNotRatedClass = '';						

@@ -32,21 +32,13 @@
 		background-color:#EEEEEE;
 	}
 
-	.testing2{
+	.location-content-container{
 		position:relative;
 	}
 }
 
 
 
-.social-and-review-conatiner{
-	position:fixed;
-	right:0;
-	bottom:0;
-	width:40%;
-	height:100px;
-	// background:red;
-}
 
 
 
@@ -55,11 +47,9 @@
 
 
 
-
-
-html, body {
-	height: 100%;
-}
+// html, body {
+// 	height: 100%;
+// }
 
 /* Header */
 .header {
@@ -413,6 +403,7 @@ html, body {
 .intro-effect-sidefixed.modify:not(.notrans) .content div:nth-child(2) {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
+	margin-top:0;
 }
 
 

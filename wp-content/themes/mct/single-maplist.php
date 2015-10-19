@@ -19,8 +19,30 @@ get_header(); ?>
 			<header class="header">
 				<div class="bg-img"><?php the_post_thumbnail('desktop-largest');?></div>
 
-          <div class="social-and-review-conatiner">
+          <div class="social-and-review-container">
               <?php echo do_shortcode("[wp-review]");?>
+
+              <?php 
+                $facebook_social_link = get_field('single_location_facebook_link');
+                $twitter_social_link = get_field('single_location_twitter_link');
+
+                if ($twitter_social_link): ?>
+
+                    <a href="<?php the_field('single_location_twitter_link');?>" class="social-and-review-container__link">
+                        <svg class="social-and-review-container__link__icon">
+                            <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-twitter" />
+                        </svg>
+                    </a>
+
+                <?php endif;?>
+
+                <?php if ( $facebook_social_link): ?>
+                    <a href="<?php the_field('single_location_facebook_link');?>" class="social-and-review-container__link">
+                        <svg class="social-and-review-container__link__icon">
+                            <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-facebook" />
+                        </svg>
+                    </a>
+                <?php endif;?>
           </div>
 			</header>
 
@@ -87,7 +109,7 @@ get_header(); ?>
           <!-- // Purple inline job -->
 
 
-            <div class="testing2">
+            <div class="location-content-container">
 
                 <?php the_content();?> 
                 
@@ -215,6 +237,7 @@ get_header(); ?>
 	<!-- Related location in same category -->
 	<section class="location-single__related-locations related-locations">
 		<div class="main-wrapper">
+            <h3 class="related-locations__title">You may also like…</h3>
     
 			<?php 
             $postID = get_the_ID();
@@ -244,8 +267,8 @@ get_header(); ?>
 				<a href="<?the_permalink()?>" class="related-locations__items__item related-locations-cell">
 					<div class="related-locations-cell__image">
 					<?php the_post_thumbnail('retina-smallest');?>
-						<h4 class="related-locations-cell__text__news-title"><?php the_title(); ?></h4>
-						<span class="related-locations-cell__text__excerpt"><?php the_excerpt(); ?></span>
+						<h4 class="related-locations-cell__title"><?php the_title(); ?></h4>
+						<!-- <span class="related-locations-cell__text__excerpt"><?php the_excerpt(); ?></span> -->
 					</div>
 				</a>
 			</ul>

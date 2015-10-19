@@ -1,0 +1,37 @@
+.social-and-review-container{
+	position:fixed;
+	right:0;
+	bottom:60px;
+	width:40%;
+	height:100px;
+	text-align:center;
+
+	&__link{
+		display:inline-block;
+
+		svg{
+			width: 55px;
+    		height: 55px;
+    		fill:$brandColor;
+		}
+	}
+
+	.wp-review-245.review-wrapper{
+		background:none;
+	}
+	.user-review-area{
+		border:none !important;
+	}
+	.review-total-star{
+
+	}
+	.user-review-title, #mts-user-reviews-total, .user-total-wrapper{
+		display:none;
+	}
+	.review-result-wrapper i{
+		font-size:22px;
+	}
+	.review-total-star{
+		float:none;
+	}
+}

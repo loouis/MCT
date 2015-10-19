@@ -2,7 +2,7 @@
   Plugin: WP Review
   Created By: MyThemeShop.com
 */
-.review-wrapper { border: 1px solid #e7e7e7; margin-bottom: 1.5em; overflow: hidden; clear: both; }
+.review-wrapper { overflow: hidden; clear: both; }
 .review-title { background-color: #f6f6f6; border-bottom: 1px solid #e7e7e7; margin: 0; padding: 10px 15px; }
 .review-wrapper .review-list { margin: 0; list-style: none; padding: 0; }
 .review-list li { border-bottom: 1px solid #e7e7e7; padding: 10px 15px; position: relative; list-style: none; }

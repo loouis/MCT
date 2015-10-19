@@ -1,7 +1,7 @@
 .related-locations{
 	position:relative;
 	@include clearfix;
-	background:white;
+	background:#E6E6E6;
 
 	&__items{
 		&__item{
@@ -12,10 +12,13 @@
 
 .related-locations-cell{
 	&__image{
-
+		background: white;
+    	padding: 0 0 20px 0;
+    	margin:15px;
 	}
 
-	&__news-title{
-
+	&__title{
+		padding:20px 0 0 0;
+		text-align: center;
 	}
 }

@@ -11,12 +11,16 @@
 
 	&__latest-job-title{
 		float:left;
+		text-transform: uppercase;
+	    font-size: 0.8em;
+	    font-weight: 700;
+	    color: #BDBDBD;
 	}
 
 	&__purple-view-all-jobs-link{
 		@extend .hjb__powered-by;
 		height:auto;
-		width:140px;
+		width:110px;
 	}
 
 	&__cell{
@@ -43,7 +47,7 @@
 		}
 
 		&__job-role{
-			font-size: 1.3em;
+			font-size: 1.1em;
 		    text-transform: uppercase;
 		    margin-bottom: 14px;
 		    margin-top: 6px;
@@ -51,6 +55,11 @@
 
 		&__desc{
 			width:100%;
+
+			p{
+				line-height: 1.6em;
+    			color: #989898;
+			}
 		}
 
 		&__direct-link{
@@ -82,5 +91,16 @@
 				bottom:40px;
 			}
 		}
+	}
+}
+
+// Override colors for single locations article
+
+body.single-maplist{
+	.inline-jobs__cell{
+		background:white;
+	}
+	.inline-jobs__cell__money{
+		background:#F3F2F2;
 	}
 }
