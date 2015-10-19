@@ -19,21 +19,29 @@ get_header(); ?>
 			<header class="header">
 				<div class="bg-img"><?php the_post_thumbnail('desktop-largest');?></div>
 
-                <div class="social-and-review-conatiner">
-                    <?php echo do_shortcode("[wp-review]");?>
-                </div>
+          <div class="social-and-review-conatiner">
+              <?php echo do_shortcode("[wp-review]");?>
+          </div>
 			</header>
 
 			<article class="content">
 
 				<div class="title">
-					<p class="location-single__cat">
-                        <?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );
-                            if( $posttags ) echo implode( ' / ' , $posttags );
-                        ?>
-                    </p>
+        
+					<!-- Tags -->
+          <?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );?>
+              
+          <?php if( $posttags ){ ?>
+            <p class="location-single__cat">
+              <?php echo implode( ' / ' , $posttags );?>
+            </p>
+          <?php } else{ ?>
+              
+          <?php } ?>
+          <!-- // Tags -->
+                        
 					<h1 class="location-single__location-name"><?php the_title(); ?></h1>
-					<h2 class="location-single__subhead-call-out"></h2>
+					<!-- <h2 class="location-single__subhead-call-out"></h2> -->
 
 					<div data-info="SCROLL TO READ" class="trigger">
 						<img src="assets/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
