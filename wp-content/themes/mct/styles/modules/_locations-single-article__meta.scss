@@ -1,0 +1,12 @@
+.location-single-meta{
+
+	&__nearest-tube{
+		margin:$base*6 0 $base*14 0;
+	}
+
+	&__title{
+		text-transform: uppercase;
+		font-size: 1em;
+		margin-bottom:$base*2;
+	}
+}

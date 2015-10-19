@@ -87,112 +87,121 @@ get_header(); ?>
           <!-- // Purple inline job -->
 
 
+            <div class="testing2">
 
-          <?php the_content();?> 
+                <?php the_content();?> 
+                
+                <section class="location-single-meta">
+
+                    <article class="location-single-meta__opening-times opening-times">
+                        <h5 class="location-single-meta__title">Opening times</h5>
+                            <ul class="opening-times__cells">
+
+                                <li class="opening-times__cells__cell">
+
+                                    <span class="opening-times__cells__cell__date">Mon</span>
+
+                                    <time class="opening-times__cells__cell__time">
+                                        <p><?php the_field('single_location_monday_opening_time');?> - <?php the_field('single_location_monday_closing_time');?><?php if( get_field('single_location_monday_opening_time_2') ):?>
+                                        , <?php the_field('single_location_monday_opening_time_2');?> - <?php the_field('single_location_monday_closing_time_2');?><?php endif; ?></p>
+                                    </time>
+
+                                </li>
+
+                                <li class="opening-times__cells__cell">
+
+                                    <span class="opening-times__cells__cell__date">Tues</span>
+
+                                    <time class="opening-times__cells__cell__time">
+                                        <p><?php the_field('single_location_tuesday_opening_time');?> - <?php the_field('single_location_tuesday_closing_timee');?><?php if( get_field('single_location_monday_opening_time_2') ):?>
+                                        , <?php the_field('single_location_tuesday_opening_time_2');?> - <?php the_field('single_location_tuesday_closing_timee_2');?><?php endif; ?></p>
+                                    </time>
+
+                                </li>
+                                        
+                                <li class="opening-times__cells__cell">
+
+                                    <span class="opening-times__cells__cell__date">Wed</span>
+
+                                    <time class="opening-times__cells__cell__time">
+                                        <p><?php the_field('single_location_wednesday_opening_time');?> - <?php the_field('single_location_wednesday_closing_time');?><?php if( get_field('single_location_monday_opening_time_2') ):?>
+                                        , <?php the_field('single_location_wednesday_opening_time_2');?> - <?php the_field('single_location_wednesday_closing_time_2');?><?php endif; ?></p>
+                                    </time>
+
+                                </li>
+                                
+                                <li class="opening-times__cells__cell">
+
+                                    <span class="opening-times__cells__cell__date">Thurs</span>
+
+                                    <time class="opening-times__cells__cell__time">
+                                        <p><?php the_field('single_location_thursday_opening_time');?> - <?php the_field('single_location_thursday_closing_time');?><?php if( get_field('single_location_monday_opening_time_2') ):?>
+                                        , <?php the_field('single_location_thursday_opening_time_2');?> - <?php the_field('single_location_thursday_closing_time_2');?><?php endif; ?></p>
+                                    </time>
+
+                                </li>
+
+                                <li class="opening-times__cells__cell">
+
+                                    <span class="opening-times__cells__cell__date">Fri</span>
+
+                                    <time class="opening-times__cells__cell__time">
+                                        <p><?php the_field('single_location_friday_opening_time');?> - <?php the_field('single_location_friday_closing_time');?><?php if( get_field('single_location_monday_opening_time_2') ):?>
+                                        , <?php the_field('single_location_friday_opening_time_2');?> - <?php the_field('single_location_friday_closing_time_2');?><?php endif; ?></p>
+                                    </time>
+
+                                </li>
+
+                                <li class="opening-times__cells__cell">
+
+                                    <span class="opening-times__cells__cell__date">Sat</span>
+
+                                    <time class="opening-times__cells__cell__time">
+                                        <p><?php the_field('single_location_saturday_opening_time');?> - <?php the_field('single_location_saturday_closing_time');?><?php if( get_field('single_location_monday_opening_time_2') ):?>
+                                        , <?php the_field('single_location_saturday_opening_time_2');?> - <?php the_field('single_location_saturday_closing_time_2');?><?php endif; ?></p>
+                                    </time>
+
+                                </li>
+
+                                <li class="opening-times__cells__cell">
+
+                                    <span class="opening-times__cells__cell__date">Sun</span>
+
+                                    <time class="opening-times__cells__cell__time">
+                                        <p><?php the_field('single_location_sunday_opening_time');?> - <?php the_field('single_location_sunday_closing_time');?><?php if( get_field('single_location_monday_opening_time_2') ):?>
+                                        , <?php the_field('single_location_sunday_opening_time_2');?> - <?php the_field('single_location_sunday_closing_time_2');?><?php endif; ?></p>
+                                    </time>
+
+                                </li>
+                                        
+                            </ul>
+                        </article>
 
 
-	   <section class="location-single-meta">
+                    <article class="location-single-meta__address">
+                        <a href="tel:<?php the_field('location_single_telephone_number')?>" target="_blank" class="location-single-meta__address__telephone">
+                            <?php 
+                            $phone_number = get_field('location_single_telephone_number');
+                            ?>
+                            <p><?php echo substr($phone_number, 0, 3)." ".substr($phone_number, 4, 4)." ".substr($phone_number,6);?></p>
+                        </a>
+                    </article>
 
-			<article class="location-single-meta__address">
-				<div class="location-single-meta__address__title">location</div>
-				<address class="location-single-meta__address__address"></address><a href="tel:<?php the_field('location_single_telephone_number')?>" target="_blank" class="location-single-meta__address__telephone"><?php the_field('location_single_telephone_number')?></a>
-			</article>
+                          
+                    <article class="location-single-meta__nearest-tube">
+                        <h5 class="location-single-meta__title">Nearest tube</h5>
+                        <p class="location-single-meta__nearest-tube__name"><?php the_field('single_location_underground_station')?></p>
+                    </article>
 
-	              
-			<article class="location-single-meta__nearest-tube">
-				<div class="location-single-meta__nearest-tube__name"><?php the_field('single_location_underground_station')?></div>
-			</article>
-
-			<article class="location-single-meta__opening-times opening-times">
-				<div class="location-single-meta__opening-times__title">Opening times</div>
-					<ul class="opening-times__cells">
-
-						<li class="opening-times__cells__cell">
-
-                            <span class="opening-times__cells__cell__date">Mon</span>
-
-							<time class="opening-times__cells__cell__time">
-                                <p><?php the_field('single_location_monday_opening_time');?> - <?php the_field('single_location_monday_closing_time');?></p><?php if( get_field('single_location_monday_opening_time_2') ):?>
-                                <p><?php the_field('single_location_monday_opening_time_2');?> - <?php the_field('single_location_monday_closing_time_2');?><?php endif; ?></p>
-                            </time>
-
-						</li>
-
-						<li class="opening-times__cells__cell">
-
-                            <span class="opening-times__cells__cell__date">Tues</span>
-
-                            <time class="opening-times__cells__cell__time">
-                                <p><?php the_field('single_location_tuesday_opening_time');?> - <?php the_field('single_location_tuesday_closing_timee');?></p><?php if( get_field('single_location_monday_opening_time_2') ):?>
-                                <p><?php the_field('single_location_tuesday_opening_time_2');?> - <?php the_field('single_location_tuesday_closing_timee_2');?><?php endif; ?></p>
-                            </time>
-
-                        </li>
-								
-                        <li class="opening-times__cells__cell">
-
-                            <span class="opening-times__cells__cell__date">Wed</span>
-
-                            <time class="opening-times__cells__cell__time">
-                                <p><?php the_field('single_location_wednesday_opening_time');?> - <?php the_field('single_location_wednesday_closing_time');?></p><?php if( get_field('single_location_monday_opening_time_2') ):?>
-                                <p><?php the_field('single_location_wednesday_opening_time_2');?> - <?php the_field('single_location_wednesday_closing_time_2');?><?php endif; ?></p>
-                            </time>
-
-                        </li>
-						
-                        <li class="opening-times__cells__cell">
-
-                            <span class="opening-times__cells__cell__date">Thurs</span>
-
-                            <time class="opening-times__cells__cell__time">
-                                <p><?php the_field('single_location_thursday_opening_time');?> - <?php the_field('single_location_thursday_closing_time');?></p><?php if( get_field('single_location_monday_opening_time_2') ):?>
-                                <p><?php the_field('single_location_thursday_opening_time_2');?> - <?php the_field('single_location_thursday_closing_time_2');?><?php endif; ?></p>
-                            </time>
-
-                        </li>
-
-                        <li class="opening-times__cells__cell">
-
-                            <span class="opening-times__cells__cell__date">Fri</span>
-
-                            <time class="opening-times__cells__cell__time">
-                                <p><?php the_field('single_location_friday_opening_time');?> - <?php the_field('single_location_friday_closing_time');?></p><?php if( get_field('single_location_monday_opening_time_2') ):?>
-                                <p><?php the_field('single_location_friday_opening_time_2');?> - <?php the_field('single_location_friday_closing_time_2');?><?php endif; ?></p>
-                            </time>
-
-                        </li>
-
-                        <li class="opening-times__cells__cell">
-
-                            <span class="opening-times__cells__cell__date">Sat</span>
-
-                            <time class="opening-times__cells__cell__time">
-                                <p><?php the_field('single_location_saturday_opening_time');?> - <?php the_field('single_location_saturday_closing_time');?></p><?php if( get_field('single_location_monday_opening_time_2') ):?>
-                                <p><?php the_field('single_location_saturday_opening_time_2');?> - <?php the_field('single_location_saturday_closing_time_2');?><?php endif; ?></p>
-                            </time>
-
-                        </li>
-
-                        <li class="opening-times__cells__cell">
-
-                            <span class="opening-times__cells__cell__date">Sun</span>
-
-                            <time class="opening-times__cells__cell__time">
-                                <p><?php the_field('single_location_sunday_opening_time');?> - <?php the_field('single_location_sunday_closing_time');?></p><?php if( get_field('single_location_monday_opening_time_2') ):?>
-                                <p><?php the_field('single_location_sunday_opening_time_2');?> - <?php the_field('single_location_sunday_closing_time_2');?><?php endif; ?></p>
-                            </time>
-
-                        </li>
-								
-					</ul>
-				</article>
-
-              <div class="location-single-meta__map">
                     
-                <a href="#" target="_blank">View map</a>
-              </div>
 
-				</section>
+                </section>
+
+
+            </div><!-- // testing -->
+
+
+	   
 			</div>
 		</article>
 	</section>

@@ -800,7 +800,9 @@ class MapListProKO {
                             // $pageContent .= '</span>';
 
                             $pageContent .= '<div id="MapAddress">';
+                                $pageContent .= '<h5 class="location-single-meta__title">Address</h5>';
                                 $pageContent .= $address;
+                                // $pageContent .= the_field('single_location_wednesday_opening_time');
                             $pageContent .= '</div>';//#MapAddress
                         $pageContent .= '</div>';//#MapAddressContainer
               

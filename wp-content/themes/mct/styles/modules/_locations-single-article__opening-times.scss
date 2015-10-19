@@ -1,4 +1,8 @@
 .opening-times{
+	position: absolute;
+    right: 0;
+    width: 50%;
+    top: 78.4%;
 	
 	&__title{
 
@@ -26,8 +30,8 @@
 
 			&__date{
 			    width: 62px;
-				font-weight: 900;
-				text-transform: uppercase;
+				font-weight: 700;
+				// text-transform: uppercase;
 				padding-top:2px;
 			}
 

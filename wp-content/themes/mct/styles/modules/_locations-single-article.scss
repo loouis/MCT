@@ -31,6 +31,10 @@
 		position:relative;
 		background-color:#EEEEEE;
 	}
+
+	.testing2{
+		position:relative;
+	}
 }
 
 
@@ -195,13 +199,13 @@ html, body {
 	padding: 0 1.25em;
 }
 
-.content > div:not(.title) p {
-	margin: 0 auto 1.5em auto;
-}
+// .content > div:not(.title) p {
+// 	margin: 0 auto 1.5em auto;
+// }
 
-.content > div:not(.title) p:first-child {
-	font-size: 1.35em;
-}
+// .content > div:not(.title) p:first-child {
+// 	font-size: 1.35em;
+// }
 
 .content h3 {
 	margin: 0;
@@ -364,7 +368,7 @@ html, body {
 .intro-effect-sidefixed .content {
 	width: 58%;
 	margin-right: 40%;
-	padding: 0 3em;
+	padding: 0 3em 0 7em;
     margin-left: 0;
 }
 
