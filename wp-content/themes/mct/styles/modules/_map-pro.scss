@@ -4,7 +4,7 @@
 
 .rightmap #ListContainer{
 	width: 49%;
-	padding: 20px !important;
+	// padding: 20px !important;
 }
 
 .prettyMapList .mapLocationDetail{
@@ -15,12 +15,25 @@
 	height:auto;
 }
 
+.location:hover .map-pro-thumbnail-image:after{
+	opacity:1 !important;
+	background:black !important;
+	background: rgba(0,0,0,0.6) !important;
+}
+
 #map-canvas0{
 	display:none;
 
 	@include breakpoint(820px){
 		display:block;
 	}
+}
+
+.description__title{
+	height:30px;
+}
+.description span{
+	line-height: 22px;
 }
 
 .customCategoryList ul li a:not(.showing) {

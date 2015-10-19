@@ -374,11 +374,16 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 {
 	content: "MAP";
     display: block;
-    right: 15%;
+    right: 22%;
     position: absolute;
-    top: 34.5%;
+    top: 32.6%;
     z-index: 20;
     border-radius: 50%;
+    opacity:0;
+}
+
+.prettylink:hover:after{
+    opacity:1;
 }
 
 .prettyMapList .prettylink:hover{}
@@ -833,11 +838,15 @@ body .prettyMapList .prettyFileBar .combo .prettySearchValue{width:100px;}
 
 .prettyMapList .corePrettyStyle a{
     position: absolute;
-    top: 46%;
-    left: 15%;
+    top: 38%;
+    left: 22%;
     width:auto !important;
     z-index:20;
+    opacity:0;
+}
 
+.prettylink:hover a{
+    opacity:1;
 }
 
 .prettyMapList .corePrettyStyle a, .prettyMapList .prettylink:after{

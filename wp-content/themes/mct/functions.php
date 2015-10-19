@@ -49,6 +49,7 @@ function mct_setup() {
 
 	add_image_size( 'custom-size', 220, 220, array( 'left', 'top' ) ); // Hard crop left top
 	add_image_size( 'retina-smallest', 640, 500, true ); // hard crop mode
+	add_image_size( 'location-smallest', 640, 400, true ); // hard crop mode
 	add_image_size( 'desktop-largest', 1900, 1069 ); // soft proportional crop mode
 
 
