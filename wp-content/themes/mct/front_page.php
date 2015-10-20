@@ -21,7 +21,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<video autoplay="autoplay" loop="loop" poster="polina.jpg" id="bgvid" class="home-hero__video">
+				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/mobile-home-hero-image.jpg" id="bgvid" class="home-hero__video">
 					<source src="<?php echo get_template_directory_uri();?>/video/home-hero-video.webm" type="video/webm"/>
 					<source src="<?php echo get_template_directory_uri();?>/video/home-hero-video.mp4" type="video/mp4"/>
 				</video>
@@ -298,7 +298,7 @@ get_header(); ?>
 								<a href=""><li class="hjb__purple-links__link">Creative & Design</li></a>
 							</ul>
 						</nav>
-						
+
 						<ul class="hjb__jobs">
 
 						<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 6, 'orderby' => 'rand')); ?>
