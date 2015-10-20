@@ -301,7 +301,14 @@ get_header(); ?>
 
 						<ul class="hjb__jobs">
 
-						<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 6, 'orderby' => 'rand')); ?>
+						<?php
+							if ( wp_is_mobile() ) {
+								$purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 3, 'orderby' => 'rand'));
+							}else{
+								$purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 6, 'orderby' => 'rand'));
+							}
+						?>
+
 							<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
 
 							<article class="hjb__jobs__cell">

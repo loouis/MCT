@@ -52,7 +52,7 @@
 			}
 	    }
 
-	    @include breakpoint($m){
+	    @include breakpoint(500px){
 			width: 65px;
 			padding:10px;
 
@@ -74,7 +74,7 @@
 		width:110px;
 		@include clearfix;
 
-		@include breakpoint($m){
+		@include breakpoint(500px){
 			position:absolute;
 			width:45px;
 			height:180px;
@@ -109,7 +109,7 @@
 				width: 26.1%;
 			}
 
-			@include breakpoint($m){
+			@include breakpoint(500px){
 				display:block;
 
 				&:nth-child(1){
