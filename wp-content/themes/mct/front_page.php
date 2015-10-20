@@ -120,7 +120,14 @@ get_header(); ?>
 											</div>
 											<div class="ilf__cells__cell__fig__text-con__title">Cafes</div>
 										</div>
-										<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg" alt="" class="ilf__cells__cell__fig__image"/>
+										<picture>
+											<source media="(min-width: 960px)"
+											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg 2x">
+											<source 
+											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes-small.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--cafes-small.jpg 2x">
+											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg" alt="">
+										</picture>
+										<!-- <img src="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg" alt="" class="ilf__cells__cell__fig__image"/> -->
 									</figure>
 								</div>
 							</a>
@@ -136,7 +143,13 @@ get_header(); ?>
 											</div>
 											<div class="ilf__cells__cell__fig__text-con__title">Hotels</div>
 										</div>
-										<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg" alt="" class="ilf__cells__cell__fig__image"/>
+										<picture>
+											<source media="(min-width: 960px)"
+											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg 2x">
+											<source 
+											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels-small.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--hotels-small.jpg 2x">
+											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg" alt="">
+										</picture>
 									</figure>
 								</div>
 							</a>
