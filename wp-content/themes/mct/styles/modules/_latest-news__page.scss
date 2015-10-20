@@ -24,6 +24,10 @@
 	    font-weight: 600;
 	    padding-bottom:$base;
 
+	    body.home &{
+	    	color:black;
+	    }
+
 		&__items{
 			
 		}

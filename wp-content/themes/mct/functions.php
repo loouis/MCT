@@ -47,9 +47,14 @@ function mct_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( 'custom-size', 220, 220, array( 'left', 'top' ) ); // Hard crop left top
+	// add_image_size( 'custom-size', 220, 220, array( 'left', 'top' ) ); // Hard crop left top
+	
+	add_image_size( 'smallest-news-cell', 600, 375, true ); // soft proportional crop mode
+
 	add_image_size( 'retina-smallest', 640, 500, true ); // hard crop mode
+
 	add_image_size( 'location-smallest', 640, 400, true ); // hard crop mode
+	
 	add_image_size( 'desktop-largest', 1900, 1069 ); // soft proportional crop mode
 
 
@@ -124,10 +129,16 @@ add_action( 'widgets_init', 'mct_widgets_init' );
 
 /* Excerpt update */
 function custom_excerpt_length( $length ) {
-return 5;
+return 25;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+
+
+//function to replace invalid ellipsis with text linking to the post
+function excerpt_abooze($text) {
+   return str_replace('[...]', 'Allanon\'s text goes here...', $text); }
+add_filter('the_excerpt', 'excerpt_abooze');
 
 /* WYSIWYG editor chages */
 

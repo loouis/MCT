@@ -29,6 +29,10 @@ get_header(); ?>
 
 			<section class="image-location-filter ilf">
 				<div class="main-wrapper">
+					
+					<h3>Explore london</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
+
 					<div class="ilf__container">
 
 						<!-- Top conatiner -->
@@ -52,7 +56,13 @@ get_header(); ?>
 												</div>
 												<div class="ilf__cells__cell__fig__text-con__title">Bars</div>
 											</div>
-											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--bar.jpg" alt="" class="ilf__cells__cell__fig__image"/>
+											<picture>
+												<source media="(min-width: 500px)"
+												srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--bar.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg 2x">
+												<source 
+												srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--bar-small.jpg 1x">
+												<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--bar.jpg" alt="">
+											</picture>
 										</figure>
 									</div>
 								</a>
@@ -127,7 +137,6 @@ get_header(); ?>
 											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes-small.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--cafes-small.jpg 2x">
 											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg" alt="">
 										</picture>
-										<!-- <img src="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg" alt="" class="ilf__cells__cell__fig__image"/> -->
 									</figure>
 								</div>
 							</a>
@@ -145,9 +154,11 @@ get_header(); ?>
 										</div>
 										<picture>
 											<source media="(min-width: 960px)"
-											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg 2x">
+											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg 1x">
+											<source media="(min-width: 500px)"
+											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels-small.jpg 1x">
 											<source 
-											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels-small.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--hotels-small.jpg 2x">
+											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg 1x">
 											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg" alt="">
 										</picture>
 									</figure>
@@ -160,39 +171,49 @@ get_header(); ?>
 
 			<!-- Trending locations -->
 			<section class="trending-locations">
-				<hgroup class="off-center-title">
-					<h3 class="trending-locations__title">Trending locations</h3>
-				</hgroup>
-
-				<div class="trending-locations__slider-container trend-loc">
-
-					<?php $featured_locations = new WP_Query(array( 
-						'post_type' => 'maplist',
+				<div class="outter-wrapper">
 						
-						'map_location_categories' => 'featured',
-						// 'taxonomy=map_location_categories&tag_ID=3',
-					 	'posts_per_page' => 6)); ?>
+					<h3 class="trending-locations__title">Trending locations</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
 
-					<ul id="trend-loc" class="trend-loc__slider">
+					<div class="trending-locations__slider-container trend-loc">
 
-						<?php while($featured_locations->have_posts() ) : $featured_locations->the_post();?>
+						<?php $featured_locations = new WP_Query(array( 
+							'post_type' => 'maplist',
+							'map_location_categories' => 'featured',
+							// 'taxonomy=map_location_categories&tag_ID=3',
+							'orderby' => 'rand',
+						 	'posts_per_page' => 6)); 
+						 	?>
 
-						<li class="trend-loc__slider__slide">
-							<div>
-								<a href="<?php the_permalink();?>">
-									<div class="trend-loc__slider__slide__text">
-										<p class="trend-loc__slider__slide__text__location">Covent garden</p>
-										<h3 class="trend-loc__slider__slide__text__title"><?php the_title();?></h3>
-										<p class="trend-loc__slider__slide__text__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam. et dolore magna aliqua. Ut enim ad minim veniam.</p>
-									</div>
-								</a>
-								<?php the_post_thumbnail('desktop-largest');?>
-						</li>
+						<ul id="trend-loc" class="trend-loc__slider">
 
-						<?php endwhile;?>
-						<?php wp_reset_postdata(); ?>
+							<?php while($featured_locations->have_posts() ) : $featured_locations->the_post();?>
 
-					</ul>
+							<li class="trend-loc__slider__slide">
+								<div>
+									<a href="<?php the_permalink();?>">
+										<div class="trend-loc__slider__slide__text">
+											<p class="trend-loc__slider__slide__text__location">
+											<!-- Query post tags -->
+											<?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );?>
+												<?php if( $posttags ){ ?>
+									            	<?php echo implode( ' / ' , $posttags );?>
+									          	<?php } else{ ?><?php } ?>
+											</p><!-- // Tags -->
+											<h3 class="trend-loc__slider__slide__text__title"><?php the_title();?></h3>
+											<p class="trend-loc__slider__slide__text__para"><?php echo(get_the_excerpt()); ?></p>
+										</div>
+									</a>
+								</div>
+									<?php the_post_thumbnail('desktop-largest');?>
+							</li>
+
+							<?php endwhile;?>
+							<?php wp_reset_postdata(); ?>
+
+						</ul>
+					</div>
 				</div>
 			</section><!-- #Trending locations -->
 
@@ -202,60 +223,82 @@ get_header(); ?>
 
 				<?php $latest_news = new WP_Query(array( 'posts_per_page' => 3,)); ?>
 
-				<div class="main-wrapper">
-					<ul class="latest-news__items">
+				<div class="outter-wrapper">
 
-						<?php while($latest_news->have_posts() ) : $latest_news->the_post();?>
+					<div class="main-wrapper">
 
-						<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
-							<div class="news-cell__image">
-								<article class="news-cell__text">
-									<!-- <p class="news-cell__text__news-type">Purple blog</p> -->
-									<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
-								</article>
-								
-								<?php the_post_thumbnail('retina-smallest');?>
+						<h3 class="latest-news__title">Latest news</h3>
 
-							</div>
-							<span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
-						</a>
+						<ul class="latest-news__items">
 
-						<?php endwhile; ?>
+							<?php while($latest_news->have_posts() ) : $latest_news->the_post();?>
 
-					</ul>
+							<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
+								<div class="news-cell__image">
+									<article class="news-cell__text">
+										<!-- <p class="news-cell__text__news-type">Purple blog</p> -->
+										<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
+									</article>
+										
+										<?php
 
-				<?php wp_reset_postdata(); ?>
+											$thumb_id = get_post_thumbnail_id();
 
-				<a href="/blog" class="button">
-					see all news
-				</a>
+											$smallest_thumb_url = wp_get_attachment_image_src($thumb_id,'smallest-news-cell', true);
 
-				</div>
+											$thumb_url = wp_get_attachment_image_src($thumb_id,'retina-smallest', true);
+
+										?>
+
+
+									<picture>
+										<source media="(min-width: 960px)"
+										srcset="<?php echo $thumb_url[0]; ?> 1x">
+										<source 
+										srcset="<?php echo $smallest_thumb_url[0]; ?> 1x">
+										<img src="<?php echo $thumb_url[0]; ?>" alt="">
+									</picture>
+									
+
+								</div>
+								<span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
+							</a>
+
+							<?php endwhile; ?>
+
+						</ul>
+
+					<?php wp_reset_postdata(); ?>
+
+					<a href="<?php echo get_site_url(); ?>/blog" class="button">
+						see all news
+					</a>
+
+					</div>
+				</div><!-- // Outter wrapper -->
 			</section><!-- #Latest news -->
 
 			<!-- Jobs board -->
 			<section class="home-jobs-board hjb">
 				<div class="outter-wrapper">
-
 					<div class="main-wrapper">
-						<hgroup class="off-center-title">
-							<h4 class="hjb__title">Jobs Board</h4>
-							<a href="http://www.purple-consultancy.com" target="_blank" class="hjb__powered-by">
-								<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
-							</a>
-							<nav class="hjb__purple-links">
-								<ul>
-									<a href=""><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>
-									<a href=""><li class="hjb__purple-links__link">Studio</li></a>
-									<a href=""><li class="hjb__purple-links__link">Planning & Strategy</li></a>
-									<a href=""><li class="hjb__purple-links__link">Tech & dev</li></a>
-									<a href=""><li class="hjb__purple-links__link">Client services</li></a>
-									<a href=""><li class="hjb__purple-links__link">Creative services</li></a>
-									<a href=""><li class="hjb__purple-links__link">Production</li></a>
-									<a href=""><li class="hjb__purple-links__link">Creative & Design</li></a>
-								</ul>
-							</nav>
-						</hgroup>
+						<h4 class="hjb__title">Jobs Board</h4>
+						<!-- <a href="http://www.purple-consultancy.com" target="_blank" class="hjb__powered-by">
+							<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
+						</a> -->
+						<nav class="hjb__purple-links">
+							<ul>
+								<a href=""><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>
+								<a href=""><li class="hjb__purple-links__link">Studio</li></a>
+								<a href=""><li class="hjb__purple-links__link">Planning & Strategy</li></a>
+								<a href=""><li class="hjb__purple-links__link">Tech & dev</li></a>
+								<a href=""><li class="hjb__purple-links__link">Client services</li></a>
+								<a href=""><li class="hjb__purple-links__link">Creative services</li></a>
+								<a href=""><li class="hjb__purple-links__link">Production</li></a>
+								<a href=""><li class="hjb__purple-links__link">Creative & Design</li></a>
+							</ul>
+						</nav>
+						
 						<ul class="hjb__jobs">
 
 						<?php $purple_jobs = new WP_Query(array( 'post_type' => 'purple_job', 'posts_per_page' => 6, 'orderby' => 'rand')); ?>

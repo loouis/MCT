@@ -1,11 +1,15 @@
 .hjb{
 	background:white;
-	padding: $base*20 0;
 	
 	&__title{
-		@extend %left;
+		@extend %center-text;
 		@extend %uppercase;
 		margin-bottom: $base*3;
 		font-size: 2.075em;
+	}
+
+	@include breakpoint(800px){
+		float:left;
+		padding: $base*20 0;
 	}
 }	

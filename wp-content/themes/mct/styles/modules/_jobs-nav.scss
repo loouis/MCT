@@ -1,10 +1,7 @@
 .hjb__purple-links{
+	display:none;
 	@extend %left;
-	width: 100%;
-    text-align: center;
-    padding: 15px 20px;
-    background-color: whitesmoke;
-	@include clearfix;
+
 
 	&__link{
 		position:relative;
@@ -34,5 +31,13 @@
 				background:$brandColor;
 			}
 		}
+	}
+
+	@include breakpoint(800px){
+		width: 100%;
+	    text-align: center;
+	    padding: 15px 20px;
+	    background-color: whitesmoke;
+		@include clearfix;
 	}
 }

@@ -1,24 +1,18 @@
 .trending-locations{
-	// background:$lightestGrey;
 	overflow:hidden;
-	display:none;
-
-
-	@include breakpoint(700px){
-		display:block;
-
-	}
+	background:$lightestGrey;
+	padding-top:40px;
 
 
 	&__title{
-		// @extend %center-text;
+		@extend %center-text;
 		@extend %uppercase;
-		@extend %text-white;
+		color:$primFontColor;
 	}
 
 	&__slider-container{
 			
-		@include breakpoint($m){
+		@include breakpoint(800px){
 			padding: 0 14%;
 			// height: 800px;
 		}
@@ -47,6 +41,14 @@
 		.bx-next{
 			right: -100%;
 			margin-right: -1.1em;
+		}
+	}
+
+	@include breakpoint(700px){
+		display:block;
+
+		&__title{
+			color:white;
 		}
 	}
 }

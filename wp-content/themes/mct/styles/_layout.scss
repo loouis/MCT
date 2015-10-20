@@ -51,7 +51,7 @@ body, html{
   @include clearfix;
 
   @include breakpoint(500px){
-    padding:60px 50px 80px 100px;
+    padding:60px 50px 80px 50px;
   }
 
   @include breakpoint(1480px){

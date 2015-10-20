@@ -1,17 +1,16 @@
 .trend-loc{
+
+	.bx-wrapper .bx-viewport{
+		overflow:hidden;
+	}
+
 	&__slider{
 		&__slide{
 			// position:relative;
 			opacity:0.5;
-			padding:0 1.1em;
 
 			&.active-slide{
 				opacity:1;
-			}
-
-			& > div{
-				position: relative;
-				// padding:30px;
 			}
 
 			&__text{
@@ -19,9 +18,11 @@
 				position:absolute;
 				bottom:0;
 				left:0;
-				padding:$base*6 $base*6 $base*6 40px;
+				width:100%;
+				padding:$base*3 $base*6 $base*3 40px;
 				background:rgba(0,0,0,.5);
 				color:white;
+				@extend %center-text;
 
 				&__location{
 					font-size:$base*2;
@@ -29,19 +30,56 @@
 					@extend %uppercase;
 					@extend %font-weight-black;
 					@extend %l-letter-spacing;
+					margin-bottom: 5px;
+
+
+					background: black;
+				    display: inline-block;
+				    padding: 0 10px;
 				}
 				&__title{
 					@extend %uppercase;
-					font-size:3.075em;
+					font-size:2.275em;
 					margin-bottom:0;
 				}
 				&__para{
-					color:white;
+					display:none;
 				}
 				&__button{
 					@extend %button-solid;
 				}
 			}
 		}
+	}
+
+	@include breakpoint(800px){
+		.bx-wrapper .bx-viewport{
+			overflow:visible !important;
+		}
+		&__slider{
+			&__slide{
+				padding:0 1.1em;
+
+				& > div{
+					position:relative;
+				}
+
+				&__text{
+					padding:$base*6 $base*6 $base*6 40px;
+					text-align: left;
+
+					&__para{
+						display:block;
+						color:white;
+					}
+
+					&__title{
+						font-size:3.075em;
+					}
+
+				}
+			}
+		}
+
 	}
 }
