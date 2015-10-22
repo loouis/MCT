@@ -32,12 +32,12 @@ $(document).ready(function(){
 		$logo = $(".logo"),
 		$openNav = $(".logo, .header-main__nav__hamburger-menu"),
 		$siteNav = $(".site-nav"),
-		$mainHeader = $(".header-main__nav");
+		$mainHeader = $(".header-main");
 
 	$openNav.on("click", function(){
 		$siteNav.toggleClass("site-nav--active");
 		$("body").toggleClass("body--is-fixed");
-		$mainHeader.toggleClass("header-main__nav--active");
+		$mainHeader.toggleClass("header-main--active");
 	});
 
 

@@ -20,7 +20,7 @@
 
 <?php wp_head(); ?>
 </head>
-
+	
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
@@ -36,39 +36,46 @@
 	</header>
 
 	<div class="site-nav">
-		<nav class="site-nav__all-site-links">
-			<div class="site-nav__cat">
-				<div class="site-nav__cat__nav">
-					<?php wp_nav_menu( 
-						array( 
-							'theme_location' => 'locations', 
-							'menu_class' => 'site-nav__cat__nav__links__link' ) 
-						); 
-					?>	
-				</div>
-			</div>
-			<div class="site-nav__main-site-links">
-				<?php wp_nav_menu( 
-					array( 
-						'theme_location' => 'primary', 
-						'menu_id' => 'primary-menu',
-						'menu_class' => 'site-nav__main-site-links__link' ) 
-					); 
-				?>
-			</div>
-		</nav>
+		<div class="outter-wrapper">
+			<div class="main-wrapper">
 
-		<ul class="social-icons">
-			<a href="http://" target="_blank" class="social-icons__icon">
-				<img src="assets/images/social-icons--twitter.png" alt=""/>
-			</a>
-			<a href="http://" target="_blank" class="social-icons__icon">
-				<img src="assets/images/social-icons--facebook.png" alt=""/>
-			</a>
-			<a href="http://" target="_blank" class="social-icons__icon">
-				<img src="assets/images/social-icons--instagram.png" alt=""/>
-			</a>
-		</ul>
+				<input type="text"  placeholder="Search"/>
+
+				<nav class="site-nav__all-site-links">
+					<div class="site-nav__cat">
+						<div class="site-nav__cat__nav">
+							<?php wp_nav_menu( 
+								array( 
+									'theme_location' => 'locations', 
+									'menu_class' => 'site-nav__cat__nav__links__link' ) 
+								); 
+							?>	
+						</div>
+					</div>
+					<div class="site-nav__main-site-links">
+						<?php wp_nav_menu( 
+							array( 
+								'theme_location' => 'primary', 
+								'menu_id' => 'primary-menu',
+								'menu_class' => 'site-nav__main-site-links__link' ) 
+							); 
+						?>
+					</div>
+				</nav>
+
+				<!-- <ul class="social-icons">
+					<a href="http://" target="_blank" class="social-icons__icon">
+						<img src="assets/images/social-icons--twitter.png" alt=""/>
+					</a>
+					<a href="http://" target="_blank" class="social-icons__icon">
+						<img src="assets/images/social-icons--facebook.png" alt=""/>
+					</a>
+					<a href="http://" target="_blank" class="social-icons__icon">
+						<img src="assets/images/social-icons--instagram.png" alt=""/>
+					</a>
+				</ul> -->
+			</div>
+		</div>
 	</div>
 
 	<div id="content" class="site-content">

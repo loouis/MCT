@@ -9,38 +9,38 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="outter-wrapper">
 
-			<?php $blog_hero = new WP_Query( array( 'posts_per_page' => 4) );?>
-			<?php if($blog_hero->have_posts() ) : $blog_hero->the_post(); ?>
+				<?php $blog_hero = new WP_Query( array( 'posts_per_page' => 4) );?>
+				<?php if($blog_hero->have_posts() ) : $blog_hero->the_post(); ?>
 
-				<section id="news-all-hero-slider" class="news-single-hero section-hero">
+					<section id="news-all-hero-slider" class="news-single-hero section-hero">
 
-					<?php while($blog_hero->have_posts()) : $blog_hero->the_post();?>
+						<?php while($blog_hero->have_posts()) : $blog_hero->the_post();?>
 
-						<div class="news-single-hero__slide" <?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
-				        	if ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'desktop-largest' ) )
-				            	printf( ' style="background-image: url(%s);"', $image_src[0] );     
-				    		}?>>
-							<div class="main-wrapper">
-								<div class="news-single-hero__slide__text">
-									<!-- Category-->
-									<p class="news-single-hero__slide__text__news-cat">
-										<?php $category = get_the_category(); $firstCategory = $category[0]->cat_name; echo $firstCategory;?>
-									</p>
-									<!-- Title -->
-									<h3 class="news-single-hero__slide__text__title"><?php the_title();?></h3>
+							<div class="news-single-hero__slide" <?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
+					        	if ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'desktop-largest' ) )
+					            	printf( ' style="background-image: url(%s);"', $image_src[0] );     
+					    		}?>>
+								<div class="main-wrapper">
+									<div class="news-single-hero__slide__text">
+										<!-- Category-->
+										<p class="news-single-hero__slide__text__news-cat">
+											<?php $category = get_the_category(); $firstCategory = $category[0]->cat_name; echo $firstCategory;?>
+										</p>
+										<!-- Title -->
+										<h3 class="news-single-hero__slide__text__title"><?php the_title();?></h3>
+									</div>
 								</div>
 							</div>
-						</div>
 
-					<?php endwhile;?>
-				</section>
-			<?php endif;?>
+						<?php endwhile;?>
+					</section>
+				<?php endif;?>
 
-			<?php wp_reset_query();?>
+				<?php wp_reset_query();?>
 
-			<div class="latest-news">
-				<div class="outter-wrapper">
+				<div class="latest-news">
 					<div class="main-wrapper">
 
 					<?php if ( have_posts() ) : ?>
@@ -80,9 +80,8 @@ get_header(); ?>
 							
 					<?php endif; ?>
 					</div><!-- // Main wrapper -->
-				</div><!-- // Outter wrapper -->
-			</div>
-
+				</div>
+			</div><!-- // Outter wrapper -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

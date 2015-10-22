@@ -17,7 +17,7 @@
 
 	@include breakpoint($m){
 		width:100%;
-		padding:$base*5 $base*10;
+		// padding:$base*5 $base*10;
 
 		background: linear-gradient(270deg, #24e5ed, #df38aa);
 	}
@@ -33,7 +33,7 @@
 		    position: absolute;
 		    height: 100%;
 		    width: 100%;
-		    background: rgba(0, 0, 0, 0.32);
+		    background: rgba(0, 0, 0, 0.52);
 		    top: 0;
 		    left: 0;
 		    z-index: 1;
@@ -59,10 +59,11 @@
 		margin-bottom:$base*4;
 		@include clearfix;
 		z-index:2;
+		margin-top:40px;
 	}
 
 	&__cat{
-		margin-top:$base*12;
+		// margin-top:$base*12;
 		clear:both;
 
 		&__title{
@@ -76,7 +77,7 @@
 			
 			@include breakpoint($m){
 				@include span ( 6 of 12);
-				
+				text-align: right;
 				// &__link{
 				// 	@include span ( 6 of 12);
 				// }
@@ -85,7 +86,7 @@
 	}
 
 	&__main-site-links{
-		@include span (last 5);
+		@include span (last 6);
 
 		&__link{
 			@extend %uppercase;
@@ -93,18 +94,23 @@
 			font-family: $brandFont;
 			display:block;
 			padding: $base*2.46 0;
-			text-align:right;
 			@extend %font-weight-black;
 			font-size:1.2em;
-
-			
 		}
 		@include breakpoint($m){
-			@include span (last 3);
+			// @include span (last 3);
+			padding-top: 8px;
+
 			&__link{
-				font-size:1.35em;
-				padding: $base*2 0;
+				font-size: 1em;
+    			padding: 0;
+    			line-height: 2em;
+				// padding: $base*2 0;
 			}
+		}
+
+		.menu-item-157{
+			padding-top:17px;
 		}
 	}
 
@@ -129,18 +135,25 @@
 
 
 input{
-	width:100%;
-	background-color:rgba(0,0,0,0);
-	background-image:url(/assets/images/transparent.png);
-	outline: none;
-	border: none;
-	border-bottom: 1px solid white;
-	padding-bottom: 10px;
-	font-family:$brandFont;
-	@extend %font-weight-bold;
-	font-size:1.2em;
-	margin: $base*2 0;
-	@extend %text-white;
+	position: relative;
+    width: 280px;
+    background-image: url(/assets/images/transparent.png);
+    outline: none;
+    border: none;
+    background: rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    font-family: "brandon-grotesque",sans-serif;
+    font-size: 1.2em;
+    z-index: 10;
+    text-align: center;
+    padding: 6px 0;
+    display: block;
+    margin: 0 auto;
+}
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+   color: white;
+   text-align:center;
 }
 
 
@@ -164,7 +177,7 @@ input[type="submit"]{
 	font-family: $brandFont;
 	display:block;
 	padding: $base*2 0;
-	font-size:em(38px);
+	font-size:em(32px);
 }
 
 .menu-item a{
