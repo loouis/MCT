@@ -1,0 +1,16 @@
+.about-purple__main-content{
+	background:#f8f8f8;
+	@include clearfix;
+
+	.p1{
+		margin-bottom: $base*4;
+	}
+}
+
+.about-us__about-purple{
+	position: relative;
+	max-width:680px;
+	margin: 0 auto;
+	text-align:center;
+	top: -200px;
+}

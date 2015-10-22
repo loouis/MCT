@@ -2,13 +2,6 @@
 /**
  * The main template file.
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package _s
  */
 
@@ -47,43 +40,47 @@ get_header(); ?>
 			<?php wp_reset_query();?>
 
 			<div class="latest-news">
+				<div class="outter-wrapper">
+					<div class="main-wrapper">
 
-				<?php if ( have_posts() ) : ?>
+					<?php if ( have_posts() ) : ?>
 
-					<h1 class="latest-news__title">More news…</h1>
+						<h1 class="latest-news__title">More news…</h1>
 
-					<ul class="latest-news__items">
-		
-						<?php while( have_posts() ) : the_post();?>
+						<ul class="latest-news__items">
+			
+							<?php while( have_posts() ) : the_post();?>
 
-							<?php if ($count == 1) : ?> 
-								<a href="" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad">
-									<article class="all-blog-inline-purple-ad__text">
-										<h4 class="all-blog-inline-purple-ad__text__news-title">SEEKING WORK  IN LONDON?</h4>
-										<p class="all-blog-inline-purple-ad__text__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-									</article>
-									<img src="<?php echo get_template_directory_uri();?>/images/all-blog-inline-purple-ad-image.jpg" alt="">
+								<?php if ($count == 1) : ?> 
+									<a href="" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad">
+										<article class="all-blog-inline-purple-ad__text">
+											<h4 class="all-blog-inline-purple-ad__text__news-title">SEEKING WORK  IN LONDON?</h4>
+											<p class="all-blog-inline-purple-ad__text__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+										</article>
+										<img src="<?php echo get_template_directory_uri();?>/images/all-blog-inline-purple-ad-image.jpg" alt="">
+									</a>
+								<?php endif; $count++; ?>
+
+								<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
+									<div class="news-cell__image">
+										<article class="news-cell__text">
+											<!-- <p class="news-cell__text__news-type">Purple blog</p> -->
+											<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
+										</article>
+										
+										<?php the_post_thumbnail('retina-smallest');?>
+
+									</div>
+									<span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
 								</a>
-							<?php endif; $count++; ?>
 
-							<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
-								<div class="news-cell__image">
-									<article class="news-cell__text">
-										<!-- <p class="news-cell__text__news-type">Purple blog</p> -->
-										<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
-									</article>
-									
-									<?php the_post_thumbnail('retina-smallest');?>
-
-								</div>
-								<span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
-							</a>
-
-						<?php endwhile; ?>
-						
-					</ul>
-						
-				<?php endif; ?>
+							<?php endwhile; ?>
+							
+						</ul>
+							
+					<?php endif; ?>
+					</div><!-- // Main wrapper -->
+				</div><!-- // Outter wrapper -->
 			</div>
 
 		</main><!-- #main -->

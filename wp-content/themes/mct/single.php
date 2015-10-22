@@ -119,7 +119,7 @@ get_header(); ?>
 				<!-- Show related posts -->
 				<section class="news-single__more-news">
 				    
-				    <div class="news-single__more-news__wrap">
+			    	<div class="main-wrapper">
 
 				    	<h4 class="news-single__more-news__title">Other news you may be interested in…</h4>
 				    	

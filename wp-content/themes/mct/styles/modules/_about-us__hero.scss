@@ -1,0 +1,27 @@
+	
+.about-us{
+	&__hero{
+		@extend %center-text;
+		height:100vh;
+		@extend %cover;
+	
+		&__mc-logo{
+			position:relative;
+			max-width: 200px;
+	    	margin: 0 auto;
+	    	height:100%;
+	    	top: 50%;
+    		-webkit-transform: translateY(-27%);
+    		-ms-transform: translateY(-27%);
+		}
+	}
+
+	@include breakpoint($m){
+		&__hero{
+		
+			&__mc-logo{
+				max-width: 280px;
+			}
+		}
+	}
+}

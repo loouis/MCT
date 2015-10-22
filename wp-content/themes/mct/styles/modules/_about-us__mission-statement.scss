@@ -1,8 +1,16 @@
 .about-purple__mission-statement{
+	position: relative;
 	padding:$base*2;
+	top:-200px;
+    max-width: 680px;
+    margin: 0 auto;
+	background: white;
+
+
 
 	&__text{
 		border: 2px solid $brandColor;
-		padding:$base*4;
+		padding:$base*8;
+		margin:$base*2;
 	}
 }

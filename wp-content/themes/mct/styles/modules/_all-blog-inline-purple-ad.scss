@@ -1,8 +1,8 @@
 .all-blog-inline-purple-ad{
 	position:relative;
-	float: left;
+	display:inline-block;
 	width:100%;
-	background:red;
+	margin-right: -4px;
 
 	&:after{
 		content:"";

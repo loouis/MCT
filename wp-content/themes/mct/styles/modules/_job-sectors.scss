@@ -1,0 +1,19 @@
+.job-sectors{
+	&__sector{
+		@include span(4 of 12);
+		padding:15px;
+		margin:$base*3 0;
+
+		&__image{
+			width:40%;
+			margin: 0 auto;
+		}
+
+		&__text{
+			font-weight:700;
+			padding-top:$base*2;
+			font-size:em(14px);
+			@extend %uppercase;
+		}
+	}
+}
