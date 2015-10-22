@@ -54,7 +54,13 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                             
                                 $mlpoutputhtml .= "<!-- Category button -->";
                                 $mlpoutputhtml .= '<div class="customCategoryList">';
-                                    $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . $categorylabel . "</a>";
+                                    $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . "". "</a>";
+
+                                    $mlpoutputhtml .= "<a class='filterView locations-list-view' href='#'>" . "L". "</a>";
+                                    $mlpoutputhtml .= "<a class='filterView locations-map-view' href='#'>" . "M". "</a>";
+
+
+                                    // $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . $categorylabel . "</a>";
                                     // $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel . "</a>";
 
                                     $mlpoutputhtml .= "<ul class='' data-bind='foreach: {data: mapCategories}'>";

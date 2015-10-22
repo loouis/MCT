@@ -55,6 +55,39 @@ $(document).ready(function(){
 	// });
 
 
+	// Mobile locations page ShowFilter button - toggle show categories
+
+	var showFilterBtn       = $('.showFilterBtn'),
+		showFilterUl        = $('.customCategoryList ul'),
+		locationsMapView    = $('.locations-map-view'),
+		locationsListView   = $('.locations-list-view'),
+		locationsMap        = $('#map-canvas0'),
+		locationsFilterView = $('.filterView');
+
+	function locationsMobileMenuHide(){
+		showFilterUl.removeClass("show-cat-filter");
+		locationsFilterView.removeClass("show-location-view-options");
+	}
+
+
+	showFilterBtn.on('click', function(){
+		showFilterUl.toggleClass("show-cat-filter");
+		locationsFilterView.toggleClass("show-location-view-options");
+	});
+
+	// Show map or list view on mobile
+	locationsListView.on('click', function(){
+		locationsMap.removeClass("show-mobile-map");
+		locationsMobileMenuHide()
+	});
+	
+	locationsMapView.on('click', function(){
+		locationsMap.addClass("show-mobile-map");
+		locationsMobileMenuHide()
+	});
+
+
+
 
 
 

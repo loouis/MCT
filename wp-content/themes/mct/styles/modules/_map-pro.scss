@@ -21,13 +21,79 @@
 	background: rgba(0,0,0,0.6) !important;
 }
 
-#map-canvas0{
-	display:none;
-
-	@include breakpoint(820px){
-		display:block;
-	}
+.rightmap #ListContainer{
+	padding:30px !important;
 }
+
+.prettyMapList .location{
+	width:100% !important;
+}
+
+
+.prettyMapList .customCategoryList ul{
+	top:initial !important;
+	bottom:120px !important;
+	visibility:hidden;
+	display:block !important;
+    position:fixed;
+    font-size: 22px;
+    line-height: 1.2em;
+    z-index:9999;
+    right: 24px;
+}
+
+.prettyMapList .customCategoryList{
+	position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-family:$brandFont;
+    z-index:20;
+    width:160px;
+}
+
+.prettyMapList .prettyFileBar .btn{
+	position: absolute;
+	float:right;
+	right: 0 !important;
+	bottom: 10px !important;
+}
+
+
+.filterView{
+	width:40px;
+	height:40px;
+	float:left;
+	visibility:hidden;
+	border-radius:50%;
+	margin:0 5px;
+	background:green;
+}
+
+.show-location-view-options{
+	visibility:visible !important;
+}
+
+.showFilterBtn{
+	width: 50px !important;
+    height: 50px !important;
+    background: #FF02AF !important;
+    z-index: 20 !important;
+    border-radius: 50% !important;
+    // position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+}
+
+.prettyMapList .corePrettyStyle {
+	margin: 2.5% 0 !important;
+}
+
+
+// Show cat filter on filter button click
+ .prettyMapList .customCategoryList ul.show-cat-filter{
+	visibility:visible;
+}
+
 
 .description__title{
 	height:30px;
@@ -46,4 +112,34 @@
 
 .customCategoryList ul li a:hover{
 	opacity:1 !important;
+}
+
+#map-canvas0{
+	opacity: 0;
+	z-index:-10;
+}
+
+// Show & hide map
+.show-mobile-map{
+	display:block !important;
+	z-index:19 !important;
+	opacity: 1 !important;
+}
+
+
+
+// .prettyMapList .corePrettyStyle{
+// 	width:94% !important;
+// }
+
+@include breakpoint(860px){
+
+	// Location cell
+	.prettyMapList .corePrettyStyle{
+		width: 46.2% !important;
+	}	
+
+	#map-canvas0{
+		display:block;
+	}
 }

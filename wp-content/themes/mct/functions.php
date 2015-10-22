@@ -298,7 +298,7 @@ function mct_scripts() {
 
 	wp_enqueue_script( 'mct-sticky-kit', get_template_directory_uri() . '/js/libs/sticky-kit.min.js', array(), '14112015', true );
 
-	wp_enqueue_script( 'mct-global', get_template_directory_uri() . '/js/global.js', array(), '05112015', true );
+	wp_enqueue_script( 'mct-global', get_template_directory_uri() . '/js/build/global.min.js', array(), '05112015', true );
 
 
 
