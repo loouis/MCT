@@ -1,0 +1,29 @@
+.title-block{
+	padding:0 30px;
+	text-align:center;
+	margin-bottom:$base*6;
+
+	&__title{
+		margin-bottom:0;
+		@extend %uppercase;
+	}
+
+	&__title, &__sub-text{
+		color:$primFontColor;
+	}
+
+	&--light-bg{
+
+	}
+
+	@include breakpoint(800px){
+
+		&__title, &__sub-text{
+			color:white;
+
+			&--light-bg{
+				color:$primFontColor;
+			}
+		}
+	}
+}

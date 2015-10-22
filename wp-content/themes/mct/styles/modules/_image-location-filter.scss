@@ -61,7 +61,6 @@
 		&__fig{
 			position:relative;
 			height:100%;
-			background:white;
 			overflow:hidden;
 
 
@@ -185,7 +184,6 @@
 					width:48.7%;
 					float:right;
 					margin-right:0;		
-					background:white;	
 				}
 
 			}
@@ -280,7 +278,6 @@
 				position:relative;
 				display: block;
 				height:100%;
-				background:white;
 			}
 
 			&--long-thin{
@@ -291,13 +288,11 @@
 				@include span(6 of 12 split);
 				margin-bottom:5.0%;
 				// height:240px;
-				background:white;
 				margin-left:0;
 
 				&-right{
 					@include span(last 6 split);
 					margin-right:0;		
-					background:white;	
 				}
 
 			}

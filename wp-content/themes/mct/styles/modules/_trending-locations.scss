@@ -1,7 +1,7 @@
 .trending-locations{
 	overflow:hidden;
 	background:$lightestGrey;
-	padding-top:40px;
+	padding-top:$base*6;
 
 
 	&__title{
@@ -28,7 +28,7 @@
 			width: 60px;
 			z-index:10;
 			background:url(images/svg/icon-carousel-arrow.svg) no-repeat;
-			background:-size:contain;
+			background-size:contain;
 			transition: background .3s ease-in-out;
 
 			&:hover{
@@ -44,9 +44,10 @@
 		}
 	}
 
-	@include breakpoint(700px){
+	@include breakpoint(800px){
 		display:block;
 		background:none;
+		padding-top:0;
 
 		&__title{
 			color:white;

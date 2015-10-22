@@ -29,9 +29,12 @@ get_header(); ?>
 
 			<section class="image-location-filter ilf">
 				<div class="main-wrapper">
+
+					<hgroup class="title-block">
+						<h3 class="title-block__title">Explore london</h3>
+						<p class="title-block__sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
+					</hgroup>
 					
-					<h3>Explore london</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
 
 					<div class="ilf__container">
 
@@ -172,9 +175,12 @@ get_header(); ?>
 			<!-- Trending locations -->
 			<section class="trending-locations">
 				<div class="outter-wrapper">
-						
-					<h3 class="trending-locations__title">Trending locations</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
+
+					<hgroup class="title-block">
+						<h3 class="title-block__title">Trending locations</h3>
+						<p class="title-block__sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
+					</hgroup>
+					
 
 					<div class="trending-locations__slider-container trend-loc">
 
@@ -220,7 +226,7 @@ get_header(); ?>
 
 
 								<picture>
-									<source media="(min-width: 960px)"
+									<source media="(min-width: 800px)"
 									srcset="<?php echo $large_thumb_url[0]; ?> 1x">
 									<source 
 									srcset="<?php echo $thumb_url[0]; ?> 1x">
@@ -246,7 +252,9 @@ get_header(); ?>
 
 					<div class="main-wrapper">
 
-						<h3 class="latest-news__title">Latest news</h3>
+						<hgroup class="title-block">
+							<h3 class="title-block__title  title-block__title--light-bg">Latest news</h3>
+						</hgroup>
 
 						<ul class="latest-news__items">
 
