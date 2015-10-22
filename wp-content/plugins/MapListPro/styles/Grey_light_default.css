@@ -1,16 +1,7 @@
 /***************************/
 /* Colours                 */
 /***************************/
-.infoWindowContainer .infoWindow h3,
-.prettyMapList .corePrettyStyle{
-    /*Gradient background*/
-    float:left;
-    background: #ffffff; /* Old browsers */
-    color:#555;
-    width: 46.2%;
-    color: #555;
-    margin: 1.5%;
-}
+
 
 /*.prettyMapList .corePrettyStyle a{color:#555;}*/
 

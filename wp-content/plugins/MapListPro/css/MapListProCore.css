@@ -352,21 +352,7 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 	zoom:1;
 }
 
-.prettyMapList .prettylink:after
-{
-	content: "MAP";
-    display: block;
-    right: 22%;
-    position: absolute;
-    top: 32.6%;
-    z-index: 20;
-    border-radius: 50%;
-    opacity:0;
-}
 
-.prettylink:hover:after{
-    opacity:1;
-}
 
 .prettyMapList .prettylink:hover{}
 
@@ -386,28 +372,13 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 /*Make sure categories clear in ie11*/
 .prettyMapList .corePrettyStyle .viewLocationDetail{display:block}
 
-.prettyMapList .corePrettyStyle{
-    background:red;
-    /*height:350px;*/
-}
 
 /*Address in list item*/
 .prettyMapList .prettylink .address{ margin-bottom: 10px;}
 
-/*Added to stop themes overriding*/
-.prettyMapList .map{
-    float:none;
-    display:block;
-}
 
-/*Added to stop themes overriding*/
-.prettyMapList .map{
-    float:none;
-    display:block;
-}
 .prettyMapList{
     background:#EFEFEF;
-    /*height:100vh;*/
 }
 
 /*Set icons*/
@@ -428,7 +399,7 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
     height:100%;
     width:100%;
     z-index:1;
-    background:rgba(0,0,0,.4);
+    background:rgba(0,0,0,.3);
 }
 .map-pro-thumbnail-image{
     position: relative;
@@ -818,27 +789,11 @@ body .prettyMapList .prettyFileBar .combo .prettySearchValue{width:100px;}
 }
 
 
-.prettyMapList .corePrettyStyle a{
-    position: absolute;
-    top: 38%;
-    left: 22%;
-    width:auto !important;
-    z-index:20;
-    opacity:0;
-}
-
 .prettylink:hover a{
     opacity:1;
 }
 
-.prettyMapList .corePrettyStyle a, .prettyMapList .prettylink:after{
-    font-family:"brandon-grotesque", sans-serif;
-    font-weight:900;
-    font-size:28px;
-    color:white;
-    background:none !important;
 
-}
 
 /*Fixes for common template issues
 Feel free to remove or tweak these if you run into issues
@@ -909,7 +864,6 @@ Feel free to remove or tweak these if you run into issues
 
 /*Map to right*/
 .rightmap .mapHolder{float:right;width:49%;}
-.rightmap #ListContainer{width:49%; padding-left:100px;}
 .rightmap .prettyFileBar{float:left;width:49%;}
 
 /*Accordion*/
