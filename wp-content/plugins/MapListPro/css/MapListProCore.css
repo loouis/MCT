@@ -890,7 +890,6 @@ Feel free to remove or tweak these if you run into issues
 
 /* Single map location
 ============================*/
-.FullMapPage #SingleMapLocation{height:300px;width:100%;}
 
 .FullMapPage .infoWindowContainer .infoWindow h3{margin-bottom:0 !important;}
 .FullMapPage .infoWindow .infowindowContent{
