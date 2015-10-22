@@ -34,6 +34,7 @@
 	}
 
 	@include breakpoint(800px){
+		display: block;
 		width: 100%;
 	    text-align: center;
 	    padding: 15px 20px;

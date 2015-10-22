@@ -6,19 +6,14 @@
 
 	&__slider{
 		&__slide{
-			// position:relative;
-			opacity:0.5;
 
-			&.active-slide{
-				opacity:1;
+			& > div{
+				position:absolute;
+				bottom: 0;
+    			width:100%;
 			}
 
 			&__text{
-				// max-width:560px;
-				position:absolute;
-				bottom:0;
-				left:0;
-				width:100%;
 				padding:$base*3 $base*6 $base*3 40px;
 				background:rgba(0,0,0,.5);
 				color:white;
@@ -29,17 +24,15 @@
 					color:$brandColor;
 					@extend %uppercase;
 					@extend %font-weight-black;
-					@extend %l-letter-spacing;
 					margin-bottom: 5px;
-
-
+					letter-spacing: 0.16em;
 					background: black;
 				    display: inline-block;
 				    padding: 0 10px;
 				}
 				&__title{
 					@extend %uppercase;
-					font-size:2.275em;
+					font-size:1.675em;
 					margin-bottom:0;
 				}
 				&__para{
@@ -52,21 +45,39 @@
 		}
 	}
 
+	@include breakpoint(600px){
+
+		&__slider{
+			&__slide{
+				&__text{
+					font-size:1.275em;
+				}
+			}
+		}
+	}
+
 	@include breakpoint(800px){
 		.bx-wrapper .bx-viewport{
 			overflow:visible !important;
 		}
 		&__slider{
+
 			&__slide{
 				padding:0 1.1em;
+				opacity:0.5;
+
+				&.active-slide{
+					opacity:1;
+				}
 
 				& > div{
-					position:relative;
+    				padding-right: 2.2em;
 				}
 
 				&__text{
-					padding:$base*6 $base*6 $base*6 40px;
+					padding:$base*4 $base*4 $base*4 $base*4;
 					text-align: left;
+					// bottom:initial;
 
 					&__para{
 						display:block;
@@ -74,12 +85,10 @@
 					}
 
 					&__title{
-						font-size:3.075em;
+						font-size:2.075em;
 					}
-
 				}
 			}
 		}
-
 	}
 }
