@@ -21,6 +21,10 @@
 		&__title, &__sub-text{
 			color:white;
 
+			&__title{
+				font-size: em(32px);
+			}
+
 			&--light-bg{
 				color:$primFontColor;
 			}

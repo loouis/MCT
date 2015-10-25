@@ -47,7 +47,7 @@
 	@include breakpoint(800px){
 		display:block;
 		background:none;
-		padding-top:0;
+		padding-top:$base*9;
 
 		&__title{
 			color:white;
