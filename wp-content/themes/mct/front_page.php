@@ -40,6 +40,7 @@ get_header(); ?>
 
 						<!-- Top conatiner -->
 						<div class="ilf__container--top">
+
 							<div class="ilf__container__split ilf__cells">
 								<div class="ilf__cells__cell ilf__cells__cell--large-square">
 									<article class="ilf__cells__cell__text cd-intro">
@@ -47,8 +48,11 @@ get_header(); ?>
 									</article><img src="<?php echo get_template_directory_uri();?>/images/ilf-images--large-text-block.jpg" alt=""/>
 								</div>
 							</div>
+
 							<div class="ilf__container__split ilf__cells">
-								<a href="http://">
+
+								<!-- Bars -->
+								<a href="<?php url();?>/locations/?locationSearchTerms=bars">
 									<div class="ilf__cells__cell ilf__cells__cell--long-thin">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
@@ -68,9 +72,10 @@ get_header(); ?>
 											</picture>
 										</figure>
 									</div>
-								</a>
-
-								<a href="http://">
+								</a><!-- //Bars -->
+								
+								<!-- Restaurants -->
+								<a href="<?php url();?>/locations/?locationSearchTerms=resturants">
 									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
@@ -84,9 +89,10 @@ get_header(); ?>
 											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--restaurants.jpg" alt="" class="ilf__cells__cell__fig__image"/>
 										</figure>
 									</div>
-								</a>
-
-								<a href="http://">
+								</a><!-- //Restaurants -->
+								
+								<!-- Entertainment -->
+								<a href="<?php url();?>/locations/?locationSearchTerms=entertainment">
 									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
@@ -100,13 +106,16 @@ get_header(); ?>
 											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--entertainment.jpg" alt="" class="ilf__cells__cell__fig__image"/>
 										</figure>
 									</div>
-								</a>
+								</a><!-- //Entertainment -->
+
 							</div>
 						</div><!-- #Top conatiner -->
 
 						<!-- Bottom conatiner -->
 						<div class="ilf__container--bottom">
-							<a href="http://">
+
+							<!-- Night Clubs -->
+							<a href="<?php url();?>/locations/?locationSearchTerms=night-clubs">
 								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
@@ -120,9 +129,10 @@ get_header(); ?>
 										<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--night-clubs.jpg" alt="" class="ilf__cells__cell__fig__image"/>
 									</figure>
 								</div>
-							</a>
-
-							<a href="http://">
+							</a><!-- //Night Clubs -->
+							
+							<!-- Cafes -->
+							<a href="<?php url();?>/locations/?locationSearchTerms=cafes">
 								<div class="ilf__cells__cell ilf__cells__cell--long-thin">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
@@ -142,9 +152,10 @@ get_header(); ?>
 										</picture>
 									</figure>
 								</div>
-							</a>
-
-							<a href="http://">
+							</a><!-- //Cafes -->
+							
+							<!-- Hotels -->
+							<a href="<?php url();?>/locations/?locationSearchTerms=hotels">
 								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
@@ -166,7 +177,7 @@ get_header(); ?>
 										</picture>
 									</figure>
 								</div>
-							</a>
+							</a><!-- //Hotels -->
 						</div>
 					</div>
 				</div>
