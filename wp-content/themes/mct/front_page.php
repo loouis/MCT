@@ -346,12 +346,19 @@ get_header(); ?>
 							?>
 
 							<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+							
+							<?php $jobs_link = get_field('purple_jobs_direct_link');
 
-							<article class="hjb__jobs__cell">
+							if( $jobs_link ){ ?>
+								<a href="<?php echo $jobs_link?>" class="hjb__jobs__cell">
+							<?php } else{ ?>
+								<a href="http://www.purple-consultancy.com/jobs/" class="hjb__jobs__cell">
+							<?php } ?>
+							
 								<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
 								<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
 								<p class="hjb__jobs__cell__desc"><?php the_content();?></p>
-							</article>
+							</a>
 
 						<?php endwhile;?>
 						<?php wp_reset_postdata(); ?>
