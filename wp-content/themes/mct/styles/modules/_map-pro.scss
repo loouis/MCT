@@ -17,6 +17,11 @@
 	width:46.2%;
 }
 
+// Background to suit the map colour when there are only a few items in view
+body.page-id-7{
+	background: #EFEFEF;
+}
+
 
 .infoWindowContainer .infoWindow h3,
 .prettyMapList .corePrettyStyle{
