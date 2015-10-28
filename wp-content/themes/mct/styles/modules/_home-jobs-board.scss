@@ -10,6 +10,6 @@
 
 	@include breakpoint(800px){
 		float:left;
-		padding: $base*8 0;
+		padding: $base*8 0 0 0;
 	}
 }	
