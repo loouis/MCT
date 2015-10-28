@@ -89,6 +89,10 @@
 			text-align: center;
 			height:280px;
 			margin-bottom:0;
+
+			body.home &{
+				height:auto;	
+			}
 		}
 	}
 

@@ -134,7 +134,7 @@
 
 
 input{
-	position: relative;
+	position: absolute;
     width: 280px;
     background-image: url(/assets/images/transparent.png);
     outline: none;
@@ -147,7 +147,11 @@ input{
     text-align: center;
     padding: 6px 0;
     display: block;
-    margin: 0 auto;
+    color:white;
+    // margin: 0 auto;
+    left:50%;
+    right:50%;
+    margin-left:-110px;
 }
 
 ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {

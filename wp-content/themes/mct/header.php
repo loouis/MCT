@@ -39,7 +39,12 @@
 		<div class="outter-wrapper">
 			<div class="main-wrapper">
 
-				<input type="text"  placeholder="Search"/>
+				<form action="<?php echo get_site_url();?>/locations"><!--Relative url to the page that your map is on-->
+					<input type="text" name="locationSearchTerms" placeholder="Search for location"><br>
+					<!-- <input type="submit" value="Search Locations"><br> -->
+				</form>
+
+
 
 				<nav class="site-nav__all-site-links">
 					<div class="site-nav__cat">
@@ -63,17 +68,17 @@
 					</div>
 				</nav>
 
-				<!-- <ul class="social-icons">
+				<ul class="social-icons">
 					<a href="http://" target="_blank" class="social-icons__icon">
 						<img src="assets/images/social-icons--twitter.png" alt=""/>
 					</a>
 					<a href="http://" target="_blank" class="social-icons__icon">
 						<img src="assets/images/social-icons--facebook.png" alt=""/>
 					</a>
-					<a href="http://" target="_blank" class="social-icons__icon">
+			<!-- 		<a href="http://" target="_blank" class="social-icons__icon">
 						<img src="assets/images/social-icons--instagram.png" alt=""/>
-					</a>
-				</ul> -->
+					</a> -->
+				</ul>
 			</div>
 		</div>
 	</div>
