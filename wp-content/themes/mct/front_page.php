@@ -319,9 +319,6 @@ get_header(); ?>
 				<div class="outter-wrapper">
 					<div class="main-wrapper">
 						<h4 class="hjb__title">Jobs Board</h4>
-						<!-- <a href="http://www.purple-consultancy.com" target="_blank" class="hjb__powered-by">
-							<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
-						</a> -->
 						<nav class="hjb__purple-links">
 							<ul>
 								<a href=""><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>
@@ -364,6 +361,9 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 
 						</ul>
+						<a href="http://www.purple-consultancy.com" target="_blank" class="hjb__powered-by">
+							<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
+						</a>
 					</div>
 				</div>
 			</section><!-- #Jobs board -->

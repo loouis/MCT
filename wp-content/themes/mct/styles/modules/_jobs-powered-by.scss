@@ -3,4 +3,10 @@
 	height:50px;
 	width:180px;
 	padding-top:$base;
+
+	body.home &{
+		float:initial;
+		display: block;	
+	    margin: 20px auto;
+	}
 }
