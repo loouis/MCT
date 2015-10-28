@@ -52,7 +52,7 @@ get_header(); ?>
 							<div class="ilf__container__split ilf__cells">
 
 								<!-- Bars -->
-								<a href="<?php url();?>/locations/?locationSearchTerms=bars">
+								<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=bars">
 									<div class="ilf__cells__cell ilf__cells__cell--long-thin">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
@@ -75,7 +75,7 @@ get_header(); ?>
 								</a><!-- //Bars -->
 								
 								<!-- Restaurants -->
-								<a href="<?php url();?>/locations/?locationSearchTerms=resturants">
+								<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=resturants">
 									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
@@ -92,7 +92,7 @@ get_header(); ?>
 								</a><!-- //Restaurants -->
 								
 								<!-- Entertainment -->
-								<a href="<?php url();?>/locations/?locationSearchTerms=entertainment">
+								<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=entertainment">
 									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
@@ -115,7 +115,7 @@ get_header(); ?>
 						<div class="ilf__container--bottom">
 
 							<!-- Night Clubs -->
-							<a href="<?php url();?>/locations/?locationSearchTerms=nightclubs">
+							<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=nightclubs">
 								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
@@ -132,7 +132,7 @@ get_header(); ?>
 							</a><!-- //Night Clubs -->
 							
 							<!-- Cafes -->
-							<a href="<?php url();?>/locations/?locationSearchTerms=cafes">
+							<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=cafes">
 								<div class="ilf__cells__cell ilf__cells__cell--long-thin">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
@@ -155,7 +155,7 @@ get_header(); ?>
 							</a><!-- //Cafes -->
 							
 							<!-- Hotels -->
-							<a href="<?php url();?>/locations/?locationSearchTerms=hotels">
+							<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=hotels">
 								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
