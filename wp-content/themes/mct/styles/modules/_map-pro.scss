@@ -161,7 +161,8 @@ body.page-id-7{
     display: block;
     right: 22%;
     position: absolute;
-    top: 32.6%;
+    // top: 32.6%;
+    top:31%;
     z-index: 20;
     border-radius: 50%;
     opacity:0;
@@ -253,6 +254,9 @@ body.page-id-7{
 	}
 	.rightmap #ListContainer {
     	padding: 0 2% 0 1.3% !important;
+	}
+	.prettyMapList .prettylink:after{
+	    top: 31%;
 	}
 }
 
