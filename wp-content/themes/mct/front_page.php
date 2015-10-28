@@ -18,6 +18,7 @@ get_header(); ?>
 				<div class="outter-wrapper">
 					<div class="home-hero__text">
 						<h1 class="home-hero__text__title">My<br/>Creative<br/> Town</h1>
+						<p class="home-hero__text__tagline"><?php bloginfo('description'); ?></p>
 					</div>
 				</div>
 
