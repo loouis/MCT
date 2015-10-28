@@ -44,8 +44,6 @@
 					<!-- <input type="submit" value="Search Locations"><br> -->
 				</form>
 
-
-
 				<nav class="site-nav__all-site-links">
 					<div class="site-nav__cat">
 						<div class="site-nav__cat__nav">
