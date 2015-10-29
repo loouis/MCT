@@ -10,11 +10,9 @@
     // border-bottom:1px solid darken($lightestGrey, 10%);
 
     &--active{
-    	
 		background:rgba(255,255,255,0);
 		border-right:none !important;;
     }
-
 
 	@include breakpoint(500px){
 		width:65px;

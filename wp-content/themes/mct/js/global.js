@@ -32,14 +32,15 @@ $(document).ready(function(){
 
 
 
-/*---------------------------------------------- Hamburger menu */
+/*---------------------------------------------- Header & Navigation */
 
 	// Hamburger menu
 	var $hamburger = $(".header-main__nav__hamburger-menu"),
 		$logo = $(".logo"),
 		$openNav = $(".logo, .header-main__nav__hamburger-menu"),
 		$siteNav = $(".site-nav"),
-		$mainHeader = $(".header-main");
+		$mainHeader = $(".header-main"),
+		$closeNav = $('.site-nav__close-button');
 
 	$openNav.on("click", function(){
 		$siteNav.toggleClass("site-nav--active");
@@ -47,19 +48,37 @@ $(document).ready(function(){
 		$mainHeader.toggleClass("header-main--active");
 	});
 
-
-	$(window).on('resize scroll', function(){
-		 var scroll = $(window).scrollTop(),
-		 	winHeight = $(window).height(),
-		 	mainHeader = $(".header-main__nav");
-
-
-		 if (scroll >= winHeight - 140){
-		 	mainHeader.addClass("has-solid-background");
-		 }else{
-			mainHeader.removeClass("has-solid-background");
-		 }
+	// Close button for main navigation
+	$closeNav.on('click', function(){
+		closeNav();
 	});
+
+	// Close nav using escape key
+	$(document).keyup(function(e) { 
+	  if (e.keyCode === 27) { 
+	    closeNav();
+	  }
+	});
+
+	function closeNav(){
+		$siteNav.removeClass("site-nav--active");
+		$("body").removeClass("body--is-fixed");
+		$mainHeader.removeClass("header-main--active");
+	}
+
+
+	// $(window).on('resize scroll', function(){
+	// 	 var scroll = $(window).scrollTop(),
+	// 	 	winHeight = $(window).height(),
+	// 	 	mainHeader = $(".header-main__nav");
+
+
+	// 	 if (scroll >= winHeight - 140){
+	// 	 	mainHeader.addClass("has-solid-background");
+	// 	 }else{
+	// 		mainHeader.removeClass("has-solid-background");
+	// 	 }
+	// });
 
 
 

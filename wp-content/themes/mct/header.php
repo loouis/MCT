@@ -37,6 +37,14 @@
 
 	<div class="site-nav">
 		<div class="outter-wrapper">
+
+			<!-- // Close nav button -->
+			<a class="site-nav__close-button">
+				<!-- <svg class="site-nav__close-button__icon">
+					<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-restaurant" />
+				</svg> -->
+			</a>
+
 			<div class="main-wrapper">
 
 				<form action="<?php echo get_site_url();?>/locations"><!--Relative url to the page that your map is on-->
@@ -73,9 +81,6 @@
 					<a href="http://" target="_blank" class="social-icons__icon">
 						<img src="assets/images/social-icons--facebook.png" alt=""/>
 					</a>
-			<!-- 		<a href="http://" target="_blank" class="social-icons__icon">
-						<img src="assets/images/social-icons--instagram.png" alt=""/>
-					</a> -->
 				</ul>
 			</div>
 		</div>
