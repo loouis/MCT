@@ -4,6 +4,9 @@ $(document).ready(function(){
 	// $('#trend-loc').bxSlider({
 	//   mode: 'horizontal',
 	// });
+
+
+/*---------------------------------------------- Init */
 	
 	$('#trend-loc').bxSlider({
 	    mode: 'horizontal',
@@ -26,6 +29,10 @@ $(document).ready(function(){
 
 	// Sticky social links in single blog posts
 	$(".share-social-links").stick_in_parent();
+
+
+
+/*---------------------------------------------- Hamburger menu */
 
 	// Hamburger menu
 	var $hamburger = $(".header-main__nav__hamburger-menu"),
@@ -55,7 +62,8 @@ $(document).ready(function(){
 	});
 
 
-	// Mobile locations page ShowFilter button - toggle show categories
+
+/*---------------------------------------------- Mobile location buttons */
 
 	var showFilterBtn       = $('.showFilterBtn'),
 		showFilterUl        = $('.customCategoryList ul'),
@@ -85,11 +93,6 @@ $(document).ready(function(){
 		locationsMap.addClass("show-mobile-map");
 		locationsMobileMenuHide()
 	});
-
-
-
-
-
 
 
 	//set animation timing
