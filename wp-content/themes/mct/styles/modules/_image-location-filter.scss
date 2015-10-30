@@ -71,7 +71,7 @@
 				left:0;
 				height: 100%;
 			    width: 100%;
-			    background: rgba(0,0,0,0.4);
+			    background: rgba(0,0,0,0.2);
 			    z-index:1;
 			}
 
@@ -90,9 +90,9 @@
 			    	&__icon{
 			    		width: 110px;
 					    height: 110px;
-					    fill: none;
-					    stroke: white;
-						stroke-width: 10px;
+					    fill: white;
+					 //    stroke: white;
+						// stroke-width: 10px;
 			    	}
 			    }
 
@@ -108,15 +108,13 @@
 				    -ms-transform: scale(0.9);
 				    transform: scale(0.9);
 				    transition: all .3s ease-in-out;
-
-
 			    }
 			}
 
 			&:hover{
 
 				&:after{
-					background: rgba(0,0,0,.8);
+					background: rgba(0,0,0,.5);
 				}
 
 				.ilf__cells__cell__fig__text-con{

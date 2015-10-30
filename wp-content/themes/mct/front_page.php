@@ -59,7 +59,7 @@ get_header(); ?>
 											<div class="ilf__cells__cell__fig__text-con">
 												<div class="ilf__cells__cell__fig__text-con__image">
 													<svg class="ilf__cells__cell__fig__text-con__image__icon">
-														<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-restaurant" />
+														<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-bars" />
 													</svg>
 												</div>
 												<div class="ilf__cells__cell__fig__text-con__title">Bars</div>
@@ -122,7 +122,7 @@ get_header(); ?>
 										<div class="ilf__cells__cell__fig__text-con">
 											<div class="ilf__cells__cell__fig__text-con__image">
 												<svg class="ilf__cells__cell__fig__text-con__image__icon">
-													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-restaurant" />
+													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-nightclubs" />
 												</svg>
 											</div>
 											<div class="ilf__cells__cell__fig__text-con__title">Night clubs</div>
@@ -139,7 +139,7 @@ get_header(); ?>
 										<div class="ilf__cells__cell__fig__text-con">
 											<div class="ilf__cells__cell__fig__text-con__image">
 												<svg class="ilf__cells__cell__fig__text-con__image__icon">
-													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-entertainment" />
+													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-cafes" />
 												</svg>
 											</div>
 											<div class="ilf__cells__cell__fig__text-con__title">Cafes</div>
