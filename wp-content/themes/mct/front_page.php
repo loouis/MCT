@@ -66,10 +66,10 @@ get_header(); ?>
 											</div>
 											<picture>
 												<source media="(min-width: 500px)"
-												srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--bar.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg 2x">
+												srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--bar.jpg 1x">
 												<source 
 												srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--bar-small.jpg 1x">
-												<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--bar.jpg" alt="">
+												<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--bar.jpg" alt="" class="ilf__cells__cell__fig__image">
 											</picture>
 										</figure>
 									</div>
@@ -149,7 +149,7 @@ get_header(); ?>
 											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg 2x">
 											<source 
 											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes-small.jpg 1x, <?php echo get_template_directory_uri();?>/images/ilf-images--cafes-small.jpg 2x">
-											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg" alt="">
+											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--cafes.jpg" alt="" class="ilf__cells__cell__fig__image">
 										</picture>
 									</figure>
 								</div>
@@ -174,7 +174,7 @@ get_header(); ?>
 											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels-small.jpg 1x">
 											<source 
 											srcset="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg 1x">
-											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg" alt="">
+											<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--hotels.jpg" alt="" class="ilf__cells__cell__fig__image">
 										</picture>
 									</figure>
 								</div>
