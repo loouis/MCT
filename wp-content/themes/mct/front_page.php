@@ -236,7 +236,6 @@ get_header(); ?>
 									$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 								?>
 
-
 								<picture>
 									<source media="(min-width: 800px)"
 									srcset="<?php echo $large_thumb_url[0]; ?> 1x">
