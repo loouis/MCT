@@ -27,6 +27,12 @@ $(document).ready(function(){
   		autoControls: true
 	});
 
+	$('#location-single-slider').bxSlider({
+	    mode: 'fade',
+	    auto: true,
+  		autoControls: true
+	});
+
 	// Sticky social links in single blog posts
 	$(".share-social-links").stick_in_parent();
 

@@ -67,7 +67,7 @@ get_header(); ?>
     					<!-- <h2 class="location-single__subhead-call-out"></h2> -->
 
     					<div data-info="SCROLL TO READ" class="trigger">
-						  <img src="assets/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
+						  <img src="<?php echo get_template_directory_uri(); ?>/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
 				       </div>
 
 			        </div><!-- //Title -->
@@ -77,6 +77,30 @@ get_header(); ?>
 
                         <?php the_field('locations__the_content');?>
 
+                        <?php wp_reset_postdata();?>
+
+
+                        <!-- Carousel -->
+                        <?php if (have_rows('locations_single__carousel')):?>
+
+                            <ul class="location-single-slider" id="location-single-slider">
+
+                                <?php while (have_rows('locations_single__carousel')): the_row();
+
+                                // Vars
+                                    $image = get_sub_field('locations-carousel__image');
+                                ?> 
+
+                                <li class="location-single-slider__slide">
+                                    <img src="<?php echo $image; ?>" alt="">
+                                </li>
+
+                            <?php endwhile;?>
+
+                            </ul>
+
+                        <?php endif;?><!-- // Carousel -->
+                        
                         <?php wp_reset_postdata();?>
 
                         <!-- Purple inline job -->

@@ -7,6 +7,10 @@
 	img.alignleft, .bxslider-gallery{
 		margin:$base*4 0;
 	}
+
+	.p1{
+		margin-bottom: $base*2;
+	}
 }
 
 .location-single{
@@ -131,12 +135,17 @@ html, body {
 	left: 0;
 	z-index: 60;
 	display: block;
-	margin-left: -0.5em;
-	margin:0 !important;
+	margin-left: 3em;
+	// margin:0 !important;
+	margin-top:$base*4;
 	border: none;
 	background: transparent;
 	color: transparent;
 	cursor: pointer;
+
+	.modify &{
+		display:none;
+	}
 
 	&__icon{
 		width:24px;
@@ -342,7 +351,7 @@ html, body {
 }
 
 .intro-effect-sidefixed .title h1 {
-	padding: 0 0 0.5em 0;
+	// padding: 0 0 0.5em 0;
 	color: white;
 }
 
