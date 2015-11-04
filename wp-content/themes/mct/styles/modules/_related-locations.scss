@@ -8,6 +8,10 @@
 			@include span(12 of 12);
 		}
 	}
+
+	.title-block__title{
+		color:$primFontColor;
+	}
 }
 
 .related-locations-cell{

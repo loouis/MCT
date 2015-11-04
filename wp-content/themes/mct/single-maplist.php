@@ -100,7 +100,7 @@ get_header(); ?>
                             </ul>
 
                         <?php endif;?><!-- // Carousel -->
-                        
+
                         <?php wp_reset_postdata();?>
 
                         <!-- Purple inline job -->
@@ -235,7 +235,7 @@ get_header(); ?>
         <div class="main-wrapper">
 
             <hgroup class="title-block">
-                <h3 class="title-block__title">You may also like…</h3>
+                <h3 class="title-block__title title-block__title--light-bg">You may also like…</h3>
             </hgroup>
 
             <?php 
@@ -278,7 +278,7 @@ get_header(); ?>
 
                 <a href="<?the_permalink()?>" class="related-locations__items__item related-locations-cell">
                     <div class="related-locations-cell__container">
-                        <?php the_post_thumbnail('retina-smallest');?>
+                        <?php the_post_thumbnail('smallest-news-cell');?>
                         <h4 class="related-locations-cell__title"><?php the_title(); ?></h4>
                     </div>
                 </a>
@@ -298,7 +298,7 @@ get_header(); ?>
         <div class="main-wrapper">
 
             <hgroup class="title-block">
-                <h3 class="title-block__title">Latest news</h3>
+                <h3 class="title-block__title title-block__title--light-bg">Latest news</h3>
             </hgroup>
 
             <?php
