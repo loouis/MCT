@@ -70,12 +70,28 @@ get_header(); ?>
 								<a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
 									<div class="news-cell__image">
 										<article class="news-cell__text">
-											<!-- <p class="news-cell__text__news-type">Purple blog</p> -->
 											<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
 										</article>
-										
-										<?php the_post_thumbnail('retina-smallest');?>
+											
+										<?php
+											$thumb_id = get_post_thumbnail_id();
 
+											$smallest_thumb_url = wp_get_attachment_image_src($thumb_id,'smallest-news-cell', true);
+
+											$thumb_url = wp_get_attachment_image_src($thumb_id,'retina-smallest', true);
+
+											// get alt
+											$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+										?>
+
+										<picture>
+											<source media="(min-width: 960px)"
+											srcset="<?php echo $thumb_url[0]; ?> 1x">
+											<source 
+											srcset="<?php echo $smallest_thumb_url[0]; ?> 1x">
+											<img src="<?php echo $thumb_url[0]; ?>" alt="<?php echo $alt;?>">
+										</picture>
+										
 									</div>
 									<span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
 								</a>

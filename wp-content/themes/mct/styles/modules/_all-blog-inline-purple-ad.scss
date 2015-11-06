@@ -2,7 +2,10 @@
 	position:relative;
 	display:inline-block;
 	width:100%;
-	margin-right: -4px;
+	// margin-right: -4px;
+	height:300px;
+	overflow:hidden;
+	margin-bottom:$base*8;
 
 	&:after{
 		content:"";
@@ -66,6 +69,7 @@
 	@include breakpoint(700px){
 		width:50%;
 		margin-bottom:5em;
+		height:auto;
 	}
 
 	@include breakpoint(1100px){
