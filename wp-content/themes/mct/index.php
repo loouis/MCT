@@ -52,12 +52,18 @@ get_header(); ?>
 							<?php while( have_posts() ) : the_post();?>
 
 								<?php if ($count == 1) : ?> 
-									<a href="" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad">
+									<a href="<?php the_field('mct_blog_advert_link','options');?>" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad">
 										<article class="all-blog-inline-purple-ad__text">
-											<h4 class="all-blog-inline-purple-ad__text__news-title">SEEKING WORK  IN LONDON?</h4>
-											<p class="all-blog-inline-purple-ad__text__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+											<h4 class="all-blog-inline-purple-ad__text__news-title"><?php the_field('mct_blog_advert_title', 'options')?></h4>
+											<?php the_field('mct_blog_advert_text', 'options')?>
+											<p class="all-blog-inline-purple-ad__text__read-more">Read more</p>
 										</article>
-										<img src="<?php echo get_template_directory_uri();?>/images/all-blog-inline-purple-ad-image.jpg" alt="">
+										<div class="all-blog-inline-purple-ad__powered-by-purple">
+											<svg class="all-blog-inline-purple-ad__powered-by-purple__logo">
+												<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#logo-purple" />
+											</svg>
+										</div>
+										<img src="<?php the_field('mct_blog_advert_image', 'options')?>" alt="">
 									</a>
 								<?php endif; $count++; ?>
 

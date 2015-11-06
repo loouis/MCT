@@ -44,7 +44,7 @@
 	</header>
 
 	<div class="site-nav">
-		<div class="outter-wrapper">
+		<div class="outter-wrapper site-nav__outter-wrapper">
 
 			<div class="main-wrapper">
 
@@ -83,7 +83,9 @@
 					
 					if ( $mct_facebook_link ) { ?>
 					<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
-						<img src="assets/images/social-icons--twitter.png" alt=""/>
+						<svg class="header-main__close-button__icon">
+							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-facebook" />
+						</svg>
 					</a>
 					<?php } ?>
 

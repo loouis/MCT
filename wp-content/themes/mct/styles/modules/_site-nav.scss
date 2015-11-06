@@ -38,17 +38,10 @@
     	}
 	}
 
-	// &__website-name{
-	// 	font-family: $brandFont;
-	// 	font-size:1.2em;
-	// 	@extend %uppercase;
-	// 	@extend %font-weight-black;
-	// 	float:left;
-
-	// 	@include breakpoint($m){
-	// 		font-size:2em;
-	// 	}
-	// }
+	&__outter-wrapper{
+		z-index: 2;
+    	position: relative;
+	}
 
 	&__all-site-links{
 		// overflow: hidden;

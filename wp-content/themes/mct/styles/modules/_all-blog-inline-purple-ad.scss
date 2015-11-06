@@ -19,21 +19,46 @@
 	&__text{
 		@include vertical-align;
 		position:absolute;
-		padding:0 20px;
+		padding:0 30px;
 		text-align: center;
 		color:white;
 		z-index: 3;
 
-		&__news-title, &__excerpt{
+		&__news-title, p{
 			color:white;
+			transform: translate(0,20px);
+		}
+
+		&__news-title, p, &__read-more{
+			transition: all .3s ease-in-out;
 		}
 
 		&__news-title{
 			font-size:em(30px);
 			font-weight:900;
 		}
-		&__excerpt{
+		p{
+			margin:10px 0 $base*6 0;
+		}
 
+		&__read-more{
+			opacity:0;
+			@extend %uppercase;
+		}
+	}
+
+	&__powered-by-purple{
+		position:absolute;
+		bottom:20px;
+		left:50%;
+		right:50%;
+		margin-left:-45px;
+		z-index:10;
+
+		&__logo{
+			fill:white;
+			width:90px;
+			height:40px;
 		}
 	}
 
@@ -44,5 +69,10 @@
 
 	@include breakpoint(1100px){
 		width:33.333%;
+	}
+
+	&:hover &__text__read-more, &:hover &__text__news-title, &:hover &__text p{
+		transform: translate(0, 0px);
+		opacity:1;
 	}
 }
