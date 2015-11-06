@@ -3,7 +3,6 @@
 	// height:100vh;
 	width:100%;
 	background-color:$lightestGrey;
-	@extend %cover;
 	overflow:hidden;
 	
 	@include breakpoint($m){
@@ -30,6 +29,7 @@
 
 	&__slide{
 		height: 100%;
+		@extend %cover;
 
 		&__text{
 			position:relative;
