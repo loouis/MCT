@@ -43,6 +43,7 @@
 
 		&__read-more{
 			opacity:0;
+			font-weight:600;
 			@extend %uppercase;
 		}
 	}
@@ -74,5 +75,8 @@
 	&:hover &__text__read-more, &:hover &__text__news-title, &:hover &__text p{
 		transform: translate(0, 0px);
 		opacity:1;
+	}
+	&:hover &__text__read-more{
+		color:$brandColor;
 	}
 }
