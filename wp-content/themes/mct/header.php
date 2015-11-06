@@ -75,12 +75,27 @@
 				</nav>
 
 				<ul class="social-icons">
-					<a href="http://" target="_blank" class="social-icons__icon">
+					<?php 
+					$mct_facebook_link = get_field( 'mct_facebook_link', 'option' );
+					$mct_twitter_link = get_field( 'mct_twitter_link', 'option' );
+					$mct_instagram_link = get_field( 'mct_instagram_link', 'option' );	
+					
+					if ( $mct_facebook_link ) { ?>
+					<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
 						<img src="assets/images/social-icons--twitter.png" alt=""/>
 					</a>
-					<a href="http://" target="_blank" class="social-icons__icon">
+					<?php } ?>
+
+					<?php if ($mct_twitter_link){ ?>
+					<a href="<?php echo $mct_twitter_link ?>" target="_blank" class="social-icons__icon">
 						<img src="assets/images/social-icons--facebook.png" alt=""/>
 					</a>
+					<?php } ?>
+					<?php if ( $mct_instagram_link ) { ?>
+						<a href="<?php echo $mct_instagram_link?>" target="_blank" class="social-icons__icon">
+						<img src="assets/images/social-icons--facebook.png" alt=""/>
+					</a>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>

@@ -148,6 +148,18 @@ function my_theme_add_editor_styles() {
 }
 add_action( 'admin_init', 'my_theme_add_editor_styles' );
 
+/* Add ACF options page */
+if(function_exists('acf_add_options_page')){
+	acf_add_options_page();
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+}
 
 /* Custom Text colours */
 function my_mce4_options($init) {
