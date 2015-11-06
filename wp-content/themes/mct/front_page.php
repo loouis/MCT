@@ -321,14 +321,14 @@ get_header(); ?>
 						<h4 class="hjb__title">Jobs Board</h4>
 						<nav class="hjb__purple-links">
 							<ul>
-								<a href=""><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>
-								<a href=""><li class="hjb__purple-links__link">Studio</li></a>
-								<a href=""><li class="hjb__purple-links__link">Planning & Strategy</li></a>
-								<a href=""><li class="hjb__purple-links__link">Tech & dev</li></a>
-								<a href=""><li class="hjb__purple-links__link">Client services</li></a>
-								<a href=""><li class="hjb__purple-links__link">Creative services</li></a>
-								<a href=""><li class="hjb__purple-links__link">Production</li></a>
-								<a href=""><li class="hjb__purple-links__link">Creative & Design</li></a>
+								<a href="http://www.purple-consultancy.com/jobs/"><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>
+								<a href="http://www.purple-consultancy.com/studio-jobs/"><li class="hjb__purple-links__link">Studio</li></a>
+								<a href="http://www.purple-consultancy.com/planning-strategy-jobs/"><li class="hjb__purple-links__link">Planning & Strategy</li></a>
+								<a href="http://www.purple-consultancy.com/technology-jobs/"><li class="hjb__purple-links__link">Tech & dev</li></a>
+								<a href="http://www.purple-consultancy.com/client-services-jobs/"><li class="hjb__purple-links__link">Client services</li></a>
+								<a href="http://www.purple-consultancy.com/creative-services-production-jobs/"><li class="hjb__purple-links__link">Creative services</li></a>
+								<a href="http://www.purple-consultancy.com/creative-services-production-jobs/"><li class="hjb__purple-links__link">Production</li></a>
+								<a href="http://www.purple-consultancy.com/creative-design-jobs/"><li class="hjb__purple-links__link">Creative & Design</li></a>
 							</ul>
 						</nav>
 
