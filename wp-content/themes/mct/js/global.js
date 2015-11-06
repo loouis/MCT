@@ -46,7 +46,7 @@ $(document).ready(function(){
 		$openNav = $(".logo, .header-main__nav__hamburger-menu"),
 		$siteNav = $(".site-nav"),
 		$mainHeader = $(".header-main"),
-		$closeNav = $('.site-nav__close-button');
+		$closeNav = $('.header-main__close-button');
 
 	$openNav.on("click", function(){
 		$siteNav.toggleClass("site-nav--active");

@@ -53,7 +53,7 @@ get_header(); ?>
 						 ?> 
 
 						<a href="<?php echo $link; ?>" target="_blank" class="job-sectors__sector">
-							<img class="job-sectors__sector__image" src="http://localhost:8888/mct-wordpress/wp-content/uploads/2015/10/purple-job-cat-studio-manager.png" alt="<?php echo $image['alt'] ?>"/>
+							<img class="job-sectors__sector__image" src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>"/>
 							<p class="job-sectors__sector__text"><?php echo $title; ?></p>
 						</a>
 
@@ -69,7 +69,7 @@ get_header(); ?>
 
 	<?php endif; wp_reset_postdata();?>
 
-	<?php $latest_news = new WP_Query(array( 'posts_per_page' => 6,)); ?>
+	<?php $latest_news = new WP_Query(array( 'posts_per_page' => 6)); ?>
 
 		<div class="main-wrapper">
 			<ul class="latest-news__items">

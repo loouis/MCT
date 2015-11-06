@@ -25,6 +25,14 @@
 <div id="page" class="hfeed site">
 
 	<header class="header-main">
+
+		<!-- Close button -->
+		<a class="header-main__close-button">
+			<svg class="header-main__close-button__icon">
+				<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-close-cross" />
+			</svg>
+		</a><!-- // Close button -->
+
 		<div class="header-main__nav left-nav">
 			<button class="header-main__nav__hamburger-menu"></button>
 			<div data-explore="explore" class="logo">
@@ -37,13 +45,6 @@
 
 	<div class="site-nav">
 		<div class="outter-wrapper">
-
-			<!-- // Close nav button -->
-			<a class="site-nav__close-button">
-				<!-- <svg class="site-nav__close-button__icon">
-					<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-restaurant" />
-				</svg> -->
-			</a>
 
 			<div class="main-wrapper">
 
