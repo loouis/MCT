@@ -1,0 +1,63 @@
+.site-nav__top-bar{
+    position:relative;
+    z-index:10;
+    width:100%;
+    height:80px;
+    background: rgba(0,0,0,0.1);
+
+    &__search{
+        float:left
+    }
+
+    &__sign-up{
+        @extend %relative;
+        float:right;
+        width:180px;
+        height:80px;
+        background: rgba(0,0,0,0.2);
+        z-index:20;
+
+        p{
+            @extend %text-white;
+            text-align: center;
+            padding-top: 21px;
+        }
+    }
+}
+
+
+input{
+	position: absolute;
+    width: 100%;
+    background-image: url(/assets/images/transparent.png);
+    outline: none;
+    border: none;
+    background: none;
+    font-family: $brandFont;
+    font-size: 1.4em;
+    z-index: 10;
+    text-align: center;
+    padding: 22px 0 25px 0;
+    display: block;
+    @extend %text-white;
+}
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+   color: white;
+   text-align:center;
+}
+
+
+input[type="submit"]{
+	width:100%;
+	background-color:rgba(0,0,0,0);
+	background-image:url(/assets/images/transparent.png);
+	outline: none;
+	border: none;
+	padding-bottom: 10px;
+	font-family:$brandFont;
+	@extend %font-weight-bold;
+	font-size:1.2em;
+	margin: $base*2 0;
+	@extend %text-white;
+}

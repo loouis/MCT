@@ -41,16 +41,13 @@
 	&__outter-wrapper{
 		z-index: 2;
     	position: relative;
+    	padding-left:0;
 	}
 
 	&__all-site-links{
-		// overflow: hidden;
-		position:relative;
 		width: 100%;
-		margin-bottom:$base*4;
+		margin-bottom:$base*6;
 		@include clearfix;
-		z-index:2;
-		margin-top:40px;
 	}
 
 	&__cat{
@@ -123,49 +120,6 @@
 		text-align: center;
 	}
 }
-
-
-input{
-	position: absolute;
-    width: 280px;
-    background-image: url(/assets/images/transparent.png);
-    outline: none;
-    border: none;
-    background: rgba(0,0,0,0.1);
-    padding-bottom: 10px;
-    font-family: "brandon-grotesque",sans-serif;
-    font-size: 1.2em;
-    z-index: 10;
-    text-align: center;
-    padding: 6px 0;
-    display: block;
-    color:white;
-    // margin: 0 auto;
-    left:50%;
-    right:50%;
-    margin-left:-110px;
-}
-
-::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
-   color: white;
-   text-align:center;
-}
-
-
-input[type="submit"]{
-	width:100%;
-	background-color:rgba(0,0,0,0);
-	background-image:url(/assets/images/transparent.png);
-	outline: none;
-	border: none;
-	padding-bottom: 10px;
-	font-family:$brandFont;
-	@extend %font-weight-bold;
-	font-size:1.2em;
-	margin: $base*2 0;
-	@extend %text-white;
-}
-
 
 .menu-item{
 	@extend %text-white;

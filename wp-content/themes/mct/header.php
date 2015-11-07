@@ -44,14 +44,24 @@
 	</header>
 
 	<div class="site-nav">
-		<div class="outter-wrapper site-nav__outter-wrapper">
 
-			<div class="main-wrapper">
+		<div class="site-nav__top-bar">
 
+			<div class="site-nav__top-bar__search">
 				<form action="<?php echo get_site_url();?>/locations"><!--Relative url to the page that your map is on-->
 					<input type="text" name="locationSearchTerms" placeholder="Search for location"><br>
 					<!-- <input type="submit" value="Search Locations"><br> -->
 				</form>
+			</div>
+
+			<div class="site-nav__top-bar__sign-up">
+				<p>Sign up</p> 
+			</div>
+		</div>
+
+		<div class="outter-wrapper site-nav__outter-wrapper">
+
+			<div class="main-wrapper">
 
 				<nav class="site-nav__all-site-links">
 					<div class="site-nav__cat">
@@ -83,7 +93,7 @@
 					
 					if ( $mct_facebook_link ) { ?>
 					<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
-						<svg class="header-main__close-button__icon">
+						<svg class="social-icons__icon">
 							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-facebook" />
 						</svg>
 					</a>
@@ -91,14 +101,14 @@
 
 					<?php if ($mct_twitter_link){ ?>
 					<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
-						<svg class="header-main__close-button__icon">
+						<svg class="social-icons__icon">
 							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-twitter" />
 						</svg>
 					</a>
 					<?php } ?>
 					<?php if ( $mct_instagram_link ) { ?>
 						<a href="<?php echo $mct_instagram_link?>" target="_blank" class="social-icons__icon">
-						<svg class="header-main__close-button__icon">
+						<svg class="social-icons__icon">
 							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-instagram" />
 						</svg>
 					</a>

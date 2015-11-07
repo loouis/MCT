@@ -6,12 +6,20 @@
 
 	&__icon{
 		display:inline-block;
-		width:44px;
-		height:44px;
+		width:40px;
+		height:40px;
 		margin:0 8px;
+
+		fill:white;
+		opacity:0.6;
+		transition:opacity .3s ease-in-out;
 
 		&:nth-child(1){
 			margin-left:0;
+		}
+
+		&:hover{
+			opacity:1;
 		}
 	}
 }
