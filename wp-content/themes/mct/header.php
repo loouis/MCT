@@ -84,19 +84,23 @@
 					if ( $mct_facebook_link ) { ?>
 					<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
 						<svg class="header-main__close-button__icon">
-							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-facebook" />
+							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-facebook" />
 						</svg>
 					</a>
 					<?php } ?>
 
 					<?php if ($mct_twitter_link){ ?>
-					<a href="<?php echo $mct_twitter_link ?>" target="_blank" class="social-icons__icon">
-						<img src="assets/images/social-icons--facebook.png" alt=""/>
+					<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
+						<svg class="header-main__close-button__icon">
+							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-twitter" />
+						</svg>
 					</a>
 					<?php } ?>
 					<?php if ( $mct_instagram_link ) { ?>
 						<a href="<?php echo $mct_instagram_link?>" target="_blank" class="social-icons__icon">
-						<img src="assets/images/social-icons--facebook.png" alt=""/>
+						<svg class="header-main__close-button__icon">
+							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-instagram" />
+						</svg>
 					</a>
 					<?php } ?>
 				</ul>
