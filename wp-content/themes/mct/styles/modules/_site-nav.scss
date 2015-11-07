@@ -61,7 +61,7 @@
 			@extend %text-white;
 		}
 		&__nav{
-			@include span ( 7 of 12);
+			@include span ( 6 of 12);
 			
 			@include breakpoint($m){
 				@include span ( 6 of 12);
@@ -81,7 +81,7 @@
 			@extend %text-white;
 			font-family: $brandFont;
 			display:block;
-			padding: $base*2.46 0;
+			text-align: right;
 			@extend %font-weight-black;
 			font-size:1.2em;
 		}
@@ -91,8 +91,10 @@
 
 			&__link{
 				font-size: 1em;
+				// padding: $base*2.46 0;
     			padding: 0;
     			line-height: 2em;
+    			text-align: left;
 				// padding: $base*2 0;
 			}
 		}
@@ -126,7 +128,12 @@
 	font-family: $brandFont;
 	display:block;
 	padding: $base*2 0;
-	font-size:em(32px);
+	font-size:1em;
+
+	@include breakpoint($m){
+		font-size:em(32px);
+	}
+	
 }
 
 .menu-item a{

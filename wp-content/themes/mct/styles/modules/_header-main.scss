@@ -14,29 +14,35 @@
 		border-right:none !important;;
     }
 
+    // Close button
+	&__close-button{
+		display:none;
+	}
+
 	@include breakpoint(500px){
 		width:65px;
 		height:100vh;
 		border-bottom:none;
 		border-right:1px solid darken($lightestGrey, 10%);
 		// padding:$base*6;
-	}
+
+		// Close button
+		&__close-button{
+			display:block;
+			position:fixed;
+			left:16px;
+			top:20px;
+			z-index: 100;
 
 
-	// Close button
-	&__close-button{
-		position:fixed;
-		left:16px;
-		top:20px;
-		z-index: 100;
-
-
-		&__icon{
-			width:30px;
-			height:30px;
-			fill:white;
+			&__icon{
+				width:30px;
+				height:30px;
+				fill:white;
+			}
 		}
 	}
+
 
 	&__nav{
 		height: 100%;

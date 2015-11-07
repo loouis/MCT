@@ -1,9 +1,10 @@
 .site-nav__top-bar{
     position:relative;
-    z-index:10;
-    width:100%;
     height:80px;
-    background: rgba(0,0,0,0.1);
+    width:100%;
+    padding:0 30px;
+    z-index:10;
+    margin-top:70px;
 
     &__search{
         float:left
@@ -23,41 +24,54 @@
             padding-top: 21px;
         }
     }
+
+    input{
+        position: absolute;
+        width: 82%;
+        background-image: url(/assets/images/transparent.png);
+        outline: none;
+        border: none;
+        background: black;
+        font-family: $brandFont;
+        font-size: 1em;
+        z-index: 10;
+        text-align: center;
+        padding: 12px 0 15px 0;
+        display: block;
+        @extend %text-white;
+    }
+
+    input[type="submit"]{
+        width:100%;
+        background-color:rgba(0,0,0,0);
+        background-image:url(/assets/images/transparent.png);
+        outline: none;
+        border: none;
+        padding-bottom: 10px;
+        font-family:$brandFont;
+        @extend %font-weight-bold;
+        font-size:1em;
+        margin: $base*2 0;
+        @extend %text-white;
+    }
+
+    @include breakpoint($m){
+        padding:0;
+        background: rgba(0,0,0,0.1);
+        margin-top:0;
+
+        input{
+            width: 100%;
+            background: none;
+            font-size: 1.4em;
+            padding: 22px 0 25px 0;
+        }
+    }
 }
 
-
-input{
-	position: absolute;
-    width: 100%;
-    background-image: url(/assets/images/transparent.png);
-    outline: none;
-    border: none;
-    background: none;
-    font-family: $brandFont;
-    font-size: 1.4em;
-    z-index: 10;
-    text-align: center;
-    padding: 22px 0 25px 0;
-    display: block;
-    @extend %text-white;
-}
 
 ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
    color: white;
    text-align:center;
 }
 
-
-input[type="submit"]{
-	width:100%;
-	background-color:rgba(0,0,0,0);
-	background-image:url(/assets/images/transparent.png);
-	outline: none;
-	border: none;
-	padding-bottom: 10px;
-	font-family:$brandFont;
-	@extend %font-weight-bold;
-	font-size:1.2em;
-	margin: $base*2 0;
-	@extend %text-white;
-}
