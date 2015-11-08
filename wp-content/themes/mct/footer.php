@@ -11,7 +11,7 @@
 
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
 <footer class="footer">
 	<div class="outter-wrapper">
@@ -21,14 +21,33 @@
 			</div>
 
 			<ul class="social-icons">
-
-				<a href="http://" target="_blank" class="social-icons__icon">
-					<img src="<?php echo get_template_directory_uri();?>/images/social-icons--twitter.png" alt=""/>
+				<?php 
+				$mct_facebook_link = get_field( 'mct_facebook_link', 'option' );
+				$mct_twitter_link = get_field( 'mct_twitter_link', 'option' );
+				$mct_instagram_link = get_field( 'mct_instagram_link', 'option' );	
+				
+				if ( $mct_facebook_link ) { ?>
+				<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
+					<svg class="social-icons__icon">
+						<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-facebook" />
+					</svg>
 				</a>
+				<?php } ?>
 
-				<a href="http://" target="_blank" class="social-icons__icon">
-					<img src="<?php echo get_template_directory_uri();?>/images/social-icons--facebook.png" alt=""/>
+				<?php if ($mct_twitter_link){ ?>
+				<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
+					<svg class="social-icons__icon">
+						<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-twitter" />
+					</svg>
 				</a>
+				<?php } ?>
+				<?php if ( $mct_instagram_link ) { ?>
+					<a href="<?php echo $mct_instagram_link?>" target="_blank" class="social-icons__icon">
+					<svg class="social-icons__icon">
+						<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-instagram" />
+					</svg>
+				</a>
+				<?php } ?>
 			</ul>
 
 
