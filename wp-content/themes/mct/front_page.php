@@ -20,6 +20,11 @@ get_header(); ?>
 						<h1 class="home-hero__text__title">My<br/>Creative<br/> Town</h1>
 						<p class="home-hero__text__tagline"><?php bloginfo('description'); ?></p>
 					</div>
+					<div class="home-hero__scroll-down-arrow">
+						<svg>
+							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
+						</svg>
+					</div>
 				</div>
 
 				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/mobile-home-hero-image.jpg" id="bgvid" class="home-hero__video">

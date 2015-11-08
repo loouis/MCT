@@ -59,7 +59,7 @@ $(document).ready(function(){
 		$logo.attr('data-explore', 'exit');
 
 		$('.list-toggle').click(function() {
-		    if ($('.list-sort').attr('colspan')) {
+		    if ($('.list-sort').attr('data-explore', 'exit')) {
 		        $('.list-sort').removeAttr('colspan');
 		    } else {
 		        $('.list-sort').attr('colspan', 6);
@@ -107,6 +107,16 @@ $(document).ready(function(){
 	// 	    $('.site-nav__top-bar__helper').removeClass("site-nav__top-bar__helper--show");
 	// 	}
 	// });
+
+
+
+/*---------------------------------------------- Home hero */
+	
+	/* Scroll down arrow  */
+	$('.home-hero__scroll-down-arrow').on('click', function(){
+		$('html, body').animate({scrollTop: $('.image-location-filter').offset().top-1}, 800);
+	});
+
 
 
 
