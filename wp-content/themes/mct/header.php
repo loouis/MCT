@@ -27,11 +27,11 @@
 	<header class="header-main">
 
 		<!-- Close button -->
-		<a class="header-main__close-button">
+		<!-- <a class="header-main__close-button">
 			<svg class="header-main__close-button__icon">
 				<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-close-cross" />
 			</svg>
-		</a><!-- // Close button -->
+		</a> --><!-- // Close button -->
 
 		<div class="header-main__nav left-nav">
 			<button class="header-main__nav__hamburger-menu"></button>
@@ -57,6 +57,11 @@
 			<!-- <p class="site-nav__top-bar__helper site-nav__top-bar__helper--show">Press enter</p> -->
 
 			<div class="site-nav__top-bar__sign-up">
+				<div class="site-nav__top-bar__sign-up__icon">
+					<svg>
+						<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-signup-to-emails" />
+					</svg>
+				</div>				
 				<p>Sign up</p> 
 			</div>
 		</div>
