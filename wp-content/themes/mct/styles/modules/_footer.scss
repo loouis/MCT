@@ -68,53 +68,57 @@ $footer-m: 800px;
 		}
 
 	}
+	&__small-footer{
+		border-top:1px solid #3A3A3A;
 
-	&__partnership{
-		float:right;
+		&__partnership{
+			float:right;
 
-		&__title{
-			@extend %font-weight-bold;
-			@extend %text-white;
-		}
+			&__title{
+				@extend %font-weight-bold;
+				@extend %text-white;
+			}
 
-		&__logos{
-			margin: $base*2 0 $base*1.1 0;
-			@include clearfix;
+			&__logos{
+				margin: $base*2 0 $base*1.1 0;
+				@include clearfix;
 
-			&__logo{
-				position:relative;
-				display: inline-block;
-				max-width:55px;
+				&__logo{
+					position:relative;
+					display: inline-block;
+					max-width:55px;
 
-				&:nth-child(1){
-					width:50px;
+					&:nth-child(1){
+						width:50px;
 
-					&:after{
-						content:"+";
-						position:absolute;
-						@extend %text-white;
-						top: -2px;
-						right: -25px;
-						font-size: 21px;
+						&:after{
+							content:"+";
+							position:absolute;
+							@extend %text-white;
+							top: -2px;
+							right: -25px;
+							font-size: 21px;
+						}
 					}
-				}
 
-				&:nth-child(2){
-					top: -3px;
-					margin-left:35px;
+					&:nth-child(2){
+						top: -3px;
+						margin-left:35px;
+					}
 				}
 			}
 		}
+
+		&__copyright{
+			@extend %font-weight-bold;
+			float:left;
+		    font-weight: 100;
+		    font-size: 0.8em;
+		    padding-top: 10px;
+			color:$secFontColor;
+		}
 	}
 
-	&__copyright{
-		@extend %font-weight-bold;
-		float:left;
-	    font-weight: 100;
-	    font-size: 0.8em;
-	    padding-top: 10px;
-		color:$secFontColor;
-	}
 
 	.social-icons{
 		margin: $base*2 0;
