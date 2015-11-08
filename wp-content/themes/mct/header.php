@@ -54,6 +54,8 @@
 				</form>
 			</div>
 
+			<!-- <p class="site-nav__top-bar__helper site-nav__top-bar__helper--show">Press enter</p> -->
+
 			<div class="site-nav__top-bar__sign-up">
 				<p>Sign up</p> 
 			</div>

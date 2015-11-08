@@ -86,6 +86,12 @@ $(document).ready(function(){
 	// 	 }
 	// });
 
+	// $('.site-nav__top-bar__search input').blur(function() {
+	// 	if(!$.trim(this.value).length) { // zero-length string AFTER a trim
+	// 	    $('.site-nav__top-bar__helper').removeClass("site-nav__top-bar__helper--show");
+	// 	}
+	// });
+
 
 
 /*---------------------------------------------- Mobile location buttons */
