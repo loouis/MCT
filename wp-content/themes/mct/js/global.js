@@ -52,6 +52,20 @@ $(document).ready(function(){
 		$siteNav.toggleClass("site-nav--active");
 		$("body").toggleClass("body--is-fixed");
 		$mainHeader.toggleClass("header-main--active");
+
+		if( $logo.attr('data-explore', 'exit') )
+
+		// Change data-explore attr to close when main nav is active 
+		$logo.attr('data-explore', 'exit');
+
+		$('.list-toggle').click(function() {
+		    if ($('.list-sort').attr('colspan')) {
+		        $('.list-sort').removeAttr('colspan');
+		    } else {
+		        $('.list-sort').attr('colspan', 6);
+		    }
+		});
+
 	});
 
 	// Close button for main navigation
@@ -70,6 +84,8 @@ $(document).ready(function(){
 		$siteNav.removeClass("site-nav--active");
 		$("body").removeClass("body--is-fixed");
 		$mainHeader.removeClass("header-main--active");
+		// Remove data attr from exit to explore 
+		$logo.attr('data-explore', 'explore');
 	}
 
 

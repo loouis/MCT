@@ -9,11 +9,6 @@
 		margin-left:0px;
 	}
 
-	@include breakpoint($m){
-		background:none;
-
-	}
-
 	@include breakpoint(1000px){
 		min-height:600px;
 	}
@@ -26,13 +21,9 @@
 		
 		&__title{
 			@extend %uppercase;
-
-			@include breakpoint(800px){
-				font-size: 8.25em;
-    			line-height: 0.9em;
-    			text-align:center;
-			}
+			line-height: 0.9em;
 		}
+
 		&__tagline{
 			@extend %text-white;
 			font-size: 1.4em;
@@ -44,7 +35,14 @@
 	}
 
 	@include breakpoint($m){
+		background:none;
 
+		&__text{
+
+			&__title{
+				font-size:4.2em;
+			}
+		}
 
 		&__video, &__grad-overlay{
 			display:block;
@@ -78,6 +76,16 @@
 			// -moz-animation: home-hero-grad-animation 30s ease infinite;
 			// -o-animation: home-hero-grad-animation 30s ease infinite;
 			// animation: home-hero-grad-animation 30s ease infinite;
+		}
+
+		@include breakpoint(800px){
+
+			&__text{
+				&__title{
+					font-size: 8.25em;
+					text-align:center;
+				}
+			}
 		}
 	}
 }
