@@ -27,21 +27,27 @@
         width:100%;
         height:auto;
 
-        &__icon{
-            margin-left:40px;
+        &__con{
+            width:80px;
+            margin: 0 auto;
 
-            svg{
-                width: 22px;
-                height: 30px;
-                fill:white;
+            &__icon{
+                @extend %left;
+
+                svg{
+                    width: 22px;
+                    height: 30px;
+                    fill:white;
+                }
             }
-        }
 
-        p{
-            padding-top: 5px;
-            color: #656565;
-            padding-bottom: 5px;
-            @extend %center-text;
+            p{
+                color: #656565;
+                @extend %center-text;
+                color:white;
+                padding:0px 0 0 10px;
+                float:left;
+            }
         }
     }
 
@@ -97,13 +103,11 @@
             z-index:20;
             padding-top: 23px;
 
-            p{
-                color:white;
-                padding:0px 0 0 10px;
-            }
 
-            p, &__icon{
-                float:left;
+            &__con{
+                &__icon{
+                    float:left;
+                }
             }
         }
         &__search{
