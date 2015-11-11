@@ -50,8 +50,16 @@ get_header(); ?>
 							<div class="ilf__container__split ilf__cells">
 								<div class="ilf__cells__cell ilf__cells__cell--large-square">
 									<article class="ilf__cells__cell__text cd-intro">
-										<h1 class="ilf__cells__cell__text__title cd-headline letters rotate-2"><span class="ilf__cells__cell__text__title__sub-title">Fancy</span><span class="cd-words-wrapper"><b class="is-visible">pizza?</b><b>Sushi?</b><b>Steak?</b></span></h1>
-									</article><img src="<?php echo get_template_directory_uri();?>/images/ilf-images--large-text-block.jpg" alt=""/>
+										<h1 class="ilf__cells__cell__text__title cd-headline letters rotate-2">
+											<span class="ilf__cells__cell__text__title__sub-title">Fancy</span>
+											<span class="cd-words-wrapper">
+												<b class="is-visible">pizza?</b>
+												<b>Sushi?</b>
+												<b>Steak?</b>
+											</span>
+										</h1>
+									</article>
+									<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--large-text-block.jpg" alt=""/>
 								</div>
 							</div>
 
