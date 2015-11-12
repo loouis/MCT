@@ -49,16 +49,31 @@ get_header(); ?>
 
 							<div class="ilf__container__split ilf__cells">
 								<div class="ilf__cells__cell ilf__cells__cell--large-square">
-									<article class="ilf__cells__cell__text cd-intro">
-										<h1 class="ilf__cells__cell__text__title cd-headline letters rotate-2">
-											<span class="ilf__cells__cell__text__title__sub-title">Fancy</span>
-											<span class="cd-words-wrapper">
-												<b class="is-visible">pizza?</b>
-												<b>Sushi?</b>
-												<b>Steak?</b>
-											</span>
-										</h1>
+									<article class="ilf__cells__cell__text">
+										<h2>Fancy</h2>
+										<ul class="ilf__cells__cell__text__slider">
+											<li class="ilf__cells__cell__text__slider__slide">
+												<span class="letter-active-1">B</span>
+												<span class="letter-active-2">a</span>
+												<span class="letter-active-3">r</span>
+												<span class="letter-active-4">s</span>
+											</li>
+											<li class="ilf__cells__cell__text__slider__slide">
+												<span class="letter-active-1">F</span>
+												<span class="letter-active-2">o</span>
+												<span class="letter-active-3">o</span>
+												<span class="letter-active-4">d</span>
+											</li>
+											<li class="ilf__cells__cell__text__slider__slide">
+												<span class="letter-active-1">G</span>
+												<span class="letter-active-2">r</span>
+												<span class="letter-active-3">a</span>
+												<span class="letter-active-4">v</span>
+												<span class="letter-active-5">y</span>
+											</li>
+										</ul>
 									</article>
+
 									<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--large-text-block.jpg" alt=""/>
 								</div>
 							</div>

@@ -27,6 +27,32 @@ $(document).ready(function(){
   		autoControls: true
 	});
 
+
+	// Homepage rotating location text hinting
+	$('.ilf__cells__cell__text__slider').bxSlider({
+	    mode: 'fade',
+	    auto: false,
+	    controls: false,
+  		autoControls: false,
+  		// pager: false,
+
+  		onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+	        // console.log(currentSlideHtmlObject);
+	        $('.ilf__cells__cell__text__slider__slide--active').removeClass('ilf__cells__cell__text__slider__slide--active');
+	        $('.ilf__cells__cell__text__slider > li').eq(currentSlideHtmlObject + 1).addClass('ilf__cells__cell__text__slider__slide--active');
+	    },
+	    onSliderLoad: function () {
+	        $('.ilf__cells__cell__text__slider__slide').eq(1).addClass('ilf__cells__cell__text__slider__slide--active');
+	    },
+	});
+
+
+ //    $('.ilf__cells__cell__slider--active span').each(function(i){
+ //        var ilfLetter = $(this);
+ //        ilfLetter.removeClass('ilf-letter-animate-in');
+ //        setTimeout(function(){ ilfLetter.toggleClass('ilf-letter-animate-in'); }, (i+1) * 60);
+ //    });
+
 	$('#location-single-slider').bxSlider({
 	    mode: 'fade',
 	    auto: true,
