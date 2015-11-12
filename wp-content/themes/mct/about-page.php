@@ -29,6 +29,36 @@ get_header(); ?>
 			<section class="about-purple__mission-statement">
 				<article class="about-purple__mission-statement__text">
 					<p><?php the_content();?></p>
+					
+					<ul class="social-icons">
+						<?php 
+						$mct_facebook_link = get_field( 'mct_facebook_link', 'option' );
+						$mct_twitter_link = get_field( 'mct_twitter_link', 'option' );
+						$mct_instagram_link = get_field( 'mct_instagram_link', 'option' );	
+						
+						if ( $mct_facebook_link ) { ?>
+						<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
+							<svg class="social-icons__icon">
+								<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-facebook" />
+							</svg>
+						</a>
+						<?php } ?>
+
+						<?php if ($mct_twitter_link){ ?>
+						<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
+							<svg class="social-icons__icon">
+								<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-twitter" />
+							</svg>
+						</a>
+						<?php } ?>
+						<?php if ( $mct_instagram_link ) { ?>
+							<a href="<?php echo $mct_instagram_link?>" target="_blank" class="social-icons__icon">
+							<svg class="social-icons__icon">
+								<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-instagram" />
+							</svg>
+						</a>
+						<?php } ?>
+					</ul>
 				</article>
 			</section><!-- // MCT mission statement -->
 

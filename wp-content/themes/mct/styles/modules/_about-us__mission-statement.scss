@@ -12,5 +12,10 @@
 		border: 2px solid $brandColor;
 		padding:$base*8;
 		margin:$base*2;
+
+		svg{
+			fill:$brandColor;
+			opacity:1;
+		}
 	}
 }
