@@ -29,7 +29,7 @@ get_header(); ?>
 			<section class="about-purple__mission-statement">
 				<article class="about-purple__mission-statement__text">
 					<p><?php the_content();?></p>
-					
+
 					<ul class="social-icons">
 						<?php 
 						$mct_facebook_link = get_field( 'mct_facebook_link', 'option' );
@@ -99,9 +99,15 @@ get_header(); ?>
 
 	<?php endif; wp_reset_postdata();?>
 
-	<?php $latest_news = new WP_Query(array( 'posts_per_page' => 6)); ?>
+	<?php $latest_news = new WP_Query(array( 'posts_per_page' => 3,)); ?>
+
 
 		<div class="main-wrapper">
+
+			<hgroup class="title-block">
+				<h3 class="title-block__title  title-block__title--light-bg">Latest news</h3>
+			</hgroup>
+
 			<ul class="latest-news__items">
 
 				<?php while($latest_news->have_posts() ) : $latest_news->the_post();?>
@@ -140,6 +146,10 @@ get_header(); ?>
 			</ul>
 
 		<?php wp_reset_postdata(); ?>
+
+		<a href="<?php echo get_site_url(); ?>/blog" class="button">
+			see all news
+		</a>
 
 		</div>
 	</section><!-- #Latest news -->

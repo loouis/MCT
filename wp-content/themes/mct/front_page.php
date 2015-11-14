@@ -50,7 +50,7 @@ get_header(); ?>
 							<div class="ilf__container__split ilf__cells">
 								<div class="ilf__cells__cell ilf__cells__cell--large-square">
 									<article class="ilf__cells__cell__text">
-										<h2>Fancy</h2>
+										<h2 class="ilf__cells__cell__text__sub-title">Fancy</h2>
 										<ul class="ilf__cells__cell__text__slider">
 											<li class="ilf__cells__cell__text__slider__slide">
 												<span class="letter-active-1">B</span>
@@ -73,6 +73,8 @@ get_header(); ?>
 											</li>
 										</ul>
 									</article>
+
+									<a href="<?php echo site_url();?>/locations" class="ilf__cells__cell__locations-link">View all locations</a>
 
 									<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--large-text-block.jpg" alt=""/>
 								</div>

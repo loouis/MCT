@@ -254,6 +254,15 @@
 		&__cell{
 			// background:red;
 
+			&__locations-link{
+				position: absolute;
+			    bottom: 50px;
+			    width: 100%;
+			    text-align: center;
+			    font-family: $brandFont;
+			    padding:$base*4 0;
+			}
+
 			&__text{
 				width:100%;
 				position:absolute;
@@ -268,20 +277,18 @@
 					&__slide{
 						span{
 							// opacity:0;
-							color:red;
+							color:$brandColor;
+							font-family: $brandFont;
+							font-weight:900;
+							font-size:4em;
 						}
 					}
 				}
 
-
-				&__title{
-					// padding: 150px 0 0 40px;
-
-					font-weight:bold;
-
-					&__sub-title{
-						color:darken($lightestGrey, 20%);
-					}
+				&__sub-title{
+					color:darken($lightestGrey, 20%);
+					font-weight:900;
+					font-size:4em;
 				}
 			}
 
@@ -304,6 +311,31 @@
 				&-right{
 					@include span(last 6 split);
 					margin-right:0;		
+				}
+
+			}
+
+			@include breakpoint(1080px){
+
+				&__locations-link{
+				    bottom: 20px;
+				    padding:$base*4 0;
+				}
+
+				&__text{
+					padding: 0 40px 40px 40px;	
+
+					&__slider{
+						&__slide{
+							span{
+								font-size:6em;
+							}
+						}
+					}
+
+					&__sub-title{
+						font-size:6em;
+					}
 				}
 
 			}
