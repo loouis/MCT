@@ -1,8 +1,11 @@
 .job-sectors{
+	@include clearfix;
+
 	&__sector{
-		@include span(4 of 12);
+		display: inline-block;
+		width:48%;
 		padding:15px;
-		margin:$base*3 0;
+		
 
 		&__image{
 			width:40%;
@@ -14,6 +17,14 @@
 			padding-top:$base*2;
 			font-size:em(14px);
 			@extend %uppercase;
+		}
+	}
+
+	@include breakpoint(640px){
+
+		&__sector{
+			margin:$base*3 0;
+			width:32.8%;
 		}
 	}
 }
