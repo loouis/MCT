@@ -102,7 +102,7 @@ get_header(); ?>
 	<?php $latest_news = new WP_Query(array( 'posts_per_page' => 3,)); ?>
 
 
-		<div class="main-wrapper">
+		<div class="main-wrapper about-page-more-news-wrapper">
 
 			<hgroup class="title-block">
 				<h3 class="title-block__title  title-block__title--light-bg">Latest news</h3>
