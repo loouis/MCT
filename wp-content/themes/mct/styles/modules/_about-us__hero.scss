@@ -2,22 +2,31 @@
 .about-us{
 	&__hero{
 		@extend %center-text;
-		height:100vh;
 		@extend %cover;
+		min-height:400px;
 	
 		&__mc-logo{
 			position:relative;
 			max-width: 200px;
 	    	margin: 0 auto;
-	    	height:100%;
-	    	top: 50%;
-    		-webkit-transform: translateY(-27%);
-    		-ms-transform: translateY(-27%);
+	    	padding-top:160px;
 		}
 	}
 
-	@include breakpoint($m){
+	@include breakpoint(800px){
 		&__hero{
+			height:100vh;
+
+			&__mc-logo{
+				position:relative;
+				max-width: 200px;
+		    	margin: 0 auto;
+		    	height:100%;
+		    	top: 50%;
+		    	padding-top:initial;
+	    		-webkit-transform: translateY(-27%);
+	    		-ms-transform: translateY(-27%);
+			}
 		
 			&__mc-logo{
 				max-width: 280px;

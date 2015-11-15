@@ -1,7 +1,6 @@
 .about-purple__mission-statement{
 	position: relative;
 	padding:$base*2;
-	top:-200px;
     max-width: 680px;
     margin: 0 auto;
 	background: white;
@@ -39,6 +38,8 @@
 	}
 
 	@include breakpoint(800px){
+		top:-200px;
+		
 		&__text{
 			&__tagline{
 				width:60%;
