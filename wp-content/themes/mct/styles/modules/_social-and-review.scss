@@ -1,43 +1,48 @@
 .social-and-review-container{
-	position:fixed;
-	right:0;
-	bottom:60px;
-	width:40%;
-	height:100px;
-	text-align:center;
+	display:none;
 
-	&__link{
-		display:inline-block;
-		margin:15px 5px 0 5px;
+	@include breakpoint($m){
+		display: block;
+		position:fixed;
+		right:0;
+		bottom:60px;
+		width:40%;
+		height:100px;
+		text-align:center;
 
-		svg{
-			width: 45px;
-    		height: 45px;
-    		// fill:$brandColor;
+		&__link{
+			display:inline-block;
+			margin:15px 5px 0 5px;
 
-    		.bird{
-    			fill:red;
-    		}
+			svg{
+				width: 45px;
+	    		height: 45px;
+	    		// fill:$brandColor;
+
+	    		.bird{
+	    			fill:red;
+	    		}
+			}
 		}
-	}
 
-	.wp-review-245.review-wrapper{
-		background:none;
-	}
-	.user-review-area{
-		border:none !important;
-	}
-	.review-total-star{
+		.wp-review-245.review-wrapper{
+			background:none;
+		}
+		.user-review-area{
+			border:none !important;
+		}
+		.review-total-star{
 
-	}
-	.user-review-title, #mts-user-reviews-total, .user-total-wrapper{
-		display:none;
-	}
-	.review-result-wrapper i{
-		font-size:22px;
-	}
-	.review-total-star{
-		float:none;
+		}
+		.user-review-title, #mts-user-reviews-total, .user-total-wrapper{
+			display:none;
+		}
+		.review-result-wrapper i{
+			font-size:22px;
+		}
+		.review-total-star{
+			float:none;
+		}
 	}
 }
 
@@ -45,5 +50,5 @@ svg.circle{
 	fill:white
 }
 .bird{
-			fill:white;
-		}
+	fill:white;
+}
