@@ -34,7 +34,7 @@
 		&__text{
 			position:relative;
 			text-align: center;
-			@include vertical-align;
+			padding:$base*8 0;
 			z-index:10;
 
 			&__title{
@@ -42,19 +42,33 @@
 				// bottom:0;
 				@extend %uppercase;
 				@extend %text-white;
-				font-size:$base*14;
+				font-size:$base*6;
 				margin-top:$base;
+				line-height: 1em;
 			}
 
 			&__news-cat{
 				text-transform: uppercase;
 			    color: #FF02AF;
 			    font-weight: 800;
-			    border: 2px solid #FF02AF;
+			    // border: 2px solid #FF02AF;
 			    display: initial;
 			    padding: 7px 14px;
 			    margin-bottom: 20px;
 			    text-align: center;
+			}
+		}
+	}
+
+	@include breakpoint($m){
+		&__slide{
+			&__text{
+
+				@include vertical-align;
+
+				&__title{
+					font-size:$base*14;
+				}
 			}
 		}
 	}
