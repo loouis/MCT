@@ -1,10 +1,15 @@
 .job-sectors{
 	@include clearfix;
+	margin:$base*5 0;
 
 	&__sector{
 		display: inline-block;
 		width:48%;
-		padding:15px;
+		padding:30px 15px;
+
+		&:hover{
+			background:white;
+		}
 		
 
 		&__image{

@@ -69,10 +69,14 @@ get_header(); ?>
 			<!-- About Purple -->
 			<section class="about-us__about-purple">
 				<div class="main-wrapper">
-					<div class="about-us__about-purple__partnership-logos"></div>
+					<div class="about-us__about-purple__partnership-logos">
+						<svg>
+							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#purple_logo-black" />
+						</svg>
+					</div>
 					<p class="about-us__about-purple__opening-para"><?php the_field('about_page_purple_text')?></p>
-					<p>Creating jobs for…</p>
-
+<!-- 					<p>Creating jobs for…</p>
+ -->
 					<div class="about-us__about-purple__job-sectors job-sectors">
 
 						<?php if (have_rows('about_page_purple_job_cats')):?>
@@ -95,7 +99,7 @@ get_header(); ?>
 					<?php endif;?>
 					</div>
 
-					<a href="http://www.purple-consultancy.com" class="button">View purple site</a>
+					<a href="http://www.purple-consultancy.com" class="button">View all jobs</a>
 				</div>
 			</section><!-- // About Purple -->
 		</div><!-- // About-purple__main-content -->
