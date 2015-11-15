@@ -148,7 +148,7 @@ get_header(); ?>
 		<?php wp_reset_postdata(); ?>
 
 		<a href="<?php echo get_site_url(); ?>/blog" class="button">
-			see all news
+			More news
 		</a>
 
 		</div>
