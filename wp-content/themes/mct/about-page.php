@@ -28,6 +28,9 @@ get_header(); ?>
 			<!-- MCT mission statement -->
 			<section class="about-purple__mission-statement">
 				<article class="about-purple__mission-statement__text">
+
+					<h2 class="about-purple__mission-statement__text__tagline"><?php bloginfo('description'); ?></h2>
+
 					<p><?php the_content();?></p>
 
 					<ul class="social-icons">
