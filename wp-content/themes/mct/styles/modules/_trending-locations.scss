@@ -21,14 +21,12 @@
 
 	.bx-controls-direction{
 
-		.bx-prev,.bx-next{
+		.bx-prev, .bx-next{
 			height: 60px;
 			top: 30%;
 			margin-top: 0;
 			width: 60px;
 			z-index:10;
-			background:url(images/svg/icon-carousel-arrow.svg) no-repeat;
-			background-size:contain;
 			transition: background .3s ease-in-out;
 
 			&:hover{
@@ -38,9 +36,40 @@
 		.bx-prev{
 			left: 0;
 
+			&:after{
+				content:"";
+				position:absolute;
+				top: 50%;
+			    margin-top: -20px;
+			    right: 7%;
+				width:40px;
+				height:40px;
+				background:url(images/svg/icon-carousel-arrow.svg) no-repeat;
+				background-size:contain;
+
+				-webkit-transform: rotate(-180deg);
+			    -moz-transform: rotate(-180deg);
+			    -o-transform: rotate(-180deg);
+			    -ms-transform: rotate(-180deg);
+			    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
+			    transform: rotate(-180deg);
+			}
+
 		}
 		.bx-next{
 			right: 0;
+
+			&:after{
+				content:"";
+				position:absolute;
+				top: 50%;
+			    margin-top: -20px;
+			    left: 7%;
+				width:40px;
+				height:40px;
+				background:url(images/svg/icon-carousel-arrow.svg) no-repeat;
+				background-size:contain;
+			}
 		}
 	}
 
@@ -72,10 +101,23 @@
 			.bx-prev{
 				left: -100%;
 				margin-left: -1.1em;
+
+				&:after{
+					content:"";
+					position:absolute;
+					top: 50%;
+				    margin-top: -20px;
+				    right: 7%;
+				}
 			}
 			.bx-next{
+				// position:relative;
 				right: -100%;
 				margin-right: -1.1em;
+
+				&:after{
+				    left: 7%;
+				}
 			}
 		}
 	}
