@@ -72,6 +72,12 @@
     				opacity:0;
 				}
 
+				&:hover{
+					.trend-loc__slider__slide__text{
+						background:rgba(255,2,175,.7);
+					}
+				}
+
 				&__text{
 					padding:$base*3 $base*4 $base*4 $base*4;
 					text-align: left;
