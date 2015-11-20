@@ -137,9 +137,10 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 //function to replace invalid ellipsis with text linking to the post
-function excerpt_abooze($text) {
-   return str_replace('[...]', 'Allanon\'s text goes here...', $text); }
-add_filter('the_excerpt', 'excerpt_abooze');
+function new_excerpt_more( $more ) {
+	return '…';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /* WYSIWYG editor chages */
 
