@@ -17,11 +17,65 @@
 	width:46.2%;
 }
 
+.infowindowContent > p, .infoWindowContainer .infoWindow h3{
+	text-align:left !important;
+}
+
+.infowindowContent > p{
+	padding-top:$base*2;
+}
+
+.infoWindowContainer .infoWindow h3{
+	font-weight:900;
+	@extend %uppercase;
+}
+
+.infowindowContent{
+	.address{
+		// text-align: center;
+		font-weight:700;
+
+		a{
+			color:$brandColor;	
+		}
+		br{
+			display: none;
+		}
+	}
+}
+.infowindowContent .viewLocationPage{
+	text-align:left !important;
+	// border:2px solid $brandColor;
+	font-family:$brandFont;
+	padding:15px 20px 12px 20px;
+	display:inline-block;
+	font-weight:700;
+	color:#5B5B5B;
+}
+
+.infoWindow{
+	&:hover{
+		.infowindowContent .viewLocationPage{
+			color:$brandColor;
+		}
+	}
+}
+
+
 // Background to suit the map colour when there are only a few items in view
 body.page-id-7{
 	background: #EFEFEF;
 }
 
+.infoWindowContainer, .infoWindowContainer .infoWindow{
+	border-radius: 0px !important;
+}
+.infoWindowContainer .infoWindow .infowindowContent{
+	padding-top:0px !important;
+}
+.prettyMapList .mapHolder .infoWindow{
+	padding: 0px 20px !important;
+}
 
 .infoWindowContainer .infoWindow h3,
 .prettyMapList .corePrettyStyle{
