@@ -306,6 +306,11 @@ get_header(); ?>
 									<article class="news-cell__text">
 										<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
 									</article>
+									<div class="news-cell__text__read-more-button">
+										<svg>
+											<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
+										</svg>
+									</div>
 										
 									<?php
 										$thumb_id = get_post_thumbnail_id();

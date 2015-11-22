@@ -15,6 +15,7 @@
 			height:100%;
 			background:rgba(0,0,0,.25);
 			z-index:0;
+			transition: background .3s ease-in-out;
 		}
 	}
 
@@ -26,6 +27,7 @@
 		z-index: 30;
 		width:100%;
 		text-align:center;
+		transition:all .3s ease-in-out;
 	
 		&__news-type{
 			color:$brandColor;
@@ -35,6 +37,25 @@
 			margin-bottom:0.5em;
 			margin-top:- $base / 2;
 			@extend %sm-letter-spacing;
+		}
+
+		&__read-more-button{
+			position:absolute;
+			bottom:16px;
+			opacity:0;
+			z-index:10;
+			left:50%;
+			right:50%;
+			width:40px;
+			height:40px;
+			margin-left:-20px;
+			transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+			
+			svg{
+				width:40px;
+				height:40px;
+				fill:white;
+			}
 		}
 
 		&__news-title{
@@ -70,6 +91,28 @@
 	// 		padding:$base*3;
 	// 	}
 	// }
+
+
+	&:hover{
+    	.news-cell__text{
+    		transform: translate(0, -34px);
+    	}
+
+    	.news-cell__image:after{
+    		background: rgba(0,0,0,0.5);
+    	}
+
+    	.news-cell__text__read-more-button{
+    		opacity:1;
+    		-webkit-transform: rotate(-90deg);
+		    -moz-transform: rotate(-90deg);
+		    -o-transform: rotate(-90deg);
+		    -ms-transform: rotate(-90deg);
+		    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		    transform: rotate(-90deg);
+    	}
+
+    }
 
 	@include breakpoint(700px){
 		width: 49.74%;
