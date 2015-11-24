@@ -239,30 +239,26 @@ get_header(); ?>
             </hgroup>
 
             <?php 
-            $postID = get_the_ID();
-            $postCat = get_the_category_bytax($post->ID, 'taxo');
-            $catName = $postCat[0]->name;
-            echo $catName;
 
 
             if ( wp_is_mobile() ) {
                 $related_locations = new WP_Query(
                     array(
                         'post_type' => 'maplist',
-                        'map_location_categories' => $catName,
-                        'posts_per_page' => 3,
+                        'map_location_categories' => 'featured',
+                        // 'taxonomy=map_location_categories&tag_ID=3',
                         'orderby' => 'rand',
-                        'post__not_in' => array( get_the_ID() ),
+                        'posts_per_page' => 3));
                     )
                 );
             }else{
                 $related_locations = new WP_Query(
                     array(
                         'post_type' => 'maplist',
-                        'map_location_categories' => $catName,
-                        'posts_per_page' => 3,
+                        'map_location_categories' => 'featured',
+                        // 'taxonomy=map_location_categories&tag_ID=3',
                         'orderby' => 'rand',
-                        'post__not_in' => array( get_the_ID() ),
+                        'posts_per_page' => 6));
                     )
                 );
             }
