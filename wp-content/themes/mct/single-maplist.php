@@ -258,7 +258,7 @@ get_header(); ?>
                         // 'map_location_categories' => 'featured',
                         // 'taxonomy=map_location_categories&tag_ID=3',
                         'orderby' => 'rand',
-                        'posts_per_page' => 6
+                        'posts_per_page' => 3
                     )
                 );
             }
