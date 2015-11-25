@@ -72,25 +72,21 @@ $(document).ready(function(){
 		$openNav = $(".logo, .header-main__nav__hamburger-menu"),
 		$siteNav = $(".site-nav"),
 		$mainHeader = $(".header-main"),
-		$closeNav = $('.header-main__close-button');
+		$closeNav = $('.header-main__close-button'),
+		$this = $(this);
 
 	$openNav.on("click", function(){
 		$siteNav.toggleClass("site-nav--active");
 		$("body").toggleClass("body--is-fixed");
 		$mainHeader.toggleClass("header-main--active");
-
-		if( $logo.attr('data-explore', 'exit') )
+		$logo.toggleClass("logo--nav-open");
 
 		// Change data-explore attr to close when main nav is active 
-		$logo.attr('data-explore', 'exit');
-
-		$('.list-toggle').click(function() {
-		    if ($('.list-sort').attr('data-explore', 'exit')) {
-		        $('.list-sort').removeAttr('colspan');
-		    } else {
-		        $('.list-sort').attr('colspan', 6);
-		    }
-		});
+		if($logo.hasClass("logo--nav-open")) {
+			$logo.attr('data-explore', 'exit');
+		} else {
+			$logo.attr('data-explore', 'explore');
+		}
 
 	});
 

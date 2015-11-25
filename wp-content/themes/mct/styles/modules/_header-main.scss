@@ -106,12 +106,19 @@
 				position:absolute;
 				transform:rotate(-90deg);
 				bottom: -24px;
-				left: -17px;
+				left: -19px;
 				text-transform:uppercase;
 				font-family:$brandFont;
-				// color:white;
 				color:darken($lightestGrey, 20%);
 				letter-spacing: 1px;
+			}
+
+			&--nav-open{
+				// Style when 'exit' text is visible
+				&:after{
+					left: 2px;
+					bottom:-5px;
+				}
 			}
 	    }
 
