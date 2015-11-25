@@ -252,6 +252,12 @@ get_header(); ?>
 											</p><!-- // Tags -->
 											<h3 class="trend-loc__slider__slide__text__title"><?php the_title();?></h3>
 											<p class="trend-loc__slider__slide__text__para"><?php echo(get_the_excerpt()); ?></p>
+
+											<div class="trend-loc__slider__slide__read-more-button">
+												<svg>
+													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
+												</svg>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -271,7 +277,7 @@ get_header(); ?>
 									srcset="<?php echo $large_thumb_url[0]; ?> 1x">
 									<source 
 									srcset="<?php echo $thumb_url[0]; ?> 1x">
-									<img src="<?php echo $large_thumb_url[0]; ?>" alt="<?php echo $alt;?>">
+									<img src="<?php echo $large_thumb_url[0]; ?>" alt="<?php echo $alt;?>" class="trend-loc__slider__slide__image-con__image">
 								</picture>
 							</li>
 
