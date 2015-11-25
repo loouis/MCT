@@ -5,6 +5,12 @@
 	&__image{
 		position:relative;
 		width:100%;
+		overflow:hidden;
+
+		img{
+			transform: scale(1.01);
+			transition: transform .3s ease-in-out;
+		}
 
 		&:after{
 			content:"";
@@ -100,6 +106,9 @@
 
     	.news-cell__image:after{
     		background: rgba(0,0,0,0.5);
+    	}
+    	.news-cell__image img{
+    		transform: scale(1.16);
     	}
 
     	.news-cell__text__read-more-button{
