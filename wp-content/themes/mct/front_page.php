@@ -390,6 +390,11 @@ get_header(); ?>
 								<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
 								<h5 class="hjb__jobs__cell__job-role"><?php the_title();?></h5>
 								<p class="hjb__jobs__cell__desc"><?php the_content();?></p>
+								<div class="hjb__jobs__cell__read-more-button">
+									<svg>
+										<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
+									</svg>
+								</div>
 							</a>
 
 						<?php endwhile;?>
