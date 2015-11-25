@@ -11,9 +11,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="outter-wrapper">
 
-				<?php $blog_hero = new WP_Query( array( 'posts_per_page' => 4) );?>
-				<?php if($blog_hero->have_posts() ) : $blog_hero->the_post(); ?>
+			<?php if ( wp_is_mobile() ) {
 
+				}else{ ?>
+
+					<?php $blog_hero = new WP_Query( array( 'posts_per_page' => 4) );?>
 					<section id="news-all-hero-slider" class="news-single-hero section-hero">
 
 						<?php while($blog_hero->have_posts()) : $blog_hero->the_post();?>
@@ -36,16 +38,22 @@ get_header(); ?>
 
 						<?php endwhile;?>
 					</section>
-				<?php endif;?>
+					<?php wp_reset_query();?>
 
-				<?php wp_reset_query();?>
+				<?php }?>				
+
+					
 
 				<div class="latest-news">
 					<div class="main-wrapper">
 
 					<?php if ( have_posts() ) : ?>
 
-						<h1 class="latest-news__title">More news…</h1>
+						<?php if ( wp_is_mobile() ) { ?>
+							<h1 class="latest-news__title">Latest news…</h1>
+						<?php } else { ?>
+							<h1 class="latest-news__title">More news…</h1>
+						<?php } ?>
 
 						<ul class="latest-news__items">
 			
