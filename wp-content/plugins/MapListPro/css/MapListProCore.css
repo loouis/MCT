@@ -458,8 +458,8 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 /*Pagination*/
 .prettyPagination
 {
-	height: 45px;
-        margin-bottom: 10px;
+	/*height: 45px;*/
+    margin-bottom: 10px;
 	padding-top:5px;
 	text-align:center;
 }

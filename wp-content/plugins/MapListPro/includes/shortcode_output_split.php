@@ -322,12 +322,11 @@ HIDE SEARCH
                     else{
                         $mlpoutputhtml .= "<div class='prettyPagination'>";
                     }
-
-                        $mlpoutputhtml .= "<a class='pfl_next btn corePrettyStyle' href='#' data-bind='click: nextPage,css:nextPageButtonCSS'>" . __('Next','maplistpro'). " &raquo;</a>";
                         $mlpoutputhtml .= '<div data-bind="visible: pagingVisible" class="pagingInfo">';
                             $mlpoutputhtml .= __('Page','maplistpro'). " <span class='currentPage' data-bind='text: currentPageNumber'></span> " . __('of','maplistpro') . " <span data-bind='text: totalPages' class='totalPages'></span>";
                         $mlpoutputhtml .= "</div>";
-                        $mlpoutputhtml .= "<a class='pfl_prev btn corePrettyStyle' data-bind='click: prevPage,css:prevPageButtonCSS' href='#'>&laquo; " . __('Prev','maplistpro'). "</a>";
+                        $mlpoutputhtml .= "<a class='pfl_next button btn corePrettyStyle' href='#' data-bind='click: nextPage,css:nextPageButtonCSS'>" . __('Next','maplistpro'). " &raquo;</a>";
+                        $mlpoutputhtml .= "<a class='pfl_prev button btn corePrettyStyle' data-bind='click: prevPage,css:prevPageButtonCSS' href='#'>&laquo; " . __('Prev','maplistpro'). "</a>";
                     $mlpoutputhtml .= "</div>";
                 }
                 break;
