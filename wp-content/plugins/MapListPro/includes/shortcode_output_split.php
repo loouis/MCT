@@ -107,6 +107,7 @@ HIDE SEARCH
                     if($hidesearch != 'true'){
 
                         $mlpoutputhtml .= "<form id='Map-List-Search' data-bind='submit:mapSearchSubmit' class='prettyMapListSearch $simplesearch'>";
+                            $mlpoutputhtml .= "<div class='locations-search-icon'></div>";
 
                             if($simplesearch == 'true'){
                                 //TEXT SEARCH
@@ -132,7 +133,7 @@ HIDE SEARCH
 
                             }
 
-                            $mlpoutputhtml .= "<a class='clearSearch btn corePrettyStyle' data-bind='visible: anySearchTermsEntered, click: clearSearch'>" . __('Clear','maplistpro'). "</a>";
+                            // $mlpoutputhtml .= "<a class='clearSearch btn corePrettyStyle' data-bind='visible: anySearchTermsEntered, click: clearSearch'>" . __('Clear','maplistpro'). "</a>";
                         $mlpoutputhtml .= "</form>";//EOF .prettyMapListSearch
                     }
 

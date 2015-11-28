@@ -8,6 +8,28 @@
 	margin-top:60px;
 	// padding: 20px !important;
 }
+// .locations-search-icon{
+// 	float:left;
+// 	width:30px;
+// 	height:30px;
+// 	background:url('images/icon-social-brandcolor_circle-facebook.png');
+// 	background-size:contain;
+// }
+
+// Search field
+.prettyMapList .prettyFileBar .prettyMapListSearch input, .prettyMapList .prettyFileBar .prettySearchValue{
+	border:none !important;
+	width:100% !important;
+	background: none !important;
+	font-family: $brandFont;
+	width:300px !important;
+	padding-left:0 !important;
+}
+.prettyMapList .prettyFileBar .prettyMapListSearch{
+	// display:block !important;
+	padding-left:30px !important;
+	margin-top:12px;
+}
 
 .map-pro-thumbnail-image{
 	margin-bottom:17px !important;
@@ -230,7 +252,7 @@ body.page-id-7{
 }
 
 .customCategoryList ul li a:not(.showing) {
-    opacity:0.3;
+    opacity:0.6;
 }
 
 .customCategoryList ul li a.showing{
@@ -295,10 +317,10 @@ body.page-id-7{
     	padding: 0 !important;
 	}
 	.map-pro-thumbnail-image{
-		margin-bottom:28px !important;
+		margin-bottom:18px !important;
 	}
 	.description{
-		padding-bottom: 40px !important;
+		padding-bottom: 32px !important;
 	}
 }
 
