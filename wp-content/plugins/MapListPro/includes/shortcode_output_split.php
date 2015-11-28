@@ -104,37 +104,37 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
 /*****
 HIDE SEARCH
 *******/
-                    // if($hidesearch != 'true'){
+                    if($hidesearch != 'true'){
 
-                    //     $mlpoutputhtml .= "<form id='Map-List-Search' data-bind='submit:mapSearchSubmit' class='prettyMapListSearch $simplesearch'>";
+                        $mlpoutputhtml .= "<form id='Map-List-Search' data-bind='submit:mapSearchSubmit' class='prettyMapListSearch $simplesearch'>";
 
-                    //         if($simplesearch == 'true'){
-                    //             //TEXT SEARCH
-                    //             $mlpoutputhtml .= "<label>" . __('Search locations','maplistpro'). "</label>";
-                    //             $mlpoutputhtml .= "<input type='text' class='prettySearchValue' data-bind='value: query, valueUpdate:" . '"keyup"' . "' autocomplete='off' value='$this->searchTextDefault'>";
-                    //         }
-                    //         else{
-                    //             if($simplesearch == 'combo'){
-                    //                 //COMBO SEARCH
-                    //                 $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchTextDefault' value=''>";
-                    //                 $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
-                    //                 $mlpoutputhtml .= "<input type='text' class='prettySearchLocationValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
-                    //                 $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:comboSearch'>" . __('Go','maplistpro'). "</a>";
-                    //             }
-                    //             else{
-                    //                 //LOCATION SEARCH
-                    //                 //TODO:Add default value in
-                    //                 $mlpoutputhtml .= "<label class='hidden'>" . __('Find locations near','maplistpro'). "</label>";
-                    //                 $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
-                    //                 $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
-                    //                 $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:locationSearch'>" . __('Go','maplistpro'). "</a>";
-                    //             }
+                            if($simplesearch == 'true'){
+                                //TEXT SEARCH
+                                // $mlpoutputhtml .= "<label>" . __('Search locations','maplistpro'). "</label>";
+                                $mlpoutputhtml .= "<input type='text' placeholder='Search for location' class='prettySearchValue' data-bind='value: query, valueUpdate:" . '"keyup"' . "' autocomplete='off' value='$this->searchTextDefault'>";
+                            }
+                            else{
+                                if($simplesearch == 'combo'){
+                                    //COMBO SEARCH
+                                    $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchTextDefault' value=''>";
+                                    $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
+                                    $mlpoutputhtml .= "<input type='text' class='prettySearchLocationValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
+                                    $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:comboSearch'>" . __('Go','maplistpro'). "</a>";
+                                }
+                                else{
+                                    //LOCATION SEARCH
+                                    //TODO:Add default value in
+                                    $mlpoutputhtml .= "<label class='hidden'>" . __('Find locations near','maplistpro'). "</label>";
+                                    $mlpoutputhtml .= "<input type='text' class='prettySearchValue' autocomplete='off' placeholder='$this->searchLocationTextDefault' value=''>";
+                                    $mlpoutputhtml .= "<select class='distanceSelector' name='distanceSelector' id='distanceSelector' data-bind='options: distanceFilters, optionsText:function(item){return item.label}, optionsValue: function(item){return item.value}, value: chosenFromDistance'></select>";
+                                    $mlpoutputhtml .= "<a class='doPrettySearch btn corePrettyStyle' data-bind='click:locationSearch'>" . __('Go','maplistpro'). "</a>";
+                                }
 
-                    //         }
+                            }
 
-                    //         $mlpoutputhtml .= "<a class='clearSearch btn corePrettyStyle' data-bind='visible: anySearchTermsEntered, click: clearSearch'>" . __('Clear','maplistpro'). "</a>";
-                    //     $mlpoutputhtml .= "</form>";//EOF .prettyMapListSearch
-                    // }
+                            $mlpoutputhtml .= "<a class='clearSearch btn corePrettyStyle' data-bind='visible: anySearchTermsEntered, click: clearSearch'>" . __('Clear','maplistpro'). "</a>";
+                        $mlpoutputhtml .= "</form>";//EOF .prettyMapListSearch
+                    }
 
                     //CATEGORIES
                     //===================================================
