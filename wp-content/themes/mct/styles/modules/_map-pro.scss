@@ -479,6 +479,10 @@ body.page-id-7{
 	.rightmap .mapHolder, .mapHolder{
 		width:47% !important;
 	}
+	.prettyMapList .customCategoryList ul a{
+		color:black;
+		opacity:0.6 !important;
+	}
 }
 
 @include breakpoint(960px){
