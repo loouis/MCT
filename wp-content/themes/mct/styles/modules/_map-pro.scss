@@ -8,13 +8,39 @@
 	margin-top:60px;
 	// padding: 20px !important;
 }
-// .locations-search-icon{
-// 	float:left;
-// 	width:30px;
-// 	height:30px;
-// 	background:url('images/icon-social-brandcolor_circle-facebook.png');
-// 	background-size:contain;
-// }
+.locations-search-icon{
+	position:absolute;
+	float:left;
+	width: 14px;
+    height: 14px;
+    opacity: 0.3;
+    margin: 9px 6px 0 5px;
+	background:url('images/icon-search.png');
+	background-size:contain;
+}
+
+
+// Error pop up
+.prettyMessage{
+	width: 48.6%;
+    left: 0;
+    padding: 10px 10px 10px 35px;
+    font-family: "brandon-grotesque",sans-serif;
+
+    span{
+    	color:#ADADAD;
+    	font-size: 13px;
+    }
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+.prettyMapList .prettyFileBar .prettyMapListSearch input:focus, .prettyMapList .prettyFileBar .prettySearchValue:focus{
+	font-size: 15px;
+    font-weight: 900;
+}
+
 
 // Search field
 .prettyMapList .prettyFileBar .prettyMapListSearch input, .prettyMapList .prettyFileBar .prettySearchValue{
@@ -24,6 +50,14 @@
 	font-family: $brandFont;
 	width:300px !important;
 	padding-left:0 !important;
+	color:$brandColor !important;
+	font-size: 15px !important;
+	margin-left:27px !important;
+}
+.prettyMapList .prettyFileBar .prettyMapListSearch input:focus, .prettyMapList .prettyFileBar .prettySearchValue:focus{
+	color:$brandColor !important;
+	font-size: 15px !important;
+	font-weight:700 !important;
 }
 .prettyMapList .prettyFileBar .prettyMapListSearch{
 	// display:block !important;
@@ -241,6 +275,12 @@ body.page-id-7{
 
 }
 
+.prettyMessage .btn{
+	float:right !important;
+	padding:0 !important;
+	margin-right:4%;
+}
+
 
 .description__title{
 	height:30px;
@@ -298,6 +338,16 @@ body.page-id-7{
     top: 38%;
 }
 
+.rightmap .prettyFileBar{
+	width:100%;
+	margin-top:60px;
+}
+
+@include breakpoint(500px){
+	.rightmap .prettyFileBar, .rightmap #ListContainer{
+		margin-top:0px;
+	}
+}
 
 
 @include breakpoint(660px){

@@ -479,7 +479,7 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 /*SEARCH AND FILTERS*/
 /*Filters*/
 .prettyMapList .prettyFileBar{
-    border-bottom: 1px dashed #EFEFEF;
+    /*border-bottom: 1px dashed #EFEFEF;*/
     padding-bottom: 5px;
     position:relative;
 }
@@ -632,24 +632,11 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 
 /*Message*/
 .prettyMapList .prettyMessage{
-	/*Gradient background*/
-	background: rgb(233,246,253); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(233,246,253,1) 0%, rgba(211,238,251,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(233,246,253,1)), color-stop(100%,rgba(211,238,251,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* IE10+ */
-	background: linear-gradient(top,  rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f6fd', endColorstr='#d3eefb',GradientType=0 ); /* IE6-9 */
-
-	/*Rounded corners*/
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-
-        margin: 10px 0;
-        padding: 10px 10px 10px 35px;
-	position:relative;
+    font-family: "brandon-grotesque",sans-serif;
+    width: 48.6%;
+    padding: 10px 10px 20px 35px;
+    background:white;
+	/*position:relative;*/
 }
 
 .prettyMapList .prettyMessage:after
@@ -708,10 +695,10 @@ body .prettyMapList .prettyFileBar .combo .prettySearchValue{width:100px;}
 .prettyMapList .prettyFileBar .prettyMapListSearch input,
 .prettyMapList .prettyFileBar .prettySearchValue{
     /*Rounded corners*/
-    -webkit-border-radius: 3px;
+/*    -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px;
-    border:solid 1px #ccc;
+    border-radius: 3px;*/
+    /*border:solid 1px #ccc;*/
     color:#ccc;
     display:inline-block;
     font-size:13px;
@@ -724,9 +711,9 @@ body .prettyMapList .prettyFileBar .combo .prettySearchValue{width:100px;}
 .prettyMapList .directionsPostcode:focus,
 .prettyMapList .prettyFileBar .prettyMapListSearch input:focus,
 .prettyMapList .prettyFileBar .prettySearchValue:focus{
-	box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+	/*box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);*/
 
-	border-color:rgba(82, 168, 236, 0.8);
+	/*border-color:rgba(82, 168, 236, 0.8);*/
 	color:#333;
 }
 
