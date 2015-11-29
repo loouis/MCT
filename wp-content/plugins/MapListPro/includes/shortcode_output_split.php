@@ -54,6 +54,7 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                             
                                 $mlpoutputhtml .= "<!-- Category button -->";
                                 $mlpoutputhtml .= '<div class="customCategoryList">';
+
                                     $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . "". "</a>";
 
                                     $mlpoutputhtml .= "<a class='filterView locations-list-view' href='#'>" . "L". "</a>";
@@ -70,6 +71,8 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
 
                                         $mlpoutputhtml .= "</li>";
                                     $mlpoutputhtml .= "</ul>";
+
+                                    $mlpoutputhtml .= '<div class="customCategoryListOverlay"></div>';
 
                                 $mlpoutputhtml .= "</div>";
                          

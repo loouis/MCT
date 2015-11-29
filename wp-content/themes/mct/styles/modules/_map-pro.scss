@@ -176,6 +176,9 @@ body.page-id-7{
 .prettyMapList .mapHolder .infoWindow{
 	padding: 0px 20px !important;
 }
+.prettyMapList .mapHolder{
+	width:46%;
+}
 
 .infoWindowContainer .infoWindow h3,
 .prettyMapList .corePrettyStyle{
@@ -201,7 +204,7 @@ body.page-id-7{
 
 .prettyMapList .customCategoryList ul{
 	top:initial !important;
-	bottom:120px !important;
+	bottom:100px !important;
 	visibility:hidden;
 	display:block !important;
     position:fixed;
@@ -211,13 +214,24 @@ body.page-id-7{
     right: 24px;
 }
 
+// .customCategoryList:after{
+// 	content:"";
+// 	position:absolute;
+// 	width:100%;
+// 	height:100%;
+// 	height:400px;
+// 	top:0;
+// 	left:0;
+// 	background:red;
+// }
+
 .prettyMapList .customCategoryList{
 	position: fixed;
     right: 20px;
     bottom: 20px;
     font-family:$brandFont;
-    z-index:20;
-    // width:160px;
+    z-index:400;
+    width:160px;
 }
 
 .prettyMapList .prettyFileBar .btn{
@@ -229,13 +243,16 @@ body.page-id-7{
 
 
 .filterView{
+	position:relative;
 	width:40px;
 	height:40px;
 	float:left;
 	visibility:hidden;
 	border-radius:50%;
-	margin:0 5px;
-	background:green;
+	margin:8px 5px;
+	background:white;
+	z-index:10;
+	padding: 13px;
 }
 
 .show-location-view-options{
@@ -292,7 +309,7 @@ body.page-id-7{
 }
 
 .customCategoryList ul li a:not(.showing) {
-    opacity:0.6;
+    opacity:1;
 }
 
 .customCategoryList ul li a.showing{
@@ -306,6 +323,10 @@ body.page-id-7{
 #map-canvas0{
 	opacity: 0;
 	z-index:-10;
+}
+
+.prettyMapList .customCategoryList ul a{
+	color:white;
 }
 
 // Show & hide map
@@ -338,10 +359,33 @@ body.page-id-7{
     top: 38%;
 }
 
+.customCategoryListOverlay{
+	opacity:0;
+
+	&--visible{
+		position:fixed;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		opacity:1;
+		background:rgba(0,0,0,.5);
+	}
+}
+
 .rightmap .prettyFileBar{
 	width:100%;
 	margin-top:60px;
 }
+
+.rightmap .mapHolder, .mapHolder{
+    float:right;
+    width:49%;
+}
+
+.mapHolder{/*height:350px;*/width:100%;}
 
 @include breakpoint(500px){
 	.rightmap .prettyFileBar, .rightmap #ListContainer{
@@ -371,6 +415,9 @@ body.page-id-7{
 	}
 	.description{
 		padding-bottom: 32px !important;
+	}
+	.rightmap .mapHolder, .mapHolder{
+		width:100% !important;
 	}
 }
 
@@ -429,6 +476,9 @@ body.page-id-7{
 		visibility:visible;
 	    right: 10px;
 	}
+	.rightmap .mapHolder, .mapHolder{
+		width:47% !important;
+	}
 }
 
 @include breakpoint(960px){
@@ -455,6 +505,12 @@ body.page-id-7{
 	}
 	.prettyMapList .prettylink:after{
 	    top: 31%;
+	}
+	.customCategoryList ul li a:not(.showing) {
+		opacity:0.6;
+	}
+	.prettyMapList .customCategoryList ul a{
+		color:black;
 	}
 }
 

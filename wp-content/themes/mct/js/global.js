@@ -149,17 +149,21 @@ $(document).ready(function(){
 		locationsMapView    = $('.locations-map-view'),
 		locationsListView   = $('.locations-list-view'),
 		locationsMap        = $('#map-canvas0'),
-		locationsFilterView = $('.filterView');
+		locationsFilterView = $('.filterView'),
+		locationsFilterOverlay = $('.customCategoryListOverlay');
 
 	function locationsMobileMenuHide(){
 		showFilterUl.removeClass("show-cat-filter");
+		locationsFilterOverlay.removeClass("customCategoryListOverlay--visible");
 		locationsFilterView.removeClass("show-location-view-options");
+
 	}
 
 
 	showFilterBtn.on('click', function(){
 		showFilterUl.toggleClass("show-cat-filter");
 		locationsFilterView.toggleClass("show-location-view-options");
+		locationsFilterOverlay.toggleClass("customCategoryListOverlay--visible");
 	});
 
 	// Show map or list view on mobile

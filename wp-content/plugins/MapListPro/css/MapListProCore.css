@@ -71,7 +71,7 @@
     /*height: 350px;*/
     height:100vh;
     margin-bottom:15px;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 /*Pop up windows*/
@@ -262,7 +262,7 @@ body .infoWindowContainer .infoWindow h3 span{font-size:13px;}
 .prettyMapList .customCategoryList ul a
 {
 
-    color:black;
+    /*color:black;*/
     display:block;
     font-size:30px;
     font-weight: 900;
@@ -850,8 +850,14 @@ Feel free to remove or tweak these if you run into issues
 .leftmap .prettyFileBar{float:left;width:49%;}
 
 /*Map to right*/
-.rightmap .mapHolder{float:right;width:49%;}
-.rightmap .prettyFileBar{float:left;width:49%;}
+/*.rightmap .mapHolder{
+    float:right;
+    width:49%;
+}*/
+.rightmap .prettyFileBar{
+    float:left;
+    /*width:49%;*/
+}
 
 /*Accordion*/
 
