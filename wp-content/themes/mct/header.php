@@ -35,7 +35,7 @@
 
 		<div class="header-main__nav left-nav">
 			<button class="header-main__nav__hamburger-menu"></button>
-			<div data-explore="explore" class="logo">
+			<div data-explore="menu" class="logo">
 				<div class="logo__letter"><img src="<?php echo get_template_directory_uri();?>/images/mct-logo--let_m.png" alt=""/></div>
 				<div class="logo__letter"><img src="<?php echo get_template_directory_uri();?>/images/mct-logo--let_c.png" alt=""/></div>
 				<div class="logo__letter"><img src="<?php echo get_template_directory_uri();?>/images/mct-logo--let_t.png" alt=""/></div>

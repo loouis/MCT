@@ -85,7 +85,7 @@ $(document).ready(function(){
 		if($logo.hasClass("logo--nav-open")) {
 			$logo.attr('data-explore', 'exit');
 		} else {
-			$logo.attr('data-explore', 'explore');
+			$logo.attr('data-explore', 'menu');
 		}
 
 	});
