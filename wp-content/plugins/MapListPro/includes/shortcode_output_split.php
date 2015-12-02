@@ -273,7 +273,7 @@ HIDE SEARCH
                                         $mlpoutputhtml .= "<!-- ko if: " . '$data.imageUrl' . " -->";
                                             // $mlpoutputhtml .= "<a href='#' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">";
                                                 $mlpoutputhtml .= "<div class='map-pro-thumbnail-image'>";
-                                                    $mlpoutputhtml .= "<a href='#' class='viewLocationPage btn corePrettyStyle' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">" . __('VIEW','maplistpro'). "</a>";
+                                                    $mlpoutputhtml .= "<a href='#' class='viewLocationPage btn corePrettyStyle' data-bind='attr:{href:" . '$data.locationUrl' . "}'" . ($openinnew == false ? "" : "target='_blank'") . ">" . __('View','maplistpro'). "</a>";
                                                     $mlpoutputhtml .= "<img src='#' data-bind='attr:{src: " . '$data.imageUrl' . "}' class='featuredImage float_left' />";
                                                 $mlpoutputhtml .= "</div>";
                                             // $mlpoutputhtml .= "</a>";
