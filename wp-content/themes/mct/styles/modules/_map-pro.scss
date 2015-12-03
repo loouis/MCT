@@ -19,6 +19,31 @@
 	background-size:contain;
 }
 
+.filterView{
+	&:after{
+		content:"";
+		position:absolute;
+		width:24px;
+		height:24px;
+		left:8px;
+		top:8px;
+	}
+}
+
+.locations-list-view{
+	&:after{
+		background:url("images/list-icon.png")no-repeat;
+		background-size:contain;
+	}
+}
+
+.locations-map-view{
+	&:after{
+		background:url("images/map-icon.png")no-repeat;
+		background-size:contain;
+	}
+}
+
 .prettyMapList .prettyMessage{
     width: 50.7%;
     padding-left:24px !important;	
@@ -64,7 +89,6 @@ textarea:focus, input:focus{
 	font-weight:700 !important;
 }
 .prettyMapList .prettyFileBar .prettyMapListSearch{
-	// display:block !important;
 	padding-left:20px !important;
 	margin-top:12px;
 }
@@ -86,9 +110,7 @@ textarea:focus, input:focus{
 .pfl_next:hover, .pfl_prev:hover{
 	background:$brandColor !important;
 }
-// .prettyPagination a.pfl_prev{
-// 	float:right !important;
-// }
+
 
 .prettyMapList .mapLocationDetail{
 	padding:0 !important;
@@ -218,6 +240,7 @@ body.page-id-7{
     right: 24px;
 }
 
+
 // .customCategoryList:after{
 // 	content:"";
 // 	position:absolute;
@@ -234,7 +257,7 @@ body.page-id-7{
     right: 20px;
     bottom: 20px;
     font-family:$brandFont;
-    z-index:20;
+    z-index:200;
     width:160px;
 }
 

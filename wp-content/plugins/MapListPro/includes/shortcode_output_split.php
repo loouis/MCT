@@ -57,8 +57,8 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
 
                                     $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . "". "</a>";
 
-                                    $mlpoutputhtml .= "<a class='filterView locations-list-view' href='#'>" . "L". "</a>";
-                                    $mlpoutputhtml .= "<a class='filterView locations-map-view' href='#'>" . "M". "</a>";
+                                    $mlpoutputhtml .= "<a class='filterView locations-list-view' href='#'>" . "". "</a>";
+                                    $mlpoutputhtml .= "<a class='filterView locations-map-view' href='#'>" . "". "</a>";
 
 
                                     // $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . $categorylabel . "</a>";
