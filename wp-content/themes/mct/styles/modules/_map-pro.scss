@@ -4,7 +4,7 @@
 
 .rightmap #ListContainer{
 	width: 100%;
-	padding:30px !important;
+	padding:20px !important;
 	margin-top:60px;
 	// padding: 20px !important;
 }
@@ -19,6 +19,10 @@
 	background-size:contain;
 }
 
+.prettyMapList .prettyMessage{
+    width: 50.7%;
+    padding-left:24px !important;	
+}
 
 // Error pop up
 .prettyMessage{
@@ -61,7 +65,7 @@ textarea:focus, input:focus{
 }
 .prettyMapList .prettyFileBar .prettyMapListSearch{
 	// display:block !important;
-	padding-left:30px !important;
+	padding-left:20px !important;
 	margin-top:12px;
 }
 
@@ -283,7 +287,7 @@ body.page-id-7{
 .prettyMapList .corePrettyStyle a, .prettyMapList .prettylink:after{
     font-family:"brandon-grotesque", sans-serif;
     font-weight:700;
-    font-size:16px;
+    font-size:20px;
     color:white;
     background:none !important;
 }
@@ -387,6 +391,9 @@ body.page-id-7{
 	.rightmap .prettyFileBar, .rightmap #ListContainer{
 		margin-top:0px;
 	}
+	.rightmap #ListContainer{
+		padding:3.7% !important;
+	}
 }
 
 
@@ -394,11 +401,15 @@ body.page-id-7{
 	.prettyMapList .corePrettyStyle{
 		width: 46.2% !important;
 		float:left;
-		margin: 1.9% 1.9% !important;
+		margin: 2.9% 1.9% !important;
 	}
 
 	.map-pro-thumbnail-image img{
 		transition: transform .3s ease-in-out;
+	}
+
+	.rightmap #ListContainer{
+		padding:1.8% !important;
 	}
 
 	.prettylink:hover .map-pro-thumbnail-image img{
@@ -449,7 +460,7 @@ body.page-id-7{
 	}	
 
 	.rightmap #ListContainer{
-		width: 47%;
+		width: 47.6%;
 		margin-top:0;
 	}
 
@@ -458,12 +469,22 @@ body.page-id-7{
 		// margin: 1.9% 1.9% !important;
 	}
 
+	.prettyMapList .prettyMessage{
+	    width: 50.7%;
+	}
+
 	.prettyPagination{
 		float: left;
 		clear:both !important;
-		width:47%;
+		width:48.6%;
 		padding-left: 3.5%;
 		margin-bottom:20px !important;
+	}
+
+	.prettyMapList .prettyPagination .pfl_prev, .prettyMapList .prettyPagination .pfl_next{
+		margin-left:0 !important;
+		margin-right:0 !important;
+		width:48% !important;
 	}
 
 	#map-canvas0{
@@ -507,16 +528,12 @@ body.page-id-7{
 
 @include breakpoint(960px){
 
-	.rightmap #ListContainer{
-		width:51.9%;
-	}
-
 	.prettyPagination a.pfl_next{
 		float:right !important;
 	}
 	.prettyPagination{
 		padding:0;
-		padding-left:1.5%;
+		padding-left:2%;
 	}
 
 	.prettyMapList .corePrettyStyle{
@@ -525,7 +542,10 @@ body.page-id-7{
 		margin: 1.9% 1.9% !important;
 	}
 	.rightmap #ListContainer {
-    	padding: 0 2% 0 0.6% !important;
+		width:50.7%;
+    	// padding: 0 2% 0 0.6% !important;
+    	padding: 0 2% 0 1% !important;
+
 	}
 	.prettyMapList .prettylink:after{
     	bottom:102px;
@@ -538,4 +558,12 @@ body.page-id-7{
 		color:black;
 	}
 }
+
+@include breakpoint(1180px){
+	.rightmap #ListContainer{
+		width:51.6%;
+	}
+}
+
+
 
