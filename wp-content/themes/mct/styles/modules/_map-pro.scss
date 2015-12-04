@@ -527,7 +527,8 @@ body.page-id-7{
 	}
 
 	.prettyMapList .corePrettyStyle a{
-		left: 29%;
+		// left: 29%;
+		left: 20%;
 	    width:auto !important;
 	    opacity:0;
 	}
@@ -547,6 +548,10 @@ body.page-id-7{
 	.prettyMapList .customCategoryList ul a{
 		color:black;
 		opacity:0.6 !important;
+	}
+
+	.prettyMapList .prettylink:after{
+		right: 26%;
 	}
 }
 
@@ -586,6 +591,12 @@ body.page-id-7{
 @include breakpoint(1180px){
 	.rightmap #ListContainer{
 		width:51.6%;
+	}
+	.prettyMapList .prettylink:after{
+		right:32%;
+	}
+	.prettyMapList .corePrettyStyle a{
+		left: 27%;
 	}
 }
 
