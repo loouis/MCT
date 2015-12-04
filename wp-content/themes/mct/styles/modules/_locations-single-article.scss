@@ -42,6 +42,14 @@
 		background-color:#EEEEEE;
 	}
 
+	&__related-locations{
+		@extend %center-text;
+
+		.button{
+			margin-top:$base*4;
+		}
+	}
+
 	.location-content-container{
 		position:relative;
 	}

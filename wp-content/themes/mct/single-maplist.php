@@ -258,7 +258,7 @@ get_header(); ?>
                         // 'map_location_categories' => 'featured',
                         // 'taxonomy=map_location_categories&tag_ID=3',
                         'orderby' => 'rand',
-                        'posts_per_page' => 3
+                        'posts_per_page' => 6
                     )
                 );
             }
@@ -282,73 +282,13 @@ get_header(); ?>
 
             <?php endwhile;?>
             <?php wp_reset_postdata(); ?>
+
+            <a href="<?php echo get_site_url(); ?>/locations" class="button">see more</a>
         </div>
         
     </div>
 </section>
 <!-- // Related location in same category -->
-
-	<!-- Latest news -->
-<section class="location-single__latest-news latest-news">
-    <div class="outter-wrapper">
-        <div class="main-wrapper">
-
-            <hgroup class="title-block">
-                <h3 class="title-block__title title-block__title--light-bg">Latest news</h3>
-            </hgroup>
-
-            <?php
-                if ( wp_is_mobile() ) {
-                    $latest_news = new WP_Query(array( 'posts_per_page' => 3));
-                }else{
-                    $latest_news = new WP_Query(array( 'posts_per_page' => 3));
-                }
-            ?>
-
-            <ul class="latest-news__items">
-
-                <?php while($latest_news->have_posts() ) : $latest_news->the_post();?>
-
-                <a href="<?the_permalink()?>" class="latest-news__items__item news-cell">
-                    <div class="news-cell__image">
-                        <article class="news-cell__text">
-                            <h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
-                        </article>
-                        <div class="news-cell__text__read-more-button">
-                            <svg>
-                                <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
-                            </svg>
-                        </div>
-                            
-                        <?php
-                            $thumb_id = get_post_thumbnail_id();
-
-                            $smallest_thumb_url = wp_get_attachment_image_src($thumb_id,'smallest-news-cell', true);
-
-                            $thumb_url = wp_get_attachment_image_src($thumb_id,'retina-smallest', true);
-
-                            // get alt
-                            $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
-                        ?>
-
-                        <picture>
-                            <source media="(min-width: 960px)"
-                            srcset="<?php echo $thumb_url[0]; ?> 1x">
-                            <source 
-                            srcset="<?php echo $smallest_thumb_url[0]; ?> 1x">
-                            <img src="<?php echo $thumb_url[0]; ?>" alt="<?php echo $alt;?>">
-                        </picture>
-                        
-                    </div>
-                    <span class="news-cell__excerpt"><?php the_excerpt(); ?></span>
-                </a>
-                <?php endwhile; ?>
-            </ul>
-            <?php wp_reset_postdata(); ?>
-                    
-        </div>
-    </div>
-</section><!-- #Latest news -->
 
 <script>
 	/* Blog single page hero animation */
