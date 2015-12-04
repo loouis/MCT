@@ -5,7 +5,7 @@
 	@include clearfix;
 	height:100vh;
 	width:100%;
-	z-index:99;
+	z-index:500;
 	top:0;
 	left:0;
 	background:$offBlack;
@@ -19,9 +19,6 @@
 
 	@include breakpoint(500px){
 		width:100%;
-
-		// padding:$base*5 $base*10;
-
 		background: linear-gradient(270deg, #24e5ed, #df38aa);
 
 		.main-wrapper{
@@ -60,7 +57,6 @@
 	}
 
 	&__cat{
-		// margin-top:$base*12;
 		clear:both;
 
 		&__title{
@@ -139,10 +135,6 @@
 		margin-top:$base*3;
 		padding-top:$base*3;
 		clear:both;
-	
-		&__form{
-			// @include span(8 of 12);
-		}
 	}
 
 	.social-icons{
