@@ -55,8 +55,9 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                                 $mlpoutputhtml .= "<!-- Category button -->";
                                 $mlpoutputhtml .= '<div class="customCategoryList">';
 
-                                    $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . "". "</a>";
-
+                                    $mlpoutputhtml .= "<a class='showFilterBtn btn' href='#'>";
+                                        $mlpoutputhtml .= "<img src='http://localhost:8888/mct-wordpress/wp-content/themes/mct/images/icon-cross-white.png' />";
+                                    $mlpoutputhtml .= "</a>";
                                     $mlpoutputhtml .= "<a class='filterView locations-list-view' href='#'>" . "". "</a>";
                                     $mlpoutputhtml .= "<a class='filterView locations-map-view' href='#'>" . "". "</a>";
 
