@@ -25,7 +25,10 @@
 
 	&__title{
 		padding:20px 0 0 0;
-		text-align: center;
+		@extend %center-text;
+		@extend %uppercase;
+		font-size:1.1em;
+		font-weight: 900;
 	}
 }
 
