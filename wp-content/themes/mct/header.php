@@ -56,7 +56,7 @@
 
 			<!-- <p class="site-nav__top-bar__helper site-nav__top-bar__helper--show">Press enter</p> -->
 
-			<div class="site-nav__top-bar__sign-up">
+			<!-- <div class="site-nav__top-bar__sign-up">
 				<div class="site-nav__top-bar__sign-up__con">
 					<div class="site-nav__top-bar__sign-up__con__icon">
 						<svg>
@@ -65,7 +65,8 @@
 					</div>				
 					<p>Sign up</p> 
 				</div>
-			</div>
+			</div> -->
+
 		</div>
 
 		<div class="outter-wrapper site-nav__outter-wrapper">
@@ -75,6 +76,7 @@
 				<nav class="site-nav__all-site-links">
 					<div class="site-nav__cat">
 						<div class="site-nav__cat__nav">
+							<p class="site-nav__cat__nav__sub-title">Looking for…</p>
 							<?php wp_nav_menu( 
 								array( 
 									'theme_location' => 'locations', 

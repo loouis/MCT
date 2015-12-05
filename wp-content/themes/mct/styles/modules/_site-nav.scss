@@ -51,9 +51,10 @@
 	}
 
 	&__all-site-links{
-		width: 100%;
+		max-width: 800px;
 		margin-bottom:$base*6;
 		@include clearfix;
+		margin:0 auto;
 	}
 
 	&__cat{
@@ -74,7 +75,7 @@
 			
 			@include breakpoint(500px){
 				@include span ( 6 of 12);
-				text-align: right;
+				text-align: center;
 
 				li{
 					font-size:1.4em;
@@ -110,7 +111,7 @@
 				font-size: 1em;
     			padding: 0;
     			line-height: 1.25em;
-    			text-align: left;
+    			text-align: center;
 			}
 			.menu-item-157{
 				padding-top:9px;

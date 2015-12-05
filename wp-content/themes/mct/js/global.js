@@ -69,7 +69,7 @@ $(document).ready(function(){
 	// Hamburger menu
 	var $hamburger = $(".header-main__nav__hamburger-menu"),
 		$logo = $(".logo"),
-		$openNav = $(".logo, .header-main__nav__hamburger-menu"),
+		$openNav = $(".logo, .header-main__nav__hamburger-menu, left-nav"),
 		$siteNav = $(".site-nav"),
 		$mainHeader = $(".header-main"),
 		$closeNav = $('.header-main__close-button'),
@@ -107,7 +107,7 @@ $(document).ready(function(){
 		$("body").removeClass("body--is-fixed");
 		$mainHeader.removeClass("header-main--active");
 		// Remove data attr from exit to explore 
-		$logo.attr('data-explore', 'explore');
+		$logo.attr('data-explore', 'menu');
 	}
 
 
