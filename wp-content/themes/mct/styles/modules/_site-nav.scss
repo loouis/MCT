@@ -150,14 +150,18 @@
 	.social-icons{
 		// width:100%;
 		clear:both;
-		text-align: initial;
-		right: 20px;
-    	position: absolute;
-    	bottom: 60px;
-
+		text-align: center;
+		
     	&__icon{
     		width:34px;
     		margin:0 4px;
+    	}
+
+    	@include breakpoint(700px){
+			text-align: initial;
+			right: 20px;
+	    	position: absolute;
+	    	bottom: 60px;
     	}
 	}
 }

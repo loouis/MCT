@@ -19,8 +19,7 @@
     }
 
     &--active{
-		background:rgba(255,255,255,0);
-		border-right:none !important;;
+		background:rgba(255,255,255,1);
     }
 
     // Close button
@@ -62,6 +61,10 @@
 
 	    &:before{
 	    	display:none;
+	    }
+
+	    &--active{
+			background:rgba(255,255,255,1);
 	    }
 	}
 
