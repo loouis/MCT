@@ -55,7 +55,14 @@ get_header(); ?>
 
 								<!-- Social share -->
 							    <aside class="share-social-links">
-							    	<?php echo do_shortcode("[ssba]"); ?>
+
+							    	<div class="share-social-links__button">
+							    		<img src="<?php echo get_template_directory_uri();?>/images/icon-cross-white.png" alt="">
+							    	</div>
+
+							    	<div class="share-social-links__container">
+							    		<?php echo do_shortcode("[ssba]"); ?>
+							    	</div>
 							    </aside><!-- // Social share -->
 								
 								<div class="wrapper">

@@ -4,7 +4,6 @@
 	width:100%;
 	background:$brandColor;
 	overflow:hidden;
-	background-size:cover;
 	
 	@include breakpoint($m){
 		height:600px;

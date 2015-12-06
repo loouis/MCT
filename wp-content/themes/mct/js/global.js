@@ -140,6 +140,13 @@ $(document).ready(function(){
 	});
 
 
+/*---------------------------------------------- Mobile blog single */
+	
+	/* Toggle social share - show & hide  */
+	$('.share-social-links__button').on('click', function(){
+		$('.share-social-links__container').toggleClass("share-social-links__container--active");
+	});
+
 
 
 /*---------------------------------------------- Mobile location buttons */

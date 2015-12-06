@@ -1,8 +1,53 @@
 .share-social-links{
-	float:left;
-	margin-top:$base;
-	width:10%;
-	z-index:5;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+
+	&__button{
+		width:44px;
+		height:44px;
+		background: $brandColor;
+		@extend %circle;
+		padding:10px;
+	}
+
+	&__container{
+		display: none;
+
+		&--active{
+			display: block;
+			position: fixed;
+		    bottom: 63px;
+		    right: 14px;
+		}
+	}
+
+	.ssbp-list li{
+		display: block !important;
+	}
+
+	@include breakpoint(600px){
+		position:relative;
+		float:left;
+		margin-top:$base;
+		width: 82px;
+		z-index:5;
+		right:initial;
+		bottom:initial;
+
+		&__container{
+			display: block;
+		}
+
+		&__button{
+			display: none;
+		}
+
+		.ssbp-list li{
+			display: inline !important;
+		}
+	}
+	
 
 	&__link{
 		display:block;
