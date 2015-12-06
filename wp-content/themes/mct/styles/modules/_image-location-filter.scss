@@ -275,13 +275,11 @@
 
 				&__slider{
 					&__slide{
-						span{
-							// opacity:0;
-							color:$brandColor;
-							font-family: $brandFont;
-							font-weight:900;
-							font-size:4em;
-						}
+						// opacity:0;
+						color:$brandColor;
+						font-family: $brandFont;
+						font-weight:900;
+						font-size:4em;
 					}
 				}
 
@@ -327,14 +325,12 @@
 
 					&__slider{
 						&__slide{
-							span{
-								font-size:6em;
-							}
+							font-size:4.6em;
 						}
 					}
 
 					&__sub-title{
-						font-size:6em;
+						font-size:4.4em;
 					}
 				}
 

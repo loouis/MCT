@@ -37,8 +37,8 @@ get_header(); ?>
 				<div class="main-wrapper">
 
 					<hgroup class="title-block">
-						<h3 class="title-block__title">Explore london</h3>
-						<p class="title-block__sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
+						<h3 class="title-block__title"><?php the_field('section1__locations__title');?></h3>
+						<p class="title-block__sub-text"><?php the_field('section1__locations__text');?></p>
 					</hgroup>
 					
 
@@ -53,23 +53,16 @@ get_header(); ?>
 										<h2 class="ilf__cells__cell__text__sub-title">Fancy</h2>
 										<ul class="ilf__cells__cell__text__slider">
 											<li class="ilf__cells__cell__text__slider__slide">
-												<span class="letter-active-1">B</span>
-												<span class="letter-active-2">a</span>
-												<span class="letter-active-3">r</span>
-												<span class="letter-active-4">s</span>
+												<?php the_field('rotating_text_1');?>
 											</li>
 											<li class="ilf__cells__cell__text__slider__slide">
-												<span class="letter-active-1">F</span>
-												<span class="letter-active-2">o</span>
-												<span class="letter-active-3">o</span>
-												<span class="letter-active-4">d</span>
+												<?php the_field('rotating_text_2');?>
 											</li>
 											<li class="ilf__cells__cell__text__slider__slide">
-												<span class="letter-active-1">G</span>
-												<span class="letter-active-2">r</span>
-												<span class="letter-active-3">a</span>
-												<span class="letter-active-4">v</span>
-												<span class="letter-active-5">y</span>
+												<?php the_field('rotating_text_3');?>
+											</li>
+											<li class="ilf__cells__cell__text__slider__slide">
+												<?php the_field('rotating_text_4');?>
 											</li>
 										</ul>
 									</article>
@@ -219,8 +212,8 @@ get_header(); ?>
 				<div class="outter-wrapper">
 
 					<hgroup class="title-block">
-						<h3 class="title-block__title">Trending locations</h3>
-						<p class="title-block__sub-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, rerum.</p>
+						<h3 class="title-block__title"><?php the_field('section2__trending__title');?></h3>
+						<p class="title-block__sub-text"><?php the_field('section2__trending__text');?></p>
 					</hgroup>
 					
 
