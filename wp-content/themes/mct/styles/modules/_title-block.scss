@@ -9,7 +9,7 @@
 	}
 
 	&__title, &__sub-text, & p{
-		color:white;
+		color:$primFontColor;
 	}
 
 	&--light-bg{
@@ -24,10 +24,12 @@
 
 		&__title, &--light-bg__title{
 			font-size: em(52px);
+			color:white;
 		}
 
 		p{
 			font-size:1.3em;
+			color:white;
 		}
 
 		&__title, &__sub-text, & p{
