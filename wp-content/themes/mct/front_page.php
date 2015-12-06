@@ -37,7 +37,7 @@ get_header(); ?>
 				<div class="main-wrapper">
 
 					<hgroup class="title-block">
-						<h3 class="title-block__title"><?php the_field('section1__locations__title');?></h3>
+						<h3 class="title-block__title small-underline"><?php the_field('section1__locations__title');?></h3>
 						<p class="title-block__sub-text"><?php the_field('section1__locations__text');?></p>
 					</hgroup>
 					
@@ -212,7 +212,7 @@ get_header(); ?>
 				<div class="outter-wrapper">
 
 					<hgroup class="title-block">
-						<h3 class="title-block__title"><?php the_field('section2__trending__title');?></h3>
+						<h3 class="title-block__title small-underline"><?php the_field('section2__trending__title');?></h3>
 						<p class="title-block__sub-text"><?php the_field('section2__trending__text');?></p>
 					</hgroup>
 					
@@ -352,7 +352,12 @@ get_header(); ?>
 			<section class="home-jobs-board hjb">
 				<div class="outter-wrapper">
 					<div class="main-wrapper">
-						<h4 class="hjb__title">Jobs Board</h4>
+					
+						<hgroup class="title-block title-block--light-bg">
+							<h3 class="title-block--light-bg__title small-underline"><?php the_field('section4__jobs__title');?></h3>
+							<?php the_field('section4__jobs__text');?>
+						</hgroup>
+
 						<nav class="hjb__purple-links">
 							<ul>
 								<a href="http://www.purple-consultancy.com/jobs/"><li class="hjb__purple-links__link hjb__purple-links__link--active">View all</li></a>

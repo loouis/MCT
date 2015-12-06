@@ -9,22 +9,29 @@
 	}
 
 	&__title, &__sub-text, & p{
-		color:$primFontColor;
+		color:white;
 	}
 
 	&--light-bg{
 		color:$primFontColor;
+
+		& p{
+			color:$primFontColor;
+		}
 	}
 
 	@include breakpoint(800px){
 
+		&__title, &--light-bg__title{
+			font-size: em(52px);
+		}
+
+		p{
+			font-size:1.3em;
+		}
+
 		&__title, &__sub-text, & p{
-			color:white;
-
-			&__title{
-				font-size: em(32px);
-			}
-
+			
 			&--light-bg{
 				color:$primFontColor;
 			}
