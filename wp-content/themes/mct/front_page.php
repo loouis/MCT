@@ -305,6 +305,7 @@ get_header(); ?>
 									<article class="news-cell__text">
 										<h4 class="news-cell__text__news-title"><?php the_title(); ?></h4>
 									</article>
+
 									<div class="news-cell__text__read-more-button">
 										<svg>
 											<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
@@ -341,7 +342,9 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 
 					<a href="<?php echo get_site_url(); ?>/blog" class="button">
-						see all news
+						<p class="button__text">see all news</p>
+
+						<span class="button__first-color"></span>
 					</a>
 
 					</div>
@@ -352,7 +355,7 @@ get_header(); ?>
 			<section class="home-jobs-board hjb">
 				<div class="outter-wrapper">
 					<div class="main-wrapper">
-					
+
 						<hgroup class="title-block title-block--light-bg">
 							<h3 class="title-block--light-bg__title small-underline"><?php the_field('section4__jobs__title');?></h3>
 							<?php the_field('section4__jobs__text');?>
