@@ -1,7 +1,7 @@
 .social-and-review-container{
 	display:none;
 
-	@include breakpoint($m){
+	@include breakpoint(800px){
 		display: block;
 		position:fixed;
 		right:0;

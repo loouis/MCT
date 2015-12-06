@@ -142,7 +142,7 @@ html, body {
 .trigger {
 	position: absolute;
 	// bottom: 40px;
-	left: 0;
+	left: 5px;
 	z-index: 60;
 	display: block;
 	// margin-left: 3em;
@@ -158,7 +158,7 @@ html, body {
 	}
 
 	&__icon{
-		width:24px;
+		width:17px;
 	}
 }
 
@@ -176,13 +176,13 @@ html, body {
 
 .trigger::before {
 	position: absolute;
-	left: 25px;
+	left: 17px;
     top: -11px;
 	padding: 0.8em;
 	white-space:nowrap;
 	color: #fff;
 	content: attr(data-info);
-	font-size: 0.9em;
+	font-size: 0.8em;
 	font-weight:900;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -316,7 +316,7 @@ html, body {
 
 .intro-effect-sidefixed .bg-img::after {
 	// background: #f8ebda;
-	background:rgba(0,0,0,.7);
+	background:rgba(0,0,0,.3);
 	top: 0;
 	left: 0;
 	width: 60%;
@@ -363,6 +363,7 @@ html, body {
 .intro-effect-sidefixed .title h1 {
 	// padding: 0 0 0.5em 0;
 	color: white;
+	font-size:3em;
 }
 
 .intro-effect-sidefixed.modify .title h1{
@@ -383,6 +384,7 @@ html, body {
 
 .intro-effect-sidefixed .content {
 	width: 100%;
+	padding:0 30px;
 	// padding: 0 0em 0 1.3em;
 }
 
@@ -430,14 +432,42 @@ html, body {
 	// margin-top:0;
 }
 
+.intro-effect-sidefixed .bg-img::after {
+	width: 100%;
+}
 
-@include breakpoint($m){
+
+// @include breakpoint(700px){
+// 	.intro-effect-sidefixed .content{
+// 		padding:0 50px;
+// 		width:53%;
+// 		float:left;
+// 	}
+// 	.intro-effect-sidefixed .bg-img::after {
+// 		width: 57%;
+// 	}
+
+// }
+
+@include breakpoint(480px){
+	.intro-effect-sidefixed .title h1 {
+		font-size: 4em;
+	}
+}
+
+@include breakpoint(800px){
 
 	.intro-effect-sidefixed .content {
-		width: 58%;
+		float:left;
+		width: 54%;
 		margin-right: 40%;
 		// padding: 0 0em 0 1.3em;
 	    margin-left: 0;
+	}
+
+	.intro-effect-sidefixed .bg-img::after {
+		width: 57%;
+		background: rgba(0,0,0,0.65);
 	}
 
 	.location-single{
@@ -452,83 +482,8 @@ html, body {
 		height:300px;
 	}
 
-
-
-}
-
-
-@include breakpoint(500px){
-	.intro-effect-sidefixed .content{
-		padding:0 30px;
+	.intro-effect-sidefixed .title h1{
+		font-size: 6em;
 	}
 }
 
-
-// /* Media Queries */
-@media screen and (max-width: 47em) {
-// 	.title, .content {
-// 		font-size: 70%;
-// 	}
-
-// 	.codrops-demos a {
-// 		font-size: 80%;
-// 	}
-
-// 	.intro-effect-side .title {
-// 		width: 100%;
-// 		padding: 0 1em;
-// 		-webkit-transform: translateY(-50%);
-// 		transform: translateY(-50%);
-// 	}
-
-// 	.intro-effect-side.modify .bg-img::before {
-// 		-webkit-transform: translateX(-100%);
-// 		transform: translateX(-100%);
-// 	}
-
-// 	.intro-effect-side .bg-img::after {
-// 		border-left-width: 0px;
-// 		border-right-width: 0px;
-// 		right: 0px;
-// 		left: 0px;
-// 		background: rgba(255,255,255,0.1);
-// 	}
-
-// 	.intro-effect-side.modify .bg-img::after {
-// 		background: rgba(255,255,255,0.8);
-// 	}
-
-// 	.intro-effect-sidefixed .content {
-// 		width: 100%;
-// 		margin-left: auto;
-// 	}
-
-	.intro-effect-sidefixed .bg-img::after {
-		width: 100%;
-	}
-
-}
-
-// @media screen and (max-width: 27em) {
-// 	.intro-effect-jam3 .content {
-// 		padding: 0 2em 5em;
-// 	}
-
-// 	.intro-effect-grid .grid li h2 {
-// 		display: none;
-// 	}
-
-// 	.intro-effect-push .header .title {
-// 		top: 60px;
-// 		-webkit-transform: translateX(-50%);
-// 		transform: translateX(-50%);
-// 	}
-
-// 	.title, .content {
-// 		font-size: 50%;
-// 	}
-
-// 	button.trigger::before {
-// 		display: none;
-// 	}
-// }
