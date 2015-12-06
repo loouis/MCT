@@ -22,14 +22,23 @@
 
 	@include breakpoint(800px){
 
-		&__title, &--light-bg__title{
+		&__title,{
 			font-size: em(52px);
 			color:white;
+		}
+
+		&--light-bg__title{
+			color:$primFontColor;
+			font-size: em(52px);
 		}
 
 		p{
 			font-size:1.3em;
 			color:white;
+		}
+
+		&--light-bg p{
+			color:$primFontColor;
 		}
 
 		&__title, &__sub-text, & p{
