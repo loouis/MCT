@@ -5,12 +5,9 @@
 	.main-wrapper{
 		max-width:1040px;
 	}
-	.wrapper{
-		padding-left:110px;
-	}
 
 	&__content{
-		max-width:90%;
+		max-width:100%;
 		margin-top:$base*8;
 
 		strong{
@@ -49,6 +46,15 @@
 		.p2{
 			font-size:18px;
 			margin-bottom: $base*4;
+		}
+	}
+
+	@include breakpoint(600px){
+		.wrapper{
+			padding-left:110px;
+		}
+		&__content{
+			width:90%;
 		}
 	}
 }
