@@ -286,13 +286,22 @@ get_header(); ?>
 
                 <a href="<?the_permalink()?>" class="related-locations__items__item related-locations-cell">
                     <div class="related-locations-cell__container">
-                        <?php the_post_thumbnail('smallest-news-cell');?>
+
+                        <div class="related-locations-cell__container__image">
+                            <div class="related-locations-cell__container__image__read-more-button">
+                                <svg>
+                                    <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
+                                </svg>
+                            </div>
+                            <?php the_post_thumbnail('smallest-news-cell');?>
+                        </div>
+
                         <h4 class="related-locations-cell__title"><?php the_title(); ?></h4>
                     </div>
                 </a>
 
                 <?php endwhile;?>
-                
+
             </ul>
 
             <?php wp_reset_postdata(); ?>
