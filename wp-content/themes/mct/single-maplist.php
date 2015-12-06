@@ -18,7 +18,19 @@ get_header(); ?>
             <section id="container" class="container intro-effect-sidefixed">
 
     			<header class="header">
-    				<div class="bg-img"><?php the_post_thumbnail('desktop-largest');?></div>
+
+                    <?php if ( wp_is_mobile() ) { ?>
+                        <div class="bg-img"<?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
+                        if ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'desktop-largest' ) )
+                            printf( ' style="background-image: url(%s);"', $image_src[0] );     
+                        }?>></div>
+                    <?php }else{ ?>
+                        <div class="bg-img"<?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
+                        if ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'desktop-largest' ) )
+                            printf( ' style="background-image: url(%s);"', $image_src[0] );     
+                        }?>></div>
+                    <?php } ?>
+    				
 
                     <div class="social-and-review-container">
                           <?php echo do_shortcode("[wp-review]");?>
