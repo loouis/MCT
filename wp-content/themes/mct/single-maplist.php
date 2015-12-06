@@ -290,9 +290,11 @@ get_header(); ?>
                         <h4 class="related-locations-cell__title"><?php the_title(); ?></h4>
                     </div>
                 </a>
+
+                <?php endwhile;?>
+                
             </ul>
 
-            <?php endwhile;?>
             <?php wp_reset_postdata(); ?>
 
             <a href="<?php echo get_site_url(); ?>/locations" class="button">see more</a>
