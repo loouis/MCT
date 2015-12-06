@@ -1,7 +1,7 @@
 .small-underline{
 	position:relative;
 	padding-bottom: 15px;
-    margin-bottom: 6px;
+    margin-bottom: $base*1;
 
 	&:after{
 		content:"";
@@ -12,6 +12,6 @@
 		left:50%;
 		right:50%;
 		bottom:0px;
-		margin-left:-25px;
+		margin-left:-15px;
 	}
 }
