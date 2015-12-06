@@ -8,7 +8,7 @@
 		// @extend %uppercase;
 	}
 
-	&__title, &__sub-text{
+	&__title, &__sub-text, & p{
 		color:$primFontColor;
 	}
 
@@ -18,7 +18,7 @@
 
 	@include breakpoint(800px){
 
-		&__title, &__sub-text{
+		&__title, &__sub-text, & p{
 			color:white;
 
 			&__title{
