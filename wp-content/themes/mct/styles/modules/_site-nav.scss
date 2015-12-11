@@ -17,16 +17,6 @@
 		padding-top:0;
 	}
 
-	@include breakpoint(500px){
-		width:100%;
-		background: linear-gradient(270deg, #24e5ed, #df38aa);
-
-		.main-wrapper{
-			padding-top:$base*6;
-		}
-	}
-	
-
 	// Menu slide out active class
 	&--active{
 		opacity:1;
@@ -48,6 +38,7 @@
 		z-index: 2;
     	position: relative;
     	padding-left:0;
+    	@extend %center-text;
 	}
 
 	&__all-site-links{
@@ -80,21 +71,6 @@
 			    letter-spacing: 0.02em;
 			}
 			
-			@include breakpoint(500px){
-				@include span ( 6 of 12);
-				text-align: center;
-
-				li{
-					font-size:1.4em;
-				}
-			}
-
-			@include breakpoint(700px){
-
-				li{
-					font-size:2em;
-				}
-			}
 		}
 	}
 
@@ -110,32 +86,6 @@
 			text-align: right;
 			@extend %font-weight-black;
 			font-size:1.2em;
-		}
-
-		@include breakpoint(500px){
-			padding-top: 8px;
-			
-
-			&__link{
-				font-size: 1em;
-    			padding: 0;
-    			line-height: 1.25em;
-    			text-align: center;
-			}
-			.menu-item-157{
-				padding-top:9px;
-			}
-		}
-
-		@include breakpoint(700px){
-
-			&__link{
-				font-size: 1em;
-				line-height: 2em;
-			}
-			.menu-item-157{
-				padding-top:17px;
-			}
 		}
 	}
 
@@ -156,14 +106,68 @@
     		width:34px;
     		margin:0 4px;
     	}
-
-    	@include breakpoint(700px){
-			text-align: initial;
-			right: 20px;
-	    	position: absolute;
-	    	bottom: 60px;
-    	}
 	}
+
+
+	@include breakpoint(500px){
+		width:100%;
+		background: linear-gradient(270deg, #24e5ed, #df38aa);
+
+		.main-wrapper{
+			padding-top:$base*6;
+		}
+
+		&__cat{
+			&__nav{
+				@include span ( 6 of 12);
+				text-align: center;
+
+				li{
+					font-size:1.4em;
+				}
+			}
+		}
+
+		&__main-site-links{
+			padding-top: 8px;
+
+			&__link{
+				font-size: 1em;
+    			padding: 0;
+    			line-height: 1.25em;
+    			text-align: center;
+			}
+			.menu-item-157{
+				padding-top:9px;
+			}
+		}
+		
+
+	} // End: Breakpoint 500px
+
+	@include breakpoint(700px){
+
+		&__cat__nav li{
+			font-size:2em;
+		}
+
+		&__main-site-links{
+			&__link{
+				font-size: 1em;
+				line-height: 2em;
+			}
+			.menu-item-157{
+				padding-top:17px;
+			}
+		}
+
+		.social-icons{
+			margin-top:40px;
+		}
+
+	} // End: Breakpoint 700px
+	
+
 }
 
 .menu-item{
@@ -172,6 +176,10 @@
 	display:block;
 	padding: $base*2 0;
 	font-size:1em;
+
+	a{
+		@extend %text-white;
+	}
 
 	@include breakpoint(500px){
 		font-size:em(24px);
@@ -182,8 +190,4 @@
 		font-size:em(32px);
 	}
 	
-}
-
-.menu-item a{
-	color:white;
 }
