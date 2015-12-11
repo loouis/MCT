@@ -64,9 +64,9 @@
 						<div class="footer__small-footer__partnership__logos__logo footer__partnership__logos__logo--mct">
 							<img src="<?php echo get_template_directory_uri();?>/images/mct-logo--color.png" alt=""/>
 						</div>
-						<div class="footer__small-footer__partnership__logos__logo footer__partnership__logos__logo--purple">
+						<!-- <div class="footer__small-footer__partnership__logos__logo footer__partnership__logos__logo--purple">
 							<img src="<?php echo get_template_directory_uri();?>/images/purple-logo--white.png" alt=""/>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
