@@ -43,6 +43,23 @@
 			position:relative;
 		}
 
+		&__locations-link{
+			font-size:0.8em;
+			@extend %center-text;
+			@extend %uppercase;
+
+			&__link{
+				border:2px solid white;
+				padding:$base*3 $base*4;
+			}
+
+			&:hover{
+				.ilf__cells__cell__locations-link__link{
+					border:2px solid $brandColor;
+				}
+			}
+		}
+
 		&--long-thin, &--normal-sqaure{
 			width:100%;
 			
@@ -99,7 +116,6 @@
 
 
 			    &__title{
-			    	
 			    	font-size: 1.6em;
 				    font-family: "brandon-grotesque",sans-serif;
 				    font-weight: 700;
@@ -259,9 +275,7 @@
 				position: absolute;
 			    bottom: 50px;
 			    width: 100%;
-			    text-align: center;
 			    font-family: $brandFont;
-			    padding:$base*4 0;
 			}
 
 			&__text{
@@ -272,7 +286,7 @@
 				padding: 0 40px 40px 40px;	
 				left:0;
 				text-transform: uppercase;
-				text-align:center;
+				text-align: center;
 
 				&__slider{
 					&__slide{
@@ -317,7 +331,7 @@
 			@include breakpoint(1080px){
 
 				&__locations-link{
-				    bottom: 20px;
+				    // bottom: 20px;
 				    padding:$base*4 0;
 				}
 

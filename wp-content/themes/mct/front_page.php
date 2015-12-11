@@ -67,7 +67,9 @@ get_header(); ?>
 										</ul>
 									</article>
 
-									<a href="<?php echo site_url();?>/locations" class="ilf__cells__cell__locations-link">View all locations</a>
+									<a href="<?php echo site_url();?>/locations" class="ilf__cells__cell__locations-link">
+										<span class="ilf__cells__cell__locations-link__link">View all locations</span>
+									</a>
 
 									<img src="<?php echo get_template_directory_uri();?>/images/ilf-images--large-text-block.jpg" alt=""/>
 								</div>
