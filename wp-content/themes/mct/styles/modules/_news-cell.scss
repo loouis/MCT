@@ -72,8 +72,8 @@
 	}
 		
 	&__excerpt p{
-		padding: 2em 3em;
-		text-align: center;
+		padding: 2em 0em;
+		@extend %center-text;
 		margin-bottom:2em;
 	}
 
@@ -157,7 +157,6 @@
 
 		&__excerpt p{
 			padding: 2em 3em;
-			text-align: center;
 		}
 	}
 
