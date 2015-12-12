@@ -5,11 +5,16 @@
 
 		&__cell{
 			@extend %relative;
+			display: block;
 			width:100%;
-			padding:$base*8 $base*5;
+			padding:$base*8 0;
 			text-align:center;
-			background:#F4F4F4;
-			border-bottom:3px solid #FBFBFB;
+			border-bottom:1px solid #F3F3F3;
+			@include clearfix;
+
+			&__job-role{
+				color:$primFontColor;
+			}
 
 			&__read-more-button{
 				position:absolute;
