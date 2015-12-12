@@ -249,6 +249,7 @@ get_header(); ?>
 											<p class="trend-loc__slider__slide__text__para"><?php echo(get_the_excerpt()); ?></p>
 
 											<div class="trend-loc__slider__slide__read-more-button">
+												<p class="trend-loc__slider__slide__read-more-button__text">Read more</p> 
 												<svg>
 													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
 												</svg>
