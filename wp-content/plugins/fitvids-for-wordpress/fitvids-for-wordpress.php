@@ -1,9 +1,11 @@
-220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------
-220-You are user number 5 of 800 allowed.
-220-Local time is now 00:55. Server port: 21.
-220-This is a private system - No anonymous login
-220 You will be disconnected after 15 minutes of inactivity.
-I: http://kevindees.cc
+<?php
+/*
+Plugin Name: FitVids for WordPress
+Plugin URI: http://wordpress.org/extend/plugins/fitvids-for-wordpress/
+Description: This plugin makes videos responsive using the FitVids jQuery plugin on WordPress.
+Version: 2.1
+Tags: videos, fitvids, responsive
+Author URI: http://kevindees.cc
 
 /--------------------------------------------------------------------\
 |                                                                    |

@@ -6,9 +6,17 @@
 	padding:15px 20px 12px 20px;
 	display:inline-block;
 	font-weight:700;
-	color:#5B5B5B;
-
 	overflow:hidden;
+	
+	// Dark button styles
+	&--dark{
+		background:black;
+		background:rgba(0,0,0,.5);
+		
+		&__text{
+			color:white;
+		}
+	}
 
 	&__text{
 		position:relative;

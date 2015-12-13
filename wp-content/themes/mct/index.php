@@ -32,6 +32,11 @@ get_header(); ?>
 										</p>
 										<!-- Title -->
 										<h3 class="news-single-hero__slide__text__title"><?php the_title();?></h3>
+
+										<a href="<?php the_permalink();?>" class="news-single-hero__slide__text__read-more-button button button--dark">
+											<p class="button__text button--dark__text">Read more</p>
+											<span class="button__first-color"></span>
+										</a>
 									</div>
 								</div>
 							</div>

@@ -33,9 +33,8 @@
 				}
 				
 				&__news-cat{
-					color:$brandColor;
+					color:white;
 					@extend %uppercase;
-					@extend %font-weight-black;
 				}	
 
 				&__title{
