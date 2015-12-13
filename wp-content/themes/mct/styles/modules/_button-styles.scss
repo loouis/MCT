@@ -1,25 +1,26 @@
 .button{
-	position:relative;
-	border:2px solid $brandColor;
-	text-transform:uppercase;
-	font-family:$brandFont;
-	padding:15px 20px 12px 20px;
+	@extend %relative;
 	display:inline-block;
+	@extend %uppercase;
+	font-family:$brandFont;
+	padding: 8px 16px 8px 16px;
 	font-weight:700;
+	border:1px solid $brandColor;
 	overflow:hidden;
 	
 	// Dark button styles
 	&--dark{
 		background:black;
 		background:rgba(0,0,0,.5);
-		
+
 		&__text{
 			color:white;
 		}
 	}
 
 	&__text{
-		position:relative;
+		@extend %relative;
+		font-size:0.7em;
 		line-height: 22px;
 		opacity:1;
 		transition:transform .4s ease-in-out, opacity .1s ease-in-out;
@@ -50,13 +51,6 @@
 			background:url('images/icon-scroll-right-arrow--white.png')no-repeat;
 			background-size:contain;
 			transform:translate(0,-100%);
-
-			// -webkit-transform: rotate(-90deg);
-		 //    -moz-transform: rotate(-90deg);
-		 //    -o-transform: rotate(-90deg);
-		 //    -ms-transform: rotate(-90deg);
-		 //    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-		 //    transform: rotate(-90deg);
 
 			transition:transform .4s ease-in-out, opacity .3s ease-in-out;
 		}
@@ -108,6 +102,15 @@
 				transform:translate(20px, 30%);
 				opacity:0;
 			}
+		}
+	}
+
+	@include breakpoint(500px){
+		padding:15px 20px 12px 20px;
+		border:2px solid $brandColor;
+
+		&__text{
+			font-size:1em;
 		}
 	}
 }
