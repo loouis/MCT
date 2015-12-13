@@ -82,7 +82,7 @@
 			transform:translate(0,0);
 
 			&:after{
-				transform:translate(0, 30%);
+				transform:translate(0, 14%);
 			}
 			&:before{
 				transform:translate(0,100%);
@@ -111,6 +111,15 @@
 
 		&__text{
 			font-size:1em;
+		}
+
+		&:hover{
+			.button__first-color{
+				
+				&:after{
+					transform:translate(0, 30%);
+				}
+			}
 		}
 	}
 }
