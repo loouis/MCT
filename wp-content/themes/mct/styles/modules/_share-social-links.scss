@@ -29,7 +29,6 @@
 		position: fixed;
 	    bottom: 63px;
 	    right: 14px;
-	    overflow:hidden;
 
 		.ssbp-li--twitter, .ssbp-li--facebook{
 			transform: translate(0,6px);
@@ -68,16 +67,23 @@
 		bottom:initial;
 
 		&__container{
-			display: block;
+			bottom:initial;
+			position:relative;
+		}
+
+		&__container, .ssbp-li--twitter, .ssbp-li--facebook{
+			opacity:1;
+			visibility: visible;
 		}
 
 		&__button{
 			display: none;
 		}
 
-		.ssbp-list li{
-			display: inline !important;
-		}
+
+		// .ssbp-list li{
+		// 	display: inline !important;
+		// }
 	}
 	
 
