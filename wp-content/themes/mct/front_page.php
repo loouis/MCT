@@ -346,7 +346,6 @@ get_header(); ?>
 
 					<a href="<?php echo get_site_url(); ?>/blog" class="button">
 						<p class="button__text">see all news</p>
-
 						<span class="button__first-color"></span>
 					</a>
 

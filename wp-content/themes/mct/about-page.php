@@ -99,7 +99,10 @@ get_header(); ?>
 					<?php endif;?>
 					</div>
 
-					<a href="http://www.purple-consultancy.com" class="button">View all jobs</a>
+					<a href="http://www.purple-consultancy.com" class="button">
+						<p class="button__text">View all jobs</p>
+						<span class="button__first-color"></span>
+					</a>
 				</div>
 			</section><!-- // About Purple -->
 		</div><!-- // About-purple__main-content -->
@@ -160,7 +163,8 @@ get_header(); ?>
 		<?php wp_reset_postdata(); ?>
 
 		<a href="<?php echo get_site_url(); ?>/blog" class="button">
-			More news
+			<p class="button__text">More news</p>
+			<span class="button__first-color"></span>
 		</a>
 
 		</div>
