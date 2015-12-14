@@ -410,8 +410,10 @@ get_header(); ?>
 						<?php wp_reset_postdata(); ?>
 
 						</ul>
-						<a href="http://www.purple-consultancy.com" target="_blank" class="hjb__powered-by">
-							<img src="<?php echo get_template_directory_uri();?>/images/powered-by-purple-lock-up.png" alt=""/>
+
+						<a href="http://www.purple-consultancy.com" class="button hjb__read-more-button">
+							<p class="button__text">View more jobs</p>
+							<span class="button__first-color"></span>
 						</a>
 					</div>
 				</div>

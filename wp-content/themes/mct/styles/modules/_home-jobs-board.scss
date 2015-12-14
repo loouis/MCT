@@ -1,5 +1,6 @@
 .hjb{
 	background:white;
+	@extend %center-text;
 	
 	&__title{
 		@extend %center-text;
@@ -10,5 +11,8 @@
 	@include breakpoint(800px){
 		float:left;
 		padding: $base*8 0 0 0;
+	}
+	&__read-more-button{
+		margin-top: $base*6;
 	}
 }	
