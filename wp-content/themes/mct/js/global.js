@@ -144,6 +144,7 @@ $(document).ready(function(){
 	
 	/* Toggle social share - show & hide  */
 	$('.share-social-links__button').on('click', function(){
+		$(this).toggleClass("share-social-links__button--active");
 		$('.share-social-links__container').toggleClass("share-social-links__container--active");
 	});
 
