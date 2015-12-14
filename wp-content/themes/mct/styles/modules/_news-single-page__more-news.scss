@@ -1,21 +1,25 @@
-
 .news-single{
 
 	&__more-news{
+		@extend %center-text;
 		margin-top:$base*10;
 		background: #F4F4F4;
-
+		
 		&__wrap{
 			padding: 0 0 0 0;
 		}
 
 		&__title{
 			margin-bottom: $base*4;
-			text-align:center;
 		}
 
 		&__items{
 			@include clearfix;
 		}
 	}
+
+	&__read-more-button{
+		margin-top:$base*6;
+	}
+
 }

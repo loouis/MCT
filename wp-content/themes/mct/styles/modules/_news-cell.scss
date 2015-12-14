@@ -139,11 +139,10 @@
 		&__excerpt p{
 			padding: 1.4em 3em;
 			text-align: center;
-			height:280px;
 			margin-bottom:0;
 
-			body.home &{
-				height:auto;	
+			body.blog &{
+				height:280px;	
 			}
 		}
 	}
