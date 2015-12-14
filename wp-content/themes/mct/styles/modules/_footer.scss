@@ -17,6 +17,12 @@
 	// 	background: rgba(0,0,0,.65);
 	// }
 
+	&__mct-logo{
+		@extend %center-block;
+		max-width:120px;
+		margin-bottom:$base*6;
+	}
+
 	.main-wrapper{
 		position:relative;
 		z-index: 20;
@@ -27,74 +33,29 @@
 		padding-bottom: $base*3;
 	}
 
-	&__list-your-company{
-		padding-top: $base*3;
-		// border-top:1px solid $brandColor;
+	// &__list-your-company{
+	// 	padding-top: $base*3;
+	// 	// border-top:1px solid $brandColor;
 
-		&__text{
+	// 	&__text{
 
-			&__title{
-				@extend %text-white;
-			}
+	// 		&__title{
+	// 			@extend %text-white;
+	// 		}
 
-			&__button{
-				@extend %button-border;
-			}
-		}
+	// 		&__button{
+	// 			@extend %button-border;
+	// 		}
+	// 	}
+	// }
+
+	&__copyright{
+		@extend %font-weight-bold;
+	    font-weight: 100;
+	    font-size: 0.8em;
+	    padding-top: 20px;
+		@extend %text-white;
 	}
-
-	&__small-footer{
-		border-top:1px solid $brandColor;
-
-		&__partnership{
-			float:right;
-			margin-top: $base;
-
-			&__title{
-				@extend %font-weight-bold;
-				@extend %text-white;
-			}
-
-			&__logos{
-				margin: $base*2 0 $base*1.1 0;
-				@include clearfix;
-
-				&__logo{
-					position:relative;
-					display: inline-block;
-					max-width:75px;
-
-					// &:nth-child(1){
-					// 	width:50px;
-
-					// 	&:after{
-					// 		content:"+";
-					// 		position:absolute;
-					// 		@extend %text-white;
-					// 		top: -2px;
-					// 		right: -25px;
-					// 		font-size: 21px;
-					// 	}
-					// }
-
-					&:nth-child(2){
-						top: -3px;
-						margin-left:35px;
-					}
-				}
-			}
-		}
-
-		&__copyright{
-			@extend %font-weight-bold;
-			float:left;
-		    font-weight: 100;
-		    font-size: 0.8em;
-		    padding-top: 20px;
-			@extend %text-white;
-		}
-	}
-
 
 	.social-icons{
 		margin: $base*2 0;
@@ -116,15 +77,15 @@
     		margin: 0 auto;
 		}
 
-		&__list-your-company{
-			margin-top:$base*8;
-			padding-top:$base*8;
+		// &__list-your-company{
+		// 	margin-top:$base*8;
+		// 	padding-top:$base*8;
 
-			&__text{
-				max-width:300px;
-				text-align: left;
-				float:left;
-			}	
-		}
+		// 	&__text{
+		// 		max-width:300px;
+		// 		text-align: left;
+		// 		float:left;
+		// 	}	
+		// }
 	}
 }

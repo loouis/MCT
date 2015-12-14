@@ -16,6 +16,9 @@
 <footer class="footer">
 	<div class="outter-wrapper">
 		<div class="main-wrapper">
+
+			<img src="<?php echo get_template_directory_uri();?>/images/mct-logo--white.png" class="footer__mct-logo" alt="My Creative Town - MCT logo"/>
+
 			<div class="footer__join-the-community">
 				<h3 class="footer__join-the-community__title">Join the community and get the latest to your inbox</h3>
 			</div>
@@ -57,21 +60,8 @@
 					<div class="footer__list-your-company__text__button">Contact</div>
 				</article>
 			</div> -->
-			<div class="footer__small-footer">
-				<div class="footer__small-footer__partnership">
-					<!-- <p class="footer__partnership__title">In partnership</p> -->
-					<div class="footer__small-footer__partnership__logos">
-						<div class="footer__small-footer__partnership__logos__logo footer__partnership__logos__logo--mct">
-							<img src="<?php echo get_template_directory_uri();?>/images/mct-logo--color.png" alt=""/>
-						</div>
-						<!-- <div class="footer__small-footer__partnership__logos__logo footer__partnership__logos__logo--purple">
-							<img src="<?php echo get_template_directory_uri();?>/images/purple-logo--white.png" alt=""/>
-						</div> -->
-					</div>
-				</div>
-			</div>
 
-			<p class="footer__small-footer__copyright">© My creative town - 2015</p>
+			<p class="footer__copyright">© MY CREATIVE TOWN - 2015</p>
 		</div>
 	</div>
 </footer>
