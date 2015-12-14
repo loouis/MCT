@@ -128,7 +128,7 @@ get_header(); ?>
 				    
 			    	<div class="main-wrapper">
 
-				    	<h4 class="news-single__more-news__title">Other news you may be interested in…</h4>
+				    	<h4 class="news-single__more-news__title">Other news…</h4>
 				    	
 					    <ul class="news-single__more-news__items">
 					    	<?php $orig_post = $post;
