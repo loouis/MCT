@@ -52,16 +52,17 @@
     }
 
     input{
-        position: absolute;
-        width: 82%;
+        position:relative;
+        width: 100%;
         background-image: url(/assets/images/transparent.png);
         outline: none;
         border: none;
-        background: black;
+        width:100%;
+        background: none;
         font-family: $brandFont;
         font-size: 1em;
         z-index: 10;
-        text-align: center;
+        @extend %center-text;
         padding: 8px 0 9px 0;
         display: block;
         @extend %text-white;
@@ -116,6 +117,7 @@
         @include breakpoint(700px){
             input{
                 text-align: center;
+                background: rgba(0,0,0,0.2);
             }
         }
     }
