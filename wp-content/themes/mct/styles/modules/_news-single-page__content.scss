@@ -46,6 +46,39 @@
 		.p2{
 			font-size:18px;
 			margin-bottom: $base*4;
+			overflow:hidden;
+
+			a{
+				position:relative;
+				color:$brandColor;
+
+				&:before, &:after{
+					content:"";
+					position:absolute;
+					left:0;
+					width:100%;
+					height:2px;
+					bottom:-2px;
+				}
+
+				&:before{
+					transform:translate(-100%, 0);
+					// left:-100%;
+					transition: transform .3s ease-in-out;
+					z-index:2;
+				}
+
+				&:after{
+					background:$lightestGrey;
+				}
+
+				&:hover{
+					&:before{
+						transform:translate(0,0);
+						background:$brandColor;
+					}
+				}
+			}
 		}
 	}
 
