@@ -48,6 +48,10 @@
 			margin-bottom: $base*4;
 			overflow:hidden;
 
+			b{
+				font-weight: 700;
+			}
+
 			a{
 				position:relative;
 				color:$brandColor;

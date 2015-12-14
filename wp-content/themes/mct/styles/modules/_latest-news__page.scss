@@ -15,7 +15,7 @@
 	    padding-bottom:$base;
 	}
 
-	body.home &{
+	body.home &, body.page-id-163 &{
 
 		&__items{
 			margin-bottom:$base*4;
