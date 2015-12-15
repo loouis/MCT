@@ -68,8 +68,13 @@ get_header(); ?>
 									<a href="<?php the_field('mct_blog_advert_link','options');?>" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad">
 										<article class="all-blog-inline-purple-ad__text">
 											<h4 class="all-blog-inline-purple-ad__text__news-title"><?php the_field('mct_blog_advert_title', 'options')?></h4>
-											<?php the_field('mct_blog_advert_text', 'options')?>
-											<p class="all-blog-inline-purple-ad__text__read-more">Read more</p>
+											<?php the_field('mct_blog_advert_text', 'options');?>
+											<span class="all-blog-inline-purple-ad__text__read-more">
+												<p class="all-blog-inline-purple-ad__text__read-more__text">Read more</p>
+												<svg>
+													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
+												</svg>
+											</span>
 										</article>
 										<div class="all-blog-inline-purple-ad__powered-by-purple">
 											<svg class="all-blog-inline-purple-ad__powered-by-purple__logo">
