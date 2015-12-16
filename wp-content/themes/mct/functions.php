@@ -308,6 +308,9 @@ function mct_scripts() {
 
 	wp_enqueue_script( 'mct-bxslider', get_template_directory_uri() . '/js/libs/bxslider.js', array(), '05112015', true );
 
+	wp_enqueue_script( 'mct-wow', get_template_directory_uri() . '/js/libs/wow.min.js', array(), '14122015', true );
+
+
 	wp_enqueue_script( 'mct-lazy-load', get_template_directory_uri() . '/js/libs/bj-lazy-load.min.js', array(), '20112015', true );
 
 	wp_enqueue_script( 'mct-classie', get_template_directory_uri() . '/js/libs/classie.js', array(), '11112015', true );
