@@ -76,6 +76,7 @@ $(document).ready(function(){
 		$this = $(this);
 
 	$openNav.on("click", function(){
+		$hamburger.toggleClass("header-main__nav__hamburger-menu--active");
 		$siteNav.toggleClass("site-nav--active");
 		$("body").toggleClass("body--is-fixed");
 		$mainHeader.toggleClass("header-main--active");
@@ -109,6 +110,9 @@ $(document).ready(function(){
 		// Remove data attr from exit to explore 
 		$logo.attr('data-explore', 'menu');
 	}
+
+	// Hamburger menu
+
 
 
 	// $(window).on('resize scroll', function(){

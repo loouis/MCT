@@ -1,3 +1,8 @@
+
+
+// Hamburger menu
+@import "_hamburger-menu";
+
 .header-main{
 	position:fixed;
 	top:0;
@@ -89,6 +94,8 @@
 				height:4px;
 				right:0;
 				background:$brandColor;
+
+				transition: transform .3s ease-in-out;
 			}
 
 			&:before{
@@ -97,6 +104,17 @@
 
 			&:after{
 				bottom:13px;
+			}
+
+			&--active{
+
+				&:after{
+					transform:translate(0, -5px);
+				}
+
+				&:before{
+					transform:translate(0, 5px);
+				}
 			}
 	    }
 
@@ -178,3 +196,4 @@
 		color:darken($lightestGrey, 20%);
 	}
 }
+
