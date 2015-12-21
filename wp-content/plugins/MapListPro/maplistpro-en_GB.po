@@ -754,13 +754,13 @@ msgstr ""
 #: MapListProKO.php:558
 #@ maplistpro
 msgctxt "Map locations general name"
-msgid "Map locations"
+msgid "Map venues"
 msgstr ""
 
 #: MapListProKO.php:559
 #@ maplistpro
 msgctxt "Map locations singular name"
-msgid "Map location"
+msgid "Map venues"
 msgstr ""
 
 #: MapListProKO.php:560
@@ -773,13 +773,13 @@ msgstr ""
 #: MapListProKO.php:597
 #@ maplistpro
 msgctxt "map_location categories"
-msgid "Location Categories"
+msgid "Venue Categories"
 msgstr ""
 
 #: MapListProKO.php:584
 #@ maplistpro
 msgctxt "map_location categories"
-msgid "Location Category"
+msgid "Venue Category"
 msgstr ""
 
 #: MapListProKO.php:585
