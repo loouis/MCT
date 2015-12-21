@@ -10,7 +10,7 @@
 	left:0;
 	background:$offBlack;
 	@extend %text-white;
-	transition:visibility .3s ease-in-out, opacity .3s ease-in-out;
+	transition:visibility .3s ease-in-out, opacity .3s ease-in-out, transform .3s ease-in-out;
 	overflow: scroll;
 
 	.main-wrapper{
@@ -147,6 +147,12 @@
 	} // End: Breakpoint 500px
 
 	@include breakpoint(700px){
+
+		transform: scale(0.8);
+
+		&--active{
+			transform: scale(1);
+		}
 
 		&__cat__nav li{
 			font-size:2em;

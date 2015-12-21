@@ -69,7 +69,7 @@ $(document).ready(function(){
 	// Hamburger menu
 	var $hamburger = $(".header-main__nav__hamburger-menu"),
 		$logo = $(".logo"),
-		$openNav = $(".logo, .header-main__nav__hamburger-menu, left-nav"),
+		$openNav = $(".header-main__nav, .header-main__nav__hamburger-menu"),
 		$siteNav = $(".site-nav"),
 		$mainHeader = $(".header-main"),
 		$closeNav = $('.header-main__close-button'),
