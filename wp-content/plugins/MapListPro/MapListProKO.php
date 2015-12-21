@@ -555,13 +555,13 @@ class MapListProKO {
         //register custom post type
         $args = array(
             'labels' => array(
-                'name' => _x('Map locations', 'Map locations general name','maplistpro'),
-                'singular_name' => _x('Map location', 'Map locations singular name','maplistpro'),
+                'name' => _x('Map venues', 'Map locations general name','maplistpro'),
+                'singular_name' => _x('Map venue', 'Map locations singular name','maplistpro'),
                 'add_new' => _x('Add new', 'maplist item','maplistpro'),
                 'add_new_item' => __('Add new map location','maplistpro'),
-                'edit_item' => __('Edit map location','maplistpro'),
-                'new_item' => __('New map location','maplistpro'),
-                'view_item' => __('View map location','maplistpro'),
+                'edit_item' => __('Edit map venue','maplistpro'),
+                'new_item' => __('New map venue','maplistpro'),
+                'view_item' => __('View map venue','maplistpro'),
                 'search_items' => __('Search maps','maplistpro')
             ),
             'exclude_from_search' => true,
@@ -580,11 +580,11 @@ class MapListProKO {
 
         //register custom taxonomy
         $categorylabels = array(
-            'name' => _x( 'Location Categories', 'map_location categories','maplistpro' ),
-            'singular_name' => _x( 'Location Category', 'map_location categories','maplistpro' ),
+            'name' => _x( 'Venue Categories', 'map_location categories','maplistpro' ),
+            'singular_name' => _x( 'venue Category', 'map_location categories','maplistpro' ),
             'search_items' => _x( 'Search Location Categories', 'map_location categories','maplistpro' ),
             'popular_items' => _x( 'Popular Location Categories', 'map_location categories','maplistpro' ),
-            'all_items' => _x( 'All Location Categories', 'map_location categories','maplistpro' ),
+            'all_items' => _x( 'All venue Categories', 'map_location categories','maplistpro' ),
             'parent_item' => _x( 'Parent Map Location Category', 'map_location categories','maplistpro' ),
             'parent_item_colon' => _x( 'Parent Map Location Category:', 'map_location categories','maplistpro' ),
             'edit_item' => _x( 'Edit Map Location Category', 'map_location categories','maplistpro' ),
