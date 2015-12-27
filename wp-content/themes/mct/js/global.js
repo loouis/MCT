@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-	// Home tranding locations sliders
-	// $('#trend-loc').bxSlider({
-	//   mode: 'horizontal',
-	// });
-
 
 /*---------------------------------------------- Init */
 	
@@ -42,7 +37,6 @@ $(document).ready(function(){
 	        // $('.ilf__cells__cell__text__slider > li').eq(currentSlideHtmlObject + 1).addClass('ilf__cells__cell__text__slider__slide--active');
 	    },
 	    onSliderLoad: function () {
-	        // $('.ilf__ceslls__cell__text__slider__slide').eq(1).addClass('ilf__cells__cell__text__slider__slide--active');
 	    },
 	});
 
@@ -73,7 +67,8 @@ $(document).ready(function(){
 		$siteNav = $(".site-nav"),
 		$mainHeader = $(".header-main"),
 		$closeNav = $('.header-main__close-button'),
-		$this = $(this);
+		$this = $(this),
+		$menuItem = $('.menu-item');
 
 	$openNav.on("click", function(){
 		$hamburger.toggleClass("header-main__nav__hamburger-menu--active");
@@ -81,6 +76,15 @@ $(document).ready(function(){
 		$("body").toggleClass("body--is-fixed");
 		$mainHeader.toggleClass("header-main--active");
 		$logo.toggleClass("logo--nav-open");
+		
+		// Animate each menu item
+		$menuItem.each(function(i){
+			var item = $(this);
+
+			setTimeout(function(){
+				item.toggleClass('menu-item--animate');
+			}, (i+1) * 50);
+		});
 
 		// Change data-explore attr to close when main nav is active 
 		if($logo.hasClass("logo--nav-open")) {
@@ -90,6 +94,16 @@ $(document).ready(function(){
 		}
 
 	});
+
+
+	function closeNav(){
+		$siteNav.removeClass("site-nav--active");
+		$("body").removeClass("body--is-fixed");
+		$mainHeader.removeClass("header-main--active");
+		// Remove data attr from exit to explore 
+		$logo.attr('data-explore', 'menu');
+		$menuItem.removeClass('menu-item--animate');
+	}
 
 	// Close button for main navigation
 	$closeNav.on('click', function(){
@@ -102,14 +116,6 @@ $(document).ready(function(){
 	    closeNav();
 	  }
 	});
-
-	function closeNav(){
-		$siteNav.removeClass("site-nav--active");
-		$("body").removeClass("body--is-fixed");
-		$mainHeader.removeClass("header-main--active");
-		// Remove data attr from exit to explore 
-		$logo.attr('data-explore', 'menu');
-	}
 
 	// Hamburger menu
 

@@ -63,6 +63,7 @@
 
 			li{
 				font-size:em(19px);
+				// transform: translateY(20px);
 			}
 
 			&__sub-title{
@@ -192,6 +193,10 @@
 	display:block;
 	padding: $base*2 0;
 	font-size:1em;
+	transform: translateY(20px);
+	opacity:0;
+
+	transition: transform .3s ease-in-out, opacity .3s ease-in-out;
 
 	a{
 		@extend %text-white;
@@ -206,4 +211,9 @@
 		font-size:em(32px);
 	}
 	
+}
+
+.menu-item--animate{
+	opacity:1;
+	transform: translateY(0px);
 }
