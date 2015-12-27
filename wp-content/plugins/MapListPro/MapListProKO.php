@@ -555,13 +555,13 @@ class MapListProKO {
         //register custom post type
         $args = array(
             'labels' => array(
-                'name' => _x('Map venues', 'Map locations general name','maplistpro'),
-                'singular_name' => _x('Map venue', 'Map locations singular name','maplistpro'),
+                'name' => _x('Map locations', 'Map locations general name','maplistpro'),
+                'singular_name' => _x('Map locations', 'Map locations singular name','maplistpro'),
                 'add_new' => _x('Add new', 'maplist item','maplistpro'),
                 'add_new_item' => __('Add new map location','maplistpro'),
-                'edit_item' => __('Edit map venue','maplistpro'),
-                'new_item' => __('New map venue','maplistpro'),
-                'view_item' => __('View map venue','maplistpro'),
+                'edit_item' => __('Edit map locations','maplistpro'),
+                'new_item' => __('New map locations','maplistpro'),
+                'view_item' => __('View map locations','maplistpro'),
                 'search_items' => __('Search maps','maplistpro')
             ),
             'exclude_from_search' => true,

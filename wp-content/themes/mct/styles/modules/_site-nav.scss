@@ -133,7 +133,7 @@
 			padding-top: 8px;
 
 			&__link{
-				font-size: 1em;
+				font-size: 0.85em;
     			padding: 0;
     			line-height: 1.25em;
     			text-align: center;
@@ -146,7 +146,15 @@
 
 	} // End: Breakpoint 500px
 
-	@include breakpoint(700px){
+	// $small-height:(min-height 100px);
+
+	// @include breakpoint($small-height){
+	// 	&__cat__nav li{
+	// 		font-size:1em;
+	// 	}
+	// }
+
+	@media only screen and(min-width:700px)and (min-height:760px){
 
 		transform: scale(0.8);
 
@@ -157,6 +165,7 @@
 		&__cat__nav li{
 			font-size:2em;
 		}
+
 
 		&__main-site-links{
 			&__link{
