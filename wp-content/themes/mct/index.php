@@ -20,7 +20,7 @@ get_header(); ?>
 
 						<?php while($blog_hero->have_posts()) : $blog_hero->the_post();?>
 
-							<div class="news-single-hero__slide" <?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
+							<li class="news-single-hero__slide" <?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
 					        	if ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'desktop-largest' ) )
 					            	printf( ' style="background-image: url(%s);"', $image_src[0] );     
 					    		}?>>
@@ -39,7 +39,7 @@ get_header(); ?>
 										</a>
 									</div>
 								</div>
-							</div>
+							</li>
 
 						<?php endwhile;?>
 					</section>

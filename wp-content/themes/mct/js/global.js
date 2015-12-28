@@ -7,7 +7,6 @@ $(document).ready(function(){
 	    mode: 'horizontal',
 	    pagerType: 'short',
 	    onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
-	        // console.log(currentSlideHtmlObject);
 	        $('.active-slide').removeClass('active-slide');
 	        $('#trend-loc > li').eq(currentSlideHtmlObject + 1).addClass('active-slide');
 	    },
@@ -19,7 +18,14 @@ $(document).ready(function(){
 	$('#news-all-hero-slider').bxSlider({
 	    mode: 'horizontal',
 	    auto: true,
-  		autoControls: true
+  		autoControls: true,
+  		onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+  			$('.active-slide').removeClass('active-slide');
+	        $('#news-all-hero-slider > li').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+  		},
+  		onSliderLoad: function () {
+	        $('#news-all-hero-slider > li').eq(1).addClass('active-slide');
+	    },
 	});
 
 
