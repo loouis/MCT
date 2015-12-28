@@ -17,6 +17,10 @@
 	// 	background: rgba(0,0,0,.65);
 	// }
 
+	body.error404 &{
+		background: $offBlack;
+	}
+
 	&__mct-logo{
 		@extend %center-block;
 		max-width:120px;
