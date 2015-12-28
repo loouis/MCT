@@ -17,8 +17,8 @@ get_header(); ?>
 				<div class="home-hero__grad-overlay"></div>
 				<div class="outter-wrapper">
 					<div class="home-hero__text">
-						<h1 class="home-hero__text__title">My<br/>Creative<br/> Town</h1>
-						<p class="home-hero__text__tagline"><?php bloginfo('description'); ?></p>
+						<h1 class="home-hero__text__title wow fadeIn">My<br/>Creative<br/> Town</h1>
+						<p class="home-hero__text__tagline wow fadeIn"><?php bloginfo('description'); ?></p>
 					</div>
 					<div class="home-hero__scroll-down-arrow">
 						<svg>
@@ -27,7 +27,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/mobile-home-hero-image.jpg" id="bgvid" class="home-hero__video">
+				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/mobile-home-hero-image.jpg" id="bgvid" class="home-hero__video wow fadeIn" data-wow-delay="1.2s">
 					<source src="<?php echo get_template_directory_uri();?>/video/home-hero-video.webm" type="video/webm"/>
 					<source src="<?php echo get_template_directory_uri();?>/video/home-hero-video.mp4" type="video/mp4"/>
 				</video>
@@ -37,8 +37,8 @@ get_header(); ?>
 				<div class="main-wrapper">
 
 					<hgroup class="title-block">
-						<h3 class="title-block__title small-underline"><?php the_field('section1__locations__title');?></h3>
-						<p class="title-block__sub-text"><?php the_field('section1__locations__text');?></p>
+						<h3 class="title-block__title small-underline wow fadeInDown"><?php the_field('section1__locations__title');?></h3>
+						<p class="title-block__sub-text wow fadeInDown"><?php the_field('section1__locations__text');?></p>
 					</hgroup>
 					
 
@@ -48,7 +48,7 @@ get_header(); ?>
 						<div class="ilf__container--top">
 
 							<div class="ilf__container__split ilf__cells">
-								<div class="ilf__cells__cell ilf__cells__cell--large-square">
+								<div class="ilf__cells__cell ilf__cells__cell--large-square wow fadeIn" data-wow-delay="0.5s">
 									<article class="ilf__cells__cell__text">
 										<h2 class="ilf__cells__cell__text__sub-title">Fancy</h2>
 										<ul class="ilf__cells__cell__text__slider">
@@ -79,7 +79,7 @@ get_header(); ?>
 
 								<!-- Bars -->
 								<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=bars">
-									<div class="ilf__cells__cell ilf__cells__cell--long-thin">
+									<div class="ilf__cells__cell ilf__cells__cell--long-thin wow fadeIn" data-wow-delay="0.1s">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
 												<div class="ilf__cells__cell__fig__text-con__image">
@@ -102,7 +102,7 @@ get_header(); ?>
 								
 								<!-- Restaurants -->
 								<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=restaurants">
-									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure">
+									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure wow fadeIn" data-wow-delay="0.3s">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
 												<div class="ilf__cells__cell__fig__text-con__image">
@@ -119,7 +119,7 @@ get_header(); ?>
 								
 								<!-- Entertainment -->
 								<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=entertainment">
-									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right">
+									<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right wow fadeIn" data-wow-delay="0.5s">
 										<figure class="ilf__cells__cell__fig">
 											<div class="ilf__cells__cell__fig__text-con">
 												<div class="ilf__cells__cell__fig__text-con__image">
@@ -142,7 +142,7 @@ get_header(); ?>
 
 							<!-- Night Clubs -->
 							<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=night%20clubs">
-								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure">
+								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure wow fadeIn" data-wow-delay="0.2s">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
 											<div class="ilf__cells__cell__fig__text-con__image">
@@ -159,7 +159,7 @@ get_header(); ?>
 							
 							<!-- Cafes -->
 							<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=cafes">
-								<div class="ilf__cells__cell ilf__cells__cell--long-thin">
+								<div class="ilf__cells__cell ilf__cells__cell--long-thin wow fadeIn" data-wow-delay="0.4s">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
 											<div class="ilf__cells__cell__fig__text-con__image">
@@ -182,7 +182,7 @@ get_header(); ?>
 							
 							<!-- Hotels -->
 							<a href="<?php echo get_site_url(); ?>/locations/?locationSearchTerms=hotels">
-								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right">
+								<div class="ilf__cells__cell ilf__cells__cell--normal-sqaure ilf__cells__cell--normal-sqaure-right wow fadeIn" data-wow-delay="0.2s">
 									<figure class="ilf__cells__cell__fig">
 										<div class="ilf__cells__cell__fig__text-con">
 											<div class="ilf__cells__cell__fig__text-con__image">

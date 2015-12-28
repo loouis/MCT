@@ -2,6 +2,14 @@ $(document).ready(function(){
 
 
 /*---------------------------------------------- Init */
+
+	// Wow
+	// wow = new WOW({
+	//     mobile: false
+	// });
+	// wow.init();
+
+	new WOW().init();
 	
 	$('#trend-loc').bxSlider({
 	    mode: 'horizontal',

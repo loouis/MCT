@@ -44,6 +44,8 @@
 
 	<header class="header-main">
 
+	<!-- <header class="header-main wow slideInLeft" data-wow-delay="0.6s"> -->
+
 		<!-- Close button -->
 		<!-- <a class="header-main__close-button">
 			<svg class="header-main__close-button__icon">

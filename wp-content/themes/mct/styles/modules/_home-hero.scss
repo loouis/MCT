@@ -87,10 +87,10 @@
 		    background: linear-gradient(270deg, #3bff4f, #24e5ed, #ff9317, #df38aa);
 			background-size: 400% 400%;
 
-			// -webkit-animation: home-hero-grad-animation 30s ease infinite;
-			// -moz-animation: home-hero-grad-animation 30s ease infinite;
-			// -o-animation: home-hero-grad-animation 30s ease infinite;
-			// animation: home-hero-grad-animation 30s ease infinite;
+			-webkit-animation: home-hero-grad-animation 10s ease infinite;
+			-moz-animation: home-hero-grad-animation 10s ease infinite;
+			-o-animation: home-hero-grad-animation 10s ease infinite;
+			animation: home-hero-grad-animation 10s ease infinite;
 		}
 
 		@include breakpoint(800px){
@@ -106,26 +106,26 @@
 }
 
 
-// @-webkit-keyframes home-hero-grad-animation {
-//     0%{background-position:0% 50%}
-//     50%{background-position:100% 50%}
-//     100%{background-position:0% 50%}
-// }
-// @-moz-keyframes home-hero-grad-animation {
-//     0%{background-position:0% 50%}
-//     50%{background-position:100% 50%}
-//     100%{background-position:0% 50%}
-// }
-// @-o-keyframes home-hero-grad-animation {
-//     0%{background-position:0% 50%}
-//     50%{background-position:100% 50%}
-//     100%{background-position:0% 50%}
-// }
-// @keyframes home-hero-grad-animation { 
-//     0%{background-position:0% 50%}
-//     50%{background-position:100% 50%}
-//     100%{background-position:0% 50%}
-// }
+@-webkit-keyframes home-hero-grad-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes home-hero-grad-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes home-hero-grad-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes home-hero-grad-animation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 
 // @include breakpoint(800px){
 		
