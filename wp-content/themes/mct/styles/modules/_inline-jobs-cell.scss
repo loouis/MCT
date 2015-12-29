@@ -20,7 +20,7 @@
 	&__purple-view-all-jobs-link{
 		@extend .hjb__powered-by;
 		height:auto;
-		width:110px;
+		width:70px;
 	}
 
 	&__cell{
@@ -30,7 +30,7 @@
 		padding:$base*4;
 		margin-bottom: $base*3;
 
-		.p2{
+		.p2, p{
 			margin:0;
 		}
 
