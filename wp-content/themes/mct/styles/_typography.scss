@@ -47,7 +47,6 @@ h4 {
 h5 {
 	font-size: 1.25em;;
 	font-weight:700;
-	color:$offBlack;
 	line-height:1.240em;
 
 	@include breakpoint($l){

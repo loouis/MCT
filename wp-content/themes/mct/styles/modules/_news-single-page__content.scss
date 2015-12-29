@@ -12,9 +12,9 @@
 
 		strong{
 			font-weight:700;
-			padding-bottom:$base*2;
-			display: block;
-			font-size:em(18px);
+			// padding-bottom:$base*2;
+			// display: block;
+			// font-size:em(18px);
 		}
 
 		h2{
@@ -22,6 +22,13 @@
 			line-height: 43px;
 			font-weight: 700;
 			margin-bottom: 50px;
+			color:$primFontColor;
+		}
+
+		h5{
+			margin-bottom: $base*1;
+			font-size:1.6em;
+			color:$primFontColor;
 		}
 
 
@@ -42,6 +49,8 @@
 			position:relative;
 
 		}
+
+		
 
 		.p2, p{
 			font-size:18px;
