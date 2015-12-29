@@ -11,8 +11,9 @@
 
 	&__latest-job-title{
 		float:left;
-		text-transform: uppercase;
-	    font-size: 0.8em;
+		@extend %uppercase;
+	    font-size: 0.8em !important;
+	    margin-bottom:0 !important;
 	    font-weight: 700;
 	    color: #BDBDBD;
 	}
