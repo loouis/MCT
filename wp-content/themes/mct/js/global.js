@@ -13,7 +13,7 @@ $(function() {
 	new WOW().init();
 
 	// Fitvids init
-	$(".news-single-post__content").fitVids();
+	$(".news-single-post__content, .content").fitVids();
 
 	
 	$('#trend-loc').bxSlider({

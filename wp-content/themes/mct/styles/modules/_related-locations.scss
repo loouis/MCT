@@ -9,8 +9,14 @@
 		}
 	}
 
-	.title-block__title{
-		color:$primFontColor;
+	.title-block{
+		padding: 0 10px;
+		text-align: left;
+
+		&__title{
+			color:$primFontColor;
+			font-size: 2em;
+		}
 	}
 }
 

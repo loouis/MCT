@@ -251,8 +251,6 @@ get_header(); ?>
             </hgroup>
 
             <?php 
-
-
             if ( wp_is_mobile() ) {
                 $related_locations = new WP_Query(
                     array(
@@ -306,7 +304,10 @@ get_header(); ?>
 
             <?php wp_reset_postdata(); ?>
 
-            <a href="<?php echo get_site_url(); ?>/locations" class="button">see more</a>
+            <a href="<?php echo get_site_url(); ?>/locations" class="button">
+                <p class="button__text">View all</p>
+                <span class="button__first-color"></span>
+            </a>
         </div>
         
     </div>
