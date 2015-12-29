@@ -67,6 +67,12 @@
 </footer>
 
 <?php wp_footer(); ?>
+<script>
+	$(document).ready(function(){
+	// Target your .container, .wrapper, .post, etc.
+	$(".news-single-post__content").fitVids();
+	});
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

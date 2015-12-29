@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function() {
 
 
 /*---------------------------------------------- Init */
@@ -9,7 +9,12 @@ $(document).ready(function(){
 	// });
 	// wow.init();
 
+	// init wow js - page animations
 	new WOW().init();
+
+	// Fitvids init
+	$(".news-single-post__content").fitVids();
+
 	
 	$('#trend-loc').bxSlider({
 	    mode: 'horizontal',
