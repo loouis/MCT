@@ -56,7 +56,7 @@
 				position:relative;
 				color:$brandColor;
 
-				&:before, &:after{
+				&:after{
 					content:"";
 					position:absolute;
 					left:0;
@@ -65,20 +65,12 @@
 					bottom:-2px;
 				}
 
-				&:before{
-					transform:translate(-100%, 0);
-					// left:-100%;
-					transition: transform .3s ease-in-out;
-					z-index:2;
-				}
-
 				&:after{
 					background:$lightestGrey;
 				}
 
 				&:hover{
-					&:before{
-						transform:translate(0,0);
+					&:after{
 						background:$brandColor;
 					}
 				}
