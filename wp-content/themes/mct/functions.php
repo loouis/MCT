@@ -185,7 +185,7 @@ add_filter('tiny_mce_before_init', 'my_mce4_options');
  */
 function tiny_mce_remove_unused_formats($init) {
 	// Add block format elements you want to show in dropdown
-	$init['block_formats'] = 'Paragraph=p;  Large opening text=h2; Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Address=address;Pre=pre';
+	$init['block_formats'] = 'Paragraph=p;  Large opening text=h2; Subtitle=h3; Small Subtitle=h4; Link=a';
 	return $init;
 }
 
