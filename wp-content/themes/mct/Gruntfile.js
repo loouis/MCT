@@ -112,20 +112,20 @@ module.exports = function(grunt) {
       },
     },
 
-    // browserSync: {
-    //     dev: {
-    //         bsFiles: {
-    //             src : [
-    //                 'build/css/*.css',
-    //                 'build/*.html'
-    //             ]
-    //         },
-    //         options: {
-    //             watchTask: true,
-    //             server: './build'
-    //         }
-    //     }
-    // },
+    browserSync: {
+        dev: {
+            bsFiles: {
+                src : [
+                    'build/css/*.css',
+                    'build/*.html'
+                ]
+            },
+            options: {
+                watchTask: true,
+                proxy: "localhost:8888/mct-wordpress"
+            }
+        }
+    },
 
     svgmin: {
       dist: {
@@ -209,7 +209,7 @@ module.exports = function(grunt) {
   // grunt.loadTasks('./tasks');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass','uglify','svgstore' ,'autoprefixer', 'watch']);
+  grunt.registerTask('default', ['sass','uglify','svgstore' ,'autoprefixer', 'browserSync', 'watch']);
   // grunt.registerTask('critical', ['criticalcss', 'svgstore' , 'grunticon:myIcons' ]);
   // Default task.
   grunt.registerTask('svg', [ 'svgmin', 'grunticon']);
