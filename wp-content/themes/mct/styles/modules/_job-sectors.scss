@@ -3,9 +3,11 @@
 	margin:$base*5 0;
 
 	&__sector{
-		display: inline-block;
-		width:48%;
+		float:left;
+		width:50%;
+		height:120px;
 		padding:30px 15px;
+
 
 		&:hover{
 			background:white;
@@ -21,6 +23,7 @@
 			font-weight:700;
 			padding-top:$base*2;
 			font-size:em(14px);
+			line-height: 1.3em;
 			@extend %uppercase;
 		}
 	}
@@ -28,7 +31,9 @@
 	@include breakpoint(640px){
 
 		&__sector{
+			display: inline-block;
 			margin:$base*3 0;
+			padding:30px 15px;
 			width:32.8%;
 		}
 	}

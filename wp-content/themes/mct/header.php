@@ -35,6 +35,10 @@
 <meta name="msapplication-TileImage" content="<?php get_template_directory();?>/images/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<link rel="stylesheet" href="http://www.mycreativetown.com/wp-content/themes/mct/ie-styles.css"><![endif]-->
+
 
 <?php wp_head(); ?>
 </head>
@@ -45,13 +49,6 @@
 	<header class="header-main">
 
 	<!-- <header class="header-main wow slideInLeft" data-wow-delay="0.6s"> -->
-
-		<!-- Close button -->
-		<!-- <a class="header-main__close-button">
-			<svg class="header-main__close-button__icon">
-				<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-close-cross" />
-			</svg>
-		</a> --><!-- // Close button -->
 
 		<div class="header-main__nav left-nav">
 			<button class="header-main__nav__hamburger-menu"></button>

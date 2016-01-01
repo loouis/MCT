@@ -370,10 +370,8 @@ body.page-id-7{
     display: block;
     right: 33%;
     position: absolute;
-    top: 32.6%;
-    // bottom:110px;
+    bottom:102px;
     z-index: 20;
-    border-radius: 50%;
     opacity:0;
 }
 
@@ -521,7 +519,7 @@ body.page-id-7{
 	}
 
 	.prettyPagination a.pfl_next{
-		float:left !important;
+		float:right !important;
 	}
 
 	// Hide mobile menu toggle button
@@ -531,7 +529,7 @@ body.page-id-7{
 
 	.prettyMapList .corePrettyStyle a{
 		// left: 29%;
-		left: 20%;
+		left: 33%;
 	    width:auto !important;
 	    opacity:0;
 	}
@@ -554,7 +552,7 @@ body.page-id-7{
 	}
 
 	.prettyMapList .prettylink:after{
-		right: 26%;
+		right: 36%;
 	}
 }
 
@@ -563,8 +561,16 @@ body.page-id-7{
 	.prettyPagination a.pfl_next{
 		float:right !important;
 	}
+	.prettyMapList .corePrettyStyle a{
+		left: 20%;
+	}
+	.prettyMapList .prettylink:after{
+		right: 26%;
+	}
+
 	.prettyPagination{
 		padding:0;
+		padding-right:1%;
 		padding-left:2%;
 	}
 
@@ -581,7 +587,7 @@ body.page-id-7{
 	}
 	.prettyMapList .prettylink:after{
     	bottom:102px;
-    	top:initial;
+    	// top:initial;
 	}
 	.customCategoryList ul li a:not(.showing) {
 		opacity:0.6;

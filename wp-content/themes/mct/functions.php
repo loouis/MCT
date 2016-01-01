@@ -292,8 +292,6 @@ function get_the_category_bytax( $id = false, $tcat = 'category' ) {
 function mct_scripts() {
 	wp_enqueue_style( 'mct-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'mct-ie-styles', get_template_directory_uri() . '/ie-styles.css', array(), '29122015', true );
-
 	// wp_enqueue_script( 'mct-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	// wp_enqueue_script( 'mct-jquery', get_template_directory_uri() . '/js/libs/jquery.js', array(), '29112015', true );

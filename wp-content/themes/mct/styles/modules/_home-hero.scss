@@ -52,6 +52,10 @@
 	@include breakpoint($m){
 		background:none;
 
+		&__scroll-down-arrow{
+			margin-left:2px;
+		}
+
 		&__text{
 
 			&__title{
