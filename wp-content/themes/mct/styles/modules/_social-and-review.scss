@@ -1,35 +1,102 @@
 .social-and-review-container{
-	display:none;
+	display: block;
+	position:relative;
+	overflow:hidden;
+	padding: 11px 0 14px 0;
+    border-bottom: 1px solid gainsboro;
+
+	&__link{
+		display:inline-block;
+		margin:9px 7px 4px 2px;
+
+		svg{
+			width: 35px;
+    		height: 35px;
+    		// fill:$brandColor;
+
+    		.bird{
+    			fill:red;
+    		}
+		}
+	}
+
+	&__block{
+		float:left;
+		padding-top: $base*2;
+	}
+
+	.user-review-area{
+		float:left;
+		padding-left:0;
+		padding-bottom:0;
+		width:100%;
+		border:none !important;
+		font-family:$brandFont;
+	}
+
+	.review-total-star{
+		clear: both;
+    	margin-top: $base;
+	}
+	.review-total-star.allowed-to-rate{
+		float:left;
+	}
+
+	@include breakpoint(520px){
+
+		&__block{
+			float:right;
+			padding-top: 5px;
+		}
+
+		.user-review-area{
+			width:auto;
+		}
+	}
 
 	@include breakpoint(800px){
-		display: block;
 		position:fixed;
 		right:0;
-		bottom:60px;
-		width:40%;
-		height:100px;
+		bottom: 38px;
+		width:43.5%;
+		// height:100px;
 		text-align:center;
+		border-bottom:none;
+
+		&__block{
+			float:initial;
+		}
 
 		&__link{
-			display:inline-block;
-			margin:15px 5px 0 5px;
+			margin: 19px 10px 4px 1px;
 
 			svg{
-				width: 45px;
-	    		height: 45px;
-	    		// fill:$brandColor;
-
-	    		.bird{
-	    			fill:red;
-	    		}
+				width: 40px;
+    			height: 40px;	
 			}
 		}
 
+		.user-review-area{
+			width:100%;
+		}
+
+		// &__link{
+		// 	display:inline-block;
+		// 	margin:15px 5px 0 5px;
+
+		// 	svg{
+		// 		width: 45px;
+	 //    		height: 45px;
+	 //    		// fill:$brandColor;
+
+	 //    		.bird{
+	 //    			fill:red;
+	 //    		}
+		// 	}
+		// }
+
 		.wp-review-245.review-wrapper{
 			background:none;
-		}
-		.user-review-area{
-			border:none !important;
 		}
 		.review-total-star{
 
@@ -37,13 +104,24 @@
 		.user-review-title, #mts-user-reviews-total, .user-total-wrapper{
 			display:none;
 		}
-		.review-result-wrapper i{
-			font-size:22px;
+		.review-result-wrapper{
+			
+			i{
+				font-size:22px;	
+			}
 		}
 		.review-total-star{
-			float:none;
+			float:none !important;
 		}
 	}
+}
+
+.review-total-star.allowed-to-rate .review-result-wrapper{
+	height:21px;
+}
+
+.user-total-wrapper{
+	width:100%;
 }
 
 svg.circle{

@@ -15,7 +15,7 @@ get_header(); ?>
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-            <section id="container" class="container intro-effect-sidefixed">
+            <section id="container" class="container">
 
     			<header class="header">
 
@@ -30,39 +30,14 @@ get_header(); ?>
                             printf( ' style="background-image: url(%s);"', $image_src[0] );     
                         }?>></div>
                     <?php } ?>
-    				
-
-                    <div class="social-and-review-container">
-                          <?php echo do_shortcode("[wp-review]");?>
-
-                        <?php 
-                            $facebook_social_link = get_field('single_location_facebook_link');
-                            $twitter_social_link = get_field('single_location_twitter_link');
-
-                            if ($twitter_social_link): 
-                        ?>
-
-                        <a href="<?php the_field('single_location_twitter_link');?>" class="social-and-review-container__link">
-                            <svg class="social-and-review-container__link__icon">
-                                <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-twitter" />
-                            </svg>
-                        </a>
-
-                        <?php endif;?>
-
-                        <?php if ( $facebook_social_link): ?>
-                            <a href="<?php the_field('single_location_facebook_link');?>" class="social-and-review-container__link">
-                                <svg class="social-and-review-container__link__icon">
-                                    <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-facebook" />
-                                </svg>
-                            </a>
-                        <?php endif;?>
-                    </div>
     			</header>
                 
-                <article class="content">
-			        <div class="title">
+                <div class="viewport-height"></div>
 
+
+                <article class="content">
+
+			        <div class="title">
                         <!-- Tags -->
                         <?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );?>
 
@@ -78,12 +53,39 @@ get_header(); ?>
     					<h1 class="location-single__location-name"><?php the_title(); ?></h1>
     					<!-- <h2 class="location-single__subhead-call-out"></h2> -->
 
-    					<div data-info="SCROLL TO READ" class="trigger">
+    					<!-- <div data-info="SCROLL TO READ" class="trigger">
 						  <img src="<?php echo get_template_directory_uri(); ?>/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
-				       </div>
+				       </div> -->
 
 			        </div><!-- //Title -->
 
+                    <div class="social-and-review-container">
+                          <?php echo do_shortcode("[wp-review]");?>
+
+                        <?php 
+                            $facebook_social_link = get_field('single_location_facebook_link');
+                            $twitter_social_link = get_field('single_location_twitter_link');
+
+                            if ($twitter_social_link): 
+                        ?>
+                        <div class="social-and-review-container__block">
+                            <a href="<?php the_field('single_location_twitter_link');?>" class="social-and-review-container__link">
+                                <svg class="social-and-review-container__link__icon">
+                                    <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-twitter" />
+                                </svg>
+                            </a>
+
+                            <?php endif;?>
+
+                            <?php if ( $facebook_social_link): ?>
+                                <a href="<?php the_field('single_location_facebook_link');?>" class="social-and-review-container__link">
+                                    <svg class="social-and-review-container__link__icon">
+                                        <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-facebook" />
+                                    </svg>
+                                </a>
+                            <?php endif;?>
+                        </div>
+                    </div>
 
 			        <div class="content-container">
 
@@ -99,7 +101,7 @@ get_header(); ?>
 
                                 <?php while (have_rows('locations_single__carousel')): the_row();
 
-                                // Vars
+                                    // Vars
                                     $image = get_sub_field('locations-carousel__image');
                                 ?> 
 
@@ -314,147 +316,6 @@ get_header(); ?>
 </section>
 <!-- // Related location in same category -->
 
-<script>
-	/* Blog single page hero animation */
-  (function() {
-    // detect if IE : from http://stackoverflow.com/a/16657946    
-    var ie = (function(){
-      var undef,rv = -1; // Return value assumes failure.
-      var ua = window.navigator.userAgent;
-      var msie = ua.indexOf('MSIE ');
-      var trident = ua.indexOf('Trident/');
-  
-      if (msie > 0) {
-        // IE 10 or older => return version number
-        rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-      } else if (trident > 0) {
-        // IE 11 (or newer) => return version number
-        var rvNum = ua.indexOf('rv:');
-        rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
-      }
-  
-      return ((rv > -1) ? rv : undef);
-    }());
-  
-  
-    // disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179          
-    // left: 37, up: 38, right: 39, down: 40,
-    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-    var keys = [32, 37, 38, 39, 40], wheelIter = 0;
-  
-    function preventDefault(e) {
-      e = e || window.event;
-      if (e.preventDefault)
-      e.preventDefault();
-      e.returnValue = false;  
-    }
-  
-    function keydown(e) {
-      for (var i = keys.length; i--;) {
-        if (e.keyCode === keys[i]) {
-          preventDefault(e);
-          return;
-        }
-      }
-    }
-  
-    function touchmove(e) {
-      preventDefault(e);
-    }
-  
-    function wheel(e) {
-      // for IE 
-      //if( ie ) {
-        //preventDefault(e);
-      //}
-    }
-  
-    function disable_scroll() {
-      window.onmousewheel = document.onmousewheel = wheel;
-      document.onkeydown = keydown;
-      document.body.ontouchmove = touchmove;
-    }
-  
-    function enable_scroll() {
-      window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;  
-    }
-  
-    var docElem = window.document.documentElement,
-      scrollVal,
-      isRevealed, 
-      noscroll, 
-      isAnimating,
-      container = document.getElementById( 'container' ),
-      trigger = container.querySelector( '.trigger' );
-  
-    function scrollY() {
-      return window.pageYOffset || docElem.scrollTop;
-    }
-    
-    function scrollPage() {
-      scrollVal = scrollY();
-      
-      if( noscroll && !ie ) {
-        if( scrollVal < 0 ) return false;
-        // keep it that way
-        window.scrollTo( 0, 0 );
-      }
-  
-      if( classie.has( container, 'notrans' ) ) {
-        classie.remove( container, 'notrans' );
-        return false;
-      }
-  
-      if( isAnimating ) {
-        return false;
-      }
-      
-      if( scrollVal <= 0 && isRevealed ) {
-        toggle(0);
-      }
-      else if( scrollVal > 0 && !isRevealed ){
-        toggle(1);
-      }
-    }
-  
-    function toggle( reveal ) {
-      isAnimating = true;
-      
-      if( reveal ) {
-        classie.add( container, 'modify' );
-      }
-      else {
-        noscroll = true;
-        disable_scroll();
-        classie.remove( container, 'modify' );
-      }
-  
-      // simulating the end of the transition:
-      setTimeout( function() {
-        isRevealed = !isRevealed;
-        isAnimating = false;
-        if( reveal ) {
-          noscroll = false;
-          enable_scroll();
-        }
-      }, 600 );
-    }
-  
-    // refreshing the page...
-    var pageScroll = scrollY();
-    noscroll = pageScroll === 0;
-    
-    disable_scroll();
-    
-    if( pageScroll ) {
-      isRevealed = true;
-      classie.add( container, 'notrans' );
-      classie.add( container, 'modify' );
-    }
-    
-    window.addEventListener( 'scroll', scrollPage );
-    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
-  })();
-</script>
+
 
 <?php get_footer(); ?>
