@@ -187,7 +187,7 @@ get_header(); ?>
 										<div class="ilf__cells__cell__fig__text-con">
 											<div class="ilf__cells__cell__fig__text-con__image">
 												<svg class="ilf__cells__cell__fig__text-con__image__icon">
-													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-restaurant" />
+													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-hotels" />
 												</svg>
 											</div>
 											<div class="ilf__cells__cell__fig__text-con__title">Hotels</div>
