@@ -30,6 +30,7 @@
 			float:left;
 			font-size:2.2em;
 			line-height: 1em;
+			padding-right:$base;
 			font-weight:900;
 			color:$brandColor;
 			@extend %uppercase;
