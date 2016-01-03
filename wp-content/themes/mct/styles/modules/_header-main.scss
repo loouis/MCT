@@ -137,6 +137,9 @@
 	.logo{
 		width:110px;
 		@include clearfix;
+		text-transform:uppercase;
+		font-family:$brandFont;
+		color:darken($lightestGrey, 20%);
 
 		@include breakpoint(500px){
 			position:absolute;
@@ -146,23 +149,19 @@
 			bottom:50%;
 			margin-top:-90px;
 
-			&:after{
-				content:attr(data-explore);
-				position:absolute;
-				transform:rotate(-90deg);
-				bottom: -14px;
-    			left: -5px;
-				text-transform:uppercase;
-				font-family:$brandFont;
-				color:darken($lightestGrey, 20%);
-				letter-spacing: 1px;
-			}
 
 			&--nav-open{
 				// Style when 'exit' text is visible
 				&:after{
 					left: 3px;
 					bottom:-5px;
+					content:attr(data-explore);
+					position:absolute;
+					transform:rotate(-90deg);
+					bottom: -14px;
+					left: -5px;
+					
+					letter-spacing: 1px;
 				}
 			}
 	    }

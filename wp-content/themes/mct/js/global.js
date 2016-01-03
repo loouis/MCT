@@ -59,6 +59,8 @@ $(function() {
 	    },
 	});
 
+	// $('input, textarea').placeholder();
+
 
  //    $('.ilf__cells__cell__slider--active span').each(function(i){
  //        var ilfLetter = $(this);
