@@ -25,7 +25,7 @@
 				left:50%;
 				right:50%;
 				margin-left:-20px;
-				transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+				transition:opacity .3s ease-in-out, transform .3s ease-in-out;
 				
 				svg{
 					width:40px;
@@ -41,7 +41,6 @@
 				    -moz-transform: rotate(-90deg);
 				    -o-transform: rotate(-90deg);
 				    -ms-transform: rotate(-90deg);
-				    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 				    transform: rotate(-90deg);
 				}
 			}
