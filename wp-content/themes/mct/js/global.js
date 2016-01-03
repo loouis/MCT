@@ -4,13 +4,13 @@ $(function() {
 /*---------------------------------------------- Init */
 
 	// Wow
-	// wow = new WOW({
-	//     mobile: false
-	// });
-	// wow.init();
+	wow = new WOW({
+	    mobile: false
+	});
+	wow.init();
 
 	// init wow js - page animations
-	new WOW().init();
+	// new WOW().init();
 
 	// Fitvids init
 	$(".news-single-post__content, .content").fitVids();
