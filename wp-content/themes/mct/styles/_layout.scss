@@ -44,6 +44,11 @@ body, html{
   }
 }
 
+.site-content{
+  @include clearfix;
+  overflow:hidden;
+}
+
 .main-wrapper{
   padding:40px 30px 60px 30px;
   @extend %center-block;

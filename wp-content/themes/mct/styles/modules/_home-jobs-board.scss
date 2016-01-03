@@ -1,6 +1,8 @@
 .hjb{
-	background:white;
 	@extend %center-text;
+	width:100%;
+	background:white;
+	@include clearfix;
 	
 	&__title{
 		@extend %center-text;

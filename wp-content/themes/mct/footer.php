@@ -69,8 +69,7 @@
 <?php wp_footer(); ?>
 <script>
 	$(document).ready(function(){
-	// Target your .container, .wrapper, .post, etc.
-	$(".news-single-post__content").fitVids();
+		$(".news-single-post__content").fitVids();
 	});
 </script>
 
