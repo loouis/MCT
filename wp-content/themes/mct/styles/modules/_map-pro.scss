@@ -265,7 +265,7 @@ body.page-id-7{
     right: 20px;
     bottom: 20px;
     font-family:$brandFont;
-    z-index:200;
+    z-index:550;
     width:160px;
 }
 
@@ -358,7 +358,8 @@ body.page-id-7{
 }
 
 .prettyMapList .customCategoryList ul a{
-	color:white;
+	color:white !important;
+	padding: 5px 0px 5px 5px !important;
 }
 
 // Show & hide map
@@ -401,7 +402,7 @@ body.page-id-7{
 		right:0;
 		bottom:0;
 		opacity:1;
-		background:rgba(0,0,0,.5);
+		background:rgba(0,0,0,.75);
 	}
 }
 
