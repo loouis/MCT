@@ -138,18 +138,6 @@
 		width:110px;
 		@include clearfix;
 
-		&:after{
-			content:attr(data-explore);
-			position:absolute;
-			transform:rotate(-90deg);
-			bottom: -14px;
-			left: -5px;
-			text-transform:uppercase;
-			font-family:$brandFont;
-			color:darken($lightestGrey, 20%);
-			letter-spacing: 1px;
-		}
-
 		@include breakpoint(500px){
 			position:absolute;
 			width:45px;
@@ -157,6 +145,18 @@
 			top:45%;
 			bottom:50%;
 			margin-top:-90px;
+
+			&:after{
+				content:attr(data-explore);
+				position:absolute;
+				transform:rotate(-90deg);
+				bottom: -14px;
+				left: -5px;
+				text-transform:uppercase;
+				font-family:$brandFont;
+				color:darken($lightestGrey, 20%);
+				letter-spacing: 1px;
+			}
 
 
 			&--nav-open{
