@@ -253,39 +253,21 @@ get_header(); ?>
             </hgroup>
 
             <?php 
-            if ( wp_is_mobile() ) {
-                $related_locations = new WP_Query(
-                    array(
-                        'post_type' => 'maplist',
-                        // 'map_location_categories' => 'featured',
-                        // 'taxonomy=map_location_categories&tag_ID=3',
-                        'orderby' => 'rand',
-                        'posts_per_page' => 3
-                    )
-                );
-            }else{
-                $related_locations = new WP_Query(
-                    array(
-                        'post_type' => 'maplist',
-                        // 'map_location_categories' => 'featured',
-                        // 'taxonomy=map_location_categories&tag_ID=3',
-                        'orderby' => 'rand',
-                        'posts_per_page' => 6
-                    )
-                );
-            }
 
-            // echo "$current_post_category";
-            
-            // echo "$getCatID[0]->cat_name;"
-            ?>
+            $posts = get_field('related_locations');
+
+            if( $posts ): ?>
+
 
             <ul class="related-locations__items">
 
-                <?php while ($related_locations->have_posts() ) : $related_locations->the_post(); ?>
+            <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                <?php setup_postdata($post); ?>
 
-                <a href="<?the_permalink()?>" class="related-locations__items__item related-locations-cell">
+
+                <a href="<?php the_permalink();?>" class="related-locations__items__item related-locations-cell">
                     <div class="related-locations-cell__container">
+
 
                         <div class="related-locations-cell__container__image">
                             <div class="related-locations-cell__container__image__read-more-button">
@@ -293,18 +275,24 @@ get_header(); ?>
                                     <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
                                 </svg>
                             </div>
-                            <?php the_post_thumbnail('smallest-news-cell');?>
+                            <?php the_post_thumbnail('smallest-news-cell');?>                        
                         </div>
 
                         <h4 class="related-locations-cell__title"><?php the_title(); ?></h4>
                     </div>
+
+
                 </a>
 
-                <?php endwhile;?>
+                <?php endforeach; ?>
+
+                <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                <?php endif; ?>
+
 
             </ul>
 
-            <?php wp_reset_postdata(); ?>
+
 
             <a href="<?php echo get_site_url(); ?>/locations" class="button">
                 <p class="button__text">View all</p>

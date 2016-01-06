@@ -28,8 +28,8 @@ get_header(); ?>
 				</div>
 
 				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/mobile-home-hero-image.jpg" id="bgvid" class="home-hero__video wow fadeIn" data-wow-delay="1.2s">
-					<source src="<?php echo get_template_directory_uri();?>/video/home-hero-video.webm" type="video/webm"/>
-					<source src="<?php echo get_template_directory_uri();?>/video/home-hero-video.mp4" type="video/mp4"/>
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.webm" type="video/webm"/>
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.mp4" type="video/mp4"/>
 				</video>
 			</section><!-- #video hero -->
 
