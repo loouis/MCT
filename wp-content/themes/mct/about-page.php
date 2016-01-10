@@ -48,7 +48,7 @@ get_header(); ?>
 						<?php } ?>
 
 						<?php if ($mct_twitter_link){ ?>
-						<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
+						<a href="<?php echo $mct_twitter_link ?>" target="_blank" class="social-icons__icon">
 							<svg class="social-icons__icon">
 								<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-twitter" />
 							</svg>
