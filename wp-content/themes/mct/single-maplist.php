@@ -258,7 +258,6 @@ get_header(); ?>
 
             if( $posts ): ?>
 
-
             <ul class="related-locations__items">
 
             <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
@@ -280,8 +279,6 @@ get_header(); ?>
 
                         <h4 class="related-locations-cell__title"><?php the_title(); ?></h4>
                     </div>
-
-
                 </a>
 
                 <?php endforeach; ?>
@@ -289,10 +286,7 @@ get_header(); ?>
                 <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
                 <?php endif; ?>
 
-
             </ul>
-
-
 
             <a href="<?php echo get_site_url(); ?>/locations" class="button">
                 <p class="button__text">View all</p>
