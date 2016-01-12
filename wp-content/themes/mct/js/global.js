@@ -195,14 +195,13 @@ $(function() {
 		showFilterUl.removeClass("show-cat-filter");
 		locationsFilterOverlay.removeClass("customCategoryListOverlay--visible");
 		locationsFilterView.removeClass("show-location-view-options");
-
 	}
-
 
 	showFilterBtn.on('click', function(){
 		showFilterUl.toggleClass("show-cat-filter");
 		locationsFilterView.toggleClass("show-location-view-options");
 		locationsFilterOverlay.toggleClass("customCategoryListOverlay--visible");
+		$(this).toggleClass("showFilterBtn--rotate");
 	});
 
 	// Show map or list view on mobile
@@ -213,7 +212,7 @@ $(function() {
 	
 	locationsMapView.on('click', function(){
 		locationsMap.addClass("show-mobile-map");
-		locationsMobileMenuHide()
+		locationsMobileMenuHide();
 	});
 
 });

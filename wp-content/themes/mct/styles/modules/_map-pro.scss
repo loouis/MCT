@@ -26,6 +26,16 @@ body.single .prettyMapList{
 	background-size:contain;
 }
 
+.showFilterBtn{
+	transition: transform .2s ease-in-out;
+
+	&--rotate{
+		transform:rotate(45deg);
+	}
+}
+
+
+
 .filterView{
 	&:after{
 		content:"";
@@ -278,6 +288,11 @@ body.page-id-7{
     right: 24px;
 }
 
+// Hide featured from the list
+.mapListProDropdown li:nth-child(4){
+	display:none;
+}
+
 
 // .customCategoryList:after{
 // 	content:"";
@@ -422,6 +437,7 @@ body.page-id-7{
 
 .customCategoryListOverlay{
 	opacity:0;
+	transition: opacity .2s ease-in-out;
 
 	&--visible{
 		position:fixed;

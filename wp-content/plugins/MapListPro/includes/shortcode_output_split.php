@@ -56,7 +56,7 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                                 $mlpoutputhtml .= '<div class="customCategoryList">';
 
                                     $mlpoutputhtml .= "<a class='showFilterBtn btn' href='#'>";
-                                        $mlpoutputhtml .= "<img src='http://localhost:8888/mct-wordpress/wp-content/themes/mct/images/icon-cross-white.png' />";
+                                        $mlpoutputhtml .= "<img src='http://mycreativetown.com/wp-content/themes/mct/images/icon-cross-white.png' />";
                                     $mlpoutputhtml .= "</a>";
                                     $mlpoutputhtml .= "<a class='filterView locations-list-view' href='#'>" . "". "</a>";
                                     $mlpoutputhtml .= "<a class='filterView locations-map-view' href='#'>" . "". "</a>";
@@ -65,7 +65,7 @@ $mlpoutputhtml .= "<div class='prettyMapList $mapposition cf' id='MapListPro$cou
                                     // $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#'>" . $categorylabel . "</a>";
                                     // $mlpoutputhtml .= "<a class='showFilterBtn float_right corePrettyStyle btn' href='#' data-bind='click:showCategories'>" . $categorylabel . "</a>";
 
-                                    $mlpoutputhtml .= "<ul class='' data-bind='foreach: {data: mapCategories}'>";
+                                    $mlpoutputhtml .= "<ul class='mapListProDropdown' data-bind='foreach: {data: mapCategories}'>";
                                         $mlpoutputhtml .= "<li data-bind=''>";
                                             $mlpoutputhtml .= "<a data-bind='css: {" . 'showing' . ": selected}, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
                                             // $mlpoutputhtml .= "<a data-bind='css: {" . 'showing' . ": selected}, html: " . '$data.title, click: $parent.selectCategory' . "' href='#'></a>";
