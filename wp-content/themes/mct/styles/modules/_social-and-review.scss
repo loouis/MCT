@@ -21,7 +21,7 @@
 	}
 
 	&__block{
-		float:left;
+		float:right;
 		padding-top: $base*2;
 	}
 
@@ -32,6 +32,10 @@
 		width:100%;
 		border:none !important;
 		font-family:$brandFont;
+	}
+	.wp-review-79.review-wrapper{
+		float:left;
+		margin: 0 auto;
 	}
 
 	.review-total-star{
@@ -52,6 +56,10 @@
 		.user-review-area{
 			width:auto;
 		}
+
+		.wp-review-79.review-wrapper{
+		    width: 196px;
+		}
 	}
 
 	@include breakpoint(800px){
@@ -59,12 +67,11 @@
 		right:0;
 		bottom: 38px;
 		width:43.5%;
-		// height:100px;
 		text-align:center;
 		border-bottom:none;
 
 		&__block{
-			float:initial;
+			width:100%;
 		}
 
 		&__link{
@@ -75,9 +82,13 @@
     			height: 40px;	
 			}
 		}
+		.wp-review-79.review-wrapper{
+			float:initial;
+		    width: 136px;
+		}
 
 		.user-review-area{
-			width:100%;
+			// width:100%;
 		}
 
 		// &__link{
@@ -98,9 +109,7 @@
 		.wp-review-245.review-wrapper{
 			background:none;
 		}
-		.review-total-star{
 
-		}
 		.user-review-title, #mts-user-reviews-total, .user-total-wrapper{
 			display:none;
 		}
@@ -111,10 +120,12 @@
 			}
 		}
 		.review-total-star{
-			float:none !important;
+			// float:none !important;
 		}
 	}
 }
+
+
 
 .review-total-star.allowed-to-rate .review-result-wrapper{
 	height:21px;

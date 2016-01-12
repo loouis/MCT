@@ -12,7 +12,7 @@
 .review-desc { float: left; width: 75%; padding: 10px 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .review-desc p:last-child { margin-bottom: 0 }
 .review-result-wrapper i { font-style: normal; font-size: 16px; }
-.review-result { position: absolute; top: 0; left: 0; height: 22px; overflow: hidden; white-space: nowrap; }
+.review-result { position: absolute; top: 0; left: 0px; height: 22px; overflow: hidden; white-space: nowrap; }
 .review-total-wrapper { float: right; margin: 0; margin-right: 0; padding-right: 0; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-right: 15px; }
 .review-total-wrapper span.review-total-box { border-top: 0; border-bottom: 0; border-left: 0; border-right: 0; display: block; font-size: 40px; font-weight: 700; text-align: right; margin: 0; padding: 35px 0 20px; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .circle-point span.review-total-box { height: 180px }
