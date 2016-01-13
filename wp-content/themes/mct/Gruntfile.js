@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     uglify: {
       build: {
-        src: [ 'js/libs/bxslider.js', 'js/libs/fitvids.js', 'js/libs/wow.min.js', 'js/global.js'], //input
+        src: [ 'js/libs/bxslider.js', 'js/libs/wow.min.js', 'js/libs/fitvids.js', 'js/global.js'], //input
         dest: './js/build/global.min.js' //output
       }
     },
