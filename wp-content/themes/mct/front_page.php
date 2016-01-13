@@ -218,69 +218,70 @@ get_header(); ?>
 						<p class="title-block__sub-text"><?php the_field('section2__trending__text');?></p>
 					</hgroup>
 					
+					<div>
+						<div class="trending-locations__slider-container trend-loc">
 
-					<div class="trending-locations__slider-container trend-loc">
-
-						<?php $featured_locations = new WP_Query(array( 
-							'post_type' => 'maplist',
-							'map_location_categories' => 'featured',
-							// 'taxonomy=map_location_categories&tag_ID=3',
-							'orderby' => 'rand',
-						 	'posts_per_page' => 6)); 
-						 	?>
+							<?php $featured_locations = new WP_Query(array( 
+								'post_type' => 'maplist',
+								'map_location_categories' => 'featured',
+								// 'taxonomy=map_location_categories&tag_ID=3',
+								'orderby' => 'rand',
+							 	'posts_per_page' => 6)); 
+							 	?>
 
 
-						<ul id="trend-loc" class="trend-loc__slider">
+							<ul id="trend-loc" class="trend-loc__slider">
 
-							<?php while($featured_locations->have_posts() ) : $featured_locations->the_post();?>
+								<?php while($featured_locations->have_posts() ) : $featured_locations->the_post();?>
 
-							<li class="trend-loc__slider__slide">
-								<div>
-									<a href="<?php the_permalink();?>">
-										<div class="trend-loc__slider__slide__text">
-											<p class="trend-loc__slider__slide__text__location">
-											<!-- Query post tags -->
-											<?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );?>
-												<?php if( $posttags ){ ?>
-									            	<?php echo implode( ' / ' , $posttags );?>
-									          	<?php } else{ ?><?php } ?>
-											</p><!-- // Tags -->
-											<h3 class="trend-loc__slider__slide__text__title"><?php the_title();?></h3>
-											<p class="trend-loc__slider__slide__text__para"><?php echo(get_the_excerpt()); ?></p>
+								<li class="trend-loc__slider__slide">
+									<div>
+										<a href="<?php the_permalink();?>">
+											<div class="trend-loc__slider__slide__text">
+												<p class="trend-loc__slider__slide__text__location">
+												<!-- Query post tags -->
+												<?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );?>
+													<?php if( $posttags ){ ?>
+										            	<?php echo implode( ' / ' , $posttags );?>
+										          	<?php } else{ ?><?php } ?>
+												</p><!-- // Tags -->
+												<h3 class="trend-loc__slider__slide__text__title"><?php the_title();?></h3>
+												<p class="trend-loc__slider__slide__text__para"><?php echo(get_the_excerpt()); ?></p>
 
-											<div class="trend-loc__slider__slide__read-more-button">
-												<p class="trend-loc__slider__slide__read-more-button__text">Read more</p> 
-												<svg>
-													<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
-												</svg>
+												<div class="trend-loc__slider__slide__read-more-button">
+													<p class="trend-loc__slider__slide__read-more-button__text">Read more</p> 
+													<svg>
+														<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-scroll-down-arrow--white" />
+													</svg>
+												</div>
 											</div>
-										</div>
-									</a>
-								</div>
-								<?php
-									$thumb_id = get_post_thumbnail_id();
+										</a>
+									</div>
+									<?php
+										$thumb_id = get_post_thumbnail_id();
 
-									$large_thumb_url = wp_get_attachment_image_src($thumb_id,'desktop-largest', true);
+										$large_thumb_url = wp_get_attachment_image_src($thumb_id,'desktop-largest', true);
 
-									$thumb_url = wp_get_attachment_image_src($thumb_id,'retina-smallest', true);
+										$thumb_url = wp_get_attachment_image_src($thumb_id,'retina-smallest', true);
 
-									// get alt
-									$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
-								?>
+										// get alt
+										$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+									?>
 
-								<picture>
-									<source media="(min-width: 800px)"
-									srcset="<?php echo $large_thumb_url[0]; ?> 1x">
-									<source 
-									srcset="<?php echo $thumb_url[0]; ?> 1x">
-									<img src="<?php echo $large_thumb_url[0]; ?>" alt="<?php echo $alt;?>" class="trend-loc__slider__slide__image-con__image">
-								</picture>
-							</li>
+									<picture>
+										<source media="(min-width: 800px)"
+										srcset="<?php echo $large_thumb_url[0]; ?> 1x">
+										<source 
+										srcset="<?php echo $thumb_url[0]; ?> 1x">
+										<img src="<?php echo $large_thumb_url[0]; ?>" alt="<?php echo $alt;?>" class="trend-loc__slider__slide__image-con__image">
+									</picture>
+								</li>
 
-							<?php endwhile;?>
-							<?php wp_reset_postdata(); ?>
+								<?php endwhile;?>
+								<?php wp_reset_postdata(); ?>
 
-						</ul>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section><!-- #Trending locations -->

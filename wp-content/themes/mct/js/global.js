@@ -19,7 +19,6 @@ $(function() {
 	$('#trend-loc').bxSlider({
 	    mode: 'horizontal',
 	    pagerType: 'short',
-	    touchEnabled: false,
 	    onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
 	        $('.active-slide').removeClass('active-slide');
 	        $('#trend-loc > li').eq(currentSlideHtmlObject + 1).addClass('active-slide');
