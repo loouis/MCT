@@ -47,7 +47,7 @@ $no-gutters: layout( 12 0 fluid float inside);
 }
 
 .main-wrapper{
-  padding:40px 30px 60px 30px;
+  padding:40px 15px 60px 15px;
   @extend %center-block;
   height:100%;
   @include clearfix;
