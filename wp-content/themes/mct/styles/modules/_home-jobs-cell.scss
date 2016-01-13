@@ -1,3 +1,21 @@
+
+// Every 3rd item wrapped in wrap
+.wrap{
+  width: 100%;
+  position:relative;
+  overflow:hidden;
+
+  &:nth-child(2){
+    border-bottom:none;
+  }
+
+  @include breakpoint($l){
+	border-bottom:2px solid #F3F3F3;
+  }
+
+}
+
+
 .hjb{
 
 	&__jobs{
@@ -5,12 +23,25 @@
 
 		&__cell{
 			@extend %relative;
-			display: block;
+			float:left;
 			width:100%;
-			padding:$base*8 0;
+			padding:$base*8 $base*4 $base*12 $base*4;
+			height:100%;
 			text-align:center;
-			border-bottom:1px solid #F3F3F3;
-			@include clearfix;
+			z-index:1;
+			overflow:hidden;
+
+			&:after{
+				content:"";
+				position:absolute;
+				top:0;
+				left:0;
+				bottom:0;
+				height:2px;
+				width:100%;
+				background: #F3F3F3;
+				opacity:1 !important;
+			}
 
 			&__job-role{
 				color:$primFontColor;
@@ -47,24 +78,49 @@
 
 									
 			@include breakpoint(700px){
-				@include layout($no-gutters);
-				@include gallery(6 of 12);
-				border-left:3px solid #FBFBFB;
+			
+				
 
-				&:nth-child(1), &:nth-child(4){
-					border-left:0;
+				&:before{
+					content:"";
+					position:absolute;
+					top:0;
+					left:0;
+					right:0;
+					bottom:-400px;
+					height:200%;
+					background:$brandColor;
+					opacity:0;
+					z-index:-1;
 				}
-				&:nth-child(4), &:nth-child(5), &:nth-child(6){
-					border-bottom:0;
+
+
+				&:hover{
+					&:before{
+						opacity:1;
+					}
 				}
-				background:white;
+				
 			}
 
 			@include breakpoint($l){
-				@include layout($no-gutters);
-				@include gallery(4 of 12);
+				width:33.3333%;
+				overflow: visible;
 				padding:$base*14 $base*8;
-				height:500px;
+
+				&:after{
+					right:0;
+					left:initial;
+					bottom:0;
+					height:1200px;
+					width:2px;
+					background: #F3F3F3;
+				}
+
+				&:nth-child(3):after{
+					display: none;
+				}
+
 			}
 
 			&__money{

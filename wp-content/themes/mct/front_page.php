@@ -345,7 +345,7 @@ get_header(); ?>
 					<?php wp_reset_postdata(); ?>
 
 					<a href="<?php echo get_site_url(); ?>/blog" class="button">
-						<p class="button__text">see all news</p>
+						<p class="button__text">See all news</p>
 						<span class="button__first-color"></span>
 					</a>
 
@@ -386,7 +386,11 @@ get_header(); ?>
 								}
 							?>
 
+
+
 							<?php while($purple_jobs->have_posts() ) : $purple_jobs->the_post();?>
+
+								<?php if( $purple_jobs->current_post%3 == 0 ) echo "\n".'<div class="wrap">'."\n"; ?>
 							
 							<?php $jobs_link = get_field('purple_jobs_direct_link');
 
@@ -405,6 +409,8 @@ get_header(); ?>
 									</svg>
 								</div>
 							</a>
+
+							<?php if( $purple_jobs->current_post%3 == 2 || $purple_jobs->current_post == $purple_jobs->post_count-1 ) echo '</div> <!--/.wrap-->'."\n"; ?>
 
 						<?php endwhile;?>
 						<?php wp_reset_postdata(); ?>
