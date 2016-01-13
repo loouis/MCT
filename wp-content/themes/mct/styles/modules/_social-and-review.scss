@@ -7,7 +7,7 @@
 
 	&__link{
 		display:inline-block;
-		margin:9px 7px 4px 2px;
+		margin:18px 7px 4px 2px;
 
 		svg{
 			width: 35px;
@@ -21,7 +21,6 @@
 	}
 
 	&__block{
-		float:right;
 		padding-top: $base*2;
 	}
 
@@ -51,6 +50,10 @@
 		&__block{
 			float:right;
 			padding-top: 5px;
+		}
+
+		&__link{
+			margin:9px 7px 4px 2px;
 		}
 
 		.user-review-area{
