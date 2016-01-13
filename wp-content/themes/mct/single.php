@@ -93,7 +93,7 @@ get_header(); ?>
 																</a>
 															</div>
 															
-															<a href="<?php the_field('purple_jobs_direct_link');?>">
+															<a href="<?php the_field('purple_jobs_direct_link');?>" onClick="_gaq.push([‘_trackEvent’, ‘Purple jobs’, ‘Clicking job’, ‘Jobs’, ‘0’]);">
 																<article class="inline-jobs__cell">
 																	<p class="inline-jobs__cell__money"><?php the_field('purple_jobs_money')?></p>
 																	<h5 class="inline-jobs__cell__job-role"><?php the_title();?></h5>
