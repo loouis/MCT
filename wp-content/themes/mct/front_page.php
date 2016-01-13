@@ -396,9 +396,9 @@ get_header(); ?>
 							<?php $jobs_link = get_field('purple_jobs_direct_link');
 
 							if( $jobs_link ){ ?>
-								<a href="<?php echo $jobs_link?>" class="hjb__jobs__cell">
+								<a href="<?php echo $jobs_link?>" class="hjb__jobs__cell" onClick="_gaq.push([‘_trackEvent’, ‘Purple jobs’, ‘Clicking job’, ‘Homepage purple jobs’, ‘0’]);">
 							<?php } else{ ?>
-								<a href="http://www.purple-consultancy.com/jobs/" class="hjb__jobs__cell">
+								<a href="http://www.purple-consultancy.com/jobs/" class="hjb__jobs__cell" onClick="_gaq.push([‘_trackEvent’, ‘Purple jobs’, ‘Clicking job’, ‘Homepage purple jobs’, ‘0’]);">
 							<?php } ?>
 							
 								<p class="hjb__jobs__cell__money p-small-title-highlight"><?php the_field('purple_jobs_money')?></p>
@@ -418,7 +418,7 @@ get_header(); ?>
 
 						</ul>
 
-						<a href="http://www.purple-consultancy.com" class="button hjb__read-more-button">
+						<a href="http://www.purple-consultancy.com" class="button hjb__read-more-button" onClick="_gaq.push([‘_trackEvent’, ‘Purple jobs’, ‘Clicking job’, ‘Homepage purple jobs’, ‘0’]);">
 							<p class="button__text">View more jobs</p>
 							<span class="button__first-color"></span>
 						</a>

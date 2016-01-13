@@ -65,7 +65,7 @@ get_header(); ?>
 							<?php while( have_posts() ) : the_post();?>
 
 								<?php if ($count == 1) : ?> 
-									<a href="<?php the_field('mct_blog_advert_link','options');?>" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad">
+									<a href="<?php the_field('mct_blog_advert_link','options');?>" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad" onClick="_gaq.push([‘_trackEvent’, ‘Purple jobs’, ‘Clicking job’, ‘All blog page purple job’, ‘0’]);">
 										<article class="all-blog-inline-purple-ad__text">
 											<h4 class="all-blog-inline-purple-ad__text__news-title"><?php the_field('mct_blog_advert_title', 'options')?></h4>
 											<?php the_field('mct_blog_advert_text', 'options');?>
