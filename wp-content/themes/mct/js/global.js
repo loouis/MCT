@@ -199,6 +199,7 @@ $(function() {
 		showFilterUl.removeClass("show-cat-filter");
 		locationsFilterOverlay.removeClass("customCategoryListOverlay--visible");
 		locationsFilterView.removeClass("show-location-view-options");
+		showFilterBtn.toggleClass("showFilterBtn--rotate");
 	}
 
 	showFilterBtn.on('click', function(){
