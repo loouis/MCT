@@ -322,7 +322,6 @@ body.page-id-7{
 	bottom: 0px !important;
 }
 
-
 .filterView{
 	position:relative;
 	width:40px;
@@ -550,6 +549,12 @@ body.page-template-search-location-page .infowindowContent{
 }
 
 @include breakpoint(860px){
+
+	.wp-review-77.review-wrapper{
+		width: 136px;
+	    margin: 0 auto;
+	}
+
 
 	// Location cell
 	.prettyMapList .corePrettyStyle{

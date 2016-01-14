@@ -46,8 +46,6 @@ function mct_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-
-	// add_image_size( 'custom-size', 220, 220, array( 'left', 'top' ) ); // Hard crop left top
 	
 	add_image_size( 'smallest-news-cell', 600, 375, true ); // soft proportional crop mode
 
