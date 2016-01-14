@@ -189,7 +189,11 @@ $(function() {
 		locationsListView   = $('.locations-list-view'),
 		locationsMap        = $('#map-canvas0'),
 		locationsFilterView = $('.filterView'),
-		locationsFilterOverlay = $('.customCategoryListOverlay');
+		locationsFilterOverlay = $('.customCategoryListOverlay'),
+		locationsListViewActiveIcon = $('.locations-list-view'),
+		locationsListMapActiveIcon = $('.locations-map-view');
+
+		
 
 	function locationsMobileMenuHide(){
 		showFilterUl.removeClass("show-cat-filter");
@@ -202,16 +206,27 @@ $(function() {
 		locationsFilterView.toggleClass("show-location-view-options");
 		locationsFilterOverlay.toggleClass("customCategoryListOverlay--visible");
 		$(this).toggleClass("showFilterBtn--rotate");
+		// locationsListViewActiveIcon.addClass("locations-list-view--active");
+
+		if( locationsMap.hasClass("show-mobile-map") ){
+			locationsListViewActiveIcon.removeClass("locations-list-view--active");
+		}else{
+			locationsListViewActiveIcon.addClass("locations-list-view--active");
+		}
 	});
 
 	// Show map or list view on mobile
 	locationsListView.on('click', function(){
 		locationsMap.removeClass("show-mobile-map");
-		locationsMobileMenuHide()
+		locationsListMapActiveIcon.removeClass("locations-list-map--active");
+		locationsListViewActiveIcon.addClass("locations-list-view--active");
+		locationsMobileMenuHide();
 	});
 	
 	locationsMapView.on('click', function(){
 		locationsMap.addClass("show-mobile-map");
+		locationsListViewActiveIcon.removeClass("locations-list-view--active");
+		locationsListMapActiveIcon.addClass("locations-list-map--active");
 		locationsMobileMenuHide();
 	});
 
