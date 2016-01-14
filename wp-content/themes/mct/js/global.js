@@ -97,6 +97,7 @@ $(function() {
 		$("body").toggleClass("body--is-fixed");
 		$mainHeader.toggleClass("header-main--active");
 		$logo.toggleClass("logo--nav-open");
+		locationsMobileMenuHide();
 		
 		// Animate each menu item
 		$menuItem.each(function(i){
