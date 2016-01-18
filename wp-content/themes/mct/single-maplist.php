@@ -159,7 +159,7 @@ get_header(); ?>
                                     <?php 
                                     $phone_number = get_field('location_single_telephone_number');
                                     ?>
-                                    <p><?php echo substr($phone_number, 0, 3)." ".substr($phone_number, 4, 4)." ".substr($phone_number,6);?></p>
+                                    <p><?php echo substr($phone_number, 0, 3)." ".substr($phone_number, 3, 4)." ".substr($phone_number,7);?></p>
                                 </a>
                             </article>
 
