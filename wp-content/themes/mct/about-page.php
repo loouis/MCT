@@ -89,7 +89,7 @@ get_header(); ?>
 							$title = get_sub_field('purple_job_cats_title');
 						 ?> 
 
-						<a href="<?php echo $link; ?>" target="_blank" class="job-sectors__sector" onClick="_gaq.push([‘_trackEvent’, ‘Purple jobs’, ‘Clicking job’, ‘About page purple jobs’, ‘0’]);">
+						<a href="<?php echo $link; ?>" target="_blank" onClick="_gaq.push([‘_trackEvent’, ‘purple jobs’, ‘click’, ‘home-jobs’, ‘0’]);" class="job-sectors__sector">
 							<img class="job-sectors__sector__image" src="<?php echo $image; ?>" alt="<?php echo $image['alt'] ?>"/>
 							<p class="job-sectors__sector__text"><?php echo $title; ?></p>
 						</a>
