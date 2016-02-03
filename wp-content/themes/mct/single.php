@@ -32,6 +32,18 @@ get_header(); ?>
 									<h3 class="news-single-hero__slide__text__title"><?php the_title();?></h3>
 								</div>
 							</div>
+
+							<?php
+								$thumb_id = get_post_thumbnail_id();
+
+								$thumb_url = wp_get_attachment_image_src($thumb_id,'desktop-largest', true);
+
+								// get alt
+								$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+							?>
+
+							<img src="<?php echo $thumb_url[0]; ?>" alt="<?php echo $alt;?>">
+
 						</div>
 
 

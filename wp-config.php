@@ -1,6 +1,4 @@
 <?php
-define( 'JETPACK_DEV_DEBUG', true);
-
 /**
  * The base configuration for WordPress
  *
@@ -34,7 +32,7 @@ define('DB_PASSWORD', 'root');
 define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8mb4');
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
@@ -48,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '!m;Prls2Ek%h&V#mWjue&Ru|rBa<3/.-MuD#-|! #Iq<n8)hU}=L`|EUH52p6u)j');
-define('SECURE_AUTH_KEY',  '-aT[8Q~Ru3+`HTH:O#@FIn|&IwTOKv6+!]exGVHRG***{f@vMniU@.F_iK|Y1f;#');
-define('LOGGED_IN_KEY',    'NY~HR^WdR3%6Pjs8K8u5YE1}a70lM?f<K-9}_+jN&1GHja>X!NFKE==Aa7$}x,BW');
-define('NONCE_KEY',        'ofY!olYZy39b(OvrA+6,D!|-m=}/:SDZV;~m9cC^;E29 /w(3[n[x6:Q~}0L`UU?');
-define('AUTH_SALT',        '6}U@^8,rgMTp{vE<^??B+IpJ|W7v9$PhaA$t>m+;uy;r0&VkCBk8p{;Mlba>mE5&');
-define('SECURE_AUTH_SALT', 'E<$#&sPOo[q/-!{b`HQI-j3-!Lf5U]tS8YZ,ENNu[a}~Umn:hy0tDt4L-EZM?,I1');
-define('LOGGED_IN_SALT',   'r,mGjT]XD~|f8IqMu=+J+.v1(KSvCGS8Jr-V7;cXk7Ay2@%9Fx&-2e<L+x]xYEb|');
-define('NONCE_SALT',       '%~2HS<%JB<sb08nS6R._|yy88@r~KVU_`{5a9y*,e,.QIh5{dFW=;_!HyC%8u{>/');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
@@ -80,8 +78,6 @@ $table_prefix  = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
-
-// define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
