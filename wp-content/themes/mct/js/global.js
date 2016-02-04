@@ -12,6 +12,8 @@ $(function() {
 	// init wow js - page animations
 	// new WOW().init();
 
+	$("img.myBackgroundImage").cover();
+
 	// Fitvids init
 	$(".news-single-post__content, .content").fitVids();
 

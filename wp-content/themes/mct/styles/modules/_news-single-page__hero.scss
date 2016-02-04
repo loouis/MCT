@@ -44,7 +44,8 @@
 		&__text{
 			position:relative;
 			@extend %center-text;
-			padding:$base*8 0;
+			@include vertical-align;
+			// padding:$base*8 0;
 			z-index:10;
 
 			&__title{
@@ -74,8 +75,6 @@
 
 		&__slide{
 			&__text{
-				
-				@include vertical-align;
 
 				&__title{
 					margin-top:12px;

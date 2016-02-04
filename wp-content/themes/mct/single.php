@@ -16,10 +16,18 @@ get_header(); ?>
 				<div class="outter-wrapper">
 					<!-- Hero section -->
 					<!-- BG image -->
-					<section class="news-single-hero section-hero"<?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
-			        	if ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'desktop-largest' ) )
-			            	printf( ' style="background-image: url(%s);"', $image_src[0] );     
-			    		}?>>
+					<section class="news-single-hero section-hero">
+
+					<?php
+								$thumb_id = get_post_thumbnail_id();
+
+								$thumb_url = wp_get_attachment_image_src($thumb_id,'desktop-largest', true);
+
+								// get alt
+								$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+							?>
+						<img src="<?php echo $thumb_url[0]; ?>" class="section-hero__bg__con__img myBackgroundImage" alt="<?php echo $alt;?>"/>
+
 
 						<div class="news-single-hero__slide">
 							<div class="main-wrapper">
@@ -32,17 +40,6 @@ get_header(); ?>
 									<h3 class="news-single-hero__slide__text__title"><?php the_title();?></h3>
 								</div>
 							</div>
-
-							<?php
-								$thumb_id = get_post_thumbnail_id();
-
-								$thumb_url = wp_get_attachment_image_src($thumb_id,'desktop-largest', true);
-
-								// get alt
-								$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
-							?>
-
-							<img src="<?php echo $thumb_url[0]; ?>" alt="<?php echo $alt;?>">
 
 						</div>
 
