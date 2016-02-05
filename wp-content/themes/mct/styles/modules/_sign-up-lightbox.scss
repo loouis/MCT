@@ -1,0 +1,22 @@
+.sign-up-lightbox{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:9999;
+	width:100%;
+	height:100%;
+	background:black;
+	visibility:hidden;
+
+	&--show{
+		visibility: visible;
+	}
+
+
+	&__container{
+		max-width:600px;
+		margin:0 auto;
+		background:white;
+		padding:40px;
+	}
+}

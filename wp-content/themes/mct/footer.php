@@ -66,6 +66,14 @@
 	</div>
 </footer>
 
+<aside class="sign-up-lightbox">
+	<div class="sign-up-lighbox__container">
+		<iframe src="" width="100%" height="600" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest';" >
+			<p>Your browser does not support iframes.</p>
+		</iframe>
+	</div>
+</aside>
+
 <?php wp_footer(); ?>
 <script>
 	$(document).ready(function(){

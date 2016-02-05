@@ -138,6 +138,8 @@ $(function() {
 	$(document).keyup(function(e) { 
 	  if (e.keyCode === 27) { 
 	    closeNav();
+
+	    lightboxSignUp.removeClass("sign-up-lightbox--show");
 	  }
 	});
 
@@ -233,5 +235,17 @@ $(function() {
 		locationsListMapActiveIcon.addClass("locations-list-map--active");
 		locationsMobileMenuHide();
 	});
+
+
+
+/*---------------------------------------------- Sign up logic */
+
+	var lightboxSignUp = $('.sign-up-lightbox'),
+		signUpButton   = $('.sign-up-button');
+
+		signUpButton.on("click", function(){
+			lightboxSignUp.toggleClass("sign-up-lightbox--show");
+		});
+
 
 });
