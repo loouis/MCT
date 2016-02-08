@@ -67,10 +67,25 @@
 </footer>
 
 <aside class="sign-up-lightbox">
-	<div class="sign-up-lighbox__container">
-		<iframe src="" width="100%" height="600" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest';" >
-			<p>Your browser does not support iframes.</p>
-		</iframe>
+	<div class="sign-up-lightbox__container">
+
+		<span class="sign-up-lightbox__container__close-button">
+			<i class="sign-up-lightbox__container__close-button__icon">
+				<svg><use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-signup-to-emails" /></svg>
+			</i>
+		</span>
+
+		<header class="sign-up-lightbox__container__header">
+			
+		</header>
+
+		<div>
+			<iframe src="" width="100%" height="600" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest';" >
+				<p>Your browser does not support iframes.</p>
+			</iframe>
+		</div>
+
+		
 	</div>
 </aside>
 

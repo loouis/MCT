@@ -241,11 +241,18 @@ $(function() {
 /*---------------------------------------------- Sign up logic */
 
 	var lightboxSignUp = $('.sign-up-lightbox'),
-		signUpButton   = $('.sign-up-button');
+		signUpButton   = $('.sign-up-button'),
+		lightboxSignUpCloseButton = $('.sign-up-lightbox__container__close-button');
 
 		signUpButton.on("click", function(){
 			lightboxSignUp.toggleClass("sign-up-lightbox--show");
 		});
+
+		lightboxSignUpCloseButton.on('click', function(){
+			lightboxSignUp.removeClass("sign-up-lightbox--show");
+		});
+
+
 
 
 });

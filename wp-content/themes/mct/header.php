@@ -86,16 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 			<!-- <p class="site-nav__top-bar__helper site-nav__top-bar__helper--show">Press enter</p> -->
 
-			<div class="site-nav__top-bar__sign-up sign-up-button">
-				<div class="site-nav__top-bar__sign-up__con">
-					<!-- <div class="site-nav__top-bar__sign-up__con__icon">
-						<svg>
-							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-signup-to-emails" />
-						</svg>
-					</div>				
-					<p>Sign up</p> --> 
-				</div>
-			</div>
+	
 
 		</div>
 
