@@ -73,20 +73,6 @@
 					<!-- <input type="submit" value="Search Locations"><br> -->
 				</form>
 			</div>
-
-			
-			<!-- <div class="site-nav__top-bar__sign-up sign-up-button">
-				<div class="site-nav__top-bar__sign-up__con ">
-					<div class="site-nav__top-bar__sign-up__con__icon">
-						<svg>
-							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-signup-to-emails" />
-						</svg>
-					</div>				
-					<p>Sign up</p> 
-				</div>
-			</div> -->
-	
-
 		</div>
 
 		<div class="outter-wrapper site-nav__outter-wrapper">
