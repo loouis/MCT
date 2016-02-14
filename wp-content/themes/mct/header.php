@@ -74,8 +74,17 @@
 				</form>
 			</div>
 
-			<!-- <p class="site-nav__top-bar__helper site-nav__top-bar__helper--show">Press enter</p> -->
-
+			
+			<!-- <div class="site-nav__top-bar__sign-up sign-up-button">
+				<div class="site-nav__top-bar__sign-up__con ">
+					<div class="site-nav__top-bar__sign-up__con__icon">
+						<svg>
+							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-signup-to-emails" />
+						</svg>
+					</div>				
+					<p>Sign up</p> 
+				</div>
+			</div> -->
 	
 
 		</div>
@@ -85,57 +94,61 @@
 			<div class="main-wrapper">
 
 				<nav class="site-nav__all-site-links">
-					<div class="site-nav__cat">
-						<div class="site-nav__cat__nav">
-							<p class="site-nav__cat__nav__sub-title">Looking for…</p>
+
+					<div class="clear">
+						<div class="site-nav__cat">
+							<div class="site-nav__cat__nav">
+								<p class="site-nav__cat__nav__sub-title">Looking for…</p>
+								<?php wp_nav_menu( 
+									array( 
+										'theme_location' => 'locations', 
+										'menu_class' => 'site-nav__cat__nav__links__link' ) 
+									); 
+								?>	
+							</div>
+						</div>
+						<div class="site-nav__main-site-links">
 							<?php wp_nav_menu( 
 								array( 
-									'theme_location' => 'locations', 
-									'menu_class' => 'site-nav__cat__nav__links__link' ) 
+									'theme_location' => 'primary', 
+									'menu_id' => 'primary-menu',
+									'menu_class' => 'site-nav__main-site-links__link' ) 
 								); 
-							?>	
+							?>
 						</div>
-					</div>
-					<div class="site-nav__main-site-links">
-						<?php wp_nav_menu( 
-							array( 
-								'theme_location' => 'primary', 
-								'menu_id' => 'primary-menu',
-								'menu_class' => 'site-nav__main-site-links__link' ) 
-							); 
-						?>
-					</div>
+					</div><!-- //Clear -->
+
+					<ul class="social-icons">
+						<?php 
+						$mct_facebook_link = get_field( 'mct_facebook_link', 'option' );
+						$mct_twitter_link = get_field( 'mct_twitter_link', 'option' );
+						$mct_instagram_link = get_field( 'mct_instagram_link', 'option' );	
+						
+						if ( $mct_facebook_link ) { ?>
+						<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
+							<svg class="social-icons__icon">
+								<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-facebook" />
+							</svg>
+						</a>
+						<?php } ?>
+
+						<?php if ($mct_twitter_link){ ?>
+						<a href="<?php echo $mct_twitter_link ?>" target="_blank" class="social-icons__icon">
+							<svg class="social-icons__icon">
+								<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-twitter" />
+							</svg>
+						</a>
+						<?php } ?>
+						<?php if ( $mct_instagram_link ) { ?>
+							<a href="<?php echo $mct_instagram_link?>" target="_blank" class="social-icons__icon">
+							<svg class="social-icons__icon">
+								<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-instagram" />
+							</svg>
+						</a>
+						<?php } ?>
+					</ul><!-- //social-icons -->
+
 				</nav>
-
-				<ul class="social-icons">
-					<?php 
-					$mct_facebook_link = get_field( 'mct_facebook_link', 'option' );
-					$mct_twitter_link = get_field( 'mct_twitter_link', 'option' );
-					$mct_instagram_link = get_field( 'mct_instagram_link', 'option' );	
-					
-					if ( $mct_facebook_link ) { ?>
-					<a href="<?php echo $mct_facebook_link ?>" target="_blank" class="social-icons__icon">
-						<svg class="social-icons__icon">
-							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-facebook" />
-						</svg>
-					</a>
-					<?php } ?>
-
-					<?php if ($mct_twitter_link){ ?>
-					<a href="<?php echo $mct_twitter_link ?>" target="_blank" class="social-icons__icon">
-						<svg class="social-icons__icon">
-							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-twitter" />
-						</svg>
-					</a>
-					<?php } ?>
-					<?php if ( $mct_instagram_link ) { ?>
-						<a href="<?php echo $mct_instagram_link?>" target="_blank" class="social-icons__icon">
-						<svg class="social-icons__icon">
-							<use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-social-white_circle-instagram" />
-						</svg>
-					</a>
-					<?php } ?>
-				</ul>
 			</div>
 		</div>
 	</div>

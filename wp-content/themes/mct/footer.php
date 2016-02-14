@@ -23,6 +23,10 @@
 				<h3 class="footer__join-the-community__title">Join the community and get the latest to your inbox</h3>
 			</div>
 
+			<div class="footer__sign-up-btn sign-up-button">
+				<p class="footer__sign-up-btn__text">Sign up to our mailing list</p>
+			</div>
+
 			<ul class="social-icons">
 				<?php 
 				$mct_facebook_link = get_field( 'mct_facebook_link', 'option' );
@@ -61,7 +65,7 @@
 				</article>
 			</div> -->
 
-			<p class="footer__copyright">© MY CREATIVE TOWN - 2015</p>
+			<p class="footer__copyright">© MY CREATIVE TOWN - <?php echo date(Y);?></p>
 		</div>
 	</div>
 </footer>
@@ -71,16 +75,19 @@
 
 		<span class="sign-up-lightbox__container__close-button">
 			<i class="sign-up-lightbox__container__close-button__icon">
-				<svg><use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-signup-to-emails" /></svg>
+				<svg><use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-close" /></svg>
 			</i>
 		</span>
 
 		<header class="sign-up-lightbox__container__header">
-			
+			<div class="sign-up-lightbox__container__header__title-group">
+				<h3 class="sign-up-lightbox__container__header__title-group__title">SIGN UP</h3>
+				<p class="sign-up-lightbox__container__header__title-group__text">Receive the latest to your inbox </p>
+			</div>
 		</header>
 
-		<div>
-			<iframe src="" width="100%" height="600" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/WebTest';" >
+		<div class="sign-up-lightbox__container__form">
+			<iframe src="" width="100%" height="400" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/';" >
 				<p>Your browser does not support iframes.</p>
 			</iframe>
 		</div>

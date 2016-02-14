@@ -18,6 +18,26 @@
 	// 	background: rgba(0,0,0,.65);
 	// }
 
+	&__sign-up-btn{
+		background:black;
+		background:rgba(0,0,0,.05);
+		// border:2px solid black;
+		padding:10px;
+		width:300px;
+		margin:0 auto 36px auto;
+		cursor:pointer;
+
+		transition: background .2s ease-in-out;
+
+		&:hover{
+			background:rgba(0,0,0,.2);
+		}
+
+		&__text{
+			color:white;
+		}
+	}
+
 	body.error404 &{
 		background: $offBlack;
 	}

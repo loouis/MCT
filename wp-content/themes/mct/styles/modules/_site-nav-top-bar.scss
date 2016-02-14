@@ -46,6 +46,7 @@
                 color:white;
                 padding:0px 0 0 10px;
                 float:left;
+                white-space: nowrap;
             }
         }
     }
@@ -93,9 +94,8 @@
         &__sign-up{
             position:absolute;
             right:0;
-            width:20px;
             width:160px;
-            // height:80px;
+            height:80px;
             background: rgba(0,0,0,0.2);
             z-index:20;
             padding-top: 23px;
