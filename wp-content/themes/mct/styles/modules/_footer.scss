@@ -45,7 +45,7 @@
 
 	&__mct-logo{
 		@extend %center-block;
-		max-width:160px;
+		max-width:120px;
 		margin-bottom:$base*6;
 	}
 
@@ -101,6 +101,10 @@
 			border-bottom:none;
 			max-width: 530px;
     		margin: 0 auto;
+		}
+
+		&__mct-logo{
+			max-width:160px;
 		}
 
 		// &__list-your-company{
