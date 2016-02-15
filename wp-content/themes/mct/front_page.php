@@ -27,9 +27,11 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/mobile-home-hero-image.jpg" id="bgvid" class="home-hero__video wow fadeIn" data-wow-delay="1.2s">
-					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.webm" type="video/webm"/>
+				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/home-hero-video-image-fallback.jpg" id="bgvid" class="home-hero__video wow fadeIn" data-wow-delay="1.2s">
 					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.mp4" type="video/mp4"/>
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.mov" type="video/mp4"/>
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.webm" type="video/webm"/>
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.ogv" type="video/ogg"/>
 				</video>
 			</section><!-- #video hero -->
 
