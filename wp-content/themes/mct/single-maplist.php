@@ -62,13 +62,10 @@ get_header(); ?>
                     <div class="social-and-review-container">
                           <?php echo do_shortcode("[wp-review]");?>
 
-                        <?php 
-                            $facebook_social_link = get_field('single_location_facebook_link');
-                            $twitter_social_link = get_field('single_location_twitter_link');
-
-                            if ($twitter_social_link): 
-                        ?>
                         <div class="social-and-review-container__block">
+
+                            <?php if ( get_field('single_location_twitter_link') ): ?>
+
                             <a href="<?php the_field('single_location_twitter_link');?>" class="social-and-review-container__link">
                                 <svg class="social-and-review-container__link__icon">
                                     <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-twitter" />
@@ -77,13 +74,14 @@ get_header(); ?>
 
                             <?php endif;?>
 
-                            <?php if ( $facebook_social_link): ?>
+                            <?php if ( get_field('single_location_facebook_link') ): ?>
                                 <a href="<?php the_field('single_location_facebook_link');?>" class="social-and-review-container__link">
                                     <svg class="social-and-review-container__link__icon">
                                         <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-facebook" />
                                     </svg>
                                 </a>
                             <?php endif;?>
+
                         </div>
                     </div>
 
