@@ -17,7 +17,7 @@ get_header(); ?>
 
             <section id="container" class="container">
 
-    			<header class="header">
+    			<header class="header wow fadeIn" data-wow-duration="2s">
 
                     <?php if ( wp_is_mobile() ) { ?>
                         <div class="bg-img"<?php if ( $thumbnail_id = get_post_thumbnail_id() ) {
@@ -42,7 +42,7 @@ get_header(); ?>
                         <?php $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );?>
 
                         <?php if( $posttags ){ ?>
-                            <p class="location-single__cat">
+                            <p class="location-single__cat wow fadeInUp" data-wow-delay="1s">
                         <?php echo implode( ' / ' , $posttags );?>
                             </p>
                         <?php } else{ ?>
@@ -50,23 +50,26 @@ get_header(); ?>
                         <?php } ?>
                         <!-- // Tags -->
                         
-    					<h1 class="location-single__location-name"><?php the_title(); ?></h1>
+    					<h1 class="location-single__location-name wow fadeInUp" data-wow-delay="0.7s" data-wow-offset="-200"><?php the_title(); ?></h1>
     					<!-- <h2 class="location-single__subhead-call-out"></h2> -->
 
-    					<!-- <div data-info="SCROLL TO READ" class="trigger">
+    					<div data-info="SCROLL TO READ" class="trigger wow fadeIn" data-wow-delay="1.4s" data-wow-offset="-2000">
 						  <img src="<?php echo get_template_directory_uri(); ?>/images/icon-scroll-to-read-more.png" alt="" class="trigger__icon"/>
-				       </div> -->
+				       </div>
 
 			        </div><!-- //Title -->
 
                     <div class="social-and-review-container">
-                          <?php echo do_shortcode("[wp-review]");?>
+
+                        <div class="wow fadeIn" data-wow-delay="1.5s">
+                            <?php echo do_shortcode("[wp-review]");?>
+                        </div>
 
                         <div class="social-and-review-container__block">
 
                             <?php if ( get_field('single_location_twitter_link') ): ?>
 
-                            <a href="<?php the_field('single_location_twitter_link');?>" class="social-and-review-container__link">
+                            <a href="<?php the_field('single_location_twitter_link');?>" class="social-and-review-container__link wow scale" data-wow-delay="1.2s">
                                 <svg class="social-and-review-container__link__icon">
                                     <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-twitter" />
                                 </svg>
@@ -75,7 +78,7 @@ get_header(); ?>
                             <?php endif;?>
 
                             <?php if ( get_field('single_location_facebook_link') ): ?>
-                                <a href="<?php the_field('single_location_facebook_link');?>" class="social-and-review-container__link">
+                                <a href="<?php the_field('single_location_facebook_link');?>" class="social-and-review-container__link wow scale" data-wow-delay="1.35s">
                                     <svg class="social-and-review-container__link__icon">
                                         <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-facebook" />
                                     </svg>

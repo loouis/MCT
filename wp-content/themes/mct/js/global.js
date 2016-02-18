@@ -176,6 +176,12 @@ $(function() {
 	});
 
 
+/*---------------------------------------------- Location hero */
+	
+	$('.trigger').on('click', function(){
+		$('html,body').animate({scrollTop:$('.content').offset().top}, {duration: 1400, easing: 'easeInOutQuint'});
+	});
+
 /*---------------------------------------------- Mobile blog single */
 	
 	/* Toggle social share - show & hide  */
