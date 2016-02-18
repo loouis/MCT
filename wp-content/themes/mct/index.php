@@ -52,6 +52,11 @@ get_header(); ?>
 				<div class="latest-news">
 					<div class="main-wrapper">
 
+					<?php 
+						$args = array('posts_per_page' => -1);
+						$blog_query = new wp_query( $args );
+					?>
+
 					<?php if ( have_posts() ) : ?>
 
 						<?php if ( wp_is_mobile() ) { ?>
@@ -62,7 +67,7 @@ get_header(); ?>
 
 						<ul class="latest-news__items">
 			
-							<?php while( have_posts() ) : the_post();?>
+							<?php while( $blog_query->have_posts() ) : $blog_query->the_post();?>
 
 								<?php if ($count == 1) : ?> 
 									<a href="<?php the_field('mct_blog_advert_link','options');?>" class="latest-news__items__item latest-news__items__item--purple-ad all-blog-inline-purple-ad" onClick="_gaq.push([‘_trackEvent’, ‘Purple jobs’, ‘Clicking job’, ‘All blog page purple job’, ‘0’]);">
