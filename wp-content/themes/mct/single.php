@@ -18,26 +18,24 @@ get_header(); ?>
 					<!-- BG image -->
 					<section class="news-single-hero section-hero">
 
-					<?php
-								$thumb_id = get_post_thumbnail_id();
-
-								$thumb_url = wp_get_attachment_image_src($thumb_id,'desktop-largest', true);
-
-								// get alt
-								$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
-							?>
-						<img src="<?php echo $thumb_url[0]; ?>" class="section-hero__bg__con__img myBackgroundImage" alt="<?php echo $alt;?>"/>
+						<?php
+							$thumb_id = get_post_thumbnail_id();
+							$thumb_url = wp_get_attachment_image_src($thumb_id,'desktop-largest', true);
+							// get alt
+							$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+						?>
+						<img src="<?php echo $thumb_url[0]; ?>" class="section-hero__bg__con__img myBackgroundImage wow fadeIn" data-wow-duration="2s" alt="<?php echo $alt;?>"/>
 
 
 						<div class="news-single-hero__slide">
 							<div class="main-wrapper">
 								<div class="news-single-hero__slide__text">
 									<!-- Category-->
-									<p class="news-single-hero__slide__text__news-cat">
+									<p class="news-single-hero__slide__text__news-cat wow fadeIn" data-wow-delay="1.4s">
 										<?php $category = get_the_category(); $firstCategory = $category[0]->cat_name; echo $firstCategory;?>
 									</p>
 									<!-- Title -->
-									<h3 class="news-single-hero__slide__text__title"><?php the_title();?></h3>
+									<h3 class="news-single-hero__slide__text__title wow fadeInUp" data-wow-delay="1s"><?php the_title();?></h3>
 								</div>
 							</div>
 
