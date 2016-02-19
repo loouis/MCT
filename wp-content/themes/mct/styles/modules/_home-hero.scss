@@ -89,6 +89,12 @@
 		    height: 100vh;
 		    z-index: -2;
 		    background: linear-gradient(270deg, #3bff4f, #24e5ed, #ff9317, #df38aa);
+		    background: -moz-linear-gradient(270deg, #3bff4f, #24e5ed, #ff9317, #df38aa);
+			background: -webkit-linear-gradient(270deg, #3bff4f, #24e5ed, #ff9317, #df38aa);
+			background: -o-linear-gradient(270deg, #3bff4f, #24e5ed, #ff9317, #df38aa);
+			background: -ms-linear-gradient(270deg, #3bff4f, #24e5ed, #ff9317, #df38aa);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24e5ed', endColorstr='#ff9317', GradientType=1 );
+
 			background-size: 400% 400%;
 
 			-webkit-animation: home-hero-grad-animation 10s ease infinite;
