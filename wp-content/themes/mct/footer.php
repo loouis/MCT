@@ -23,9 +23,9 @@
 				<h3 class="footer__join-the-community__title">Join the community and get the latest to your inbox</h3>
 			</div>
 
-			<div class="footer__sign-up-btn sign-up-button">
+			<a href="#sign-up-lightbox" class="footer__sign-up-btn sign-up-button fancybox">
 				<p class="footer__sign-up-btn__text">Sign up to our mailing list</p>
-			</div>
+			</a>
 
 			<ul class="social-icons">
 				<?php 
@@ -57,41 +57,35 @@
 				<?php } ?>
 			</ul>
 
-
-			<!-- <div class="footer__list-your-company">
-				<article class="footer__list-your-company__text">
-					<h5 class="footer__list-your-company__text__title">Want to list your company and  reach over 2,000 creative active users?</h5>
-					<div class="footer__list-your-company__text__button">Contact</div>
-				</article>
-			</div> -->
-
 			<p class="footer__copyright">© MY CREATIVE TOWN - <?php echo date(Y);?></p>
 		</div>
 	</div>
 </footer>
 
-<aside class="sign-up-lightbox">
-	<div class="sign-up-lightbox__container">
+<div class="fancybox-hidden">
+	<aside class="sign-up-lightbox" id="sign-up-lightbox">
+		<div class="sign-up-lightbox__container">
 
-		<span class="sign-up-lightbox__container__close-button">
-			<i class="sign-up-lightbox__container__close-button__icon">
-				<svg><use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-close" /></svg>
-			</i>
-		</span>
+			<span class="sign-up-lightbox__container__close-button">
+				<i class="sign-up-lightbox__container__close-button__icon">
+					<svg><use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-defs.svg#icon-close" /></svg>
+				</i>
+			</span>
 
-		<header class="sign-up-lightbox__container__header">
-			<div class="sign-up-lightbox__container__header__title-group">
-				<h3 class="sign-up-lightbox__container__header__title-group__title">SIGN UP</h3>
-				<p class="sign-up-lightbox__container__header__title-group__text">Receive the latest to your inbox </p>
+			<header class="sign-up-lightbox__container__header">
+				<div class="sign-up-lightbox__container__header__title-group">
+					<h3 class="sign-up-lightbox__container__header__title-group__title">SIGN UP</h3>
+					<p class="sign-up-lightbox__container__header__title-group__text">Receive the latest to your inbox </p>
+				</div>
+			</header>
+
+			<div class="sign-up-lightbox__container__form">
+				<iframe src="" width="100%" height="400" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/';" ><p>Your browser does not support iframes.</p></iframe>
 			</div>
-		</header>
-
-		<div class="sign-up-lightbox__container__form">
-			<iframe src="" width="100%" height="400" onload="javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/MCTwebform/';" ><p>Your browser does not support iframes.</p></iframe>
+			
 		</div>
-		
-	</div>
-</aside>
+	</aside>
+</div>
 
 <?php wp_footer(); ?>
 <script>

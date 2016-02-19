@@ -22,9 +22,9 @@
 	&__sign-up-btn{
 		background:black;
 		background:rgba(0,0,0,.05);
-		// border:2px solid black;
 		padding:10px;
 		width:280px;
+		display:block;
 		margin:0 auto 36px auto;
 		cursor:pointer;
 
@@ -106,17 +106,6 @@
 		&__mct-logo{
 			max-width:160px;
 		}
-
-		// &__list-your-company{
-		// 	margin-top:$base*8;
-		// 	padding-top:$base*8;
-
-		// 	&__text{
-		// 		max-width:300px;
-		// 		text-align: left;
-		// 		float:left;
-		// 	}	
-		// }
 	}
 }
 

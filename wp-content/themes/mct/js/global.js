@@ -9,8 +9,9 @@ $(function() {
 	});
 	wow.init();
 
-	// init wow js - page animations
-	// new WOW().init();
+	// Fancybox
+	$(".fancybox").fancybox();
+
 
 	$("img.myBackgroundImage").cover();
 
@@ -246,21 +247,25 @@ $(function() {
 
 /*---------------------------------------------- Sign up logic */
 
-	var lightboxSignUp = $('.sign-up-lightbox'),
-		signUpButton   = $('.sign-up-button'),
-		lightboxSignUpCloseButton = $('.sign-up-lightbox__container__close-button');
+	$('.sign-up-lightbox__container__close-button').on('click', function(){
+		$.fancybox.close();
+	});
 
-		signUpButton.on("click", function(){
-			lightboxSignUp.toggleClass("sign-up-lightbox--show");
-			// jQuery('.sign-up-lightbox__container__form').html("<iframe src='' width='100%' height='600' onload='javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2';'></iframe>");
-		});
+	// var lightboxSignUp = $('.sign-up-lightbox'),
+	// 	signUpButton   = $('.sign-up-button'),
+	// 	lightboxSignUpCloseButton = $('.sign-up-lightbox__container__close-button');
+
+	// 	signUpButton.on("click", function(){
+	// 		lightboxSignUp.toggleClass("sign-up-lightbox--show");
+	// 		// jQuery('.sign-up-lightbox__container__form').html("<iframe src='' width='100%' height='600' onload='javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2';'></iframe>");
+	// 	});
 
 
 
 
-		lightboxSignUpCloseButton.on('click', function(){
-			lightboxSignUp.removeClass("sign-up-lightbox--show");
-		});
+	// 	lightboxSignUpCloseButton.on('click', function(){
+	// 		lightboxSignUp.removeClass("sign-up-lightbox--show");
+	// 	});
 
 
 
