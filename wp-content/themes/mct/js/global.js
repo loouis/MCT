@@ -139,8 +139,6 @@ $(function() {
 	$(document).keyup(function(e) { 
 	  if (e.keyCode === 27) { 
 	    closeNav();
-
-	    lightboxSignUp.removeClass("sign-up-lightbox--show");
 	  }
 	});
 
@@ -250,24 +248,5 @@ $(function() {
 	$('.sign-up-lightbox__container__close-button').on('click', function(){
 		$.fancybox.close();
 	});
-
-	// var lightboxSignUp = $('.sign-up-lightbox'),
-	// 	signUpButton   = $('.sign-up-button'),
-	// 	lightboxSignUpCloseButton = $('.sign-up-lightbox__container__close-button');
-
-	// 	signUpButton.on("click", function(){
-	// 		lightboxSignUp.toggleClass("sign-up-lightbox--show");
-	// 		// jQuery('.sign-up-lightbox__container__form').html("<iframe src='' width='100%' height='600' onload='javascript: if(typeof ewt != 'undefined' && ewt && ewt.setIFrameSrc) ewt.setIFrameSrc(this, 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2'); else if(this.src != 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2') this.src = 'http://www.pages03.net/purpleconsultancy-mct/mycreativetown/SignUp2';'></iframe>");
-	// 	});
-
-
-
-
-	// 	lightboxSignUpCloseButton.on('click', function(){
-	// 		lightboxSignUp.removeClass("sign-up-lightbox--show");
-	// 	});
-
-
-
 
 });
