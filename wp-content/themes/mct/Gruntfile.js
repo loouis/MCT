@@ -122,7 +122,7 @@ module.exports = function(grunt) {
             },
             options: {
                 watchTask: true,
-                proxy: "localhost:8888/mct-wordpress"
+                proxy: "localhost:8888/mct"
             }
         }
     },
