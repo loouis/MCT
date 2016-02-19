@@ -28,10 +28,10 @@ get_header(); ?>
 				</div>
 
 				<video autoplay="autoplay" loop="loop" poster="<?php echo get_template_directory_uri();?>/images/home-hero-video-image-fallback.jpg" id="bgvid" class="home-hero__video wow fadeIn" data-wow-delay="1.2s">
-					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.mp4" type="video/mp4"/>
-					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.mov" type="video/mp4"/>
-					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.webm" type="video/webm"/>
-					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.ogv" type="video/ogg"/>
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'/>
+					<!-- <source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.mov" type="video/mp4"/> -->
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.webm" type='video/webm;codecs="vp8, vorbis"'/>
+					<source src="https://s3-eu-west-1.amazonaws.com/my-creative-town/home-hero-video.ogv" type="video/ogv; codecs=dirac, speex"/>
 				</video>
 			</section><!-- #video hero -->
 
