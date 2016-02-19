@@ -10,7 +10,9 @@ $(function() {
 	wow.init();
 
 	// Fancybox
-	$(".fancybox").fancybox();
+	$(".fancybox").fancybox({
+		'closeBtn' : false 
+	});
 
 
 	$("img.myBackgroundImage").cover();
